@@ -1,0 +1,15 @@
+User: ::1 - September 8, 2021, 14:11:03
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - September 8, 2021, 14:22:23
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Legal
+-------------------------
+User: ::1 - September 8, 2021, 14:22:23
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------

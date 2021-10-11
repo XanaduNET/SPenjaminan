@@ -1,0 +1,45 @@
+User: ::1 - September 15, 2021, 09:22:30
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - September 15,2021, 09:22:49
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - September 15, 2021, 09:55:39
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - September 15,2021, 09:55:44
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - September 15,2021, 10:00:23
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - September 15, 2021, 13:21:49
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - September 15, 2021, 13:37:50
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - September 15, 2021, 14:19:12
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Direktur
+-------------------------
+User: ::1 - September 15,2021, 14:19:12
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------

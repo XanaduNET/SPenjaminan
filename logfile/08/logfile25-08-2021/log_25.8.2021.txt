@@ -1,0 +1,55 @@
+User: ::1 - August 25, 2021, 14:52:23
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - August 25, 2021, 14:52:28
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - August 25, 2021, 16:24:57
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - August 25, 2021, 16:25:21
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - August 25,2021, 16:25:47
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - August 25,2021, 16:27:15
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - August 25,2021, 16:27:23
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - August 25, 2021, 16:27:27
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - August 25, 2021, 16:27:30
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Manajemen Risiko
+-------------------------
+User: ::1 - August 25,2021, 16:27:33
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - August 25, 2021, 16:57:33
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------

@@ -1,0 +1,115 @@
+User: ::1 - September 6, 2021, 09:52:14
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - September 6, 2021, 09:52:20
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - September 6, 2021, 05:08:46
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - September 6, 2021, 05:14:13
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - September 6, 2021, 05:49:30
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - September 6, 2021, 06:54:16
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Manajemen Risiko
+-------------------------
+User: ::1 - September 6, 2021, 06:54:16
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Manajemen Risiko
+-------------------------
+User: ::1 - September 6, 2021, 06:55:47
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Manajemen Risiko
+-------------------------
+User: ::1 - September 6, 2021, 06:55:47
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Manajemen Risiko
+-------------------------
+User: ::1 - September 6, 2021, 06:58:06
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Manajemen Risiko
+-------------------------
+User: ::1 - September 6, 2021, 06:58:06
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Manajemen Risiko
+-------------------------
+User: ::1 - September 6, 2021, 06:58:14
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - September 6, 2021, 06:59:04
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Manajemen Risiko
+-------------------------
+User: ::1 - September 6, 2021, 06:59:05
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Manajemen Risiko
+-------------------------
+User: ::1 - September 6, 2021, 07:00:36
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Manajemen Risiko
+-------------------------
+User: ::1 - September 6, 2021, 07:00:36
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Manajemen Risiko
+-------------------------
+User: ::1 - September 6, 2021, 07:00:51
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Manajemen Risiko
+-------------------------
+User: ::1 - September 6, 2021, 07:00:51
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Manajemen Risiko
+-------------------------
+User: ::1 - September 6, 2021, 09:28:25
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - September 6, 2021, 09:28:44
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Manajemen Risiko
+-------------------------
+User: ::1 - September 6, 2021, 09:28:44
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Manajemen Risiko
+-------------------------
+User: ::1 - September 6, 2021, 09:48:04
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - September 6, 2021, 09:48:38
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------

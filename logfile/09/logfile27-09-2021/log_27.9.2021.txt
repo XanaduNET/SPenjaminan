@@ -1,0 +1,15 @@
+User: ::1 - September 27, 2021, 08:12:54
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - September 27,2021, 08:22:17
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - September 27,2021, 08:22:28
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------

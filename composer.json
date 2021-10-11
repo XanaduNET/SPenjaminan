@@ -1,0 +1,15 @@
+{
+    "name": "jamkridariau/spenjamian",
+    "description": "Untuk Kebutuhan Projek",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Rani Amelia",
+            "email": "raniamelia@alumni.pcr.ac.id"
+        }
+    ],
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.17"
+    }
+}

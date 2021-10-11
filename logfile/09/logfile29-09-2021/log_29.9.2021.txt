@@ -1,0 +1,35 @@
+User: ::1 - September 29, 2021, 08:36:20
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - September 29, 2021, 09:17:41
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - September 29, 2021, 10:26:23
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - September 29, 2021, 14:00:22
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - September 29, 2021, 14:01:31
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - September 29, 2021, 14:05:03
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - September 29, 2021, 14:52:21
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------

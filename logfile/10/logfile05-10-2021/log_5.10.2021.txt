@@ -1,0 +1,35 @@
+User: ::1 - October 5, 2021, 04:28:01
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - October 5,2021, 04:36:17
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - October 5,2021, 05:36:22
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - October 5,2021, 05:47:38
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - October 5, 2021, 08:45:56
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - October 5, 2021, 08:46:01
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - October 5,2021, 09:11:06
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
