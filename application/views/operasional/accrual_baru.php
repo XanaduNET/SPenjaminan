@@ -10,7 +10,6 @@
               <input type="hidden" id="bulan" name="bulan"
                   value="<?php echo htmlspecialchars(json_encode($bulan)) ?>" />    
               <input type="hidden" id="click" name="click" value='1' />
-              ps -e | grep [s]sh-agent
 
               <input type="submit" class="btn btn-primary" id="export" name="export" value="EXPORT" />
           </form>
