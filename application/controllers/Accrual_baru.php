@@ -30,7 +30,7 @@ class Accrual_baru extends CI_Controller
         $keyword = $this->input->post('keyword');
         if (!empty($this->input->post('Month')) && ($this->input->post('Month') == "00")) {
             $data['table'] = $this->Model_table_accrual->ambil_data($keyword);
-            $data['bulanmax'] = $this->Model_table_maxbulan->ambil_data_maxbulan($keyword);
+            $data['bulanmax'] = $this->Model_table_accrual->ambil_data_maxbulan($keyword);
         } else if (!empty($this->input->post('Month')) && ($this->input->post('Month') != "00")) {
 
             $Monthchecked[] = $this->input->post('Month');

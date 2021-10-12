@@ -11,55 +11,47 @@
                           <table class="table table-bordered" id="myTable" width="100%" cellspacing="0">
                               <thead class="text-dark">
                                   <tr>
-                                      <th>1. No</th>
-                                      <th>2. Bank x</th>
-                                      <th>3. NOMOR SERTIFIKAT</th>
-                                      <th>4. NAMA TERJAMIN</th>
-                                      <th>5. Tanggal Akad</th>
-                                      <th>6. Jangka Waktu (BULAN) </th>
-                                      <th>7. Tanggal Selesai</th>
-                                      <th>8. Premi</th>
-                                      <th>9. Angsuran / Bulan </th>
+                                      <th width="5%">No</th>
+                                      <th>Bank x</th>
+                                      <th>NOMOR SERTIFIKAT</th>
+                                      <th>NAMA TERJAMIN</th>
+                                      <th>Tanggal Akad</th>
+                                      <th>Jangka Waktu (BULAN) </th>
+                                      <th>Tanggal Selesai</th>
+                                      <th>Premi</th>
+                                      <th>Angsuran / Bulan </th>
                                       <?php
-$tglawal = date('01-2021');
+$tglawal = date('Y-01');
 foreach ($bulanmax as $u) {
-    for ($i = 1; $i <= $u->DJPDjangkawaktu; $i++) {?>
+    for ($i = 0; $i <= $u->DJPDjangkawaktu; $i++) {?>
 
                                       <th> <?php
 
-        $tglakhir = date('m-y', strtotime('+ ' . $i . 'month', strtotime($tglawal)));
+        $tglakhir = date('Y-M', strtotime('+ ' . $i . 'month', strtotime($tglawal)));
         echo $tglakhir;
     }}?></th>
 
                                   </tr>
                               </thead>
                               <tbody class="text-dark">
-
+                              <?php $no = 1;
+foreach ($table as $u) {?>
                               <tr>
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                    <td>5</td>
-                                    <td>6</td>
-                                    <td>7</td>
-                                    <td>8</td>
-                                    <td>9</td>
-                                    <!-- looping disini menurut jangka waktu terbanyak dalam periode sertifikat -->
-                                    <td>10</td>
-                                    <td>1</td>
-                                    <td>2</td>
-                                    <td>3</td>
-                                    <td>4</td>
-                                    <td>5</td>
-                                    <td>6</td>
-                                    <td>7</td>
-                                    <td>8</td>
-                                    <td>9</td>
-                                    <td>10</td>
-                                    <td>1</td>
-                                    <!-- Endd looping-->
+
+                                    <td><?php echo $no; ?></td>
+                                    <td><?php echo $u->PPnama; ?> </td>
+                                    <td><?php echo $u->DJPnoreg; ?> </td>
+                                    <td><?php echo $u->TRJMnama; ?></td>
+                                    <td><?php echo $u->DJPDtanggalakad; ?></td>
+                                    <td><?php echo $u->DJPDjangkawaktu; ?></td>
+                                    <td><?php echo $u->DJPDtanggalakhir; ?></td>
+                                    <td><?php echo "Rp." . number_format($u->DJPDimbaljasa, 0, ".", "."); ?></td>
+                                    <td><?php echo "Rp." . number_format($angsuran = (int) ($u->DJPDimbaljasa / $u->DJPDjangkawaktu), 0, ".", "."); ?></td>
+                                    <?php for ($i = 0; $i <= $u->DJPDjangkawaktu; $i++) {?>
+                                    <td><?php echo "Rp." . number_format($angsuran, 0, ".", "."); ?></td>
+                                    <?php }?>
                                 </tr>
+                                <?php $no++;}?>
 
                               </tbody>
 
