@@ -58,3 +58,13 @@ Attempt: Success Masuk Halaman
 User: Akbar
 Aksi: Accrual Penjaminan
 -------------------------
+User: ::1 - October 12, 2021, 16:58:52
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - October 12, 2021, 17:01:05
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Manajemen Risiko
+-------------------------
