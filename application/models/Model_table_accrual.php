@@ -156,9 +156,7 @@ class Model_table_accrual extends CI_Model
         }
     }
 
-
     public function ambil_data_bulan($keyword, $Monthchecked)
-        
     {
 
         $MONTHid = $Monthchecked;
@@ -183,9 +181,7 @@ class Model_table_accrual extends CI_Model
         }
     }
 
-    
     public function ambil_data_maxbulan_perbulan($keyword, $Monthchecked)
-        
     {
 
         $MONTHid = $Monthchecked;
@@ -207,10 +203,8 @@ class Model_table_accrual extends CI_Model
     }
 
     public function ambil_data_maxbulan($keyword)
-        
     {
 
-        $MONTHid = $Monthchecked;
         //    return $this->db->get('tbldjph');
         $this->db->like('DJPnoreg', $keyword);
         $this->db->select_max('DJPDjangkawaktu');
@@ -226,7 +220,6 @@ class Model_table_accrual extends CI_Model
             </script>";
         }
     }
-
 
     public function ambil_data_query_bulan($keyword, $GPPchecked, $Monthchecked)
     {
