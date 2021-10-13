@@ -29,6 +29,7 @@ foreach ($bulanmax as $u) {
 
         $tglakhir = date('Y-M', strtotime('+ ' . $i . 'month', strtotime($tglawal)));
         echo $tglakhir;
+
     }}?></th>
 
                                   </tr>
@@ -47,9 +48,21 @@ foreach ($table as $u) {?>
                                     <td><?php echo $u->DJPDtanggalakhir; ?></td>
                                     <td><?php echo "Rp." . number_format($u->DJPDimbaljasa, 0, ".", "."); ?></td>
                                     <td><?php echo "Rp." . number_format($angsuran = (int) ($u->DJPDimbaljasa / $u->DJPDjangkawaktu), 0, ".", "."); ?></td>
-                                    <?php for ($i = 0; $i <= $u->DJPDjangkawaktu; $i++) {?>
+                                    <?php
+$tglawal = date('Y-01');
+    for ($i = 0; $i <= $u->DJPDjangkawaktu; $i++) {
+        $time = strtotime($u->DJPtanggalcetak);
+        $newtime = date('Y-M', $time);
+        $tglakhir = date('Y-M', strtotime('+ ' . $i . 'month', strtotime($tglawal)));
+
+        if ($newtime == $tglakhir) {
+
+            for ($i = 0; $i <= $u->DJPDjangkawaktu; $i++) {?>
                                     <td><?php echo "Rp." . number_format($angsuran, 0, ".", "."); ?></td>
-                                    <?php }?>
+                                    <?php }} else {
+            ?><td bgcolor="#FFC0CB"> -- </td> <?php
+
+        }}?>
                                 </tr>
                                 <?php $no++;}?>
 
