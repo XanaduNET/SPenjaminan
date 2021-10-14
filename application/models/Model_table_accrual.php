@@ -188,6 +188,7 @@ class Model_table_accrual extends CI_Model
         //    return $this->db->get('tbldjph');
         $this->db->like('DJPnoreg', $keyword);
         $this->db->select_max('DJPDjangkawaktu');
+        $this->db->select_max('DJPDtanggalakhir');
         $this->db->from('tbldjph');
         $this->db->join('tbldjpd', 'tbldjph.DJPid=tbldjpd.DJPid');
         $this->db->where_in("DATE_FORMAT(DJPtanggalverif,'%m')", $MONTHid);
@@ -207,8 +208,9 @@ class Model_table_accrual extends CI_Model
 
         //    return $this->db->get('tbldjph');
         $this->db->like('DJPnoreg', $keyword);
-        $this->db->select_max('DJPDjangkawaktu');
         $this->db->select_max('DJPDtanggalakhir');
+        $this->db->select_max('DJPDjangkawaktu');
+
         $this->db->from('tbldjph');
         $this->db->join('tbldjpd', 'tbldjph.DJPid=tbldjpd.DJPid');
         $query = $this->db->get();
