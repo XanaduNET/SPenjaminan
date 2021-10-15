@@ -39,7 +39,7 @@ class Model_table_accrual extends CI_Model
         } else {
             echo "<script>
             alert('Data Tidak Ditemukan');
-            window.location.href='Accrual';
+            window.location.href='Accrual_baru';
             </script>";
         }
     }
@@ -65,7 +65,7 @@ class Model_table_accrual extends CI_Model
         } else {
             echo "<script>
             alert('Data Tidak Ditemukan');
-            window.location.href='Accrual';
+            window.location.href='Accrual_baru';
             </script>";
         }
     }
@@ -93,7 +93,7 @@ class Model_table_accrual extends CI_Model
         } else {
             echo "<script>
             alert('Data Tidak Ditemukan');
-            window.location.href='Accrual';
+            window.location.href='Accrual_baru';
             </script>";
         }
     }
@@ -123,7 +123,7 @@ class Model_table_accrual extends CI_Model
         } else {
             echo "<script>
             alert('Data Tidak Ditemukan');
-            window.location.href='Accrual';
+            window.location.href='Accrual_baru';
             </script>";
         }
     }
@@ -151,7 +151,7 @@ class Model_table_accrual extends CI_Model
         } else {
             echo "<script>
             alert('Data Tidak Ditemukan');
-            window.location.href='Accrual';
+            window.location.href='Accrual_baru';
             </script>";
         }
     }
@@ -176,7 +176,7 @@ class Model_table_accrual extends CI_Model
         } else {
             echo "<script>
             alert('Data Tidak Ditemukan');
-            window.location.href='Accrual';
+            window.location.href='Accrual_baru';
             </script>";
         }
     }
@@ -199,7 +199,7 @@ class Model_table_accrual extends CI_Model
         } else {
             echo "<script>
             alert('Data Tidak Ditemukan');
-            window.location.href='Accrual';
+            window.location.href='Accrual_baru';
             </script>";
         }
     }
@@ -220,7 +220,7 @@ class Model_table_accrual extends CI_Model
         } else {
             echo "<script>
             alert('Data Tidak Ditemukan');
-            window.location.href='Accrual';
+            window.location.href='Accrual_baru';
             </script>";
         }
     }
@@ -248,7 +248,7 @@ class Model_table_accrual extends CI_Model
         } else {
             echo "<script>
             alert('Data Tidak Ditemukan');
-            window.location.href='Accrual';
+            window.location.href='Accrual_baru';
             </script>";
         }
     }

@@ -13,3 +13,33 @@ Attempt: Success Login
 User: Akbar
 Aksi: Login
 -------------------------
+User: ::1 - October 15,2021, 14:52:48
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - October 15,2021, 14:52:53
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - October 15,2021, 14:53:00
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - October 15,2021, 14:53:03
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - October 15,2021, 15:27:51
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - October 15,2021, 15:29:00
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
