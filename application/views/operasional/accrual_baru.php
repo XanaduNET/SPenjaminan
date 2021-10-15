@@ -38,11 +38,14 @@ foreach ($bulanmax as $u) {
     $month2 = date('m', $ts2);
 
     $diff = (($year2 - $year1) * 12) + ($month2 - $month1);
-    for ($i = 0; $i <= $diff; $i++) {
+
+    $flagtanggal = $u->DJPDjangkawaktu + $diff;
+    for ($i = 0; $i <= $flagtanggal; $i++) {
 
         $tglakhir = date('Y-M', strtotime('+ ' . $i . 'month', strtotime($tglawal)));
         ?><th> <?php echo $tglakhir; ?> </th><?php
-}
+
+    }
 
 }?>
                                   </tr>
