@@ -22,7 +22,7 @@
                                       <th>Angsuran / Bulan </th>
                                       <?php
 $tglawal = date('Y-01');
-
+        
 foreach ($bulanmax as $u) {
 
     $date1 = $tglawal;

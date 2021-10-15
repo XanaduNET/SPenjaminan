@@ -156,13 +156,81 @@ class Accrual_baru extends CI_Controller
             $data['bulanmax'] = $this->Model_table_accrual->ambil_data_maxbulan($keyword);
         }
 
+        $date = date("d-m-Y");
+        $bulan = date("m");
+        $namauser = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+
+        $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j,Y, H:i:s") . PHP_EOL .
+            "Attempt: " . ("Success Masuk Halaman") . PHP_EOL .
+            "User: " . $namauser['nama'] . PHP_EOL .
+            "Aksi: " . ('Accrual Penjaminan') . PHP_EOL .
+            "-------------------------" . PHP_EOL;
+        //-
+        file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
+
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
         $this->load->view('operasional/accrual_baru', $data);
         $this->load->view('templates/footer', $data);
     }
+    public function triggeredExport()
+    {
+        if ($this->input->post('click') == 1) {
+            $clickEvent = 1;
+        } else {
+            $clickEvent = 0;
+        }
 
+        if ($clickEvent == 1) {
+            $clickEvent = 0;
+            $data = $this->input->post('table');
+            $data2 = $this->input->post('bulan');
+            $dataTable = json_decode(htmlspecialchars_decode($data, true));
+            $dataBulan = json_decode(htmlspecialchars_decode($data2, true));
+
+            $date = date("d-m-Y");
+            $bulan = date("m");
+            $namauser = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+
+            $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j, Y, H:i:s") . PHP_EOL .
+                "Attempt: " . ("Success Export Accrual") . PHP_EOL .
+                "User: " . $namauser['nama'] . PHP_EOL .
+                "Aksi: " . ('Operasional Accrual') . PHP_EOL .
+                "-------------------------" . PHP_EOL;
+            //-
+            file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
+
+            $this->export($dataTable, $dataBulan);
+        } else {
+
+        }
+    }
+    public function export($dataTable, $dataBulan)
+    {
+        $table_result = $dataTable;
+        $bulan = $dataBulan;
+
+        $spreadsheet = new Spreadsheet;
+
+        $spreadsheet->setActiveSheetIndex(0)
+            ->setCellValue('A1', 'No')
+            ->setCellValue('B1', 'Nomor Sertifikat')
+            ->setCellValue('C1', 'Nama Terjamin')
+            ->setCellValue('D1', 'Tanggal Akad')
+            ->setCellValue('E1', 'Jangka Waktu(Bulan)')
+            ->setCellValue('F1', 'Tanggal Selesai')
+            ->setCellValue('G1', 'Premi')
+            ->setCellValue('H1', 'Angsuran / Bulan')
+        // looping abcnya aja angkanya sih engga
+            ->setcellValue('I1', '2021-Jan');
+
+        $kolom = 2;
+        $nomor = 1;
+        if (!is_array($table_result || is_array($table_result))) {
+
+        }
+    }
 }
 
 ?>
