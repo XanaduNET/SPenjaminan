@@ -22,20 +22,15 @@
                                       <th>Angsuran / Bulan </th>
                                       <?php
 $tglawal = date('Y-01');
-$flagtanggal = date('2095-09');
+
 foreach ($bulanmax as $u) {
 
-    for ($i = 0; $i <= $u->DJPDjangkawaktu && $flagtanggal = date('Y-M', strtotime($u->DJPDtanggalakhir)); $i++) {?>
-
-                                      <th> <?php
-
+    for ($i = 0; $i <= $u->DJPDjangkawaktu; $i++) {
         $tglakhir = date('Y-M', strtotime('+ ' . $i . 'month', strtotime($tglawal)));
-        echo $tglakhir;
+        ?><th>  </th><?php
+}
 
-        $flagtanggal = $tglakhir;}
-
-}?></th>
-
+}?>
                                   </tr>
                               </thead>
                               <tbody class="text-dark">
