@@ -214,16 +214,17 @@ class Accrual_baru extends CI_Controller
         $spreadsheet = new Spreadsheet;
 
         $spreadsheet->setActiveSheetIndex(0)->setCellValue('A1', 'No');
-        $spreadsheet->setActiveSheetIndex(0)->setCellValue('B1', 'Nomor Sertifikat');
-        $spreadsheet->setActiveSheetIndex(0)->setCellValue('C1', 'Nama Terjamin');
-        $spreadsheet->setActiveSheetIndex(0)->setCellValue('D1', 'Tanggal Akad');
-        $spreadsheet->setActiveSheetIndex(0)->setCellValue('E1', 'Jangka Waktu(Bulan)');
-        $spreadsheet->setActiveSheetIndex(0)->setCellValue('F1', 'Tanggal Selesai');
-        $spreadsheet->setActiveSheetIndex(0)->setCellValue('G1', 'Premi');
-        $spreadsheet->setActiveSheetIndex(0)->setCellValue('H1', 'Angsuran / Bulan');
+        $spreadsheet->setActiveSheetIndex(0)->setCellValue('B1', 'Bank x');
+        $spreadsheet->setActiveSheetIndex(0)->setCellValue('C1', 'Nomor Sertifikat');
+        $spreadsheet->setActiveSheetIndex(0)->setCellValue('D1', 'Nama Terjamin');
+        $spreadsheet->setActiveSheetIndex(0)->setCellValue('E1', 'Tanggal Akad');
+        $spreadsheet->setActiveSheetIndex(0)->setCellValue('F1', 'Jangka Waktu (Bulan)');
+        $spreadsheet->setActiveSheetIndex(0)->setCellValue('G1', 'Tanggal Selesai');
+        $spreadsheet->setActiveSheetIndex(0)->setCellValue('H1', 'Premi');
+        $spreadsheet->setActiveSheetIndex(0)->setCellValue('I1', 'Angsuran / Bulan');
         // looping abcnya aja angkanya sih engga
         $tglawal = date('Y-01');
-        $alphabet = "I";
+        $alphabet = "J";
         foreach ($bulanmax as $u) {
             $date1 = $tglawal;
             $date2 = $u->DJPDtanggalakhir;
@@ -254,9 +255,18 @@ class Accrual_baru extends CI_Controller
 
         $kolom = 2;
         $nomor = 1;
+        $no = 1;
         if (!is_array($table_result || is_array($table_result))) {
             foreach ($table_result as $u) {
-
+                $spreadsheet->setActiveSheetIndex(0)->setCellValue('A' . $kolom, $nomor);
+                $spreadsheet->setActiveSheetIndex(0)->setCellValue('B' . $kolom, $u->PPnama);
+                $spreadsheet->setActiveSheetIndex(0)->setCellValue('C' . $kolom, $u->DJPnoreg);
+                $spreadsheet->setActiveSheetIndex(0)->setCellValue('D' . $kolom, $u->TRJMnama);
+                $spreadsheet->setActiveSheetIndex(0)->setCellValue('E' . $kolom, $u->DJPDtanggalakad);
+                $spreadsheet->setActiveSheetIndex(0)->setCellValue('F' . $kolom, $u->DJPDjangkawaktu);
+                $spreadsheet->setActiveSheetIndex(0)->setCellValue('G' . $kolom, $u->DJPDtanggalakhir);
+                $spreadsheet->setActiveSheetIndex(0)->setCellValue('H' . $kolom, "Rp." . number_format($u->DJPDimbaljasa, 0, ".", "."));
+                $spreadsheet->setActiveSheetIndex(0)->setCellValue('I' . $kolom, "Rp." . number_format($angsuran = (int) ($u->DJPDimbaljasa / $u->DJPDjangkawaktu), 0, ".", "."));
             }
         }
     }
