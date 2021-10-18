@@ -209,26 +209,55 @@ class Accrual_baru extends CI_Controller
     public function export($dataTable, $dataBulan)
     {
         $table_result = $dataTable;
-        $bulan = $dataBulan;
+        $bulanmax = $dataBulan;
 
         $spreadsheet = new Spreadsheet;
 
-        $spreadsheet->setActiveSheetIndex(0)
-            ->setCellValue('A1', 'No')
-            ->setCellValue('B1', 'Nomor Sertifikat')
-            ->setCellValue('C1', 'Nama Terjamin')
-            ->setCellValue('D1', 'Tanggal Akad')
-            ->setCellValue('E1', 'Jangka Waktu(Bulan)')
-            ->setCellValue('F1', 'Tanggal Selesai')
-            ->setCellValue('G1', 'Premi')
-            ->setCellValue('H1', 'Angsuran / Bulan')
+        $spreadsheet->setActiveSheetIndex(0)->setCellValue('A1', 'No');
+        $spreadsheet->setActiveSheetIndex(0)->setCellValue('B1', 'Nomor Sertifikat');
+        $spreadsheet->setActiveSheetIndex(0)->setCellValue('C1', 'Nama Terjamin');
+        $spreadsheet->setActiveSheetIndex(0)->setCellValue('D1', 'Tanggal Akad');
+        $spreadsheet->setActiveSheetIndex(0)->setCellValue('E1', 'Jangka Waktu(Bulan)');
+        $spreadsheet->setActiveSheetIndex(0)->setCellValue('F1', 'Tanggal Selesai');
+        $spreadsheet->setActiveSheetIndex(0)->setCellValue('G1', 'Premi');
+        $spreadsheet->setActiveSheetIndex(0)->setCellValue('H1', 'Angsuran / Bulan');
         // looping abcnya aja angkanya sih engga
-            ->setcellValue('I1', '2021-Jan');
+        $tglawal = date('Y-01');
+        $alphabet = "I";
+        foreach ($bulanmax as $u) {
+            $date1 = $tglawal;
+            $date2 = $u->DJPDtanggalakhir;
+
+            $ts1 = strtotime($date1);
+            $ts2 = strtotime($date2);
+
+            $year1 = date('Y', $ts1);
+            $year2 = date('Y', $ts2);
+
+            $month1 = date('m', $ts1);
+            $month2 = date('m', $ts2);
+
+            $diff = (($year2 - $year1) * 12) + ($month2 - $month1);
+
+            $flagtanggal = $u->DJPDjangkawaktu + $diff;
+
+            for ($i = 0; $i <= $flagtanggal; $i++) {
+
+                $tglakhir = date('Y-M', strtotime('+ ' . $i . 'month', strtotime($tglawal)));
+
+                $spreadsheet->setActiveSheetIndex(0)->setcellValue("$alphabet'1'", $tglakhir);
+                ++$alphabet;
+            }
+
+        }
+        // end looping
 
         $kolom = 2;
         $nomor = 1;
         if (!is_array($table_result || is_array($table_result))) {
+            foreach ($table_result as $u) {
 
+            }
         }
     }
 }
