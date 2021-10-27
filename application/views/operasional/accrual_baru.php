@@ -3,6 +3,17 @@
           <h1 class="h3 mb-4 text-gray-800"><?=$title;?></h1>
 
 
+          <div><?=validation_errors()?></div>
+          <div><?=$this->session->flashdata('error')?></div>
+          <?=form_open('Accrual_baru/triggeredExport', ['class' => 'form-horizontal'])?>
+          <form role="form" class="form-horizontal">
+              <input type="hidden" id="table" name="table" value="<?php echo htmlspecialchars(json_encode($table)) ?>" />
+              <input type="hidden" id="bulan" name="bulan" value="<?php echo htmlspecialchars(json_encode($bulanmax)) ?>" />
+              <input type="hidden" id="click" name="click" value='1' />
+
+              <input type="submit" class="btn btn-primary" id="export" name="export" value="EXPORT" />
+          </form>
+
           <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
               <div class="card">
                   <div class="card-body">
@@ -22,7 +33,7 @@
                                       <th>Angsuran / Bulan </th>
                                       <?php
 $tglawal = date('Y-01');
-        
+
 foreach ($bulanmax as $u) {
 
     $date1 = $tglawal;

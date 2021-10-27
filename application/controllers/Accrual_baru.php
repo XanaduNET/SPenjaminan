@@ -4,6 +4,9 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 require './application/third_party/phpoffice/vendor/autoload.php';
 
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+
 class Accrual_baru extends CI_Controller
 {
 
@@ -17,7 +20,7 @@ class Accrual_baru extends CI_Controller
 
     public function index()
     {
-
+        $clickEvent = 0;
         $data['title'] = 'Accrual';
         $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
         $data['gpp'] = $this->Model_table_accrual->getGPP();
@@ -174,6 +177,7 @@ class Accrual_baru extends CI_Controller
         $this->load->view('operasional/accrual_baru', $data);
         $this->load->view('templates/footer', $data);
     }
+
     public function triggeredExport()
     {
         if ($this->input->post('click') == 1) {
@@ -186,20 +190,9 @@ class Accrual_baru extends CI_Controller
             $clickEvent = 0;
             $data = $this->input->post('table');
             $data2 = $this->input->post('bulan');
+
             $dataTable = json_decode(htmlspecialchars_decode($data, true));
             $dataBulan = json_decode(htmlspecialchars_decode($data2, true));
-
-            $date = date("d-m-Y");
-            $bulan = date("m");
-            $namauser = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
-
-            $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j, Y, H:i:s") . PHP_EOL .
-                "Attempt: " . ("Success Export Accrual") . PHP_EOL .
-                "User: " . $namauser['nama'] . PHP_EOL .
-                "Aksi: " . ('Operasional Accrual') . PHP_EOL .
-                "-------------------------" . PHP_EOL;
-            //-
-            file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
 
             $this->export($dataTable, $dataBulan);
         } else {
@@ -210,22 +203,28 @@ class Accrual_baru extends CI_Controller
     {
         $table_result = $dataTable;
         $bulanmax = $dataBulan;
-
-        $spreadsheet = new Spreadsheet;
-
-        $spreadsheet->setActiveSheetIndex(0)->setCellValue('A1', 'No');
-        $spreadsheet->setActiveSheetIndex(0)->setCellValue('B1', 'Bank x');
-        $spreadsheet->setActiveSheetIndex(0)->setCellValue('C1', 'Nomor Sertifikat');
-        $spreadsheet->setActiveSheetIndex(0)->setCellValue('D1', 'Nama Terjamin');
-        $spreadsheet->setActiveSheetIndex(0)->setCellValue('E1', 'Tanggal Akad');
-        $spreadsheet->setActiveSheetIndex(0)->setCellValue('F1', 'Jangka Waktu (Bulan)');
-        $spreadsheet->setActiveSheetIndex(0)->setCellValue('G1', 'Tanggal Selesai');
-        $spreadsheet->setActiveSheetIndex(0)->setCellValue('H1', 'Premi');
-        $spreadsheet->setActiveSheetIndex(0)->setCellValue('I1', 'Angsuran / Bulan');
-        // looping abcnya aja angkanya sih engga
         $tglawal = date('Y-01');
-        $alphabet = "J";
+        $alphabet = 'J';
+        $alphabet2 = 'J';
+        $spreadsheet = new Spreadsheet;
+        $nomor = 1;
+        $kolom = 2;
+
+        $spreadsheet->setActiveSheetIndex(0)
+            ->setCellValue('A1', 'No')
+            ->setCellValue('B1', 'Bank x')
+            ->setCellValue('C1', 'Nomor Sertifikat')
+            ->setCellValue('D1', 'Nama Terjamin')
+            ->setCellValue('E1', 'Tanggal Akad')
+            ->setCellValue('F1', 'Jangka Waktu (Bulan)')
+            ->setCellValue('G1', 'Tanggal Selesai')
+            ->setCellValue('H1', 'Premi')
+            ->setCellValue('I1', 'Angsuran / Bulan');
+
+        // looping abcnya aja angkanya sih engga
+
         foreach ($bulanmax as $u) {
+
             $date1 = $tglawal;
             $date2 = $u->DJPDtanggalakhir;
 
@@ -242,34 +241,55 @@ class Accrual_baru extends CI_Controller
 
             $flagtanggal = $u->DJPDjangkawaktu + $diff;
 
-            for ($i = 0; $i <= $flagtanggal; $i++) {
-
+            for ($i = 0; $i <= $flagtanggal; $i++, ++$alphabet) {
                 $tglakhir = date('Y-M', strtotime('+ ' . $i . 'month', strtotime($tglawal)));
-
-                $spreadsheet->setActiveSheetIndex(0)->setcellValue("$alphabet'1'", $tglakhir);
-                ++$alphabet;
+                $spreadsheet->setActiveSheetIndex(0)->setcellValue($alphabet . "1", $tglakhir);
             }
 
         }
+
         // end looping
 
-        $kolom = 2;
-        $nomor = 1;
-        $no = 1;
-        if (!is_array($table_result || is_array($table_result))) {
-            foreach ($table_result as $u) {
-                $spreadsheet->setActiveSheetIndex(0)->setCellValue('A' . $kolom, $nomor);
-                $spreadsheet->setActiveSheetIndex(0)->setCellValue('B' . $kolom, $u->PPnama);
-                $spreadsheet->setActiveSheetIndex(0)->setCellValue('C' . $kolom, $u->DJPnoreg);
-                $spreadsheet->setActiveSheetIndex(0)->setCellValue('D' . $kolom, $u->TRJMnama);
-                $spreadsheet->setActiveSheetIndex(0)->setCellValue('E' . $kolom, $u->DJPDtanggalakad);
-                $spreadsheet->setActiveSheetIndex(0)->setCellValue('F' . $kolom, $u->DJPDjangkawaktu);
-                $spreadsheet->setActiveSheetIndex(0)->setCellValue('G' . $kolom, $u->DJPDtanggalakhir);
-                $spreadsheet->setActiveSheetIndex(0)->setCellValue('H' . $kolom, "Rp." . number_format($u->DJPDimbaljasa, 0, ".", "."));
-                $spreadsheet->setActiveSheetIndex(0)->setCellValue('I' . $kolom, "Rp." . number_format($angsuran = (int) ($u->DJPDimbaljasa / $u->DJPDjangkawaktu), 0, ".", "."));
+        foreach ($table_result as $u) {
+            $spreadsheet->setActiveSheetIndex(0)
+                ->setCellValue('A' . $kolom, $nomor)
+                ->setCellValue('B' . $kolom, $u->PPnama)
+                ->setCellValue('C' . $kolom, $u->DJPnoreg)
+                ->setCellValue('D' . $kolom, $u->TRJMnama)
+                ->setCellValue('E' . $kolom, $u->DJPDtanggalakad)
+                ->setCellValue('F' . $kolom, $u->DJPDjangkawaktu)
+                ->setCellValue('G' . $kolom, $u->DJPDtanggalakhir)
+                ->setCellValue('H' . $kolom, "Rp." . number_format($u->DJPDimbaljasa, 0, ".", "."))
+                ->setCellValue('I' . $kolom, "Rp." . number_format($angsuran = (int) ($u->DJPDimbaljasa / $u->DJPDjangkawaktu), 0, ".", "."));
+
+            for ($i = 0; $i <= $u->DJPDjangkawaktu; $i++, ++$alphabet2) {
+                $time = strtotime($u->DJPtanggalcetak);
+                $newtime = date('Y-M', $time);
+                $tglakhir = date('Y-M', strtotime('+ ' . $i . 'month', strtotime($tglawal)));
+
+                if ($newtime == $tglakhir) {
+
+                    for ($i = 0; $i <= $u->DJPDjangkawaktu; $i++) {
+                        $spreadsheet->setActiveSheetIndex(0)->setCellValue($alphabet2 . $kolom, "Rp." . number_format($angsuran = (int) ($u->DJPDimbaljasa / $u->DJPDjangkawaktu), 0, ".", "."));
+                        $kolom++;
+
+                    }
+                } else {
+                    $spreadsheet->setActiveSheetIndex(0)->setCellValue($alphabet2 . $kolom, "--");
+                    $kolom++;
+                }
             }
+            $kolom++;
+            $nomor++;
+            $writer = new Xlsx($spreadsheet);
+            header('Content-Type: application/vnd.ms-excel');
+            header('Content-Disposition: attachment;filename="IJPAccrual.xls"');
+            header('Cache-Control: max-age=0');
+            $writer->save('php://output');
         }
+
     }
+
 }
 
 ?>

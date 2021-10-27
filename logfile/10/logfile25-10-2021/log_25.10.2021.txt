@@ -1,0 +1,80 @@
+User: ::1 - October 25, 2021, 08:34:37
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - October 25,2021, 08:37:12
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - October 25,2021, 08:37:16
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - October 25,2021, 08:37:21
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - October 25, 2021, 08:37:25
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------
+User: ::1 - October 25,2021, 08:42:24
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - October 25, 2021, 08:42:25
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------
+User: ::1 - October 25, 2021, 10:52:51
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - October 25,2021, 10:52:52
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - October 25, 2021, 10:52:53
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------
+User: ::1 - October 25, 2021, 10:54:42
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------
+User: ::1 - October 25, 2021, 10:55:47
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------
+User: ::1 - October 25, 2021, 10:56:30
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------
+User: ::1 - October 25,2021, 13:47:51
+Attempt: Success Masuk Halaman
+User: 
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - October 25, 2021, 13:47:56
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - October 25, 2021, 13:48:10
+Attempt: Success Export Operasional
+User: Akbar
+Aksi: Operasional Operasional
+-------------------------
