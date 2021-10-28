@@ -1,3 +1,7 @@
+<?php
+header('Content-disposition: attachment; filename=SP2KProduktif.pdf');
+header('Content-type: application/pdf');
+?>
 <html lang="en">
 
     <head>
@@ -232,3 +236,8 @@ function Terbilang($satuan)
 </span>
 <?php }?>
 </div>
+
+<?php
+$output = $dompdf->output();
+file_put_contents("file.pdf", $output);
+?>

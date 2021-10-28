@@ -214,7 +214,11 @@ class Direktur extends CI_Controller
             "-------------------------" . PHP_EOL;
         //-
         file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
-        redirect('Direktur/');
+        if ($CBCPkeputusan == 4) {
+            echo "<a href=cbcpsp2k/$CBCPid target=_blank>DOWNLOAD </a>";
+        } else {
+            redirect('Direktur/');
+        }
     }
 
     public function cbclist()

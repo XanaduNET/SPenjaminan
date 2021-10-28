@@ -86,7 +86,9 @@ $tglawal = date('Y-01');
 
             for ($i = 0; $i <= $u->DJPDjangkawaktu; $i++) {?>
                                     <td><?php echo "Rp." . number_format($angsuran, 0, ".", "."); ?></td>
-                                    <?php }} else {
+                                    <?php }
+                                    } 
+                                    else {
             ?><td bgcolor="#FFC0CB"> -- </td> <?php
 
         }}?>

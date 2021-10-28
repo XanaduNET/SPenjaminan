@@ -76,6 +76,7 @@ class Model_direktur extends CI_Model
     {
         if ($CBCPkeputusan == 4) {
             $CBCPstatus = 4;
+            
         } elseif ($CBCkeputusan == 5) {
             $CBCPstatus = 5;
         } else {

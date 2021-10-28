@@ -175,9 +175,8 @@ class Accrual_baru extends CI_Controller
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
         $this->load->view('operasional/accrual_baru', $data);
-        $this->load->view('templates/footer', $data);
+        $this->load->view('templates/footer');
     }
-
     public function triggeredExport()
     {
         if ($this->input->post('click') == 1) {
@@ -190,9 +189,20 @@ class Accrual_baru extends CI_Controller
             $clickEvent = 0;
             $data = $this->input->post('table');
             $data2 = $this->input->post('bulan');
-
             $dataTable = json_decode(htmlspecialchars_decode($data, true));
             $dataBulan = json_decode(htmlspecialchars_decode($data2, true));
+
+            $date = date("d-m-Y");
+            $bulan = date("m");
+            $namauser = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+
+            $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j, Y, H:i:s") . PHP_EOL .
+                "Attempt: " . ("Success Export Accrual") . PHP_EOL .
+                "User: " . $namauser['nama'] . PHP_EOL .
+                "Aksi: " . ('Operasional Accrual') . PHP_EOL .
+                "-------------------------" . PHP_EOL;
+            //-
+            file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
 
             $this->export($dataTable, $dataBulan);
         } else {
@@ -262,7 +272,7 @@ class Accrual_baru extends CI_Controller
                 ->setCellValue('H' . $kolom, "Rp." . number_format($u->DJPDimbaljasa, 0, ".", "."))
                 ->setCellValue('I' . $kolom, "Rp." . number_format($angsuran = (int) ($u->DJPDimbaljasa / $u->DJPDjangkawaktu), 0, ".", "."));
 
-            for ($i = 0; $i <= $u->DJPDjangkawaktu; $i++, ++$alphabet2) {
+            for ($i = 0; $i <= $u->DJPDjangkawaktu; $i++) {
                 $time = strtotime($u->DJPtanggalcetak);
                 $newtime = date('Y-M', $time);
                 $tglakhir = date('Y-M', strtotime('+ ' . $i . 'month', strtotime($tglawal)));
@@ -271,22 +281,35 @@ class Accrual_baru extends CI_Controller
 
                     for ($i = 0; $i <= $u->DJPDjangkawaktu; $i++) {
                         $spreadsheet->setActiveSheetIndex(0)->setCellValue($alphabet2 . $kolom, "Rp." . number_format($angsuran = (int) ($u->DJPDimbaljasa / $u->DJPDjangkawaktu), 0, ".", "."));
-                        $kolom++;
 
+                        ++$alphabet2;
                     }
                 } else {
-                    $spreadsheet->setActiveSheetIndex(0)->setCellValue($alphabet2 . $kolom, "--");
-                    $kolom++;
+                    $spreadsheet->setActiveSheetIndex(0)->setCellValue($alphabet2 . $kolom, "-");
+
+                    $cells = $alphabet2 . $kolom;
+                    $spreadsheet
+                        ->getActiveSheet()
+                        ->getStyle($cells)
+                        ->getFill()
+                        ->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)
+                        ->getStartColor('FFCCCC')
+                        ->setARGB('FFCCCC');
+
+                    ++$alphabet2;
                 }
+
             }
             $kolom++;
             $nomor++;
-            $writer = new Xlsx($spreadsheet);
-            header('Content-Type: application/vnd.ms-excel');
-            header('Content-Disposition: attachment;filename="IJPAccrual.xls"');
-            header('Cache-Control: max-age=0');
-            $writer->save('php://output');
+            $alphabet2 = 'J';
         }
+        $writer = new Xlsx($spreadsheet);
+        ob_end_clean();
+        header('Content-Type: application/vnd.ms-excel');
+        header('Content-Disposition: attachment;filename="Hello.xls"');
+        header('Cache-Control: max-age=0');
+        $writer->save('php://output');
 
     }
 

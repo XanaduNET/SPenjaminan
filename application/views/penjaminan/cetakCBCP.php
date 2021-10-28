@@ -1058,5 +1058,104 @@ Dari hasil <i> On The Desk </i> (OTD), maka nilai dasar agunan calon terjamin di
 </tr>
 </table>
 <!-- paragraf 11 end -->
+
+<!-- paragraf 12 -->
+<div class="page_break"></div>
+<table align="center" cellspacing="0" style="width: 50%; text-align: center; ">
+<tr>
+
+                <td>
+                    <U><span style="font-weight: bold; font-size: 11pt;  color: #000000"><br><br>LEMBAR PERSETUJUAN</span></U><br>
+
+                    <span style="font-size: 11pt;  color: #000000">
+                    <?php
+foreach ($table->result() as $u) {
+    echo $u->CBCPnomormemo;
+}?>
+<br>
+<br>
+<br>
+<br>
+<br>
+</span>
+</td>
+        </tr>
+
+</table>
+
+<!-- paragraf 12 end -->
+
+<!-- paragraf 13 -->
+
+<table frame="box" cellspacing="0" style="width: 100%; text-align:left;" >
+<tr>
+<td width="100%"> <b> KOMENTAR MANAJEMEN RESIKO</b> </td>
+<td width="50%"> </td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td><?php
+foreach ($table->result() as $u) {
+    echo $u->CBCPmr;
+}?> </td>
+<td height="200px"></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center">Ttd</td>
+</tr>
+</table >
+<!-- paragraf 13 end -->
+<br><br><br>
+<!-- paragraf 14 -->
+
+<table frame="box" cellspacing="0" style="width: 100%; text-align:left;" >
+<tr>
+<td width="100%"> <b>KOMENTAR LEGAL</b> </td>
+<td width="50%"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td><?php
+foreach ($table->result() as $u) {
+    echo $u->CBCPlegal;
+}?> </td>
+<td height="200px"></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center">Ttd</td>
+</tr>
+</table >
+<!-- paragraf 14 end -->
+<br><br><br>
+<!-- paragraf 14 -->
+
+<table frame="box" cellspacing="0" style="width: 100%; text-align:left;" >
+<tr>
+<td width="100%"> <b>DIREKSI (SETUJU/TIDAK SETUJU)</b> </td>
+<td width="50%"></td>
+<td width="100%"></td>
+</tr>
+<tr>
+<td><?php
+foreach ($table->result() as $u) {
+    echo $u->CBCPdirektur;
+}?> </td>
+<td height="200px"></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td align="center">Ttd</td>
+</tr>
+</table >
+<!-- paragraf 14 end -->
+
     </body>
 </html>
