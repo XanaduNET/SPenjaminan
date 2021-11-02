@@ -37,11 +37,12 @@ class Direktur extends CI_Controller
         $data['subrogasi'] = $this->Model_direktur->ambilsubrogasi()->result_array();
         $data['penjaminan'] = $this->Model_direktur->ambilpenjaminan()->result_array();
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar', $data);
-        $this->load->view('templates/topbar', $data);
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
         $this->load->view('direktur/beranda', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('template/footer');
     }
 
     public function casebycase()
@@ -51,11 +52,12 @@ class Direktur extends CI_Controller
         $data['role'] = $this->db->get('user_role')->result_array();
         $data['title'] = 'Case By Case';
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar', $data);
-        $this->load->view('templates/topbar', $data);
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
         $this->load->view('direktur/cbc', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('template/footer');
     }
 
     public function casebycaseproduktif()
@@ -66,11 +68,12 @@ class Direktur extends CI_Controller
         $data['title'] = 'Case By Case';
         $data['cbcp'] = $this->Model_legal->getCBCP();
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar', $data);
-        $this->load->view('templates/topbar', $data);
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
         $this->load->view('legal/cbcp', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('template/footer');
     }
 
     public function cbcapprove()
@@ -82,11 +85,12 @@ class Direktur extends CI_Controller
         $data['cbc'] = $this->Model_direktur->getCBC();
         $data['cbcp'] = $this->Model_direktur->getCBCP();
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar', $data);
-        $this->load->view('templates/topbar', $data);
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
         $this->load->view('direktur/cbcapprove', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('template/footer');
     }
 
     public function cbcPDF()
@@ -154,11 +158,12 @@ class Direktur extends CI_Controller
         $data['title'] = 'Case By Case';
         $data['cbc'] = $this->Model_direktur->getCBC();
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar', $data);
-        $this->load->view('templates/topbar', $data);
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
         $this->load->view("direktur/cbcdetail", $data);
-        $this->load->view('templates/footer');
+        $this->load->view('template/footer');
     }
     public function cbcpdetail()
     {
@@ -168,11 +173,12 @@ class Direktur extends CI_Controller
         $data['title'] = 'Case By Case';
         $data['cbcp'] = $this->Model_direktur->getCBCP();
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar', $data);
-        $this->load->view('templates/topbar', $data);
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
         $this->load->view("direktur/cbcpdetail", $data);
-        $this->load->view('templates/footer');
+        $this->load->view('template/footer');
     }
 
     public function inputkomentar()
@@ -214,11 +220,7 @@ class Direktur extends CI_Controller
             "-------------------------" . PHP_EOL;
         //-
         file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
-        if ($CBCPkeputusan == 4) {
-            echo "<a href=cbcpsp2k/$CBCPid target=_blank>DOWNLOAD </a>";
-        } else {
-            redirect('Direktur/');
-        }
+        redirect('Direktur/');
     }
 
     public function cbclist()
@@ -231,11 +233,12 @@ class Direktur extends CI_Controller
         //untuk dapatin cbcp semuanya dari Model_direktur
         $data['cbcp'] = $this->Model_direktur->getCBCP();
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar', $data);
-        $this->load->view('templates/topbar', $data);
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
         $this->load->view('direktur/cbclist', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('template/footer');
     }
 
     public function cbcsp2k()

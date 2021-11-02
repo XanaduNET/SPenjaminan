@@ -1,14 +1,9 @@
-<div id="content-wrapper" class="d-flex flex-column">
-    <div id="content">
-        <div class="container-fluid">
-            <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Input Penjaminan</h1>
-                <!--  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
-            </div>
+<div class="mobile-menu-overlay"></div>
 
-            <!-- ISI KONTEN -->
-
+<div class="container-fluid">
+    <div class="main-container">
+        <h1 class="h3 mb-4 text-gray-800"><?=$title;?></h1>
+        <div>
             <form id="formnasabah" method="post">
                 <div class="card-body">
                     <div class="container-fluid">
@@ -39,34 +34,34 @@
                                             <th class="col-md-2">Tujuan Kredit</th>
                                             <th class="col-md-2">Jenis Agunan</th>
                                             <th class="col-md-2">Cara Pengikat</th>
-                                            <th colspan ="2" class="col-md-2">Nilai Transaksi</th>
+                                            <th colspan="2" class="col-md-2">Nilai Transaksi</th>
                                             <th class="col-md-2">Objek Penjaminan</th>
                                             <th class="col-md-2">Sektor Usaha</th>
                                         </tr>
                                         <th class="col-md-2"></th>
-                                            <th class="col-md-2"></th>
-                                            <th class="col-md-2"></th>
-                                            <th class="col-md-2"></th>
-                                            <th class="col-md-2"></th>
-                                            <th class="col-md-2"></th>
-                                            <th class="col-md-2"></th>
-                                            <th class="col-md-2"></th>
-                                            <th class="col-md-2"></th>
-                                            <th class="col-md-2"></th>
-                                            <th class="col-md-2"></th>
-                                            <th class="col-md-2"></th>
-                                            <th class="col-md-2"></th>
-                                            <th class="col-md-2"></th>
-                                            <th class="col-md-2"></th>
-                                            <th class="col-md-2"></th>
-                                            <th class="col-md-2"></th>
-                                            <th class="col-md-2"></th>
-                                            <th class="col-md-2"></th>
-                                            <th class="col-md-2"></th>
-                                            <th class="col-md-2">Nilai Pasar</th>
-                                            <th class="col-md-2">Nilai Likuidasi</th>
+                                        <th class="col-md-2"></th>
+                                        <th class="col-md-2"></th>
+                                        <th class="col-md-2"></th>
+                                        <th class="col-md-2"></th>
+                                        <th class="col-md-2"></th>
+                                        <th class="col-md-2"></th>
+                                        <th class="col-md-2"></th>
+                                        <th class="col-md-2"></th>
+                                        <th class="col-md-2"></th>
+                                        <th class="col-md-2"></th>
+                                        <th class="col-md-2"></th>
+                                        <th class="col-md-2"></th>
+                                        <th class="col-md-2"></th>
+                                        <th class="col-md-2"></th>
+                                        <th class="col-md-2"></th>
+                                        <th class="col-md-2"></th>
+                                        <th class="col-md-2"></th>
+                                        <th class="col-md-2"></th>
+                                        <th class="col-md-2"></th>
+                                        <th class="col-md-2">Nilai Pasar</th>
+                                        <th class="col-md-2">Nilai Likuidasi</th>
 
-                                            <th class="col-md-2"></th>
+                                        <th class="col-md-2"></th>
                                         <tr>
 
                                         </tr>
@@ -87,16 +82,18 @@
                                                     class="form-control" value="<?php echo $this->uri->segment(3) ?> "
                                                     readonly>
 
-                                                <td><select id="PKRJid" name="PKRJid[]"/>
-                                                        <option selected="selected">--Pilih--</option>
-                                                        <?php
+                                                <td><select id="PKRJid" name="PKRJid[]" />
+                                                    <option selected="selected">--Pilih--</option>
+                                                    <?php
 
 foreach ($ambilpkrj as $row) {
-    echo '<option value="' . $row->PKRJid . '">' . $row->PKRJnama . '</option>';
+	echo '<option value="' . $row->PKRJid . '">' . $row->PKRJnama . '</option>';
 }
-?>   <div id="loading" style="margin-top: 15px;">
-<img src="../img/loading.gif" width="18"> <small>Loading...</small>
-</div></td>
+?> <div id="loading" style="margin-top: 15px;">
+                                                        <img src="../img/loading.gif" width="18">
+                                                        <small>Loading...</small>
+                                                    </div>
+                                                </td>
 
                                                 <td><input type="text" id="DJPDnoakad" name="DJPDnoakad[]"></td>
                                                 <td><input type="date" id="DJPDtanggalakad" name="DJPDtanggalakad[]"
@@ -119,14 +116,17 @@ foreach ($ambilpkrj as $row) {
                                                 <td><input type="text" id="DJPDtujuankredit" name="DJPDtujuankredit[]">
                                                 </td>
 
-                                                 <td><input type="text" id="DJPDjenisagunan" name="DJPDjenisagunan[]"></td>
-                                                <td><input type="text" id="DJPDcarapengikatan" name="DJPDcarapengikatan[]"></td>
+                                                <td><input type="text" id="DJPDjenisagunan" name="DJPDjenisagunan[]">
+                                                </td>
+                                                <td><input type="text" id="DJPDcarapengikatan"
+                                                        name="DJPDcarapengikatan[]"></td>
                                                 <td><input type="text" id="DJPDnilaitransaksipasar"
                                                         name="DJPDnilaitransaksipasar[]"></td>
                                                 <td><input type="text" id="DJPDnilaitransaksilikuidasi"
                                                         name="DJPDnilaitransaksilikuidasi[]"></td>
-                                                        <td><input type="text" id="DJPDsu" name="DJPDsu[]"></td>
-                                                        <td><input type="text" id="DJPDobjekpenjaminan" name="DJPDobjekpenjaminan[]"></td>
+                                                <td><input type="text" id="DJPDsu" name="DJPDsu[]"></td>
+                                                <td><input type="text" id="DJPDobjekpenjaminan"
+                                                        name="DJPDobjekpenjaminan[]"></td>
 
                                             </tr>
                                         </div>
@@ -136,8 +136,8 @@ foreach ($ambilpkrj as $row) {
                             </div>
                             <div class="card-footer">
 
-                            <?php if ($this->uri->segment(3) == 2 || $this->uri->segment(3) == 3) {
-    //
+                                <?php if ($this->uri->segment(3) == 2 || $this->uri->segment(3) == 3) {
+	//
 } else {?>
                                 <button type="button" name="add" id="add" class="btn btn-success">Add More</button>
                                 <?php }?>
@@ -219,8 +219,8 @@ foreach ($ambilpkrj as $row) {
 
                                     <div class="form-group row" style="text-align:right">
 
-                                        <label class="col-md-8"> <input type="checkbox" name="check_feebank" id="check_feebank"
-                                                alt="Checkbox" value="feebank"> FEE BANK</label>
+                                        <label class="col-md-8"> <input type="checkbox" name="check_feebank"
+                                                id="check_feebank" alt="Checkbox" value="feebank"> FEE BANK</label>
                                         <div class="col md-auto">
                                             <input style="width: 100%;" type="text" class="form-control" id="DJPfeebank"
                                                 name="DJPfeebank" placeholder="">
@@ -230,8 +230,8 @@ foreach ($ambilpkrj as $row) {
                                     </div>
 
                                     <div class="form-group row" style="text-align:right">
-                                        <label class="col-md-8"><input type="checkbox" name="check_materai" id ="check_materai"
-                                                alt="Checkbox" value="materai"> MATERAI</label>
+                                        <label class="col-md-8"><input type="checkbox" name="check_materai"
+                                                id="check_materai" alt="Checkbox" value="materai"> MATERAI</label>
                                         <div class="col md-auto">
                                             <input style="width: 100%;" type="text" class="form-control"
                                                 id="DJPfeematerai" name="DJPfeematerai" placeholder="" value="0">
@@ -278,38 +278,37 @@ foreach ($ambilpkrj as $row) {
         </div>
     </form>
 
-  <!-- Modal -->
-<div class="modal fade" id="ModalPKRJ" tabindex="-1" role="dialog" aria-labelledby="ModalPKRJLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="ModalPKRJLabel">Tambah Pekerjaan Baru</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form id="formModalPKRJ" method="post">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="PKRJ" name="PKRJ" placeholder="Nama Pekerjaan">
+    <!-- Modal -->
+    <div class="modal fade" id="ModalPKRJ" tabindex="-1" role="dialog" aria-labelledby="ModalPKRJLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="ModalPKRJLabel">Tambah Pekerjaan Baru</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form id="formModalPKRJ" method="post">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="PKRJ" name="PKRJ" placeholder="Nama Pekerjaan">
+                        </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                    <button type="submit" class="btn btn-primary">Simpan</button>
-                </div>
-            </form>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
     <!-- SAMPAI SINI -->
 
 
     <!-- MUNCUL FORM -->
 
     <script>
-
     $(function() {
 
 
@@ -345,30 +344,31 @@ foreach ($ambilpkrj as $row) {
             var DJPDsu = $('#DJPDsu').val();
 
 
-        if(TRJMnama.length == 0 || TRJMalamat.length == 0 || TRJMusia.length == 0 || TRJMsiup.length == 0 || TRJMktp.   wlength == 0 || TRJMnpwp.length == 0 || PKRJid.length == 0 || DJPDnoakad.length == 0 || DJPDtanggalakad.length == 0 || DJPDjangkawaktu.length == 0 || DJPDtanggalawal.length == 0 || DJPDtanggalakhir.length == 0 || DJPDplafondkredit.length == 0 || DJPDnilaipenjaminan.length == 0 || DJPDcoverage.length == 0 || DJPDrate.length == 0 || DJPDimbaljasa.length == 0 || DJPDtujuankredit.length == 0 || DJPDjenisagunan.length == 0 || DJPDcarapengikatan.length == 0 || DJPDnilaitransaksipasar.length == 0 || DJPDnilaitransaksilikuidasi.length == 0 || DJPDsu.length == 0)
-        {
-            alert("Data Tidak Boleh Ada Yang Kosong !!");
-            return false;
-}
-else{
+            if (TRJMnama.length == 0 || TRJMalamat.length == 0 || TRJMusia.length == 0 || TRJMsiup
+                .length == 0 || TRJMktp.wlength == 0 || TRJMnpwp.length == 0 || PKRJid.length == 0 ||
+                DJPDnoakad.length == 0 || DJPDtanggalakad.length == 0 || DJPDjangkawaktu.length == 0 ||
+                DJPDtanggalawal.length == 0 || DJPDtanggalakhir.length == 0 || DJPDplafondkredit
+                .length == 0 || DJPDnilaipenjaminan.length == 0 || DJPDcoverage.length == 0 || DJPDrate
+                .length == 0 || DJPDimbaljasa.length == 0 || DJPDtujuankredit.length == 0 ||
+                DJPDjenisagunan.length == 0 || DJPDcarapengikatan.length == 0 || DJPDnilaitransaksipasar
+                .length == 0 || DJPDnilaitransaksilikuidasi.length == 0 || DJPDsu.length == 0) {
+                alert("Data Tidak Boleh Ada Yang Kosong !!");
+                return false;
+            } else {
 
-    $.ajax({
-                type: "POST",
-                url: "<?=base_url('index.php/Nasabah/storePost');?>",
-                data: data,
-            });
-}
+                $.ajax({
+                    type: "POST",
+                    url: "<?=base_url('index.php/Nasabah/storePost');?>",
+                    data: data,
+                });
+            }
             e.preventDefault();
             alert('Data Telah Berhasil Disimpan!');
 
 
 
-});
-});
-
-
-
-
+        });
+    });
     </script>
 
     <!-- END MUNCUL FORM -->
@@ -381,8 +381,6 @@ else{
 
     <!-- STORE POST TOTAL-->
     <script>
-
-
     $(function() {
         $('#formbiayabiaya').on('submit', function(e) {
 
@@ -391,8 +389,7 @@ else{
                 type: "POST",
                 url: "<?=base_url('index.php/Nasabah/storePostTotal');?>",
                 data: data,
-            });
-            ;
+            });;
             alert('Data Telah Berhasil Disimpan!');
 
 
@@ -423,51 +420,47 @@ else{
                 document.getElementById('DJPnilaipenjaminan').value = data2[0].nilaipenjaminan;
                 document.getElementById('DJPjumlahimbaljasa').value = data2[0].imbaljasa;
                 var DJPjumlahimbaljasarubah = document.getElementById("DJPjumlahimbaljasa");
-DJPjumlahimbaljasarubah.addEventListener("mouseover", function(e) {
-     DJPjumlahimbaljasarubah.value = convertRupiah(this.value);
-});
-DJPjumlahimbaljasarubah.addEventListener('mouseover', function(event) {
-	return isNumberKey(event);
-});
+                DJPjumlahimbaljasarubah.addEventListener("mouseover", function(e) {
+                    DJPjumlahimbaljasarubah.value = convertRupiah(this.value);
+                });
+                DJPjumlahimbaljasarubah.addEventListener('mouseover', function(event) {
+                    return isNumberKey(event);
+                });
                 $imbaljasa = parseInt(data2[0].imbaljasa);
 
-                if( ($("#check_feebank").prop("checked") == true ) && ($("#check_materai").prop("checked") == true)   ){
-                document.getElementById('DJPfeebank').value = data2[0].feebank;
+                if (($("#check_feebank").prop("checked") == true) && ($("#check_materai").prop(
+                        "checked") == true)) {
+                    document.getElementById('DJPfeebank').value = data2[0].feebank;
 
 
-                $feebank = parseInt(data2[0].feebank);
+                    $feebank = parseInt(data2[0].feebank);
 
-                $jumlahfeebank = $imbaljasa * ($feebank / 100);
-
-
-
-                }
-
-                else if ( ($("#check_feebank").prop("checked") == false)  && ($("#check_materai").prop("checked") == true)){
-                $jumlahfeebank = 0;
+                    $jumlahfeebank = $imbaljasa * ($feebank / 100);
 
 
-                document.getElementById('DJPfeebank').value = "0%";
-                document.getElementById('DJPjumlahfeebank').value = 0;
-                }
 
-                else if(($("#check_feebank").prop("checked") == true)  && ($("#check_materai").prop("checked") == false))
-                {
-                document.getElementById('DJPfeematerai').value = 0;
+                } else if (($("#check_feebank").prop("checked") == false) && ($("#check_materai")
+                        .prop("checked") == true)) {
+                    $jumlahfeebank = 0;
 
-                document.getElementById('DJPfeebank').value = data2[0].feebank;
-                $feebank = parseInt(data2[0].feebank);
 
-                $jumlahfeebank = $imbaljasa * ($feebank / 100);
+                    document.getElementById('DJPfeebank').value = "0%";
+                    document.getElementById('DJPjumlahfeebank').value = 0;
+                } else if (($("#check_feebank").prop("checked") == true) && ($("#check_materai")
+                        .prop("checked") == false)) {
+                    document.getElementById('DJPfeematerai').value = 0;
 
-                }
+                    document.getElementById('DJPfeebank').value = data2[0].feebank;
+                    $feebank = parseInt(data2[0].feebank);
 
-                else{
+                    $jumlahfeebank = $imbaljasa * ($feebank / 100);
 
-                document.getElementById('DJPfeematerai').value = 0;
-                $jumlahfeebank = 0;
-                document.getElementById('DJPfeebank').value = "0%";
-                document.getElementById('DJPjumlahfeebank').value = 0;
+                } else {
+
+                    document.getElementById('DJPfeematerai').value = 0;
+                    $jumlahfeebank = 0;
+                    document.getElementById('DJPfeebank').value = "0%";
+                    document.getElementById('DJPjumlahfeebank').value = 0;
                 }
 
 
@@ -515,130 +508,146 @@ DJPjumlahimbaljasarubah.addEventListener('mouseover', function(event) {
                 '" name="DJPDtanggalakhir[]" readonly></td><td><input type="text" id="DJPDplafondkredit' +
                 i +
                 '" name="DJPDplafondkredit[]"></td>   <td><input type="text" id="DJPDcoverage' +
-                i + '" name="DJPDcoverage[]"></td>   <td><input type="text" id="DJPDnilaipenjaminan' +
+                i +
+                '" name="DJPDcoverage[]"></td>   <td><input type="text" id="DJPDnilaipenjaminan' +
                 i +
                 '" name="DJPDnilaipenjaminan[]"></td>  <td><input type="text" id="DJPDrate' + i +
                 '" name="DJPDrate[]"></td> <td><input type="text" id="DJPDimbaljasa' + i +
                 '" name="DJPDimbaljasa[]"></td><td><input type="text" id="DJPDtujuankredit' + i +
-                '" name="DJPDtujuankredit[]"></td> <td><input type="text" id="DJPDjenisagunan"'+
-                i +'"name="DJPDjenisagunan[]"></td>    <td><input type="text" id="DJPDcarapengikatan"'+i+'" name="DJPDcarapengikatan[]"></td>  <td><input type="text" id="DJPDnilaitransaksipasar' +
+                '" name="DJPDtujuankredit[]"></td> <td><input type="text" id="DJPDjenisagunan"' +
+                i +
+                '"name="DJPDjenisagunan[]"></td>    <td><input type="text" id="DJPDcarapengikatan"' +
+                i +
+                '" name="DJPDcarapengikatan[]"></td>  <td><input type="text" id="DJPDnilaitransaksipasar' +
                 i +
                 '" name="DJPDnilaitransaksipasar[]"> <td><input type="text" id="DJPDnilaitransaksilikuidasi' +
-                i +'" name="DJPDnilaitransaksilikuidasi[]" > </td>    <td><input type="text" id="DJPDsu"'+i+'" name="DJPDsu[]"></td> <td><input type="text" id="DJPDobjekpenjaminan"'+i+'" name="DJPDobjekpenjaminan[]"></td><td> <button type="button" name="remove" id="' + i + '" class="btn btn-danger btn_remove">X</button> </td> </tbody>');
+                i +
+                '" name="DJPDnilaitransaksilikuidasi[]" > </td>    <td><input type="text" id="DJPDsu"' +
+                i + '" name="DJPDsu[]"></td> <td><input type="text" id="DJPDobjekpenjaminan"' + i +
+                '" name="DJPDobjekpenjaminan[]"></td><td> <button type="button" name="remove" id="' +
+                i + '" class="btn btn-danger btn_remove">X</button> </td> </tbody>');
 
 
-                var DJPDplafondkreditrubah = document.getElementById("DJPDplafondkredit"+i);
-DJPDplafondkreditrubah.addEventListener("keyup", function(e) {
- DJPDplafondkreditrubah.value = convertRupiah(this.value);
-});
-DJPDplafondkreditrubah.addEventListener('keydown', function(event) {
-	return isNumberKey(event);
-});
-
-var DJPDimbaljasarubah = document.getElementById("DJPDimbaljasa"+i);
-DJPDimbaljasarubah.addEventListener("click", function(e) {
- DJPDimbaljasarubah.value = convertRupiah(this.value);
-});
-DJPDimbaljasa.addEventListener('click', function(event) {
-	return isNumberKey(event);
-});
-
-var DJPDnilaipenjaminanrubah = document.getElementById("DJPDnilaipenjaminan"+i);
-DJPDnilaipenjaminanrubah.addEventListener("click", function(e) {
-    DJPDnilaipenjaminanrubah.value = convertRupiah(this.value);
-});
-DJPDnilaipenjaminanrubah.addEventListener('click', function(event) {
-	return isNumberKey(event);
-});
-
-var DJPDnilaitransaksipasarrubah = document.getElementById("DJPDnilaitransaksipasar"+i);
-DJPDnilaitransaksipasarrubah.addEventListener("click", function(e) {
-     DJPDnilaitransaksipasarrubah.value = convertRupiah(this.value);
-});
-DJPDnilaitransaksipasarrubah.addEventListener('click', function(event) {
-	return isNumberKey(event);
-});
-var DJPDnilaitransaksilikuidasirubah = document.getElementById("DJPDnilaitransaksilikuidasi"+i);
-DJPDnilaitransaksilikuidasirubah.addEventListener("click", function(e) {
-     DJPDnilaitransaksilikuidasirubah.value = convertRupiah(this.value);
-});
-    DJPDnilaitransaksilikuidasirubah.addEventListener('click', function(event) {
-	return isNumberKey(event);
-
-});
-
-
-function convertRupiah(angka, prefix) {
-  var number_string = angka.replace(/[^,\d]/g, "").toString(),
-    split  = number_string.split(","),
-    sisa   = split[0].length % 3,
-    rupiah = split[0].substr(0, sisa),
-    ribuan = split[0].substr(sisa).match(/\d{3}/gi);
-
-	if (ribuan) {
-		separator = sisa ? "." : "";
-		rupiah += separator + ribuan.join(".");
-	}
-
-	rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
-	return prefix == undefined ? rupiah : rupiah ? prefix + rupiah : "";
-}
-
-function isNumberKey(evt) {
-    key = evt.which || evt.keyCode;
-	if ( 	key != 188 // Comma
-		 && key != 8 // Backspace
-		 && key != 17 && key != 86 & key != 67 // Ctrl c, ctrl v
-		 && (key < 48 || key > 57) // Non digit
-		)
-	{
-		evt.preventDefault();
-		return;
-	}
-}
-
-$( "#PKRJid"+i).dblclick(function() {
-
-  $('#ModalPKRJ').modal('show');
-
-  });
-
-         $(document).ready(function() {
-
-            $("#loading").hide();
-            $("#formModalPKRJ").submit(function(e){
-         $("#PKRJid" + i).eq().hide(); // Sembunyikan dulu combobox kota nya
-        $("#loading").show();
-
-        $.ajax({
-            type: "POST", // Method pengiriman data bisa dengan GET atau POST
-            url: "<?php echo base_url("index.php/Nasabah/inputPKRJ"); ?>", // Isi dengan url/path file php yang dituju
-            data: {
-                PKRJ: $("#PKRJ").val()
-            }, // data yang akan dikirim ke file yang dituju
-            dataType: "json",
-            beforeSend: function(e) {
-                if (e && e.overrideMimeType) {
-                    e.overrideMimeType("application/json;charset=UTF-8");
-                }
-            },
-            success: function(response) { // Ketika proses pengiriman berhasil
-                $("#loading").hide(); // Sembunyikan loadingnya
-
-
-                $("#PKRJid"+i).html(response.list_pkrj).show();
-                $("#PKRJid").html(response.list_pkrj).show();
-                alert('Data Berhasil Ditambahkan!');
-            },
-            error: function(xhr, ajaxOptions, thrownError) { // Ketika ada error
-                alert(xhr.status + "\n" + xhr.responseText + "\n" +
-                    thrownError); // Munculkan alert error
-            }
-        });
-
-        e.preventDefault();
+            var DJPDplafondkreditrubah = document.getElementById("DJPDplafondkredit" + i);
+            DJPDplafondkreditrubah.addEventListener("keyup", function(e) {
+                DJPDplafondkreditrubah.value = convertRupiah(this.value);
             });
-        });
+            DJPDplafondkreditrubah.addEventListener('keydown', function(event) {
+                return isNumberKey(event);
+            });
+
+            var DJPDimbaljasarubah = document.getElementById("DJPDimbaljasa" + i);
+            DJPDimbaljasarubah.addEventListener("click", function(e) {
+                DJPDimbaljasarubah.value = convertRupiah(this.value);
+            });
+            DJPDimbaljasa.addEventListener('click', function(event) {
+                return isNumberKey(event);
+            });
+
+            var DJPDnilaipenjaminanrubah = document.getElementById("DJPDnilaipenjaminan" + i);
+            DJPDnilaipenjaminanrubah.addEventListener("click", function(e) {
+                DJPDnilaipenjaminanrubah.value = convertRupiah(this.value);
+            });
+            DJPDnilaipenjaminanrubah.addEventListener('click', function(event) {
+                return isNumberKey(event);
+            });
+
+            var DJPDnilaitransaksipasarrubah = document.getElementById("DJPDnilaitransaksipasar" + i);
+            DJPDnilaitransaksipasarrubah.addEventListener("click", function(e) {
+                DJPDnilaitransaksipasarrubah.value = convertRupiah(this.value);
+            });
+            DJPDnilaitransaksipasarrubah.addEventListener('click', function(event) {
+                return isNumberKey(event);
+            });
+            var DJPDnilaitransaksilikuidasirubah = document.getElementById(
+                "DJPDnilaitransaksilikuidasi" + i);
+            DJPDnilaitransaksilikuidasirubah.addEventListener("click", function(e) {
+                DJPDnilaitransaksilikuidasirubah.value = convertRupiah(this.value);
+            });
+            DJPDnilaitransaksilikuidasirubah.addEventListener('click', function(event) {
+                return isNumberKey(event);
+
+            });
+
+
+            function convertRupiah(angka, prefix) {
+                var number_string = angka.replace(/[^,\d]/g, "").toString(),
+                    split = number_string.split(","),
+                    sisa = split[0].length % 3,
+                    rupiah = split[0].substr(0, sisa),
+                    ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+
+                if (ribuan) {
+                    separator = sisa ? "." : "";
+                    rupiah += separator + ribuan.join(".");
+                }
+
+                rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
+                return prefix == undefined ? rupiah : rupiah ? prefix + rupiah : "";
+            }
+
+            function isNumberKey(evt) {
+                key = evt.which || evt.keyCode;
+                if (key != 188 // Comma
+                    &&
+                    key != 8 // Backspace
+                    &&
+                    key != 17 && key != 86 & key != 67 // Ctrl c, ctrl v
+                    &&
+                    (key < 48 || key > 57) // Non digit
+                ) {
+                    evt.preventDefault();
+                    return;
+                }
+            }
+
+            $("#PKRJid" + i).dblclick(function() {
+
+                $('#ModalPKRJ').modal('show');
+
+            });
+
+            $(document).ready(function() {
+
+                $("#loading").hide();
+                $("#formModalPKRJ").submit(function(e) {
+                    $("#PKRJid" + i).eq().hide(); // Sembunyikan dulu combobox kota nya
+                    $("#loading").show();
+
+                    $.ajax({
+                        type: "POST", // Method pengiriman data bisa dengan GET atau POST
+                        url: "<?php echo base_url("index.php/Nasabah/inputPKRJ"); ?>", // Isi dengan url/path file php yang dituju
+                        data: {
+                            PKRJ: $("#PKRJ").val()
+                        }, // data yang akan dikirim ke file yang dituju
+                        dataType: "json",
+                        beforeSend: function(e) {
+                            if (e && e.overrideMimeType) {
+                                e.overrideMimeType(
+                                    "application/json;charset=UTF-8");
+                            }
+                        },
+                        success: function(
+                            response) { // Ketika proses pengiriman berhasil
+                            $("#loading").hide(); // Sembunyikan loadingnya
+
+
+                            $("#PKRJid" + i).html(response.list_pkrj)
+                                .show();
+                            $("#PKRJid").html(response.list_pkrj).show();
+                            alert('Data Berhasil Ditambahkan!');
+                        },
+                        error: function(xhr, ajaxOptions,
+                            thrownError) { // Ketika ada error
+                            alert(xhr.status + "\n" + xhr.responseText +
+                                "\n" +
+                                thrownError); // Munculkan alert error
+                        }
+                    });
+
+                    e.preventDefault();
+                });
+            });
 
 
 
@@ -814,148 +823,140 @@ $( "#PKRJid"+i).dblclick(function() {
 
 
     <!-- END  -->
-   <script>
-
-function convertRupiah(angka, prefix) {
-  var number_string = angka.replace(/[^,\d]/g, "").toString(),
-    split  = number_string.split(","),
-    sisa   = split[0].length % 3,
-    rupiah = split[0].substr(0, sisa),
-    ribuan = split[0].substr(sisa).match(/\d{3}/gi);
-
-	if (ribuan) {
-		separator = sisa ? "." : "";
-		rupiah += separator + ribuan.join(".");
-	}
-
-	rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
-	return prefix == undefined ? rupiah : rupiah ? prefix + rupiah : "";
-}
-
-function isNumberKey(evt) {
-    key = evt.which || evt.keyCode;
-	if ( 	key != 188 // Comma
-		 && key != 8 // Backspace
-		 && key != 17 && key != 86 & key != 67 // Ctrl c, ctrl v
-		 && (key < 48 || key > 57) // Non digit
-		)
-	{
-		evt.preventDefault();
-		return;
-	}
-}
-
-var DJPmaxnilairubah = document.getElementById("DJPmaxnilai");
-DJPmaxnilairubah.addEventListener("click", function(e) {
- DJPmaxnilairubah.value = convertRupiah(this.value);
-});
-DJPmaxnilairubah.addEventListener('click', function(event) {
-	return isNumberKey(event);
-});
-
-var DJPjumlahnilaipkrubah = document.getElementById("DJPjumlahnilaipk");
-DJPjumlahnilaipkrubah.addEventListener("click", function(e) {
- DJPjumlahnilaipkrubah.value = convertRupiah(this.value);
-});
-DJPjumlahnilaipk.addEventListener('click', function(event) {
-	return isNumberKey(event);
-});
-
-var DJPnilaipenjaminanrubah = document.getElementById("DJPnilaipenjaminan");
-DJPnilaipenjaminanrubah.addEventListener("click", function(e) {
-    DJPnilaipenjaminanrubah.value = convertRupiah(this.value);
-});
-DJPnilaipenjaminanrubah.addEventListener('click', function(event) {
-	return isNumberKey(event);
-});
-
-
-
-var DJPfeebankrubah = document.getElementById("DJPfeebank");
-DJPfeebankrubah.addEventListener("keyup", function(e) {
-     DJPfeebankrubah.value = convertRupiah(this.value);
-});
-DJPfeebankrubah.addEventListener('keydown', function(event) {
-	return isNumberKey(event);
-});
-var DJPjumlahfeebankrubah = document.getElementById("DJPjumlahfeebank");
-DJPjumlahfeebankrubah.addEventListener("click", function(e) {
-     DJPjumlahfeebankrubah.value = convertRupiah(this.value);
-});
-DJPjumlahfeebankrubah.addEventListener('click', function(event) {
-	return isNumberKey(event);
-});
-var DJPfeematerairubah = document.getElementById("DJPfeematerai");
-DJPfeematerairubah.addEventListener("keyup", function(e) {
-     DJPfeematerairubah.value = convertRupiah(this.value);
-});
-DJPfeematerairubah.addEventListener('keydown', function(event) {
-	return isNumberKey(event);
-});
-var DJPfeeadminrubah = document.getElementById("DJPfeeadmin");
-DJPfeeadminrubah.addEventListener("keyup", function(e) {
-     DJPfeeadminrubah.value = convertRupiah(this.value);
-});
-DJPfeeadminrubah.addEventListener('keydown', function(event) {
-	return isNumberKey(event);
-});
-var DJPjumlahbiayarubah = document.getElementById("DJPjumlahbiaya");
-DJPjumlahbiayarubah.addEventListener("click", function(e) {
-     DJPjumlahbiayarubah.value = convertRupiah(this.value);
-});
-DJPjumlahbiayarubah.addEventListener('click', function(event) {
-	return isNumberKey(event);
-});
-
-
-
-</script>
     <script>
+    function convertRupiah(angka, prefix) {
+        var number_string = angka.replace(/[^,\d]/g, "").toString(),
+            split = number_string.split(","),
+            sisa = split[0].length % 3,
+            rupiah = split[0].substr(0, sisa),
+            ribuan = split[0].substr(sisa).match(/\d{3}/gi);
 
-var DJPDplafondkreditrubah = document.getElementById("DJPDplafondkredit");
-DJPDplafondkreditrubah.addEventListener("keyup", function(e) {
- DJPDplafondkreditrubah.value = convertRupiah(this.value);
-});
-DJPDplafondkreditrubah.addEventListener('keydown', function(event) {
-	return isNumberKey(event);
-});
+        if (ribuan) {
+            separator = sisa ? "." : "";
+            rupiah += separator + ribuan.join(".");
+        }
 
-var DJPDimbaljasarubah = document.getElementById("DJPDimbaljasa");
-DJPDimbaljasarubah.addEventListener("click", function(e) {
- DJPDimbaljasarubah.value = convertRupiah(this.value);
-});
-DJPDimbaljasa.addEventListener('click', function(event) {
-	return isNumberKey(event);
-});
+        rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
+        return prefix == undefined ? rupiah : rupiah ? prefix + rupiah : "";
+    }
 
-var DJPDnilaipenjaminanrubah = document.getElementById("DJPDnilaipenjaminan");
-DJPDnilaipenjaminanrubah.addEventListener("click", function(e) {
-    DJPDnilaipenjaminanrubah.value = convertRupiah(this.value);
-});
-DJPDnilaipenjaminanrubah.addEventListener('click', function(event) {
-	return isNumberKey(event);
-});
+    function isNumberKey(evt) {
+        key = evt.which || evt.keyCode;
+        if (key != 188 // Comma
+            &&
+            key != 8 // Backspace
+            &&
+            key != 17 && key != 86 & key != 67 // Ctrl c, ctrl v
+            &&
+            (key < 48 || key > 57) // Non digit
+        ) {
+            evt.preventDefault();
+            return;
+        }
+    }
 
-var DJPDnilaitransaksipasarrubah = document.getElementById("DJPDnilaitransaksipasar");
-DJPDnilaitransaksipasarrubah.addEventListener("click", function(e) {
-     DJPDnilaitransaksipasarrubah.value = convertRupiah(this.value);
-});
-DJPDnilaitransaksipasarrubah.addEventListener('click', function(event) {
-	return isNumberKey(event);
-});
+    var DJPmaxnilairubah = document.getElementById("DJPmaxnilai");
+    DJPmaxnilairubah.addEventListener("click", function(e) {
+        DJPmaxnilairubah.value = convertRupiah(this.value);
+    });
+    DJPmaxnilairubah.addEventListener('click', function(event) {
+        return isNumberKey(event);
+    });
 
-var DJPDnilaitransaksilikuidasirubah = document.getElementById("DJPDnilaitransaksilikuidasi");
-DJPDnilaitransaksilikuidasirubah.addEventListener("click", function(e) {
-     DJPDnilaitransaksilikuidasirubah.value = convertRupiah(this.value);
-});
-DJPDnilaitransaksilikuidasirubah.addEventListener('click', function(event) {
-	return isNumberKey(event);
-});
+    var DJPjumlahnilaipkrubah = document.getElementById("DJPjumlahnilaipk");
+    DJPjumlahnilaipkrubah.addEventListener("click", function(e) {
+        DJPjumlahnilaipkrubah.value = convertRupiah(this.value);
+    });
+    DJPjumlahnilaipk.addEventListener('click', function(event) {
+        return isNumberKey(event);
+    });
+
+    var DJPnilaipenjaminanrubah = document.getElementById("DJPnilaipenjaminan");
+    DJPnilaipenjaminanrubah.addEventListener("click", function(e) {
+        DJPnilaipenjaminanrubah.value = convertRupiah(this.value);
+    });
+    DJPnilaipenjaminanrubah.addEventListener('click', function(event) {
+        return isNumberKey(event);
+    });
 
 
 
+    var DJPfeebankrubah = document.getElementById("DJPfeebank");
+    DJPfeebankrubah.addEventListener("keyup", function(e) {
+        DJPfeebankrubah.value = convertRupiah(this.value);
+    });
+    DJPfeebankrubah.addEventListener('keydown', function(event) {
+        return isNumberKey(event);
+    });
+    var DJPjumlahfeebankrubah = document.getElementById("DJPjumlahfeebank");
+    DJPjumlahfeebankrubah.addEventListener("click", function(e) {
+        DJPjumlahfeebankrubah.value = convertRupiah(this.value);
+    });
+    DJPjumlahfeebankrubah.addEventListener('click', function(event) {
+        return isNumberKey(event);
+    });
+    var DJPfeematerairubah = document.getElementById("DJPfeematerai");
+    DJPfeematerairubah.addEventListener("keyup", function(e) {
+        DJPfeematerairubah.value = convertRupiah(this.value);
+    });
+    DJPfeematerairubah.addEventListener('keydown', function(event) {
+        return isNumberKey(event);
+    });
+    var DJPfeeadminrubah = document.getElementById("DJPfeeadmin");
+    DJPfeeadminrubah.addEventListener("keyup", function(e) {
+        DJPfeeadminrubah.value = convertRupiah(this.value);
+    });
+    DJPfeeadminrubah.addEventListener('keydown', function(event) {
+        return isNumberKey(event);
+    });
+    var DJPjumlahbiayarubah = document.getElementById("DJPjumlahbiaya");
+    DJPjumlahbiayarubah.addEventListener("click", function(e) {
+        DJPjumlahbiayarubah.value = convertRupiah(this.value);
+    });
+    DJPjumlahbiayarubah.addEventListener('click', function(event) {
+        return isNumberKey(event);
+    });
+    </script>
+    <script>
+    var DJPDplafondkreditrubah = document.getElementById("DJPDplafondkredit");
+    DJPDplafondkreditrubah.addEventListener("keyup", function(e) {
+        DJPDplafondkreditrubah.value = convertRupiah(this.value);
+    });
+    DJPDplafondkreditrubah.addEventListener('keydown', function(event) {
+        return isNumberKey(event);
+    });
 
+    var DJPDimbaljasarubah = document.getElementById("DJPDimbaljasa");
+    DJPDimbaljasarubah.addEventListener("click", function(e) {
+        DJPDimbaljasarubah.value = convertRupiah(this.value);
+    });
+    DJPDimbaljasa.addEventListener('click', function(event) {
+        return isNumberKey(event);
+    });
 
+    var DJPDnilaipenjaminanrubah = document.getElementById("DJPDnilaipenjaminan");
+    DJPDnilaipenjaminanrubah.addEventListener("click", function(e) {
+        DJPDnilaipenjaminanrubah.value = convertRupiah(this.value);
+    });
+    DJPDnilaipenjaminanrubah.addEventListener('click', function(event) {
+        return isNumberKey(event);
+    });
+
+    var DJPDnilaitransaksipasarrubah = document.getElementById("DJPDnilaitransaksipasar");
+    DJPDnilaitransaksipasarrubah.addEventListener("click", function(e) {
+        DJPDnilaitransaksipasarrubah.value = convertRupiah(this.value);
+    });
+    DJPDnilaitransaksipasarrubah.addEventListener('click', function(event) {
+        return isNumberKey(event);
+    });
+
+    var DJPDnilaitransaksilikuidasirubah = document.getElementById("DJPDnilaitransaksilikuidasi");
+    DJPDnilaitransaksilikuidasirubah.addEventListener("click", function(e) {
+        DJPDnilaitransaksilikuidasirubah.value = convertRupiah(this.value);
+    });
+    DJPDnilaitransaksilikuidasirubah.addEventListener('click', function(event) {
+        return isNumberKey(event);
+    });
     </script>
 
 
@@ -967,3 +968,8 @@ DJPDnilaitransaksilikuidasirubah.addEventListener('click', function(event) {
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
+</div>
+</div>
+</div>
+
+</div>

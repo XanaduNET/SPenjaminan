@@ -1,0 +1,130 @@
+User: ::1 - October 29, 2021, 08:12:28
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - October 29, 2021, 08:13:06
+Attempt: Success Login
+User: admin
+Aksi: Login
+-------------------------
+User: ::1 - October 29, 2021, 08:13:15
+Attempt: Success Login
+User: admin
+Aksi: Login
+-------------------------
+User: ::1 - October 29, 2021, 08:46:04
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - October 29,2021, 08:46:45
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - October 29, 2021, 09:04:23
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - October 29,2021, 09:05:17
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - October 29, 2021, 09:12:12
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - October 29, 2021, 09:14:03
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - October 29, 2021, 09:14:34
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - October 29, 2021, 09:23:06
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - October 29, 2021, 09:40:59
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Manajemen Risiko
+-------------------------
+User: ::1 - October 29, 2021, 09:41:13
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - October 29, 2021, 09:47:42
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Manajemen Risiko
+-------------------------
+User: ::1 - October 29, 2021, 09:47:42
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Manajemen Risiko
+-------------------------
+User: ::1 - October 29, 2021, 09:47:51
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - October 29, 2021, 09:48:17
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Legal
+-------------------------
+User: ::1 - October 29, 2021, 09:48:17
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - October 29,2021, 09:48:26
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - October 29, 2021, 09:49:17
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Direktur
+-------------------------
+User: ::1 - October 29,2021, 09:49:17
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - October 29, 2021, 11:13:40
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - October 29, 2021, 11:14:21
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - October 29, 2021, 15:59:48
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - October 29, 2021, 16:08:51
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - October 29, 2021, 16:10:30
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------

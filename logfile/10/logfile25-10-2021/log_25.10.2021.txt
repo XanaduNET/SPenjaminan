@@ -1,80 +1,30 @@
-User: ::1 - October 25, 2021, 08:34:37
+User: ::1 - October 25, 2021, 03:31:46
 Attempt: Success Login
-User: Akbar
+User: admin
 Aksi: Login
 -------------------------
-User: ::1 - October 25,2021, 08:37:12
+User: ::1 - October 25, 2021, 03:33:01
 Attempt: Success Masuk Halaman
-User: Akbar
+User: Admin
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - October 25,2021, 03:35:13
+Attempt: Success Masuk Halaman
+User: Admin
 Aksi: Accrual Penjaminan
 -------------------------
-User: ::1 - October 25,2021, 08:37:16
-Attempt: Success Masuk Halaman
-User: Akbar
-Aksi: Accrual Penjaminan
--------------------------
-User: ::1 - October 25,2021, 08:37:21
-Attempt: Success Masuk Halaman
-User: Akbar
-Aksi: Accrual Penjaminan
--------------------------
-User: ::1 - October 25, 2021, 08:37:25
-Attempt: Success Export Accrual
-User: Akbar
-Aksi: Operasional Accrual
--------------------------
-User: ::1 - October 25,2021, 08:42:24
-Attempt: Success Masuk Halaman
-User: Akbar
-Aksi: Accrual Penjaminan
--------------------------
-User: ::1 - October 25, 2021, 08:42:25
-Attempt: Success Export Accrual
-User: Akbar
-Aksi: Operasional Accrual
--------------------------
-User: ::1 - October 25, 2021, 10:52:51
+User: ::1 - October 25, 2021, 10:00:24
 Attempt: Success Login
-User: Akbar
+User: admin
 Aksi: Login
 -------------------------
-User: ::1 - October 25,2021, 10:52:52
+User: ::1 - October 25,2021, 10:39:17
 Attempt: Success Masuk Halaman
-User: Akbar
+User: Admin
 Aksi: Accrual Penjaminan
 -------------------------
-User: ::1 - October 25, 2021, 10:52:53
-Attempt: Success Export Accrual
-User: Akbar
-Aksi: Operasional Accrual
--------------------------
-User: ::1 - October 25, 2021, 10:54:42
-Attempt: Success Export Accrual
-User: Akbar
-Aksi: Operasional Accrual
--------------------------
-User: ::1 - October 25, 2021, 10:55:47
-Attempt: Success Export Accrual
-User: Akbar
-Aksi: Operasional Accrual
--------------------------
-User: ::1 - October 25, 2021, 10:56:30
-Attempt: Success Export Accrual
-User: Akbar
-Aksi: Operasional Accrual
--------------------------
-User: ::1 - October 25,2021, 13:47:51
+User: ::1 - October 25,2021, 10:42:34
 Attempt: Success Masuk Halaman
-User: 
+User: Admin
 Aksi: Accrual Penjaminan
--------------------------
-User: ::1 - October 25, 2021, 13:47:56
-Attempt: Success Login
-User: Akbar
-Aksi: Login
--------------------------
-User: ::1 - October 25, 2021, 13:48:10
-Attempt: Success Export Operasional
-User: Akbar
-Aksi: Operasional Operasional
 -------------------------

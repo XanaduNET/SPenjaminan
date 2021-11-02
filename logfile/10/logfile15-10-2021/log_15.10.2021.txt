@@ -3,43 +3,23 @@ Attempt: Success Login
 User: Akbar
 Aksi: Login
 -------------------------
-User: ::1 - October 15, 2021, 11:12:52
+User: ::1 - October 15, 2021, 11:10:12
 Attempt: Success Login
-User: Akbar
+User: admin
 Aksi: Login
 -------------------------
-User: ::1 - October 15, 2021, 13:52:41
+User: ::1 - October 15, 2021, 11:10:38
 Attempt: Success Login
-User: Akbar
+User: rani
 Aksi: Login
 -------------------------
-User: ::1 - October 15,2021, 14:52:48
-Attempt: Success Masuk Halaman
-User: Akbar
-Aksi: Accrual Penjaminan
+User: ::1 - October 15, 2021, 11:49:31
+Attempt: Success Login
+User: rani
+Aksi: Login
 -------------------------
-User: ::1 - October 15,2021, 14:52:53
-Attempt: Success Masuk Halaman
-User: Akbar
-Aksi: Accrual Penjaminan
--------------------------
-User: ::1 - October 15,2021, 14:53:00
-Attempt: Success Masuk Halaman
-User: Akbar
-Aksi: Accrual Penjaminan
--------------------------
-User: ::1 - October 15,2021, 14:53:03
-Attempt: Success Masuk Halaman
-User: Akbar
-Aksi: Accrual Penjaminan
--------------------------
-User: ::1 - October 15,2021, 15:27:51
-Attempt: Success Masuk Halaman
-User: Akbar
-Aksi: Accrual Penjaminan
--------------------------
-User: ::1 - October 15,2021, 15:29:00
-Attempt: Success Masuk Halaman
-User: Akbar
-Aksi: Accrual Penjaminan
+User: ::1 - October 15, 2021, 12:24:05
+Attempt: Success Login
+User: rani
+Aksi: Login
 -------------------------

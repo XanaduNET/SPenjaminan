@@ -1,10 +1,60 @@
-User: ::1 - October 18, 2021, 08:26:47
+User: ::1 - October 18, 2021, 03:38:28
 Attempt: Success Login
-User: Akbar
+User: admin
 Aksi: Login
 -------------------------
-User: ::1 - October 18, 2021, 16:40:38
+User: ::1 - October 18, 2021, 03:38:38
 Attempt: Success Login
-User: Akbar
+User: rani
+Aksi: Login
+-------------------------
+User: ::1 - October 18, 2021, 04:25:05
+Attempt: Success Login
+User: reza
+Aksi: Login
+-------------------------
+User: ::1 - October 18, 2021, 04:25:27
+Attempt: Success Login
+User: rima
+Aksi: Login
+-------------------------
+User: ::1 - October 18, 2021, 04:30:39
+Attempt: Success Login
+User: rima
+Aksi: Login
+-------------------------
+User: ::1 - October 18, 2021, 04:35:24
+Attempt: Success Login
+User: rima
+Aksi: Login
+-------------------------
+User: ::1 - October 18, 2021, 04:35:36
+Attempt: Success Login
+User: admin
+Aksi: Login
+-------------------------
+User: ::1 - October 18, 2021, 04:35:51
+Attempt: Success Login
+User: anggi
+Aksi: Login
+-------------------------
+User: ::1 - October 18, 2021, 04:36:57
+Attempt: Success Login
+User: rani
+Aksi: Login
+-------------------------
+User: ::1 - October 18, 2021, 05:13:32
+Attempt: Success Login
+User: admin
+Aksi: Login
+-------------------------
+User: ::1 - October 18, 2021, 06:28:17
+Attempt: Success Login
+User: admin
+Aksi: Login
+-------------------------
+User: ::1 - October 18, 2021, 09:06:37
+Attempt: Success Login
+User: admin
 Aksi: Login
 -------------------------

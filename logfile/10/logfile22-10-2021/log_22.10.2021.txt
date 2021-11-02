@@ -1,0 +1,35 @@
+User: ::1 - October 22, 2021, 05:39:59
+Attempt: Success Login
+User: admin
+Aksi: Login
+-------------------------
+User: ::1 - October 22, 2021, 05:40:44
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - October 22, 2021, 05:40:59
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - October 22,2021, 05:49:21
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - October 22, 2021, 08:51:49
+Attempt: Success Masuk Halaman
+User: 
+Aksi: Beranda Manajemen Risiko
+-------------------------
+User: ::1 - October 22, 2021, 08:52:14
+Attempt: Success Login
+User: admin
+Aksi: Login
+-------------------------
+User: ::1 - October 22, 2021, 08:52:37
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Beranda Manajemen Risiko
+-------------------------

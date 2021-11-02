@@ -37,7 +37,6 @@ class Model_legal extends CI_Model
         return $this->db->query($query);
     }
 
-
     public function tambahkomentar($CBClegal, $CBCid)
     {
 

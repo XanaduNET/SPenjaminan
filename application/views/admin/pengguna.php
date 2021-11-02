@@ -1,18 +1,20 @@
-<!-- Begin Page Content -->
+<div class="mobile-menu-overlay"></div>
+
 <div class="container-fluid">
-
-    <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800"><?=$title;?></h1>
-    <div class="row">
-        <div class="col-lg-6">
-            <?=form_error('menu', '<div class="alert alert-danger" role="alert">', '</div>');?>
-
+    <div class="main-container">
+        <script>
+        $(document).ready(function() {
+            $('table.display').DataTable();
+        });
+        </script>
+        <h1 class="h3 mb-4 text-gray-800"><?=$title;?></h1>
+        <div>
             <?=$this->session->flashdata('message');?>
             <a href="<?=base_url('auth/registration');?>" class="btn btn-primary mb-3">Tambah Pengguna</a>
             <div class="card">
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <table class="display table table-striped table-bordered" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
                                     <th scope="col">No</th>
@@ -34,15 +36,7 @@
                         </table>
                     </div>
 
-
-
                 </div>
             </div>
+
         </div>
-    </div>
-
-</div>
-<!-- /.container-fluid -->
-
-</div>
-<!-- End of Main Content -->

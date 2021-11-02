@@ -2,220 +2,216 @@
 
 class Kredit extends CI_Controller
 {
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('Model_Kredit');
+		$this->load->database();
 
-    public function __construct()
-    {
-        parent::__construct();
-        $this->load->model('Model_Kredit');
-        $this->load->database();
+	}
+	public function index()
+	{
 
-    }
+		$this->load->library('form_validation');
 
-    public function index()
-    {
+		$data['ambilgpp'] = $this->Model_Kredit->ambilGPP();
+		$data['ambilOPK'] = $this->Model_Kredit->ambilOPK();
+		$data['ambilJSP'] = $this->Model_Kredit->ambilJSP();
+		$data['ambilSPJ'] = $this->Model_Kredit->ambilSPJ();
 
-        $this->load->library('form_validation');
+		$data['autogen'] = $this->Model_Kredit->noregis();
+		$data['autogenurut'] = $this->Model_Kredit->nourut();
 
-        $data['ambilgpp'] = $this->Model_Kredit->ambilGPP();
-        $data['ambilOPK'] = $this->Model_Kredit->ambilOPK();
-        $data['ambilJSP'] = $this->Model_Kredit->ambilJSP();
-        $data['ambilSPJ'] = $this->Model_Kredit->ambilSPJ();
+		$data['title'] = 'Tambah Data Penjaminan';
+		$data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
 
-        $data['autogen'] = $this->Model_Kredit->noregis();
-        $data['autogenurut'] = $this->Model_Kredit->nourut();
+		$data['role'] = $this->db->get('user_role')->result_array();
+		$this->load->view('template/header', $data);
+		$this->load->view('template/header_body', $data);
+		$this->load->view('template/right_sidebar', $data);
+		$this->load->view('template/left_sidebar', $data);
+		$this->load->view('penjaminan/kredit', $data);
+		$this->load->view('template/footer');
+	}
+	public function listPKS()
+	{
+		// Ambil data ID GPP yang dikirim via ajax post
+		$GPPid = $this->input->post('GPPid');
 
-        $data['title'] = 'Tambah Data Penjaminan';
-        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+		$PKS = $this->Model_Kredit->ambilPKS($GPPid);
 
-        $data['role'] = $this->db->get('user_role')->result_array();
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar', $data);
-        $this->load->view('templates/topbar', $data);
-        $this->load->view('penjaminan/kredit', $data);
-        $this->load->view('templates/footer');
+		// Buat variabel untuk menampung tag-tag option nya
+		// Set defaultnya dengan tag option --Pilih--
+		$lists = "<option value=''>--Pilih--</option>";
 
-    }
+		foreach ($PKS as $data) {
+			if ($data->PKSno2 != null) {
+				$lists .= "<option value='" . $data->PKSid . "'>" . $data->PKSno2 . "</option>"; // Tambahkan tag option ke variabel $lists
 
-    public function listPKS()
-    {
-        // Ambil data ID GPP yang dikirim via ajax post
-        $GPPid = $this->input->post('GPPid');
+			} else {
+				$lists .= "<option value='" . $data->PKSid . "'>" . $data->PKSno1 . "</option>"; // Tambahkan tag option ke variabel $lists
 
-        $PKS = $this->Model_Kredit->ambilPKS($GPPid);
+			}
+		}
+		$callback = array('list_pks' => $lists); // Masukan variabel lists tadi ke dalam array $callback dengan index array : list_pks
 
-        // Buat variabel untuk menampung tag-tag option nya
-        // Set defaultnya dengan tag option --Pilih--
-        $lists = "<option value=''>--Pilih--</option>";
+		echo json_encode($callback); // konversi varibael $callback menjadi JSON
 
-        foreach ($PKS as $data) {
-            if ($data->PKSno2 != null) {
-                $lists .= "<option value='" . $data->PKSid . "'>" . $data->PKSno2 . "</option>"; // Tambahkan tag option ke variabel $lists
+	}
+	public function autocompletePP()
+	{
+		if (isset($_GET['term'])) {
+			$result = $this->Model_Kredit->cariPP($_GET['term']);
+			if (count($result) > 0) {
+				foreach ($result as $row) {
+					$arr_result[] = array(
+						'label' => $row->PPnama,
+						'description' => $row->PPalamat,
+						'id' => $row->PPid,
+					);
+				}
+				echo json_encode($arr_result);
+			}
+		}
+	}
+	public function input()
+	{
 
-            } else {
-                $lists .= "<option value='" . $data->PKSid . "'>" . $data->PKSno1 . "</option>"; // Tambahkan tag option ke variabel $lists
+		$this->form_validation->set_rules('DJPacuanhitung', 'Acuan Hitung IJP', 'required');
+		$this->form_validation->set_rules('GPPid', 'Grup Penerima Penaminan', 'required');
+		$this->form_validation->set_rules('DJPnoreg', 'Nomor Registrasi', 'required');
+		$this->form_validation->set_rules('DJPnourut', 'No Urut', 'required');
+		$this->form_validation->set_rules('DJPnoseri', 'No Seri Sertifikat', 'required');
+		$this->form_validation->set_rules('PPnama', 'Penerima Penjaminan', 'required');
+		$this->form_validation->set_rules('PPalamat', 'Alamat Penjaminan', 'required');
+		$this->form_validation->set_rules('DJPnodeklarasi', 'No Deklarasi', 'required');
+		$this->form_validation->set_rules('DJPtanggaldeklarasi', 'Tanggal Deklarasi', 'required');
+		$this->form_validation->set_rules('DJPperiode', 'Periode Akhir', 'required');
+		$this->form_validation->set_rules('PKSid', 'Jenis PKS', 'required');
+		$this->form_validation->set_rules('SPJid', 'Status Penjaminan', 'required');
+		$this->form_validation->set_rules('JSPid', 'Jenis Pengajuan', 'required');
 
-            }
-        }
-        $callback = array('list_pks' => $lists); // Masukan variabel lists tadi ke dalam array $callback dengan index array : list_pks
+		$PKSjenis = "PK";
 
-        echo json_encode($callback); // konversi varibael $callback menjadi JSON
+		if ($this->form_validation->run() == false) {
 
-    }
+			$this->index();
 
-    public function autocompletePP()
-    {
-        if (isset($_GET['term'])) {
-            $result = $this->Model_Kredit->cariPP($_GET['term']);
-            if (count($result) > 0) {
-                foreach ($result as $row) {
-                    $arr_result[] = array(
-                        'label' => $row->PPnama,
-                        'description' => $row->PPalamat,
-                        'id' => $row->PPid,
-                    );
-                }
-                echo json_encode($arr_result);
-            }
-        }
-    }
+		} else {
 
-    public function input()
-    {
+			$DJPacuanhitung = $this->input->post('DJPacuanhitung');
+			$GPPid = $this->input->post('GPPid');
+			$DJPnoreg = $this->input->post('DJPnoreg');
+			$DJPnourut = $this->input->post('DJPnourut');
+			$DJPnoseri = $this->input->post('DJPnoseri');
+			$PPid = $this->input->post("PPid");
+			$PPnama = $this->input->post('PPnama');
+			$PPalamat = $this->input->post('PPalamat');
+			$DJPnodeklarasi = $this->input->post('DJPnodeklarasi');
+			$DJPtanggaldeklarasi = $this->input->post('DJPtanggaldeklarasi');
+			$DJPperiode = $this->input->post('DJPperiode');
+			$OPKid = $this->input->post('OPKid');
+			$PKSid = $this->input->post('PKSid');
+			$SPJid = $this->input->post('SPJid');
+			$JSPid = $this->input->post('JSPid');
 
-        $this->form_validation->set_rules('DJPacuanhitung', 'Acuan Hitung IJP', 'required');
-        $this->form_validation->set_rules('GPPid', 'Grup Penerima Penaminan', 'required');
-        $this->form_validation->set_rules('DJPnoreg', 'Nomor Registrasi', 'required');
-        $this->form_validation->set_rules('DJPnourut', 'No Urut', 'required');
-        $this->form_validation->set_rules('DJPnoseri', 'No Seri Sertifikat', 'required');
-        $this->form_validation->set_rules('PPnama', 'Penerima Penjaminan', 'required');
-        $this->form_validation->set_rules('PPalamat', 'Alamat Penjaminan', 'required');
-        $this->form_validation->set_rules('DJPnodeklarasi', 'No Deklarasi', 'required');
-        $this->form_validation->set_rules('DJPtanggaldeklarasi', 'Tanggal Deklarasi', 'required');
-        $this->form_validation->set_rules('DJPperiode', 'Periode Akhir', 'required');
-        $this->form_validation->set_rules('PKSid', 'Jenis PKS', 'required');
-        $this->form_validation->set_rules('SPJid', 'Status Penjaminan', 'required');
-        $this->form_validation->set_rules('JSPid', 'Jenis Pengajuan', 'required');
+			$this->Model_Kredit->tambah($DJPacuanhitung, $GPPid, $DJPnoreg, $DJPnourut, $DJPnoseri, $PPid, $PPnama, $PPalamat, $DJPnodeklarasi, $DJPtanggaldeklarasi, $DJPperiode, $OPKid, $PKSid, $PKSjenis, $SPJid, $JSPid);
+			$insert_id = $this->db->insert_id();
 
-        $PKSjenis = "PK";
+			$date = date("d-m-Y");
+			$bulan = date("m");
+			$namauser = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
 
-        if ($this->form_validation->run() == false) {
+			$log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j, Y, H:i:s") . PHP_EOL .
+				"Attempt: " . ("Success Add Data Kredit") . PHP_EOL .
+				"User: " . $namauser['nama'] . PHP_EOL .
+				"Aksi: " . ('Data Penjaminan') . PHP_EOL .
+				"-------------------------" . PHP_EOL;
+			//-
+			file_put_contents('logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
 
-            $this->index();
+			redirect('nasabah/' . $insert_id . '/' . $OPKid);
 
-        } else {
+		}
+	}
 
-            $DJPacuanhitung = $this->input->post('DJPacuanhitung');
-            $GPPid = $this->input->post('GPPid');
-            $DJPnoreg = $this->input->post('DJPnoreg');
-            $DJPnourut = $this->input->post('DJPnourut');
-            $DJPnoseri = $this->input->post('DJPnoseri');
-            $PPid = $this->input->post("PPid");
-            $PPnama = $this->input->post('PPnama');
-            $PPalamat = $this->input->post('PPalamat');
-            $DJPnodeklarasi = $this->input->post('DJPnodeklarasi');
-            $DJPtanggaldeklarasi = $this->input->post('DJPtanggaldeklarasi');
-            $DJPperiode = $this->input->post('DJPperiode');
-            $OPKid = $this->input->post('OPKid');
-            $PKSid = $this->input->post('PKSid');
-            $SPJid = $this->input->post('SPJid');
-            $JSPid = $this->input->post('JSPid');
+	public function editkredit()
+	{
+		$this->form_validation->set_rules('DJPacuanhitung', 'Acuan Hitung IJP', 'required');
+		$this->form_validation->set_rules('GPPid', 'Grup Penerima Penaminan', 'required');
+		$this->form_validation->set_rules('DJPnoreg', 'Nomor Registrasi', 'required');
+		$this->form_validation->set_rules('DJPnourut', 'No Urut', 'required');
+		$this->form_validation->set_rules('DJPnoseri', 'No Seri Sertifikat', 'required');
+		$this->form_validation->set_rules('PPnama', 'Penerima Penjaminan', 'required');
+		$this->form_validation->set_rules('PPalamat', 'Alamat Penjaminan', 'required');
+		$this->form_validation->set_rules('DJPnodeklarasi', 'No Deklarasi', 'required');
+		$this->form_validation->set_rules('DJPtanggaldeklarasi', 'Tanggal Deklarasi', 'required');
+		$this->form_validation->set_rules('DJPperiode', 'Periode Sertifikat', 'required');
+		$this->form_validation->set_rules('PKSid', 'Jenis PKS', 'required');
+		$this->form_validation->set_rules('SPJid', 'Status Penjaminan', 'required');
+		$this->form_validation->set_rules('JSPid', 'Jenis Pengajuan', 'required');
 
-            $this->Model_Kredit->tambah($DJPacuanhitung, $GPPid, $DJPnoreg, $DJPnourut, $DJPnoseri, $PPid, $PPnama, $PPalamat, $DJPnodeklarasi, $DJPtanggaldeklarasi, $DJPperiode, $OPKid, $PKSid, $PKSjenis, $SPJid, $JSPid);
-            $insert_id = $this->db->insert_id();
+		$PKSjenis = "PK";
 
-            $date = date("d-m-Y");
-            $bulan = date("m");
-            $namauser = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+		if ($this->form_validation->run() == false) {
 
-            $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j, Y, H:i:s") . PHP_EOL .
-                "Attempt: " . ("Success Add Data Kredit") . PHP_EOL .
-                "User: " . $namauser['nama'] . PHP_EOL .
-                "Aksi: " . ('Data Penjaminan') . PHP_EOL .
-                "-------------------------" . PHP_EOL;
-            //-
-            file_put_contents('logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
+			$this->index();
 
-            redirect('nasabah/' . $insert_id . '/' . $OPKid);
+		} else {
+			$PKSjenis = "PK";
+			$DJPid = $this->input->post('DJPid');
+			$DJPacuanhitung = $this->input->post('DJPacuanhitung');
+			$GPPid = $this->input->post('GPPid');
+			$DJPnoreg = $this->input->post('DJPnoreg');
+			$DJPnourut = $this->input->post('DJPnourut');
+			$DJPnoseri = $this->input->post('DJPnoseri');
+			$PPid = $this->input->post("PPid");
+			$PPnama = $this->input->post('PPnama');
+			$PPalamat = $this->input->post('PPalamat');
+			$DJPnodeklarasi = $this->input->post('DJPnodeklarasi');
+			$DJPtanggaldeklarasi = $this->input->post('DJPtanggaldeklarasi');
+			$DJPperiode = $this->input->post('DJPperiode');
+			$OPKid = $this->input->post('OPKid');
+			$PKSid = $this->input->post('PKSid');
+			$SPJid = $this->input->post('SPJid');
+			$JSPid = $this->input->post('JSPid');
 
-        }
-    }
+			$this->Model_Kredit->update($DJPid, $DJPacuanhitung, $GPPid, $DJPnoreg, $DJPnourut, $DJPnoseri, $PPid, $PPnama, $PPalamat, $DJPnodeklarasi, $DJPtanggaldeklarasi, $DJPperiode, $OPKid, $PKSid, $PKSjenis, $SPJid, $JSPid);
 
-    public function editkredit()
-    {
-        $this->form_validation->set_rules('DJPacuanhitung', 'Acuan Hitung IJP', 'required');
-        $this->form_validation->set_rules('GPPid', 'Grup Penerima Penaminan', 'required');
-        $this->form_validation->set_rules('DJPnoreg', 'Nomor Registrasi', 'required');
-        $this->form_validation->set_rules('DJPnourut', 'No Urut', 'required');
-        $this->form_validation->set_rules('DJPnoseri', 'No Seri Sertifikat', 'required');
-        $this->form_validation->set_rules('PPnama', 'Penerima Penjaminan', 'required');
-        $this->form_validation->set_rules('PPalamat', 'Alamat Penjaminan', 'required');
-        $this->form_validation->set_rules('DJPnodeklarasi', 'No Deklarasi', 'required');
-        $this->form_validation->set_rules('DJPtanggaldeklarasi', 'Tanggal Deklarasi', 'required');
-        $this->form_validation->set_rules('DJPperiode', 'Periode Sertifikat', 'required');
-        $this->form_validation->set_rules('PKSid', 'Jenis PKS', 'required');
-        $this->form_validation->set_rules('SPJid', 'Status Penjaminan', 'required');
-        $this->form_validation->set_rules('JSPid', 'Jenis Pengajuan', 'required');
+			$date = date("d-m-Y");
+			$bulan = date("m");
+			$namauser = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
 
-        $PKSjenis = "PK";
+			$log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j, Y, H:i:s") . PHP_EOL .
+				"Attempt: " . ("Success Edit Data Kredit") . PHP_EOL .
+				"User: " . $namauser['nama'] . PHP_EOL .
+				"Aksi: " . ('Data Penjaminan') . PHP_EOL .
+				"-------------------------" . PHP_EOL;
+			//-
+			file_put_contents('logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
 
-        if ($this->form_validation->run() == false) {
+			redirect('Kredit/nasabahedit/' . $DJPid . '/' . $OPKid);
 
-            $this->index();
+		}
+	}
+	public function nasabahedit()
+	{
+		$this->load->model('Model_nasabah');
+		$DJPid = $this->uri->segment(3);
+		$OPKid = $this->uri->segment(4);
 
-        } else {
-            $PKSjenis = "PK";
-            $DJPid = $this->input->post('DJPid');
-            $DJPacuanhitung = $this->input->post('DJPacuanhitung');
-            $GPPid = $this->input->post('GPPid');
-            $DJPnoreg = $this->input->post('DJPnoreg');
-            $DJPnourut = $this->input->post('DJPnourut');
-            $DJPnoseri = $this->input->post('DJPnoseri');
-            $PPid = $this->input->post("PPid");
-            $PPnama = $this->input->post('PPnama');
-            $PPalamat = $this->input->post('PPalamat');
-            $DJPnodeklarasi = $this->input->post('DJPnodeklarasi');
-            $DJPtanggaldeklarasi = $this->input->post('DJPtanggaldeklarasi');
-            $DJPperiode = $this->input->post('DJPperiode');
-            $OPKid = $this->input->post('OPKid');
-            $PKSid = $this->input->post('PKSid');
-            $SPJid = $this->input->post('SPJid');
-            $JSPid = $this->input->post('JSPid');
+		$data['ambilpkrj'] = $this->Model_nasabah->ambilPKRJ();
+		$data['title'] = "Edit";
+		$data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
 
-            $this->Model_Kredit->update($DJPid, $DJPacuanhitung, $GPPid, $DJPnoreg, $DJPnourut, $DJPnoseri, $PPid, $PPnama, $PPalamat, $DJPnodeklarasi, $DJPtanggaldeklarasi, $DJPperiode, $OPKid, $PKSid, $PKSjenis, $SPJid, $JSPid);
+		//tambahan pengiriman  id melewati disini
 
-            $date = date("d-m-Y");
-            $bulan = date("m");
-            $namauser = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+		$this->load->view('template/header', $data);
+		$this->load->view('template/header_body', $data);
+		$this->load->view('template/right_sidebar', $data);
+		$this->load->view('template/left_sidebar', $data);
+		$this->load->view('penjaminan/nasabahedit', $data);
+		$this->load->view('template/footer');
+	}
 
-            $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j, Y, H:i:s") . PHP_EOL .
-                "Attempt: " . ("Success Edit Data Kredit") . PHP_EOL .
-                "User: " . $namauser['nama'] . PHP_EOL .
-                "Aksi: " . ('Data Penjaminan') . PHP_EOL .
-                "-------------------------" . PHP_EOL;
-            //-
-            file_put_contents('logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
-
-            redirect('Kredit/nasabahedit/' . $DJPid . '/' . $OPKid);
-
-        }
-    }
-
-    public function nasabahedit()
-    {
-        $this->load->model('Model_nasabah');
-        $DJPid = $this->uri->segment(3);
-        $OPKid = $this->uri->segment(4);
-
-        $data['ambilpkrj'] = $this->Model_nasabah->ambilPKRJ();
-        $data['title'] = "Edit";
-        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
-
-        //tambahan pengiriman  id melewati disini
-
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/sidebar', $data);
-        $this->load->view('templates/topbar', $data);
-        $this->load->view('penjaminan/nasabahedit', $data);
-        $this->load->view('templates/footer');
-    }
 }

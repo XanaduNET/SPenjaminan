@@ -19,9 +19,10 @@ class Lap_bul extends CI_Controller
 		$data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
 		$data['table'] = $this->Model_lap_bul->ambil_data();
 		$data['role'] = $this->db->get('user_role')->result_array();
-		$this->load->view('templates/header', $data);
-		$this->load->view('templates/sidebar', $data);
-		$this->load->view('templates/topbar', $data);
+		$this->load->view('template/header', $data);
+		$this->load->view('template/header_body', $data);
+		$this->load->view('template/right_sidebar', $data);
+		$this->load->view('template/left_sidebar', $data);
 		$this->load->view('operasional/lap_bul', $data);
 		$this->load->view('templates/footer');
 

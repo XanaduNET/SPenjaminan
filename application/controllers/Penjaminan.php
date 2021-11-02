@@ -13,10 +13,11 @@ class Admin extends CI_Controller
 	{
 		$data['title'] = 'Data Penjaminan';
 		$data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
-		$this->load->view('templates/header', $data);
-		$this->load->view('templates/sidebar', $data);
-		$this->load->view('templates/topbar', $data);
+		$this->load->view('template/header', $data);
+		$this->load->view('template/header_body', $data);
+		$this->load->view('template/right_sidebar', $data);
+		$this->load->view('template/left_sidebar', $data);
 		$this->load->view('penjaminan/index', $data);
-		$this->load->view('templates/footer');
+		$this->load->view('template/footer');
 	}
 }
