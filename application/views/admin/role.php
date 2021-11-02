@@ -16,7 +16,6 @@
                     <?=$this->session->flashdata('message');?>
                     <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newRoleModal">Tambah
                         Role</a>
-
                     <table class="display table table-striped table-bordered" width="100%" cellspacing="0">
                         <thead>
                             <tr>

@@ -3,3 +3,58 @@ Attempt: Success Login
 User: Akbar
 Aksi: Login
 -------------------------
+User: ::1 - November 2, 2021, 08:44:50
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 2, 2021, 10:04:44
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 2, 2021, 10:15:33
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 2, 2021, 10:22:18
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 2, 2021, 13:30:43
+Attempt: Success Login
+User: admin
+Aksi: Login
+-------------------------
+User: ::1 - November 2, 2021, 13:30:50
+Attempt: Success Login
+User: admin
+Aksi: Login
+-------------------------
+User: ::1 - November 2, 2021, 14:06:51
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 2, 2021, 14:11:40
+Attempt: Success Login
+User: Berry
+Aksi: Login
+-------------------------
+User: ::1 - November 2,2021, 14:11:40
+Attempt: Success Masuk Halaman
+User: Berry
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - November 2, 2021, 14:12:14
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 2, 2021, 14:12:50
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
