@@ -208,6 +208,49 @@ class Model_table_fee extends CI_Model
             </script>";
         }
     }
+    public function ambil_data_maxbulan_perbulan($keyword, $Monthchecked)
+    {
+
+        $MONTHid = $Monthchecked;
+        //    return $this->db->get('tbldjph');
+        $this->db->like('DJPnoreg', $keyword);
+        $this->db->select_max('DJPDtanggalakhir');
+        $this->db->select_max('DJPDjangkawaktu');
+
+        $this->db->from('tbldjph');
+        $this->db->join('tbldjpd', 'tbldjph.DJPid=tbldjpd.DJPid');
+        $this->db->where_in("DATE_FORMAT(DJPtanggalverif,'%m')", $MONTHid);
+        $query = $this->db->get();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            echo "<script>
+            alert('Data Tidak Ditemukan');
+            window.location.href='Accrual_baru';
+            </script>";
+        }
+    }
+
+    public function ambil_data_maxbulan($keyword)
+    {
+
+        //    return $this->db->get('tbldjph');
+        $this->db->like('DJPnoreg', $keyword);
+        $this->db->select_max('DJPDtanggalakhir');
+        $this->db->select_max('DJPDjangkawaktu');
+
+        $this->db->from('tbldjph');
+        $this->db->join('tbldjpd', 'tbldjph.DJPid=tbldjpd.DJPid');
+        $query = $this->db->get();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            echo "<script>
+            alert('Data Tidak Ditemukan');
+            window.location.href='Accrual_baru';
+            </script>";
+        }
+    }
 
     public function getGPP()
     {

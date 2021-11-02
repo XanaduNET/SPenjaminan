@@ -58,3 +58,78 @@ Attempt: Success Login
 User: Akbar
 Aksi: Login
 -------------------------
+User: ::1 - November 2, 2021, 15:19:50
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 2,2021, 15:21:09
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Fee
+-------------------------
+User: ::1 - November 2,2021, 15:49:07
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Fee
+-------------------------
+User: ::1 - November 2,2021, 16:03:34
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Fee
+-------------------------
+User: ::1 - November 2,2021, 16:04:15
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - November 2,2021, 16:10:24
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - November 2, 2021, 16:10:30
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------
+User: ::1 - November 2,2021, 16:10:56
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - November 2, 2021, 16:11:03
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------
+User: ::1 - November 2,2021, 16:11:10
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Fee
+-------------------------
+User: ::1 - November 2,2021, 16:11:34
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Fee
+-------------------------
+User: ::1 - November 2,2021, 16:11:45
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Fee
+-------------------------
+User: ::1 - November 2, 2021, 16:11:51
+Attempt: Success Export Fee
+User: Akbar
+Aksi: Operasional Fee
+-------------------------
+User: ::1 - November 2,2021, 16:12:09
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Fee
+-------------------------
+User: ::1 - November 2, 2021, 16:12:12
+Attempt: Success Export Fee
+User: Akbar
+Aksi: Operasional Fee
+-------------------------
