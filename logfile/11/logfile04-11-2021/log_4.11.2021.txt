@@ -1,0 +1,10 @@
+User: ::1 - November 4, 2021, 14:16:06
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 4,2021, 14:16:14
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------

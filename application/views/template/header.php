@@ -14,9 +14,9 @@
     <link rel="stylesheet" href="<?php echo base_url() . 'css/bootstrap.css' ?>" type="text/css">
     <link rel="stylesheet" href="<?php echo base_url() . 'css/jquery-ui.css' ?>" type="text/css">
     <!-- Site favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="<?=base_url('assets/');?>vendors/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="<?=base_url('assets/');?>vendors/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?=base_url('assets/');?>vendors/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?=base_url('assets/');?>vendors/images/logo-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?=base_url('assets/');?>vendors/images/logo-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?=base_url('assets/');?>vendors/images/logo-icon.png">
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
