@@ -128,8 +128,9 @@ p {
 	width: 0%;
 	height: 8px;
 	display: block;
-	background: #00e091;
+	background: #000000;;
 }
+
 .pre-loader .percent{
 	text-align: center;
 	font-size: 24px;
