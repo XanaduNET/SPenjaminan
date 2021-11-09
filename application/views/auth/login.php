@@ -40,6 +40,6 @@
             </form>
         </div>
     </div>
-    <script type="text/javascript" src="assets/js/main.js"></script>
+	<script src="<?=base_url('assets/');?>vendors/scripts/main.js"></script>
 </body>
 </html>
