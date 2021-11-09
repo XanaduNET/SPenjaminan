@@ -43,3 +43,48 @@ Attempt: Success Login
 User: Akbar
 Aksi: Login
 -------------------------
+User: ::1 - November 8, 2021, 14:57:57
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 8, 2021, 16:07:29
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 8, 2021, 16:10:06
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 8, 2021, 16:12:40
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 8, 2021, 16:34:24
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 8, 2021, 16:37:21
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 8, 2021, 16:40:22
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 8, 2021, 21:29:00
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 8, 2021, 21:30:11
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
