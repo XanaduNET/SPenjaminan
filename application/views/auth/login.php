@@ -40,6 +40,6 @@
             </form>
         </div>
     </div>
-	<script src="<?=base_url('assets/');?>vendors/scripts/main.js"></script>
+	<script src="<?=base_url('assets/');?>vendors/scripts/main.js"></script>n  
 </body>
 </html>

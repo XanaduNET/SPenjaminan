@@ -3,3 +3,23 @@ Attempt: Success Login
 User: Akbar
 Aksi: Login
 -------------------------
+User: ::1 - November 9, 2021, 15:28:22
+Attempt: Success Masuk Halaman
+User: 
+Aksi: Beranda Manajemen Risiko
+-------------------------
+User: ::1 - November 9, 2021, 15:28:49
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 9, 2021, 15:29:00
+Attempt: Success Login
+User: admin
+Aksi: Login
+-------------------------
+User: ::1 - November 9, 2021, 15:29:04
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Beranda Manajemen Risiko
+-------------------------
