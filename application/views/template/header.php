@@ -6,20 +6,17 @@
     <meta charset="utf-8">
     <title><?=$title;?></title>
 
-    <script src="<?=base_url('assets/');?>src/plugins/apexcharts/apexcharts.min.js"></script>
-<script src="<?=base_url('assets/');?>src/plugins/datatables/js/jquery.dataTables.min.js"></script>
-<script src="<?=base_url('assets/');?>src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
-<script src="<?=base_url('assets/');?>src/plugins/datatables/js/dataTables.responsive.min.js"></script>
-<script src="<?=base_url('assets/');?>src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="<?php echo base_url() . 'css/bootstrap.css' ?>" type="text/css">
-    <link rel="stylesheet" href="<?php echo base_url() . 'css/jquery-ui.css' ?>" type="text/css">
     <!-- Site favicon -->
+    <script src="<?=base_url('assets/');?>vendors/scripts/dashboard.js"></script>
+    <script src="<?=base_url('assets/');?>js/jquery-3.3.1.js">
+    </script>
+    <script src=" <?=base_url('assets/');?>js/bootstrap.js">
+    </script>
+    <script src=" <?=base_url('assets/');?>js/jquery-ui.js">
+    </script>
+    <script src="<?=base_url('assets/');?>vendors/scripts/core.js"></script>
+    <script src="<?=base_url('assets/');?>vendors/scripts/script.min.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="<?=base_url('assets/');?>vendors/images/logo-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?=base_url('assets/');?>vendors/images/logo-icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<?=base_url('assets/');?>vendors/images/logo-icon.png">
@@ -51,4 +48,8 @@
 
     gtag('config', 'UA-119386393-1');
     </script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.css" />
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.js"></script>
+
 </head>

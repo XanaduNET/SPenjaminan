@@ -1,0 +1,20 @@
+User: ::1 - November 15, 2021, 08:28:41
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 15, 2021, 08:48:39
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 15, 2021, 10:55:05
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 15, 2021, 15:15:37
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------

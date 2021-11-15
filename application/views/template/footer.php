@@ -6,12 +6,13 @@
 </div>
 </div>
 <!-- js -->
-<script src="<?=base_url('assets/');?>vendors/scripts/core.js"></script>
-<script src="<?=base_url('assets/');?>vendors/scripts/script.min.js"></script>
+<script src="<?=base_url('assets/');?>src/plugins/apexcharts/apexcharts.min.js"></script>
+
+
+
 <script src="<?=base_url('assets/');?>vendors/scripts/process.js"></script>
 <script src="<?=base_url('assets/');?>vendors/scripts/layout-settings.js"></script>
 
-<script src="<?=base_url('assets/');?>vendors/scripts/dashboard.js"></script>
 
 <script>
 $('.form-check-input').on('click', function() {
@@ -33,7 +34,6 @@ $('.form-check-input').on('click', function() {
 </script>
 
 <!-- DROPDOWN -->
-<script src="<?=base_url('assets/');?>js/jquery.min.js"></script>
 
 <script>
 $(document).ready(function() { // Ketika halaman sudah siap (sudah selesai di load)
@@ -72,7 +72,7 @@ $(document).ready(function() { // Ketika halaman sudah siap (sudah selesai di lo
 <!-- Cari PP -->
 
 
-<script type=" text/javascript">
+<script type="text/javascript">
 $(document).ready(function() {
 
     $('#PPnama').autocomplete({
