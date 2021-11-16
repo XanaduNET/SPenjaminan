@@ -8,3 +8,8 @@ Attempt: Success Login
 User: akbar
 Aksi: Login
 -------------------------
+User: ::1 - November 16, 2021, 09:04:58
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
