@@ -18,7 +18,7 @@ $id = $this->uri->segment(3);
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">KOMENTAR</label>
                         <div class="form-group col-lg-3 col-sm-4">
-                            <textarea name="CBCmr" width="150px" heigh="150px" class="form-control"></textarea>
+                            <textarea name="CBCdirektur" width="150px" heigh="150px" class="form-control"></textarea>
                             <input type="text" name="CBCid" class="form-control" id="CBCid" value="<?=$id?>" hidden>
                             <br>
                             <input type="radio" id="CBCkeputusan" name="CBCkeputusan" value="4">

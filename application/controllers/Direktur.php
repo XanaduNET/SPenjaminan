@@ -186,7 +186,7 @@ class Direktur extends CI_Controller
         $CBCdirektur = $this->input->post('CBCdirektur');
         $CBCid = $this->input->post('CBCid');
         $CBCkeputusan = $this->input->post('CBCkeputusan');
-
+        $date = date("d-m-Y");
         $bulan = date("m");
         $namauser = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
 

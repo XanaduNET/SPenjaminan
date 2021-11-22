@@ -60,16 +60,19 @@ class Model_direktur extends CI_Model
             $CBCstatus = 4;
 
 //Ambil Nama
-            $query = "SELECT `tbltrjm`.`tbltrjm.TRJMnama`
+            $query = "SELECT `tbltrjm`.`TRJMnama`
         FROM `tbltrjm` JOIN `tblcbc`
         ON `tblcbc`.`TRJMid` = `tbltrjm`.`TRJMid`
         WHERE `tblcbc`.`CBCid`= $CBCid
 ";
             $trjmnama = $this->db->query($query)->row_array();
+            foreach ($trjmnama as $t) {
+                $trjmuser = $t;
+            }
 // Send Notifikasi
             $data = array(
-                'comment_subject' => 'Data Case By Case',
-                'comment_text' => "SP2K A.n $trjmnama Siap Dicetak",
+                'comment_subject' => 'Data Case By Case Konsumtif',
+                'comment_text' => "SP2K A.n $trjmuser Siap Dicetak",
                 'comment_status' => 0,
                 'roleId_sender' => 4,
                 'roleId_receiver' => 2,
@@ -95,7 +98,27 @@ class Model_direktur extends CI_Model
         if ($CBCPkeputusan == 4) {
             $CBCPstatus = 4;
 
-        } elseif ($CBCkeputusan == 5) {
+            //Ambil Nama
+            $query = "SELECT `tbltrjm`.`TRJMnama`
+        FROM `tbltrjm` JOIN `tblcbcp`
+        ON `tblcbcp`.`TRJMid` = `tbltrjm`.`TRJMid`
+        WHERE `tblcbcp`.`CBCPid`= $CBCPid
+";
+            $trjmnama = $this->db->query($query)->row_array();
+            foreach ($trjmnama as $t) {
+                $trjmuser = $t;
+            }
+// Send Notifikasi
+            $data = array(
+                'comment_subject' => 'Data Case By Case Produktif',
+                'comment_text' => "SP2K A.n $trjmuser Siap Dicetak",
+                'comment_status' => 0,
+                'roleId_sender' => 4,
+                'roleId_receiver' => 2,
+            );
+            $this->db->insert('tbl_comments', $data);
+
+        } elseif ($CBCPkeputusan == 5) {
             $CBCPstatus = 5;
         } else {
             $CBCPstatus = 4;
