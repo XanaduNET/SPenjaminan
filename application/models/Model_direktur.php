@@ -58,6 +58,24 @@ class Model_direktur extends CI_Model
     {
         if ($CBCkeputusan == 4) {
             $CBCstatus = 4;
+
+//Ambil Nama
+            $query = "SELECT `tbltrjm`.`tbltrjm.TRJMnama`
+        FROM `tbltrjm` JOIN `tblcbc`
+        ON `tblcbc`.`TRJMid` = `tbltrjm`.`TRJMid`
+        WHERE `tblcbc`.`CBCid`= $CBCid
+";
+            $trjmnama = $this->db->query($query)->row_array();
+// Send Notifikasi
+            $data = array(
+                'comment_subject' => 'Data Case By Case',
+                'comment_text' => "SP2K A.n $trjmnama Siap Dicetak",
+                'comment_status' => 0,
+                'roleId_sender' => 4,
+                'roleId_receiver' => 2,
+            );
+            $this->db->insert('tbl_comments', $data);
+
         } elseif ($CBCkeputusan == 5) {
             $CBCstatus = 5;
         } else {
