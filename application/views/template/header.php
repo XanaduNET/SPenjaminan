@@ -15,9 +15,9 @@
     </script>
     <script src=" <?=base_url('assets/');?>js/jquery-ui.js">
     </script>
-    <script src="<?=base_url('assets/');?>vendors/scripts/core.js"></script>
+
     <script src="<?=base_url('assets/');?>vendors/scripts/script.min.js"></script>
-   
+
     <link rel="apple-touch-icon" sizes="180x180" href="<?=base_url('assets/');?>vendors/images/logo-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?=base_url('assets/');?>vendors/images/logo-icon.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<?=base_url('assets/');?>vendors/images/logo-icon.png">
