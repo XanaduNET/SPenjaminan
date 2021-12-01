@@ -62,7 +62,6 @@ class Casebc extends CI_Controller
 
     public function input()
     {
-
         $this->form_validation->set_rules('CBCnomormemo', 'Nomor memo', 'required');
         $this->form_validation->set_rules('TRJMnama', 'Nama terjamin', 'required');
         $this->form_validation->set_rules('TRJMttl', 'Tempat tanggal lahir terjamin', 'required');
@@ -136,6 +135,16 @@ class Casebc extends CI_Controller
                 "-------------------------" . PHP_EOL;
             //-
             file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
+
+            // Send Notifikasi Kadiv Penjaminan
+            $data = array(
+                'comment_subject' => 'Input Case By Case Konsumtif',
+                'comment_text' => "CBC Konsumtif Baru Berhasil Ditambahkan",
+                'comment_status' => 0,
+                'roleId_sender' => 2,
+                'roleId_receiver' => 2, // Kadiv Penjaminan
+            );
+            $this->db->insert('tbl_comments', $data);
 
             echo "<script>
         alert('Data Berhasil Ditambahkan');
@@ -478,6 +487,16 @@ class Casebc extends CI_Controller
         //-
         file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
 
+        // Send Notifikasi Kadiv Penjaminan
+        $data = array(
+            'comment_subject' => 'Input Case By Case Produktif',
+            'comment_text' => "CBC Produktif Baru Berhasil Ditambahkan",
+            'comment_status' => 0,
+            'roleId_sender' => 2,
+            'roleId_receiver' => 2, // Kadiv Penjaminan
+        );
+        $this->db->insert('tbl_comments', $data);
+
         echo "<script>
         alert('Data Berhasil Ditambahkan');
         window.location.href='datacbc';
@@ -806,7 +825,7 @@ class Casebc extends CI_Controller
         file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
 
         echo "<script>
-        alert('Data Berhasil Ditambahkan');
+        alert('Data Berhasil Dirubah');
         window.location.href='datacbc';
         </script>";
 

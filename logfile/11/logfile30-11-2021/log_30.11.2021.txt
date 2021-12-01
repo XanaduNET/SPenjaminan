@@ -1,0 +1,125 @@
+User: ::1 - November 30, 2021, 08:26:23
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 30, 2021, 14:44:41
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 30, 2021, 15:12:40
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - November 30, 2021, 15:26:42
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - November 30, 2021, 15:27:06
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - November 30, 2021, 15:27:10
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - November 30, 2021, 15:27:14
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - November 30, 2021, 15:27:19
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - November 30, 2021, 15:27:51
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - November 30, 2021, 15:27:55
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - November 30, 2021, 15:29:05
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 30, 2021, 15:29:10
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 30, 2021, 15:30:02
+Attempt: Success Login
+User: Bronardhe
+Aksi: Login
+-------------------------
+User: ::1 - November 30, 2021, 15:31:20
+Attempt: Success Login
+User: Bronardhe
+Aksi: Login
+-------------------------
+User: ::1 - November 30, 2021, 15:31:24
+Attempt: Success Login
+User: Bronardhe
+Aksi: Login
+-------------------------
+User: ::1 - November 30,2021, 15:31:24
+Attempt: Success Masuk Halaman
+User: Bronardhe
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - November 30, 2021, 15:32:26
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - November 30, 2021, 15:32:55
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Manajemen Risiko
+-------------------------
+User: ::1 - November 30, 2021, 15:32:55
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Manajemen Risiko
+-------------------------
+User: ::1 - November 30, 2021, 15:33:15
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - November 30, 2021, 15:33:49
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Legal
+-------------------------
+User: ::1 - November 30, 2021, 15:33:49
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - November 30,2021, 15:34:06
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - November 30, 2021, 15:35:07
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Direktur
+-------------------------
+User: ::1 - November 30,2021, 15:35:07
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------
