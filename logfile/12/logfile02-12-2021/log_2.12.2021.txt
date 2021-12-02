@@ -3,3 +3,83 @@ Attempt: Success Login
 User: Akbar
 Aksi: Login
 -------------------------
+User: ::1 - December 2, 2021, 09:35:00
+Attempt: Failed Tambah User
+User: Admin
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 2, 2021, 09:35:01
+Attempt: Failed Tambah User
+User: Admin
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 2, 2021, 09:35:30
+Attempt: Failed Tambah User
+User: Admin
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 2, 2021, 09:37:39
+Attempt: Failed Tambah User
+User: Admin
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 2, 2021, 09:37:48
+Attempt: Failed Tambah User
+User: Admin
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 2, 2021, 09:41:23
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 2, 2021, 09:41:24
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 2, 2021, 09:42:29
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 2, 2021, 09:42:31
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 2, 2021, 09:42:31
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 2, 2021, 09:42:31
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 2, 2021, 09:42:31
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 2, 2021, 09:42:31
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 2, 2021, 09:42:34
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 2, 2021, 09:43:50
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 2, 2021, 09:44:06
+Attempt: Berhasil Tambah User BROANGGI
+User: Akbar
+Aksi: Registrasi
+-------------------------

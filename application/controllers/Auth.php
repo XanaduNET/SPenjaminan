@@ -134,7 +134,10 @@ class Auth extends CI_Controller
         }
     }
     public function registration()
-    {$date = date("d-m-Y");
+    {
+       
+        $date = date("d-m-Y");
+        $bulan = date("m");
         $usernama = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
         $data['role'] = $this->db->get('user_role')->result_array();
 
@@ -154,12 +157,12 @@ class Auth extends CI_Controller
                 "Aksi: " . ('Registrasi') . PHP_EOL .
                 "-------------------------" . PHP_EOL;
             //-
-            file_put_contents('logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
+               file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
 
             $data['title'] = 'Halaman Registrasi';
-            $this->load->view('templates/auth_header', $data);
+            $this->load->view('template/auth_header', $data);
             $this->load->view('auth/registration');
-            $this->load->view('templates/auth_footer');
+            $this->load->view('template/auth_footer');
         } else {
             $namauser = htmlspecialchars($this->input->post('nama', true));
             $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j, Y, H:i:s") . PHP_EOL .
@@ -168,7 +171,7 @@ class Auth extends CI_Controller
                 "Aksi: " . ('Registrasi') . PHP_EOL .
                 "-------------------------" . PHP_EOL;
             //-
-            file_put_contents('logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
+               file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
 
             $data = [
                 'nama' => htmlspecialchars($this->input->post('nama', true)),
@@ -185,6 +188,7 @@ class Auth extends CI_Controller
     }
     public function logout()
     {
+        $bulan = date("m");
         $date = date("d-m-Y");
         $namauser = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
 
