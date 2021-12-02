@@ -190,9 +190,9 @@ class Risk extends CI_Controller
         //-
         //Ambil Nama
         $query = "SELECT `tbltrjm`.`TRJMnama`
-         FROM `tbltrjm` JOIN `tblcbcp`
-         ON `tblcbcp`.`TRJMid` = `tbltrjm`.`TRJMid`
-         WHERE `tblcbcp`.`CBCPid`= $CBCPid
+         FROM `tbltrjm` JOIN `tblcbc`
+         ON `tblcbc`.`TRJMid` = `tbltrjm`.`TRJMid`
+         WHERE `tblcbc`.`CBCid`= $CBCid
  ";
         $trjmnama = $this->db->query($query)->row_array();
         foreach ($trjmnama as $t) {

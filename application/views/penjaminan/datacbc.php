@@ -2,7 +2,7 @@
 
 <div class="container-fluid">
     <div class="main-container">
-        <h1 class="h3 mb-4 text-gray-800"><?=$title;?></h1>
+        <h1 class="h3 mb-4 text-gray-800"><?=$title . " Konsumtif";?></h1>
         <div>
             <script>
             $(document).ready(function() {
@@ -57,22 +57,27 @@
                                                 &nbsp;
                                                 <a href="<?=base_url("casebc/CBCberkas/");?><?=$c['CBCid'];?>"
                                                     class=" badge badge-info">Berkas</a>
+                                                <?php if ($c['CBCstatus'] == 4) {?>
+                                                &nbsp;
+                                                <a href="<?=base_url("Direktur/CBCsp2k/");?><?=$c['CBCid'];?>"
+                                                    class=" badge badge-success">Download SP2K</a>
+                                                <?php }?>
                                             </td>
                                             <td>
                                                 <?php
 
 if ($c['CBCstatus'] == 0) {
-	echo "Dokumen Tidak Lengkap!";
+    echo "Dokumen Tidak Lengkap!";
 } else if ($c['CBCstatus'] == 1) {
-	echo "Dokumen Lengkap!";
+    echo "Dokumen Lengkap!";
 } else if ($c['CBCstatus'] == 2) {
-	echo "Dokumen Lengkap!";
+    echo "Dokumen Lengkap!";
 } else if ($c['CBCstatus'] == 3) {
-	echo "Dokumen Lengkap!";
+    echo "Dokumen Lengkap!";
 } else if ($c['CBCstatus'] == 4) {
-	echo "Dokumen Lengkap!";
+    echo "Dokumen Lengkap!";
 } else if ($c['CBCstatus'] == 5) {
-	echo "Ditolak!";
+    echo "Ditolak!";
 }
 ?>
                                             </td>
@@ -167,23 +172,28 @@ if ($c['CBCstatus'] == 0) {
                                                 &nbsp;
                                                 <a href="<?=base_url("casebc/CBCPberkas/");?><?=$c['CBCPid'];?>"
                                                     class=" badge badge-info">Berkas</a>
+                                                    <?php if ($c['CBCPstatus'] == 4) {?>
+                                                &nbsp;
+                                                <a href="<?=base_url("Direktur/CBCPsp2k/");?><?=$c['CBCPid'];?>"
+                                                    class=" badge badge-success">Download SP2K</a>
+                                                <?php }?>
 
                                             </td>
                                             <td>
                                                 <?php
 
 if ($c['CBCPstatus'] == 0) {
-	echo "Dokumen Tidak Lengkap!";
+    echo "Dokumen Tidak Lengkap!";
 } else if ($c['CBCPstatus'] == 1) {
-	echo "Dokumen Lengkap!";
+    echo "Dokumen Lengkap!";
 } else if ($c['CBCPstatus'] == 2) {
-	echo "Dokumen Lengkap!";
+    echo "Dokumen Lengkap!";
 } else if ($c['CBCPstatus'] == 3) {
-	echo "Dokumen Lengkap!";
+    echo "Dokumen Lengkap!";
 } else if ($c['CBCPstatus'] == 4) {
-	echo "Dokumen Lengkap!";
+    echo "Dokumen Lengkap!";
 } else if ($c['CBCPstatus'] == 5) {
-	echo "Ditolak!";
+    echo "Ditolak!";
 }
 ?>
                                             </td>
@@ -201,7 +211,7 @@ if ($c['CBCPstatus'] == 0) {
                                                     <div class="modal-body">
 
                                                         <?php echo form_open_multipart(base_url("casebc/uploadcbcp/") . $c['CBCPid']); ?>
-                                                        <input type='file' name='userfile' size='20' />
+                                                        <input type='file' name='userfile'/>
 
                                                         <br>
                                                         <input class="form-check-input" type="checkbox" value="1"

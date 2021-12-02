@@ -1,0 +1,60 @@
+User: ::1 - December 1, 2021, 08:33:05
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 1, 2021, 08:36:19
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 1, 2021, 13:22:05
+Attempt: Success Upload Berkas
+User: Akbar
+Aksi: Case By Case Konsumtif
+-------------------------
+User: ::1 - December 1, 2021, 13:27:35
+Attempt: Success Upload Berkas
+User: Akbar
+Aksi: Case By Case Produktif
+-------------------------
+User: ::1 - December 1, 2021, 14:07:31
+Attempt: Success Upload Berkas
+User: Akbar
+Aksi: Case By Case Produktif
+-------------------------
+User: ::1 - December 1, 2021, 15:28:07
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Manajemen Risiko
+-------------------------
+User: ::1 - December 1, 2021, 15:28:07
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Manajemen Risiko
+-------------------------
+User: ::1 - December 1, 2021, 15:28:36
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Legal
+-------------------------
+User: ::1 - December 1, 2021, 15:29:15
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Legal
+-------------------------
+User: ::1 - December 1, 2021, 15:29:15
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - December 1, 2021, 15:29:54
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Direktur
+-------------------------
+User: ::1 - December 1,2021, 15:29:54
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------

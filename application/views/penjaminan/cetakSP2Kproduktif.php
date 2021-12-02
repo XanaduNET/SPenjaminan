@@ -43,7 +43,7 @@
         <br>
         <?php
 foreach ($table->result() as $u) {
-	?>
+    ?>
         <table cellspacing="0" style="width: 100%; text-align: left; ">
             <tr>
 
@@ -116,7 +116,7 @@ foreach ($table->result() as $u) {
                     <td width="2%"> : </td>
                     <td width="60%"><?php
 $hasil = ($u->CBCPrate / 100) * $u->CBCPplafondkredit;
-	echo "Rp." . number_format($hasil, 0, ".", ".");?></td>
+    echo "Rp." . number_format($hasil, 0, ".", ".");?></td>
                 </tr>
                 <tr>
                     <td width="2%"> - </td>
@@ -165,56 +165,56 @@ $hasil = ($u->CBCPrate / 100) * $u->CBCPplafondkredit;
                     </td>
                     <td></td>
                     <td> = &nbsp;&nbsp;&nbsp; <?php $hasil = ($u->CBCPrate / 100) * $u->CBCPplafondkredit;
-	echo "Rp." . number_format($hasil, 0, ".", ".");?>
+    echo "Rp." . number_format($hasil, 0, ".", ".");?>
                 </tr>
                 <tr>
                     <td>Fee Bank 10% x <?php echo "Rp." . number_format($hasil, 0, ".", "."); ?></td>
                     <td></td>
                     <td> = <u> &nbsp;&nbsp; <?php
 $hasil2 = (10 / 100) * $hasil;
-	echo "Rp." . number_format($hasil2, 0, ".", ".");
-	?> </u> &nbsp;- </td>
+    echo "Rp." . number_format($hasil2, 0, ".", ".");
+    ?> </u> &nbsp;- </td>
                 </tr>
                 <tr>
                     <td> <b> Total <b> </td>
                     <td></td>
                     <td> = <b> &nbsp;&nbsp;&nbsp;<?php $hasil3 = $hasil - $hasil2;
-	echo "Rp." . number_format($hasil3, 0, ".", ".");?></b></td>
+    echo "Rp." . number_format($hasil3, 0, ".", ".");?></b></td>
                 </tr>
                 <?php
 function Terbilang($satuan)
-	{
-		$huruf = array("", "Satu", "Dua", "Tiga", "Empat", "Lima", "Enam",
-			"Tujuh", "Delapan", "Sembilan", "Sepuluh", "Sebelas");
-		if ($satuan < 12) {
-			return " " . $huruf[$satuan];
-		} else if ($satuan < 20) {
-			return Terbilang($satuan - 10) . " Belas";
-		} else if ($satuan < 100) {
-			return Terbilang($satuan / 10) . " Puluh" .
-			Terbilang($satuan % 10);
-		} else if ($satuan < 200) {
-			return " Seratus" . Terbilang($satuan - 100);
-		} else if ($satuan < 1000) {
-			return Terbilang($satuan / 100) . " Ratus" .
-			Terbilang($satuan % 100);
-		} else if ($satuan < 2000) {
-			return " Seribu" . Terbilang($satuan - 1000);
-		} else if ($satuan < 1000000) {
-			return Terbilang($satuan / 1000) . " Ribu" .
-			Terbilang($satuan % 1000);
-		} else if ($satuan < 1000000000) {
-			return Terbilang($satuan / 1000000) . " Juta" .
-			Terbilang($satuan % 1000000);
-		} else if ($satuan < 1000000000000) {
-			return Terbilang($satuan / 1000000000) . " Milyar" .
-			Terbilang($satuan % 1000000000);
-		} else if ($satuan < 1000000000000000) {
-			return Terbilang($satuan / 1000000000000) . " Trilyun" .
-			Terbilang($satuan % 1000000000000);
-		}
-	}
-	?>
+    {
+        $huruf = array("", "Satu", "Dua", "Tiga", "Empat", "Lima", "Enam",
+            "Tujuh", "Delapan", "Sembilan", "Sepuluh", "Sebelas");
+        if ($satuan < 12) {
+            return " " . $huruf[$satuan];
+        } else if ($satuan < 20) {
+            return Terbilang($satuan - 10) . " Belas";
+        } else if ($satuan < 100) {
+            return Terbilang($satuan / 10) . " Puluh" .
+            Terbilang($satuan % 10);
+        } else if ($satuan < 200) {
+            return " Seratus" . Terbilang($satuan - 100);
+        } else if ($satuan < 1000) {
+            return Terbilang($satuan / 100) . " Ratus" .
+            Terbilang($satuan % 100);
+        } else if ($satuan < 2000) {
+            return " Seribu" . Terbilang($satuan - 1000);
+        } else if ($satuan < 1000000) {
+            return Terbilang($satuan / 1000) . " Ribu" .
+            Terbilang($satuan % 1000);
+        } else if ($satuan < 1000000000) {
+            return Terbilang($satuan / 1000000) . " Juta" .
+            Terbilang($satuan % 1000000);
+        } else if ($satuan < 1000000000000) {
+            return Terbilang($satuan / 1000000000) . " Milyar" .
+            Terbilang($satuan % 1000000000);
+        } else if ($satuan < 1000000000000000) {
+            return Terbilang($satuan / 1000000000000) . " Trilyun" .
+            Terbilang($satuan % 1000000000000);
+        }
+    }
+    ?>
                 <tr>
                     <td colspan=3> &nbsp;</td>
                 </tr>

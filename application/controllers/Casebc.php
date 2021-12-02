@@ -283,6 +283,23 @@ class Casebc extends CI_Controller
             $this->Model_CBC->uploadcbcp($UPLDPnama, $CBCPid, $CBCPstatus);
             //data berhasil di upload
         } else {
+
+            $data = array('upload_data' => $this->upload->data());
+            $UPLDPnama = $this->upload->data('file_name');
+
+            $namauser = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+            $date = date("d-m-Y");
+            $bulan = date("m");
+            $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j, Y, H:i:s") . PHP_EOL .
+                "Attempt: " . ("Success Upload Berkas") . PHP_EOL .
+                "User: " . $namauser['nama'] . PHP_EOL .
+                "Aksi: " . ('Case By Case Produktif') . PHP_EOL .
+                "-------------------------" . PHP_EOL;
+            //-
+            file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
+
+            $this->Model_CBC->uploadcbcp($UPLDPnama, $CBCPid, $CBCPstatus);
+
             echo "<script>
                 alert('Berkas Tidak Berhasil Di Upload');
                 window.location.href='../../casebc/datacbc';

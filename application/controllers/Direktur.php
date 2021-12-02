@@ -243,7 +243,7 @@ class Direktur extends CI_Controller
 
     public function cbcsp2k()
     {
-        $id = 2;
+        $id = $this->uri->segment(3);
         $data['table'] = $this->Model_CBC->getCBCid($id);
         $this->load->view('penjaminan/cetakCBC', $data);
 
@@ -267,7 +267,7 @@ class Direktur extends CI_Controller
 
     public function cbcpsp2k()
     {
-        $id = 5;
+        $id = $this->uri->segment(3);
         $data['table'] = $this->Model_CBC->getCBCPbyid($id);
         $data['cbcpja'] = $this->Model_CBC->getCBCPJAbyid($id);
         $data['cbcpojk'] = $this->Model_CBC->getCBCPOJKbyid($id);
