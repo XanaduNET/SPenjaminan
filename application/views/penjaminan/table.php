@@ -20,16 +20,13 @@
                                     <h5 class="card-header">DATA</h5>
 
                                     <div>
-                                        <form action="<?php echo site_url('table/index'); ?>" method="post">
-                                            <input type="text" name="keyword" />
-                                            <input type="submit" value="Search" />
-                                        </form>
+
                                     </div>
 
                                     <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table class="table table-bordered" id="dataTable" width="100%"
-                                                cellspacing="0">
+                                    <div class="table-responsive">
+                        <table class="display table table-striped table-bordered" width="100%" cellspacing="0">
+                                                
                                                 <thead>
                                                     <tr>
                                                         <th>No.</th>
