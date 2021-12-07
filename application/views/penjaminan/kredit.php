@@ -32,7 +32,7 @@
                                 <option selected="selected">--Pilih--</option>
                                 <?php
 foreach ($ambilgpp as $row) {
-	echo '<option value="' . $row->GPPid . '">' . $row->GPPnama . '</option>';
+    echo '<option value="' . $row->GPPid . '">' . $row->GPPnama . '</option>';
 }
 ?>
                             </select>
@@ -59,7 +59,7 @@ foreach ($ambilgpp as $row) {
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">No Urut Sertifikat</label>
                         <div class="form-group col-lg-3 col-sm-4">
-                            <input style="width: 100%;" type="text" name="DJPnourut" class="form-control"
+                            <input style="width: 100%;" type="text"  name="DJPnourut" class="form-control"
                                 value="<?php echo $autogenurut; ?>">
                         </div>
                     </div>
@@ -67,7 +67,7 @@ foreach ($ambilgpp as $row) {
                         <label class="col-sm-2 col-form-label">No Seri Sartifikat</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="DJPnoseri" name="DJPnoseri"
-                                placeholder="">
+                                placeholder="" >
                         </div>
                     </div>
                     <!-- /.card-header -->
@@ -138,7 +138,7 @@ foreach ($ambilgpp as $row) {
                                 <option selected="selected">--Pilih--</option>
                                 <?php
 foreach ($ambilOPK as $row) {
-	echo '<option value="' . $row->OPKid . '">' . $row->OPKjenis . '</option>';
+    echo '<option value="' . $row->OPKid . '">' . $row->OPKjenis . '</option>';
 }
 ?>
                             </select>
@@ -151,7 +151,7 @@ foreach ($ambilOPK as $row) {
                                 <option selected="selected">--Pilih--</option>
                                 <?php
 foreach ($ambilSPJ as $row) {
-	echo '<option value="' . $row->SPJid . '">' . $row->SPJnama . '</option>';
+    echo '<option value="' . $row->SPJid . '">' . $row->SPJnama . '</option>';
 }
 ?>
                             </select>
@@ -164,7 +164,7 @@ foreach ($ambilSPJ as $row) {
                                 <option selected="selected">--Pilih--</option>
                                 <?php
 foreach ($ambilJSP as $row) {
-	echo '<option value="' . $row->JSPid . '">' . $row->JSPjenis . '</option>';
+    echo '<option value="' . $row->JSPid . '">' . $row->JSPjenis . '</option>';
 }
 ?>
                             </select>
