@@ -1,0 +1,30 @@
+User: ::1 - December 6, 2021, 08:21:34
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 6, 2021, 11:25:30
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 6, 2021, 14:09:11
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 6, 2021, 14:43:40
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 6, 2021, 14:44:02
+Attempt: Berhasil Tambah User Agung
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 6, 2021, 15:04:41
+Attempt: Success Add Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------

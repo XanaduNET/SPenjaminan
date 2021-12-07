@@ -21,8 +21,8 @@
         <div class="user-notification">
         <ul class="nav navbar-nav navbar-right">
       <li class="dropdown">
-       <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-copy dw dw-notification"></i><span class="label label-pill label-danger count" style="border-radius:10px;"></span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
-       <ul class="dropdown-menu"></ul>
+       <a href="#" id="dropdown-toggleID" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-copy dw dw-notification"></i><span class="label label-pill label-danger count" style="border-radius:10px;"></span> <span class="glyphicon glyphicon-bell" style="font-size:18px;"></span></a>
+       <ul class="dropdown-menu" id="dropdown-menuID"></ul>
       </li>
      </ul>
 			</div>
@@ -37,7 +37,7 @@
             </div>
             <div class="user-info-dropdown">
                 <div class="dropdown">
-                    <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                    <a  class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
                         <span class="user-icon">
                             <img src="<?=base_url('assets/img/profile/') . $user['image'];?>" alt="">
                         </span>

@@ -11,8 +11,7 @@
     <script src="<?=base_url('assets/');?>vendors/scripts/dashboard.js"></script>
     <script src="<?=base_url('assets/');?>js/jquery-3.3.1.js">
     </script>
-    <script src=" <?=base_url('assets/');?>js/bootstrap.js">
-    </script>
+
     <script src=" <?=base_url('assets/');?>js/jquery-ui.js">
     </script>
 
