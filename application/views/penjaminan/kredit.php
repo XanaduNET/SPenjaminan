@@ -4,7 +4,7 @@
     <div class="main-container">
         <h1 class="h3 mb-4 text-gray-800"><?=$title;?></h1>
         <div>
-            <div><?=$this->session->flashdata('error')?></div>
+
             <?php if (validation_errors()): ?>
             <div class="alert alert-danger" role="alert">
                 <?=validation_errors();?>
@@ -59,8 +59,8 @@ foreach ($ambilgpp as $row) {
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">No Urut Sertifikat</label>
                         <div class="form-group col-lg-3 col-sm-4">
-                            <input style="width: 100%;" type="text"  name="DJPnourut" class="form-control"
-                                value="<?php echo $autogenurut; ?>">
+<input style="width: 100%;" type="text"  name="DJPnourut" class="form-control"
+                                value="<?php echo $autogenurut; ?>"  onkeypress="return onlyNumberKey(event)">
                         </div>
                     </div>
                     <div class="form-group row">

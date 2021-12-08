@@ -20,7 +20,7 @@
                 </form>
                 <br>
                 <?php if (empty($flag)) {
-	?>
+    ?>
 
                 <?=form_open('kur/triggeredExportkuraccrual', ['class' => 'form-horizontal'])?>
                 <form role="form" class="form-horizontal">
@@ -198,9 +198,9 @@ echo $numBulan;?>
                                     <td>
                                         <?php
 if ($p['nilai_akad'] <= 50000000) {
-	$rate = 0.0175;
+    $rate = 0.0175;
 } else {
-	$rate = 0.015;
+    $rate = 0.015;
 }
 $c = $p['nilai_akad'];
 $a = $p['tanggal_akad'];
@@ -215,27 +215,27 @@ $numBulan += date("m", $timeEnd) - date("m", $timeStart);
 $hasil1 = (int) (($numBulan / $numBulan) * $c);
 $hasil2 = (int) ((($numBulan - 1) / $numBulan) * $c);
 if ($hasil2 < 0) {
-	$hasil7 = 0;
+    $hasil7 = 0;
 } else {
-	$hasil7 = $hasil2;
+    $hasil7 = $hasil2;
 }
 $hasil3 = (int) ((($numBulan - 2) / $numBulan) * $c);
 if ($hasil3 < 0) {
-	$hasil8 = 0;
+    $hasil8 = 0;
 } else {
-	$hasil8 = $hasil3;
+    $hasil8 = $hasil3;
 }
 $hasil4 = (int) ((($numBulan - 3) / $numBulan) * $c);
 if ($hasil4 < 0) {
-	$hasil9 = 0;
+    $hasil9 = 0;
 } else {
-	$hasil9 = $hasil4;
+    $hasil9 = $hasil4;
 }
 $hasil5 = (int) ((($numBulan - 4) / $numBulan) * $c);
 if ($hasil5 < 0) {
-	$hasil6 = 0;
+    $hasil6 = 0;
 } else {
-	$hasil6 = $hasil5;
+    $hasil6 = $hasil5;
 }
 $ijp = (int) ($hasil1 + $hasil7 + $hasil8 + $hasil9 + $hasil6) * $rate;
 echo "" . number_format($ijp, 2, ".", ".");
@@ -294,28 +294,28 @@ $JKW = (date("Y", $timeEnd) - date("Y", $timeStart)) * 12;
 $JKW += date("m", $timeEnd) - date("m", $timeStart);
 
 for ($i = 2; $i < $JKW; $i++) {
-	echo "<td>";
+    echo "<td>";
 
-	$bln_a = date("m", strtotime($d));
-	//echo '<td>'.' </td>';
-	if ($bln_a == $i) {
+    $bln_a = date("m", strtotime($d));
+    //echo '<td>'.' </td>';
+    if ($bln_a == $i) {
 
-		echo '' . number_format($bulan, 2, ".", ".");
+        echo '' . number_format($bulan, 2, ".", ".");
 
-	}
+    }
 
-	$bln_batas = date("m", strtotime($d));
-	//echo ' ' . strtoupper($JKW[$i]) .  ' ';
-	// echo '<td>'.' </td>';
-	if ($bln_batas == $i) {
+    $bln_batas = date("m", strtotime($d));
+    //echo ' ' . strtoupper($JKW[$i]) .  ' ';
+    // echo '<td>'.' </td>';
+    if ($bln_batas == $i) {
 
-		for ($i = 2; $i < $JKW; $i++) {
-			echo '<td>' . number_format($c, 2, ".", ".") . '</td>';
-		}
+        for ($i = 2; $i < $JKW; $i++) {
+            echo '<td>' . number_format($c, 2, ".", ".") . '</td>';
+        }
 
-	}
+    }
 
-	echo "</td>";
+    echo "</td>";
 }
 ?>
                                     </td>
@@ -342,7 +342,7 @@ for ($i = 2; $i < $JKW; $i++) {
         </div>
 
         <div><?=validation_errors()?></div>
-        <div><?=$this->session->flashdata('error')?></div>
+
         <?=form_open('kur', ['class' => 'form-horizontal'])?>
         <form role="form" class="form-horizontal">
             <div class="col-xl-4 col-md-7 mb-5">

@@ -142,11 +142,11 @@ class Table extends CI_Controller
             "Aksi: " . ('Data Penjaminan') . PHP_EOL .
             "-------------------------" . PHP_EOL;
 //-
-        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Penjaminan has been deleted !</div>');
-        redirect('table');
-
         file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
-        $this->pdfsartifikat->generate($html, $file_pdf, $paper, $orientation);
+        echo "<script>
+        alert('Data Sertifikat Berhasil Dihapus!');
+        window.location.href='table';
+        </script>";
     }
 
     public function reportpdf()

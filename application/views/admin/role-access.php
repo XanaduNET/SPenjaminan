@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-lg-6">
 
-                    <?=$this->session->flashdata('message');?>
+
                     <h5>Role : <?=$role['role'];?></h5>
                     <table class="display table table-striped table-bordered" width="100%" cellspacing="0">
                         <thead>

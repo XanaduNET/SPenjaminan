@@ -55,9 +55,12 @@ class Kur extends CI_Controller
 
         if (!$this->upload->do_upload('file')) {
             //upload gagal
-            $this->session->set_flashdata('message', '<div class="alert alert-danger"><b>PROSES IMPORT GAGAL!</b>' . $this->upload->display_errors() . '</div>');
-            //redirect halaman
-            redirect('kur/lapbul_bulan');
+
+            echo "<script>
+            alert('<b> IMPORT GAGAL!! </b>');
+            window.location.href='../kur/lapbul_bulan';
+            </script>";
+
         } else {
             $data_upload = $this->upload->data();
             $excelreader = new PHPExcel_Reader_Excel2007();
@@ -86,7 +89,7 @@ class Kur extends CI_Controller
         $this->db->insert_batch('tblkur', $data);
         unlink(realpath('uploads/' . $data_upload['file_name']));
         //upload success
-        $this->session->set_flashdata('message', 'PROSES IMPORT BERHASIL!');
+
         //redirect halaman
         $date = date("d-m-Y");
         $bulan = date("m");
@@ -100,7 +103,10 @@ class Kur extends CI_Controller
         //-
         file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
 
-        redirect('kur/lapbul_bulan');
+        echo "<script>
+        alert('IMPORT BERHASIL!');
+        window.location.href='../kur/lapbul_bulan';
+        </script>";
     }
 
     public function aksi()
@@ -181,9 +187,11 @@ class Kur extends CI_Controller
             }
 
         }
-        $this->session->set_flashdata('message', 'PROSES IMPORT BERHASIL!');
-        //redirect halaman
-        redirect('kur/lapbul_bulan');
+
+        echo "<script>
+        alert('IMPORT BERHASIL!');
+        window.location.href='='../kur/lapbul_bulan';
+        </script>";
     }
     public function lapbul()
     {

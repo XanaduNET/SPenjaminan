@@ -37,7 +37,9 @@ class Auth extends CI_Controller
         if (!is_dir('logfile/' . $bulan . '/logfile' . $date . '/')) {
             // dir doesn't exist, make it
             mkdir('logfile/' . $bulan . '/logfile' . $date . '/');
-        } else {}
+        } else {
+
+        }
         //usernya ada
         if ($user) {
             if ($user['is_active'] == 1) {
@@ -87,55 +89,52 @@ class Auth extends CI_Controller
                 } else {
 
                     $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j, Y, H:i:s") . PHP_EOL .
-                        "Attempt: " . ('Success Login') . PHP_EOL .
+                        "Attempt: " . ('Failed Login') . PHP_EOL .
                         "User: " . $nama . PHP_EOL .
                         "Aksi: " . ('Login') . PHP_EOL .
                         "-------------------------" . PHP_EOL;
                     //-
 
                     file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
+                    echo "<script>
+                    alert('Password Salah!');
+                    window.location.href='auth';</script>";
 
-                    $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> Password salah! </div>');
-                    redirect('auth');
                 }
             } else {
 
                 $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j, Y, H:i:s") . PHP_EOL .
-                    "Attempt: " . ('Success Login') . PHP_EOL .
+                    "Attempt: " . ('Failed Login') . PHP_EOL .
                     "User: " . $nama . PHP_EOL .
                     "Aksi: " . ('Login') . PHP_EOL .
                     "-------------------------" . PHP_EOL;
                 //-
 
                 file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
-                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> User tidak aktif ! </div>');
-                redirect('auth');
+                echo "<script>
+            alert('User Tidak Aktif! Silahkan Hubungi Admiistrator!');
+            window.location.href='auth';</script>";
             }
 
         } else {
 
             $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j, Y, H:i:s") . PHP_EOL .
-                "Attempt: " . ('Success Login') . PHP_EOL .
+                "Attempt: " . ('Failed Login') . PHP_EOL .
                 "User: " . $nama . PHP_EOL .
                 "Aksi: " . ('Login') . PHP_EOL .
                 "-------------------------" . PHP_EOL;
             //-
 
-            $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j, Y, H:i:s") . PHP_EOL .
-                "Attempt: " . ('Success Login') . PHP_EOL .
-                "User: " . $nama . PHP_EOL .
-                "Aksi: " . ('Login') . PHP_EOL .
-                "-------------------------" . PHP_EOL;
-//-
-
             file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
-            $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> User tidak terdaftar ! </div>');
-            redirect('auth');
+            echo "<script>
+            alert('User Tidak Terdaftar! Silahkan Hubungi Admiistrator!');
+            window.location.href='auth';</script>";
+
         }
     }
     public function registration()
     {
-       
+
         $date = date("d-m-Y");
         $bulan = date("m");
         $usernama = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
@@ -157,7 +156,7 @@ class Auth extends CI_Controller
                 "Aksi: " . ('Registrasi') . PHP_EOL .
                 "-------------------------" . PHP_EOL;
             //-
-               file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
+            file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
 
             $data['title'] = 'Halaman Registrasi';
             $this->load->view('template/auth_header', $data);
@@ -171,7 +170,7 @@ class Auth extends CI_Controller
                 "Aksi: " . ('Registrasi') . PHP_EOL .
                 "-------------------------" . PHP_EOL;
             //-
-               file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
+            file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
 
             $data = [
                 'nama' => htmlspecialchars($this->input->post('nama', true)),
@@ -182,8 +181,9 @@ class Auth extends CI_Controller
                 'date_created' => time(),
             ];
             $this->db->insert('user', $data);
-            $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Selamat! akun anda berhasil dibuat! Silahkan masuk! </div>');
-            redirect('admin/pengguna');
+            echo "<script>
+            alert('Selamat! akun anda berhasil dibuat! Silahkan masuk!');
+            window.location.href='../admin/pengguna';</script>";
         }
     }
     public function logout()
@@ -198,13 +198,14 @@ class Auth extends CI_Controller
             "Aksi: " . ('Logout') . PHP_EOL .
             "-------------------------" . PHP_EOL;
         //-
-        file_put_contents('logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
+        file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
 
         $this->session->unset_userdata('nama');
         $this->session->unset_userdata('role_id');
 
-        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Anda sudah Logged out!</div>');
-        redirect('auth');
+        echo "<script>
+        alert('Anda Berhasil Logout!');
+        window.location.href='../auth'; </script>";
     }
 
     public function blocked()

@@ -4,7 +4,7 @@
     <div class="main-container">
         <h1 class="h3 mb-4 text-gray-800"><?=$title;?></h1>
         <div>
-            <div><?=$this->session->flashdata('error')?></div>
+          
             <?php if (validation_errors()): ?>
             <div class="alert alert-danger" role="alert">
                 <?=validation_errors();?>

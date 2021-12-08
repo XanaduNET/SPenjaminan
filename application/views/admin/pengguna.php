@@ -9,7 +9,7 @@
         </script>
         <h1 class="h3 mb-4 text-gray-800"><?=$title;?></h1>
         <div>
-            <?=$this->session->flashdata('message');?>
+
             <a href="<?=base_url('auth/registration');?>" class="btn btn-primary mb-3">Tambah Pengguna</a>
             <div class="card">
                 <div class="card-body">

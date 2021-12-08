@@ -4,17 +4,11 @@
     <div class="main-container">
         <h1 class="h3 mb-4 text-gray-800"><?=$title;?></h1>
         <div>
-            <!--
-            <div><?=validation_errors()?></div>
-            <div><?=$this->session->flashdata('error')?></div>
-            <?=form_open('Nasabah/input', ['class' => 'form-horizontal'])?>
-          <form role="form" class="form-horizontal">
- -->
+
             <div class="table-responsive">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-gray-800">Data</h1>
-                    <!--  <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
+
                 </div>
                 <div class="card-body">
                     <div class="form-group">
@@ -25,11 +19,6 @@
 
                     <div class="container-fluid">
                         <div class="card-body">
-
-
-                            <!-- ============================================================== -->
-                            <!-- basic table  -->
-                            <!-- ============================================================== -->
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card">
                                     <div>
@@ -80,7 +69,7 @@
                                                     <?php
 $no = 1;
 foreach ($table as $u) {
-	?>
+    ?>
                                                     <tr>
                                                         <td><?php echo $no ?></td>
                                                         <td><?php echo $u->PPnama ?></td>

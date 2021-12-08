@@ -7,7 +7,7 @@
             <!--
 
             <div><?=validation_errors()?></div>
-            <div><?=$this->session->flashdata('error')?></div>
+          
             <?=form_open('Nasabah/input', ['class' => 'form-horizontal'])?>
           <form role="form" class="form-horizontal">
  -->

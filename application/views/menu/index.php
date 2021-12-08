@@ -10,7 +10,7 @@
             });
             </script>
 
-            <?=$this->session->flashdata('message');?>
+       
             <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newMenuModal">Tambah Menu</a>
             <div class="card">
                 <div class="card-body">

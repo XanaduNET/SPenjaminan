@@ -5,7 +5,7 @@
         <h1 class="h3 mb-4 text-gray-800"><?=$title;?></h1>
         <div>
             <div><?=validation_errors()?></div>
-            <div><?=$this->session->flashdata('error')?></div>
+            
             <?=form_open('Outstanding/triggeredExport', ['class' => 'form-horizontal'])?>
             <form role="form" class="form-horizontal">
                 <input type="hidden" id="table" name="table"
@@ -133,7 +133,7 @@ $no++;
                     </div>
                 </div>
                 <div><?=validation_errors()?></div>
-                <div><?=$this->session->flashdata('error')?></div>
+                
                 <?=form_open('Outstanding', ['class' => 'form-horizontal'])?>
                 <form role="form" class="form-horizontal">
                     <div class="col-xl-4 col-md-7 mb-5">

@@ -26,6 +26,11 @@ class Menu_model extends CI_Model
     {
         $this->db->where('id', $id);
         $this->db->delete('user_menu');
+
+        echo "<script>
+        alert('Menu Berhasil Dihapus!');
+        window.location.href='../';
+        </script>";
     }
 
     public function getMenuById($id)
@@ -37,11 +42,21 @@ class Menu_model extends CI_Model
     {
         $this->db->where('id', $this->input->post('id'));
         $this->db->update('user_menu', ['menu' => $this->input->post('menu')]);
+
+        echo "<script>
+        alert('Menu Berhasil Di Update!');
+        window.location.href='../../menu';
+        </script>";
     }
     public function deleteDataSubMenu($id)
     {
         $this->db->where('id', $id);
         $this->db->delete('user-sub_menu');
+
+        echo "<script>
+        alert('Submenu Berhasil Dihapus!');
+        window.location.href='../../menu/subMenu';
+        </script>";
     }
     public function getSubMenuById($id)
     {
@@ -56,6 +71,7 @@ class Menu_model extends CI_Model
 
     public function editsubMenu($id, $title, $menuid, $url, $icon, $isactive)
     {
+
         $this->db->set('title', $title);
         $this->db->set('menu_id', $menuid);
         $this->db->set('url', $url);
@@ -63,5 +79,9 @@ class Menu_model extends CI_Model
         $this->db->set('is_active', $isactive);
         $this->db->where('id', $id);
         $this->db->update('user-sub_menu');
+
+        echo "<script>
+        alert('Menu Berhasil Diedit!');
+        window.location.href='../../menu/subMenu';</script>";
     }
 }

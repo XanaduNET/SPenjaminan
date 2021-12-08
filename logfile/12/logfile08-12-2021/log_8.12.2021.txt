@@ -1,0 +1,450 @@
+User: ::1 - December 8, 2021, 11:11:21
+Attempt: Failed Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 8, 2021, 11:11:34
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 8, 2021, 11:12:04
+Attempt: Failed Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 8, 2021, 11:12:09
+Attempt: Failed Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 8, 2021, 11:13:45
+Attempt: Failed Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 8, 2021, 11:14:37
+Attempt: Failed Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 8, 2021, 11:14:46
+Attempt: Failed Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 8, 2021, 11:14:53
+Attempt: Failed Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 8, 2021, 11:16:30
+Attempt: Failed Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 8, 2021, 11:16:36
+Attempt: Failed Login
+User: aaa
+Aksi: Login
+-------------------------
+User: ::1 - December 8, 2021, 11:25:58
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 8, 2021, 11:38:16
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 8, 2021, 11:38:35
+Attempt: Berhasil Tambah User Brocan
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 8, 2021, 11:39:38
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 8, 2021, 11:39:39
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 8, 2021, 11:39:53
+Attempt: Berhasil Tambah User Brok
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 8, 2021, 11:42:27
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 8, 2021, 11:45:47
+Attempt: Success Add Role
+User: Akbar
+Aksi: Role
+-------------------------
+User: ::1 - December 8, 2021, 11:46:14
+Attempt: Success Add Role
+User: Akbar
+Aksi: Role
+-------------------------
+User: ::1 - December 8, 2021, 11:46:31
+Attempt: Success Add Role
+User: Akbar
+Aksi: Role
+-------------------------
+User: ::1 - December 8,2021, 11:52:40
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - December 8, 2021, 13:17:12
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 8, 2021, 14:51:01
+Attempt: Success Edit SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:01:15
+Attempt: Success Edit SubMenu 2
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:01:18
+Attempt: Success Edit SubMenu 2
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:01:24
+Attempt: Success Edit SubMenu 1
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:06:01
+Attempt: Success Edit SubMenu 2
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:06:03
+Attempt: Success Edit SubMenu 2
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:06:20
+Attempt: Success Edit SubMenu 1
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:08:19
+Attempt: Success Edit SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:09:04
+Attempt: Success Edit SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:09:23
+Attempt: Success Edit SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:10:05
+Attempt: Success Edit
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:12:18
+Attempt: Success Edit
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:12:51
+Attempt: Success Edit
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:13:33
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 8, 2021, 15:14:16
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 8, 2021, 15:14:20
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - December 8, 2021, 15:14:26
+Attempt: Success Logout
+User: 
+Aksi: Logout
+-------------------------
+User: ::1 - December 8, 2021, 15:14:37
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 8, 2021, 15:15:48
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - December 8, 2021, 15:16:00
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 8, 2021, 15:16:16
+Attempt: Success Add Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:17:39
+Attempt: Success Add Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:18:00
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:18:19
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:18:19
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:18:21
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:18:21
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:18:21
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:18:22
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:18:22
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:18:22
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:18:22
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:21:00
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:21:01
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:21:01
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:21:01
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:21:01
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:21:01
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:21:02
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:21:02
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:21:02
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:21:02
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:21:02
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:21:02
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:21:02
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:21:03
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:21:03
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:21:47
+Attempt: Success Add Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:21:56
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:21:57
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:21:58
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:22:16
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:22:17
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:22:17
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:22:20
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:22:41
+Attempt: Success Add Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:23:13
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:23:33
+Attempt: Success Add SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:24:46
+Attempt: Success Add SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:25:02
+Attempt: Delete SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - December 8, 2021, 15:25:08
+Attempt: Delete SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - December 8,2021, 15:31:32
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - December 8,2021, 16:15:06
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - December 8,2021, 16:15:07
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - December 8,2021, 16:15:12
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - December 8,2021, 16:15:14
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - December 8,2021, 16:15:24
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - December 8, 2021, 17:00:31
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------

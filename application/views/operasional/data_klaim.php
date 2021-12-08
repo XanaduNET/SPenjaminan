@@ -149,7 +149,7 @@ $no++;
                 </div>
             </div>
             <div><?=validation_errors()?></div>
-            <div><?=$this->session->flashdata('error')?></div>
+           
             <?=form_open('data_klaim', ['class' => 'form-horizontal'])?>
             <form role="form" class="form-horizontal">
                 <div class="col-xl-4 col-md-7 mb-5">

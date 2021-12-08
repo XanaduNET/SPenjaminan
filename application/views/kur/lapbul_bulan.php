@@ -9,7 +9,7 @@
         });
         </script>
         <div>
-            <?=$this->session->flashdata('message');?>
+
             <div class="row mt-2">
                 <div class="col-12">
                     <div class="card">
@@ -30,7 +30,6 @@
                             <br>
                             <br>
                             <div><?=validation_errors()?></div>
-                            <div><?=$this->session->flashdata('error')?></div>
                             <?=form_open('Kur/triggeredExport', ['class' => 'form-horizontal'])?>
                             <form role="form" class="form-horizontal">
                                 <input type="hidden" id="datakur" name="datakur"
@@ -158,9 +157,9 @@ $numBulan = (date("Y", $timeEnd) - date("Y", $timeStart));
 $numBulan += date("m", $timeEnd) - date("m", $timeStart);
 $hasil = (int) ((($numBulan - 3) / $numBulan) * $c);
 if ($hasil <= 0) {
-	echo "-";
+    echo "-";
 } else {
-	echo "" . number_format($hasil, 0, ".", ".");}?></td>
+    echo "" . number_format($hasil, 0, ".", ".");}?></td>
                                         <td><?php
 $c = $p['nilai_akad'];
 $a = $p['tanggal_akad'];
@@ -174,23 +173,23 @@ $numBulan += date("m", $timeEnd) - date("m", $timeStart);
 $hasil = (int) ((($numBulan - 4) / $numBulan) * $c);
 
 if ($hasil <= 0) {
-	echo "-";
+    echo "-";
 } else {
-	echo "" . number_format($hasil, 0, ".", ".");}?></td>
+    echo "" . number_format($hasil, 0, ".", ".");}?></td>
 
                                         <td><?php
 if ($p['nilai_akad'] <= 50000000) {
-	$rate = 1.75;
+    $rate = 1.75;
 } else {
-	$rate = 1.50;
+    $rate = 1.50;
 }
 ;
 echo $rate . "%";?></td>
                                         <td><?php
 if ($p['nilai_akad'] <= 50000000) {
-	$rate = 0.0175;
+    $rate = 0.0175;
 } else {
-	$rate = 0.015;
+    $rate = 0.015;
 }
 $c = $p['nilai_akad'];
 $a = $p['tanggal_akad'];
@@ -205,27 +204,27 @@ $numBulan += date("m", $timeEnd) - date("m", $timeStart);
 $hasil1 = (int) (($numBulan / $numBulan) * $c);
 $hasil2 = (int) ((($numBulan - 1) / $numBulan) * $c);
 if ($hasil2 < 0) {
-	$hasil7 = 0;
+    $hasil7 = 0;
 } else {
-	$hasil7 = $hasil2;
+    $hasil7 = $hasil2;
 }
 $hasil3 = (int) ((($numBulan - 2) / $numBulan) * $c);
 if ($hasil3 < 0) {
-	$hasil8 = 0;
+    $hasil8 = 0;
 } else {
-	$hasil8 = $hasil3;
+    $hasil8 = $hasil3;
 }
 $hasil4 = (int) ((($numBulan - 3) / $numBulan) * $c);
 if ($hasil4 < 0) {
-	$hasil9 = 0;
+    $hasil9 = 0;
 } else {
-	$hasil9 = $hasil4;
+    $hasil9 = $hasil4;
 }
 $hasil5 = (int) ((($numBulan - 4) / $numBulan) * $c);
 if ($hasil5 < 0) {
-	$hasil6 = 0;
+    $hasil6 = 0;
 } else {
-	$hasil6 = $hasil5;
+    $hasil6 = $hasil5;
 }
 $ijp = (int) ($hasil1 + $hasil7 + $hasil8 + $hasil9 + $hasil6) * $rate;
 echo "" . number_format($ijp, 0, ".", ".");?></td>
@@ -248,7 +247,7 @@ echo "" . number_format($ijp, 0, ".", ".");?></td>
                     <!-- Filter Bulan -->
 
                     <div><?=validation_errors()?></div>
-                    <div><?=$this->session->flashdata('error')?></div>
+
                     <?=form_open('Kur/lapbul_bulan', ['class' => 'form-horizontal'])?>
                     <form role="form" class="form-horizontal">
                         <select id="Month" name="Month">
