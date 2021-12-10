@@ -67,7 +67,7 @@ foreach ($ambilgpp as $row) {
                         <label class="col-sm-2 col-form-label">No Seri Sartifikat</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="DJPnoseri" name="DJPnoseri"
-                                placeholder="" >
+                                placeholder="">
                         </div>
                     </div>
                     <!-- /.card-header -->

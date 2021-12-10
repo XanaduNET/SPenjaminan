@@ -81,7 +81,7 @@ class Kredit extends CI_Controller
         $this->form_validation->set_rules('GPPid', 'Grup Penerima Penaminan', 'required');
         $this->form_validation->set_rules('DJPnoreg', 'Nomor Registrasi', 'required');
         $this->form_validation->set_rules('DJPnourut', 'No Urut', 'required');
-        $this->form_validation->set_rules('DJPnoseri', 'No Seri Sertifikat', 'required');
+
         $this->form_validation->set_rules('PPnama', 'Penerima Penjaminan', 'required');
         $this->form_validation->set_rules('PPalamat', 'Alamat Penjaminan', 'required');
         $this->form_validation->set_rules('DJPnodeklarasi', 'No Deklarasi', 'required');
@@ -130,7 +130,7 @@ class Kredit extends CI_Controller
             //-
             file_put_contents('logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
 
-            redirect('nasabah/' . $insert_id . '/' . $OPKid);
+            redirect('nasabah/' . $insert_id . '/' . $OPKid . '/' . $JSPid);
 
         }
     }
@@ -190,7 +190,7 @@ class Kredit extends CI_Controller
             //-
             file_put_contents('logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
 
-            redirect('Kredit/nasabahedit/' . $DJPid . '/' . $OPKid);
+            redirect('Kredit/nasabahedit/' . $DJPid . '/' . $OPKid . '/' . $JSPid);
 
         }
     }

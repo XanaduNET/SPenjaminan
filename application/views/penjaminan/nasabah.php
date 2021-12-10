@@ -18,9 +18,7 @@
                                             <th class="col-md-2">KTP Terjamin</th>
                                             <th class="col-md-2">No Surat Izin Usaha Perdagangan</th>
                                             <th class="col-md-2">NPWP Terjamin</th>
-
                                             <th class="col-md-2">Kategori Pekerjaan</th>
-
                                             <th class="col-md-2">No Akad</th>
                                             <th class="col-md-2">Tanggal Akad</th>
                                             <th class="col-md-2">Jangka Waktu</th>
@@ -87,7 +85,7 @@
                                                     <?php
 
 foreach ($ambilpkrj as $row) {
-	echo '<option value="' . $row->PKRJid . '">' . $row->PKRJnama . '</option>';
+    echo '<option value="' . $row->PKRJid . '">' . $row->PKRJnama . '</option>';
 }
 ?> <div id="loading" style="margin-top: 15px;">
                                                         <img src="../img/loading.gif" width="18">
@@ -136,8 +134,9 @@ foreach ($ambilpkrj as $row) {
                             </div>
                             <div class="card-footer">
 
-                                <?php if ($this->uri->segment(3) == 2 || $this->uri->segment(3) == 3) {
-	//
+                                <?php if ($this->uri->segment(4) == 2) {
+
+    //
 } else {?>
                                 <button type="button" name="add" id="add" class="btn btn-success">Add More</button>
                                 <?php }?>
@@ -151,7 +150,7 @@ foreach ($ambilpkrj as $row) {
 
     <!-- DARI UNTUK FROM BIAYA -->
 
-    <form id="formbiayabiaya" method="post">
+    <form id="formbiayabiaya" method="post" style="display: none; ">
         <div class="container-fluid">
             <div class="card-body">
                 <div class="table-responsive">
@@ -313,6 +312,8 @@ foreach ($ambilpkrj as $row) {
 
 
         $('#formnasabah').on('submit', function(e) {
+
+            $('#formbiayabiaya').css('display', 'block');
             var data = $("#formnasabah :input").serialize();
 
 
@@ -896,17 +897,17 @@ foreach ($ambilpkrj as $row) {
         return isNumberKey(event);
     });
     var DJPfeematerairubah = document.getElementById("DJPfeematerai");
-    DJPfeematerairubah.addEventListener("keyup", function(e) {
+    DJPfeematerairubah.addEventListener("click", function(e) {
         DJPfeematerairubah.value = convertRupiah(this.value);
     });
-    DJPfeematerairubah.addEventListener('keydown', function(event) {
+    DJPfeematerairubah.addEventListener("click", function(event) {
         return isNumberKey(event);
     });
     var DJPfeeadminrubah = document.getElementById("DJPfeeadmin");
-    DJPfeeadminrubah.addEventListener("keyup", function(e) {
+    DJPfeeadminrubah.addEventListener("click", function(e) {
         DJPfeeadminrubah.value = convertRupiah(this.value);
     });
-    DJPfeeadminrubah.addEventListener('keydown', function(event) {
+    DJPfeeadminrubah.addEventListener("click", function(event) {
         return isNumberKey(event);
     });
     var DJPjumlahbiayarubah = document.getElementById("DJPjumlahbiaya");
@@ -965,9 +966,7 @@ foreach ($ambilpkrj as $row) {
 
 </div>
 </div>
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
+
 </div>
 </div>
 </div>

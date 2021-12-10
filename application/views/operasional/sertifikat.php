@@ -10,7 +10,8 @@
 
 
     <div id="container" style="font-family:sans-serif;">
-
+    <?php
+foreach ($table as $u) {?>
 
         <table align="center" cellspacing="0" style="width: 50%; text-align: center; ">
             `<tr>
@@ -21,28 +22,17 @@
                             KREDIT</span></U><br>
 
                     <?php
-$DJPnoreg = "";
-foreach ($table as $u) {?>
-                    <?php if ($u->DJPnoreg != $DJPnoreg) {
-	echo $u->DJPnoreg;
-	$DJPnoreg = $u->DJPnoreg;
-} else {
-
-}}?> <br>
-
-                    <?php
-$JSPjenis = "";
-foreach ($table as $u) {?>
-                    <?php if ($u->JSPjenis != $JSPjenis) {
-	echo '(' . $u->JSPjenis . ')';
-	$JSPjenis = $u->JSPjenis;
-} else {
-
-}}?>
+echo $u->DJPnoreg;
+    ?> <br>
+<?php if ($u->JSPid == 1) {
+        echo '(Massal)';
+    } else {
+        echo '(BARU)';
+    }?>
 
                     <br>
                 </td>
-            </tr>s`
+            </tr>
         </table>
 
         <div style="width: 85%; font-size: 15px; " align="justify">Dengan ini PENJAMIN memberikan Jaminan Kredit atas
@@ -57,46 +47,84 @@ foreach ($table as $u) {?>
                     <div align="center">I.</div>
                 </td>
                 <td style="width:70%;">
-                    <div align="left"> DATA PENJAMINAN</div>
+                    <div align="left"> DATA PENERIMA JAMINAN</div>
                 </td>
                 <td style="width:10%;">
-                    <div align="center">:</div>
+                    <div align="center">:<br>:</div>
                 </td>
-                <td style="width:130%;">PT. PENJAMINAN KREDIT DEARAH PROVINSI RIAU</td>
-            </tr>
-        </table>
-        <table cellspacing="0" style="width: 85%; font-size: 10pt;">
-            <tr>
-                <td style="width:20%;">&nbsp;</td>
-                <td style="width:70%;">&nbsp;</td>
-                <td style="width:10%;">&nbsp;</td>
-                <td style="width:130%;">Jl. Sumatera No. 25 Pekanbaru, Kel. Simpang Empat, Kec. Pekanbaru Kota</td>
+                <td style="width:130%;"><?php echo $u->PPnama . "<br>" . $u->PPalamat ?></td>
             </tr>
         </table> <br>
 
+        <!-- If JSP Massal / Non Massal -->
+        <?php if ($u->JSPid == 1) {?>
+
+            <table border="1" cellspacing="0" style="width: 100%; font-size: 10pt;">
+        <tr>
+            <td style="width:20%;">
+                <div align="center">II.</div>
+            </td>
+            <td style="width:100%;">DATA MENGENAI KREDIT</td>
+            <td style="width:10%;">&nbsp;</td>
+            <td style="width:150%;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width: 20%;">
+            <td style="width:100%;"> Sesuai Surat Permohonan Penjaminan Kredit</td>
+            <td style="width:10%;">
+                <div align="center">:</div>
+            </td>
+            <td style="width:100%;"><?php echo $u->DJPnodeklarasi ?> :
+                <?php echo date('d F Y', strtotime($u->DJPtanggaldeklarasi)); ?> </td>
+            </td>
+        </tr>
+
+        <?php
+if ($u->PKSno2 != null) {
+        ?>
+        <tr>
+            <td style="width: 5%">
+            <td style="width:100%;"> Berdasarkasn Perjanjian Penjaminan Kredit </td>
+            <td style="width:10%;">
+                <div align="center">:</div>
+            </td>
+            <td style="width:100%;"><?php echo $u->PKSno2 ?> : <?php echo date('d F Y', strtotime($u->PKStanggal)); ?>
+            </td>
+            </td>
+        </tr>
+        <?php
+} else {
+        ?>
+        <tr>
+            <td style="width: 5%">
+            <td style="width:100%;"> Berdasarkasn Perjanjian Penjaminan Kredit</td>
+            <td style="width:10%;">
+                <div align="center">:</div>
+            </td>
+            <td style="width:100%;"><?php echo $u->PKSno1 ?> : <?php echo date('d F Y', strtotime($u->PKStanggal)); ?>
+            </td>
+            </td>
+            <?php
+}?>
+
+    </table><br>
+<?php } else {
+        ?>
         <table cellspacing="0" style="width: 85%; font-size: 10pt;">
             <tr>
                 <td style="width:20%;">
                     <div align="center">II.</div>
                 </td>
-                <td style="width:70%;">DATA PENERIMA JAMINAN</td>
+                <td style="width:70%;">DATA MENGENAI KREDIT</td>
                 <td style="width:10%;">
                     <div align="center">:</div>
                 </td>
-                <td style="width:130%;"><?php echo $u->PPnama ?></td>
+                <td style="width:130%;"><?php echo $u->PPnama . "<br>" . $u->PPalamat ?></td>
             </tr>
         </table>
-        <table cellspacing="0" style="width: 85%; font-size: 10pt;">
-            <tr>
-                <td style="width:20%;">&nbsp;</td>
-                <td style="width:70%;">&nbsp;</td>
-                <td style="width:10%;">&nbsp;
-    </div>
-    </td>
-    <td style="width:130%;"> <?php echo $u->PPalamat ?> </td>
-    </tr>
-    </table> <br>
-
+        <br>
+        <!-- End If-->
+<?php }?>
     <table cellspacing="0" style="width: 100%; font-size: 10pt;">
         <tr>
             <td style="width:20%;">
@@ -122,7 +150,7 @@ foreach ($table as $u) {?>
 
         <?php
 if ($u->PKSno2 != null) {
-	?>
+        ?>
         <tr>
             <td style="width: 5%">
             <td style="width:100%;"> Berdasarkasn Perjanjian Penjaminan Kredit </td>
@@ -135,7 +163,7 @@ if ($u->PKSno2 != null) {
         </tr>
         <?php
 } else {
-	?>
+        ?>
         <tr>
             <td style="width: 5%">
             <td style="width:100%;"> Berdasarkasn Perjanjian Penjaminan Kredit</td>
@@ -147,7 +175,7 @@ if ($u->PKSno2 != null) {
             </td>
             <?php
 }
-?>
+    ?>
 
     </table><br>
     <table cellspacing="0" style="width: 100%; font-size: 10pt;">
@@ -182,7 +210,7 @@ if ($u->PKSno2 != null) {
             <td style="width:30%;">
                 <div align="right">2.</div>
             </td>
-            <td style="width:100%;">Jumlah Plafond Kredit</td>
+            <td style="width:100%;">Nilai Penjaminan</td>
             <td style="width:11%;">
                 <div align="right">:</div>
             </td>
@@ -203,7 +231,7 @@ if ($u->PKSno2 != null) {
             <td style="width:19%;">
                 <div align="center">:</div>
             </td>
-            <td style="width:500%;"><?php echo $u->DJPjumlahpk ?></td>
+            <td style="width:500%;"><?php echo $u->DJPjumlahpk; ?></td>
         </tr>
     </table>
     <table cellspacing="0" style="width: 198%; font-size: 10pt;">
@@ -383,6 +411,7 @@ if ($u->PKSno2 != null) {
             </td>
         </tr>
     </table>
+    <?php }?>
     </div>
 </body>
 
