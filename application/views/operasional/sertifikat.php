@@ -203,29 +203,40 @@ if ($u->PKSno2 != null) {
 <br>
 <table border="1" cellspacing="0" style="width:100%; font-size: 10pt;">
             <tr>
-                <td style="width:30%;"><div align="center"></div></td>
-                <td style="width:80%;">Imbal Jasa Penjaminan</td>
+                <td style="width:15%;"><div align="center"></div></td>
+                <td style="width:80%;">a. Imbal Jasa Penjaminan</td>
                 <td style="width:10%;"><div align="center">:</div></td>
-                <td style="width:130%;"><div align="right"><?php echo "Rp." . number_format($u->DJPjumlahimbaljasa, 2, ",", ".") ?></div></td>
+                <td style="width:130%;"><div align="right"><?php echo "Rp. " . number_format($u->DJPjumlahimbaljasa, 2, ",", ".") ?></div></td>
             </tr>
             <tr>
-                <td style="width:30%;"><div align="center"></div></td>
-                <td style="width:80%;">Fee Bank 10,00% x <?php echo "Rp." . number_format($u->DJPjumlahimbaljasa, 2, ",", ".") ?></td>
+                <td style="width:15%;"><div align="center"></div></td>
+                <td style="width:80%;">b. Fee Bank 10,00% x <?php echo "Rp. " . number_format($u->DJPjumlahimbaljasa, 2, ",", ".") ?></td>
                 <td style="width:10%;"><div align="center">:</div></td>
-                <td style="width:130%;"><div align="right"><u?>
-                <?php echo "Rp" . number_format($u->DJPfeebank, 2, ",", ".") ?> </u> </div></td>
+                <td style="width:130%;"><div align="right"><u>
+                <?php echo "Rp. " . number_format($u->DJPfeebank, 2, ",", ".") ?> </u> </div></td>
             </tr>
             <tr>
-                <td style="width:30%;"><div align="center"></div></td>
-                <td style="width:80%;">Bea Materai</td>
+                <td style="width:15%;"><div align="center"></div></td>
+                <td style="width:80%;">c. Bea Materai</td>
                 <td style="width:10%;"><div align="center">:</div></td>
-                <td style="width:130%;"><div align="right"><?php echo "Rp" . number_format($u->DJPfeematerai, 2, ",", ".") ?></div></td>
+                <td style="width:130%;"><div align="right"><?php echo "Rp. " . number_format($u->DJPfeematerai, 2, ",", ".") ?></div></td>
             </tr>
             <tr>
-                <td style="width:30%;"><div align="center"></div></td>
-                <td style="width:80%;">Biaya Administrasi Penjaminan</td>
+                <td style="width:15%;"><div align="center"></div></td>
+                <td style="width:80%;">d. Biaya Administrasi Penjaminan</td>
                 <td style="width:10%;"><div align="center">:</div></td>
-                <td style="width:130%;"><div align="right"><?php echo "Rp" . number_format($u->DJPfeeadmin, 2, ",", ".") ?></div></td>
+                <td style="width:130%;"><div align="right"><u><?php echo "Rp. " . number_format($u->DJPfeeadmin, 2, ",", ".") ?></u><br></div></td>
+            </tr>
+            <tr>
+                <td style="width:15%;"><div align="center"></div></td>
+                <td style="width:80%;">&nbsp;&nbsp;&nbsp;&nbsp;Jumlah</td>
+                <td style="width:10%;"><div align="center">:</div></td>
+                <td style="width:130%;"><div align="right"><?php echo "Rp. " . number_format($u->DJPjumlahbiaya, 2, ",", ".") ?></u></div></td>
+            </tr>
+
+            <tr>
+                <td rowspan="4" style="width:10%;"><div align="center">Terbilang</div></td>
+
             </tr>
 </table>
 <?php }?>
