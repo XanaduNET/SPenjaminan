@@ -146,7 +146,7 @@ if ($u->PKSno2 != null) {
    <!-- 1 Kolektif 2 By Person -->
 <?php if ($u->JSPid == 1) {?>
 
-    <table border="1" cellspacing="0" style="width:100%; font-size: 10pt;">
+    <table cellspacing="0" style="width:100%; font-size: 10pt;">
             <tr>
                 <td style="width:10%;"><div align="center"><b>III.</b></div></td>
                 <td style="width:80%;"><b>KETENTUAN PENJAMINAN KREDIT</b></td>
@@ -201,7 +201,7 @@ if ($u->PKSno2 != null) {
             </tr>
 </table>
 <br>
-<table border="1" cellspacing="0" style="width:100%; font-size: 10pt;">
+<table cellspacing="0" style="width:100%; font-size: 10pt;">
             <tr>
                 <td style="width:15%;"><div align="center"></div></td>
                 <td style="width:80%;">a. Imbal Jasa Penjaminan</td>
@@ -229,251 +229,164 @@ if ($u->PKSno2 != null) {
             </tr>
             <tr>
                 <td style="width:15%;"><div align="center"></div></td>
-                <td style="width:80%;">&nbsp;&nbsp;&nbsp;&nbsp;Jumlah</td>
-                <td style="width:10%;"><div align="center">:</div></td>
-                <td style="width:130%;"><div align="right"><?php echo "Rp. " . number_format($u->DJPjumlahbiaya, 2, ",", ".") ?></u></div></td>
+                <td style="width:95%;">&nbsp;&nbsp;&nbsp;&nbsp;Jumlah</td>
+                <td style="width:5%;"><div align="center">:</div></td>
+                <td style="width:130%;"><div align="right"><u><?php echo "Rp. " . number_format($u->DJPjumlahbiaya, 2, ",", ".") ?></u></div></td>
+            </tr>
+            <tr>
+                <td style="width:15%;"><div align="center"></div></td>
+                <td style="width:95%;">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td style="width:5%;"><div align="center">&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+                <td style="width:130%;"><div align="right">&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
             </tr>
 
             <tr>
-                <td rowspan="4" style="width:10%;"><div align="center">Terbilang</div></td>
-
+                <td></td>
+                <td colspan="3"style="width:130;"><div align="left">Terbilang : <i> <?php echo $u->DJPjumlahbiayaterbilang; ?></div></i></td>
             </tr>
 </table>
+<br>
+<?php } else {
+    ?>
+ <table cellspacing="0" style="width: 100%; font-size: 10pt;">
+        <tr>
+            <td style="width:10%;"><div align="center"><b>III.</b></div></td>
+            <td style="width:80%;"><b>DATA MENGENAI KREDIT</b></td>
+            <td style="width:10%;">&nbsp;</td>
+            <td style="width:130%;">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="width:10%;"></td>
+            <td style="width:80%;">Sesuai Surat Permohonan Penjaminan Kredit</td>
+            <td style="width:10%;"><div align="center">:</div></td>
+            <td style="width:130%;"><?php echo $u->DJPnodeklarasi ?> : <?php echo date('d F Y', strtotime($u->DJPtanggaldeklarasi)); ?> </td>
+        </tr>
+
+        <?php
+if ($u->PKSno2 != null) {
+        ?>
+        <tr>
+            <td style="width:10%"> </td>
+            <td style="width:80%;"> Berdasarkan Perjanjian Penjaminan Kredit </td>
+            <td style="width:10%;"><div align="center">:</div></td>
+            <td style="width:130%;"><?php echo $u->PKSno2 ?> : <?php echo date('d F Y', strtotime($u->PKStanggal)); ?></td>
+        </tr>
+        <?php
+} else {
+        ?>
+        <tr>
+            <td style="width:10%"></td>
+            <td style="width:80%;"> Berdasarkasn Perjanjian Penjaminan Kredit</td>
+            <td style="width:10%;"><div align="center">:</div></td>
+            <td style="width:130%;"><?php echo $u->PKSno1 ?> : <?php echo date('d F Y', strtotime($u->PKStanggal)); ?></td>
+            <?php
+}?>
+
+    </table>
+    <br>
+    <table cellspacing="0" style="width:100%; font-size: 10pt;">
+            <tr>
+                <td style="width:10%;"><div align="center"><b>IV.</b></div></td>
+                <td style="width:80%;"><b>KETENTUAN PENJAMINAN KREDIT</b></td>
+                <td style="width:10%;"><div align="center"></div></td>
+                <td style="width:130%;"></td>
+            </tr>
+
+
+            <tr>
+                <td style="width:10%;"><div align="center"></div></td>
+                <td style="width:80%;">1. Jangka Waktu Penjaminan</td>
+                <td style="width:10%;"><div align="center">:</div></td>
+                <td style="width:130%;"><?php echo $u->DJPDjangkawaktu . " Bulan. ( " . $u->DJPDtanggalawal . " s/d " . $u->DJPDtanggalakhir . " )"; ?></td>
+            </tr>
+
+            <tr>
+                <td style="width:10%;"><div align="center"></div></td>
+                <td style="width:80%;">2. Jumlah Plafond.</td>
+                <td style="width:10%;"><div align="center">:</div></td>
+                <td style="width:130%;"><?php echo "Rp." . number_format($u->DJPDplafondkredit, 2, ",", ".") ?></td>
+            </tr>
+            <tr>
+                <td style="width:10%;"><div align="center"></div></td>
+                <td style="width:80%;">3. Jumlah Penjaminan</td>
+                <td style="width:10%;"><div align="center">:</div></td>
+                <td style="width:130%;"><?php echo "Rp." . number_format($u->DJPDnilaipenjaminan, 2, ",", ".") ?></td>
+            </tr>
+            <tr>
+                <td style="width:10%;"><div align="center"></div></td>
+                <td style="width:80%;">4. Coverage</td>
+                <td style="width:10%;"><div align="center">:</div></td>
+                <td style="width:130%;"> <?php echo $u->DJPDcoverage ?> </td>
+            </tr>
+            <tr>
+                <td style="width:10%;"><div align="center"></div></td>
+                <td style="width:80%;">5. Rate Penjaminan</td>
+                <td style="width:10%;"><div align="center">:</div></td>
+                <td style="width:130%;"> <?php echo $u->DJPDrate . "%" ?> </td>
+            </tr>
+</table>
+<br>
+<table cellspacing="0" style="width:100%; font-size: 10pt;">
+            <tr>
+                <td style="width:10%;"><div align="center"><b>V.</b></div></td>
+                <td style="width:80%;"><b>BIAYA PENJAMINAN</b></td>
+                <td style="width:10%;"><div align="center"></div></td>
+                <td style="width:130%;"></td>
+            </tr>
+
+
+            <tr>
+                <td style="width:10%;"><div align="center"></div></td>
+                <td style="width:80%;">1. Imbal Jasa Penjaminan (IJP)</td>
+                <td style="width:10%;"><div align="center">:</div></td>
+                <td style="width:130%;"><div align="right"><?php echo "Rp. " . number_format($u->DJPjumlahimbaljasa, 2, ",", ".") ?></div></td>
+            </tr>
+            <tr>
+                <td style="width:10%;"><div align="center"></div></td>
+                <td style="width:80%;">2. Fee Bank 10,00% x <?php echo "Rp. " . number_format($u->DJPjumlahimbaljasa, 2, ",", ".") ?></td>
+                <td style="width:10%;"><div align="center">:</div></td>
+                <td style="width:130%;"><div align="right"><u>
+                <?php echo "Rp. " . number_format($u->DJPfeebank, 2, ",", ".") ?> </u> </div></td>
+            </tr>
+            <tr>
+                <td style="width:10%;"><div align="center"></div></td>
+                <td style="width:80%;">3. Bea Materai</td>
+                <td style="width:10%;"><div align="center">:</div></td>
+                <td style="width:130%;"><div align="right"><?php echo "Rp. " . number_format($u->DJPfeematerai, 2, ",", ".") ?></div></td>
+            </tr>
+            <tr>
+                <td style="width:10%;"><div align="center"></div></td>
+                <td style="width:80%;">4. Biaya Administrasi Penjaminan</td>
+                <td style="width:10%;"><div align="center">:</div></td>
+                <td style="width:130%;"><div align="right"><u><?php echo "Rp. " . number_format($u->DJPfeeadmin, 2, ",", ".") ?></u><br></div></td>
+            </tr>
+            <tr>
+                <td style="width:10%;"><div align="center"></div></td>
+                <td style="width:95%;">&nbsp;&nbsp;&nbsp;&nbsp;Jumlah</td>
+                <td style="width:5%;"><div align="center">:</div></td>
+                <td style="width:130%;"><div align="right"><u><?php echo "Rp. " . number_format($u->DJPjumlahbiaya, 2, ",", ".") ?></u></div></td>
+            </tr>
+            <tr>
+                <td style="width:10%;"><div align="center"></div></td>
+                <td style="width:95%;">&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td style="width:5%;"><div align="center">&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+                <td style="width:130%;"><div align="right">&nbsp;&nbsp;&nbsp;&nbsp;</div></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td colspan="3"style="width:130;"><div align="left">Terbilang : <i> <?php echo $u->DJPjumlahbiayaterbilang; ?></div></i></td>
+            </tr>
+</table>
+<br>
+
 <?php }?>
 <!-- End If -->
-    <table cellspacing="0" style="width: 100%; font-size: 10pt;">
-        <tr>
-            <td style="width:20%;">
-                <div align="center">IV.</div>
-            </td>
-            <td style="width:100%;">KETENTUAN PENJAMINAN KREDIT</td>
-            <td style="width:10%;">&nbsp;</td>
-            <td style="width:150%;">&nbsp;</td>
-        </tr>
-    </table>
-    <table cellspacing="0" style="width: 201%; font-size: 10pt;">
-        <tr>
-            <td style="width:30%;">
-                <div align="right">1.</div>
-            </td>
-            <td style="width:100%;">Jumlah Plafond Kredit</td>
-            <td style="width:11%;">
-                <div align="right">:</div>
-            </td>
-            <td style="width:18%;">
-                <div align="right">Rp. </div>
-            </td>
-            <td style="width:500%;">
-                <div align="left"><?php echo number_format($u->DJPDplafondkredit, 2, ",", ".") ?></div>
-            </td>
-        </tr>
-    </table>
-    <table cellspacing="0" style="width: 201%; font-size: 10pt;">
-        <tr>
-            <td style="width:30%;">
-                <div align="right">2.</div>
-            </td>
-            <td style="width:100%;">Nilai Penjaminan</td>
-            <td style="width:11%;">
-                <div align="right">:</div>
-            </td>
-            <td style="width:18%;">
-                <div align="right">Rp. </div>
-            </td>
-            <td style="width:500%;">
-                <div align="left"><?php echo number_format($u->DJPnilaipenjaminan, 2, ",", ".") ?></div>
-            </td>
-        </tr>
-    </table>
-    <table cellspacing="0" style="width: 198%; font-size: 10pt;">
-        <tr>
-            <td style="width:30%;">
-                <div align="right">3.</div>
-            </td>
-            <td style="width:100%;">Jumlah Terjamin</td>
-            <td style="width:19%;">
-                <div align="center">:</div>
-            </td>
-            <td style="width:500%;"><?php echo $u->DJPjumlahpk; ?></td>
-        </tr>
-    </table>
-    <table cellspacing="0" style="width: 198%; font-size: 10pt;">
-        <tr>
-            <td style="width:30%;">
-                <div align="right">4.</div>
-            </td>
-            <td style="width:100%;">Jangka Waktu</td>
-            <td style="width:19%;">
-                <div align="center">:</div>
-            </td>
-            <td style="width:500%;">Terlampir</td>
-        </tr>
-    </table>
-    <table cellspacing="0" style="width: 198%; font-size: 10pt;">
-        <tr>
-            <td style="width:30%;">
-                <div align="right">5.</div>
-            </td>
-            <td style="width:100%;">Coverage</td>
-            <td style="width:19%;">
-                <div align="center">:</div>
-            </td>
-            <td style="width:500%;">Terlampir</td>
-        </tr>
-    </table>
-    <table cellspacing="0" style="width: 198%; font-size: 10pt;">
-        <tr>
-            <td style="width:30%;">
-                <div align="right">6.</div>
-            </td>
-            <td style="width:100%;">Jenis Penjaminan</td>
-            <td style="width:19%;">
-                <div align="center">:</div>
-            </td>
-            <td style="width:500%;"><?php echo $u->OPKjenis ?></td>
-        </tr>
-    </table>
-    <table cellspacing="0" style="width: 198%; font-size: 10pt;">
-        <tr>
-            <td style="width:30%;">
-                <div align="right">7.</div>
-            </td>
-            <td style="width:100%;">Rate Penjaminan</td>
-            <td style="width:19%;">
-                <div align="center">:</div>
-            </td>
-            <td style="width:500%;">Terlampir</td>
-        </tr>
-    </table>
-    <table cellspacing="0" style="width: 198%; font-size: 10pt;">
-        <tr>
-            <td style="width:30%;">
-                <div align="right">8.</div>
-            </td>
-            <td style="width:100%;">Jumlah Biaya Penjaminan</td>
-            <td style="width:19%;">&nbsp;</td>
-            <td style="width:500%;">&nbsp;</td>
-        </tr>
-    </table>
-
-    <table cellspacing="0" style="width: 80%; font-size: 10pt;">
-        <tr>
-            <td style="width:47%;">
-                <div align="right">a.</div>
-            </td>
-            <td style="width:180%;">Imbal Jasa Penjaminan (IJP)</td>
-            <td style="width:20%;">
-                <div align="center">:</div>
-            </td>
-            <td style="width:60%;">
-                <div align="left">Rp.</div>
-            </td>
-            <td style="width:50%;">
-                <div align="left"><?php echo number_format($u->DJPjumlahimbaljasa, 2, ",", ".") ?></div>
-            </td>
-        </tr>
-
-        <tr>
-            <td style="width:47%;">
-                <div align="right">b.</div>
-            </td>
-            <td style="width:90%;">Feebank <?php echo $u->PKSratefee ?> x
-                <?php echo number_format($u->DJPjumlahimbaljasa, 2, ",", ".") ?> </td>
-            <td style="width:20%;">
-                <div align="center">:</div>
-            </td>
-            <td style="width:60%;">
-                <div align="left">Rp. </div>
-            </td>
-            <td style="width:50%;">
-                <div align="left"> <?php echo number_format($u->DJPfeebank, 2, ",", ".") ?></div>
-            </td>
-        </tr>
-        <tr>
-            <td style="width:47%;">
-                <div align="right">c.</div>
-            </td>
-            <td style="width:90%;">Bea Materai </td>
-            <td style="width:20%;">
-                <div align="center">:</div>
-            </td>
-            <td style="width:60%;">
-                <div align="left">Rp.</div>
-            </td>
-            <td style="width:50%;">
-                <div align="left"> <?php echo number_format($u->DJPfeematerai, 2, ",", ".") ?></div>
-            </td>
-        </tr>
-
-        <tr>
-            <hr style="width: 25%;" align="right" width="44%" />
-            <td style="width:47%;">
-                <div align="right">d.</div>
-            </td>
-            <td style="width:90%;">Biaya Administrasi Penjaminan</td>
-            <td style="width:20%;">
-                <div align="center">:</div>
-            </td>
-            <td style="width:60%;">
-                <div align="left">Rp.</div>
-            </td>
-            <td style="width:50%;">
-                <div align="left"> <?php echo number_format($u->DJPfeeadmin, 2, ",", ".") ?></div>
-            </td>
-        </tr>
-    </table>
-    <table cellspacing="0" style="width: 80%; font-size: 10pt;">
-        <tr>
-            <td style="width:37%;">&nbsp;</td>
-            <td style="width:190%;"> Jumlah</td>
-            <td style="width:20%;">
-                <div align="center">:</div>
-            </td>
-            <td style="width:60%;">
-                <div align="left">Rp.</div>
-            </td>
-            <td style="width:50%;">
-                <div align="left"> <?php echo number_format($u->DJPjumlahbiaya, 2, ",", ".") ?></div>
-            </td>
-        </tr>
-    </table><br>
-    <table cellspacing="0" style="width: 85%; ">
-        <tr>
-
-            <td style="width:10%;"> Terbilang</td>
-            <td style="width:20%;">
-                <div align="center">:</div>
-            </td>
-            <td style="width:800%;"> <i>
-                    <div align="left"> <?php echo $u->DJPjumlahbiayaterbilang ?></div>
-                </i></td>
-        </tr>
-    </table>
-
-    <br>
-
-
-    <div style="width: 85%; " align="justify">Sertifikat penjaminan ini sekaligus berlaku sebagai nota tagihan,
-        selanjutnya pembayaran biaya penjaminan tersebut diatas harap dilimpahkan pada rekening atas nama PT. PENJAMINAN
-        KREDIT DAERAH PROVINSI RIAU, Nomor : <?php echo $u->RSrekening ?> Di <?php echo $u->RSbank ?>
-        <br>
-        <br>
-    </div>
-
-    <table cellspacing="0" style="width: 80%; text-align: left;">
-        <tr>
-            <td></td>
-            <td style="width:50%;" align="center">
-                Dibuat di Pekanbaru <br> Tanggal <?php echo date('d F Y', strtotime($u->DJPtanggalcetak)); ?> <br>
-                <b>PT. JAMKRIDA RIAU</b><br>
-                <br>
-                <br>
-                <br>
-                <b><u>AFRIZAL BERRY</u></b><br>
-                Direktur Utama<br>
-            </td>
-        </tr>
-    </table>
+<table>
+    <tr>
+    <td colspan="4"style="width:130;"> Sertifikat Penjaminan Kredit ini sekaligus berlaku sebagai nota tagihan,</td>
+</tr>
+</table>
     </div>
 </body>
 
