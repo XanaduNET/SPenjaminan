@@ -31,8 +31,13 @@
                             </div>
                             <div class="form-group">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="1" name="is_active"
-                                        id="is_active" checked>
+                                    <input class="form-check-input" type="checkbox" value="<?=$subMenu['is_active'];?>" name="is_active"
+                                        id="is_active"
+                                        <?php if ($subMenu['is_active'] == 0) {
+
+} else {?>
+                                         checked <?php }?>
+                                         >
                                     <label class="form-check-label" for="is_active">
                                         Active ?
                                     </label>

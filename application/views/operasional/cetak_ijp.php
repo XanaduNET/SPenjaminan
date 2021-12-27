@@ -34,8 +34,8 @@
 $DJPnoreg = "";
 foreach ($table as $u) {?>
                 <?php if ($u->DJPnoreg != $DJPnoreg) {
-	echo $u->DJPnoreg;
-	$DJPnoreg = $u->DJPnoreg;
+    echo $u->DJPnoreg;
+    $DJPnoreg = $u->DJPnoreg;
 } else {
 
 }}?></td>
@@ -65,7 +65,11 @@ foreach ($table as $u) {?>
         <tr>
             <td style="font-weight: bold; width:20%;">DATA DJP</td>
             <td style="font-weight: bold; width:10%;">
-                <div align="right"> Jenis : <?php echo $u->JSPjenis ?></div>
+                <div align="right"> Jenis : <?php if ($u->JSPjenis == "Kolektif") {
+    echo "Massal";
+} else {
+    echo "Baru";
+}?></div>
             </td>
 
         </tr>

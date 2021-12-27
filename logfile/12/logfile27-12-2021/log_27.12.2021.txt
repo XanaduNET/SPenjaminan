@@ -3,3 +3,118 @@ Attempt: Success Login
 User: akbar
 Aksi: Login
 -------------------------
+User: ::1 - December 27, 2021, 11:45:55
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - December 27, 2021, 11:46:00
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 27, 2021, 11:46:47
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 27, 2021, 11:47:09
+Attempt: Berhasil Tambah User Coba
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - December 27, 2021, 11:47:26
+Attempt: Success Add Role
+User: Akbar
+Aksi: Role
+-------------------------
+User: ::1 - December 27, 2021, 11:48:38
+Attempt: Success Add SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - December 27, 2021, 11:53:36
+Attempt: Success Add SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - December 27, 2021, 11:53:53
+Attempt: Success Edit SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - December 27, 2021, 12:00:31
+Attempt: Success Add Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 27, 2021, 12:00:45
+Attempt: Success Edit
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 27, 2021, 12:00:55
+Attempt: Delete Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - December 27, 2021, 12:01:11
+Attempt: Delete SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - December 27, 2021, 12:02:03
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - December 27, 2021, 13:28:33
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - December 27, 2021, 13:37:32
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - December 27, 2021, 13:39:01
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - December 27, 2021, 13:39:01
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - December 27, 2021, 13:39:03
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - December 27, 2021, 13:39:31
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - December 27, 2021, 13:40:48
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - December 27, 2021, 13:41:15
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - December 27, 2021, 13:41:28
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - December 27, 2021, 13:46:08
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
