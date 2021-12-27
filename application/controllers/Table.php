@@ -63,7 +63,7 @@ class Table extends CI_Controller
         // filename dari pdf ketika didownload
         $file_pdf = 'laporan';
         // setting paper
-        $paper = 'letter';
+        $paper = 'Legal';
         //   $dompdf->set_paper(DEFAULT_PDF_PAPER_SIZE, 'portrait');
         //orientasi paper potrait / landscape
         $orientation = "potrait";

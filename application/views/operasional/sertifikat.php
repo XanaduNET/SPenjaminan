@@ -382,9 +382,49 @@ if ($u->PKSno2 != null) {
 
 <?php }?>
 <!-- End If -->
-<table>
+<table cellspacing="0" style="width:100%; font-size: 10pt;">
     <tr>
-    <td colspan="4"style="width:130;"> Sertifikat Penjaminan Kredit ini sekaligus berlaku sebagai nota tagihan,</td>
+    <td colspan="4"style="width:130;"> <div align="justify">Sertifikat Penjaminan Kredit ini sekaligus berlaku sebagai nota tagihan, selanjutnya pembayaran biaya penjaminan tersebut di
+atas harap dilimpahkan pada rekening atas nama PT. PENJAMINAN KREDIT DAERAH PROVINSI RIAU, Nomor : 101.20.03064 Di Bank Riau Kepri Cabang Utama</div></td>
+</tr>
+<tr>
+    <td colspan="4"style="width:130;">
+</td></tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td style="width:20%;"> <div align="Left;"> Dibuat di Pekanbaru </div></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td style="width:20%;"> <div align="Left;"> Tanggal <?php echo $u->DJPtanggalcetak; ?></div></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td style="width:20%;"> <div align="center;"> <br><b>PT. JAMKRIDA RIAU </b></div></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td style="width:20%;" height="40">  <div align="Left;"> </div></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td style="width:20%;"><div align="center;"> <b> <u> AFRIZAL BERRY </u> </b> </div>  </td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td style="width:20%;"> <div align="center;"> Direktur Utama </div>  </td>
 </tr>
 </table>
     </div>
