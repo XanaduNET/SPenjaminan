@@ -431,35 +431,3 @@ atas harap dilimpahkan pada rekening atas nama PT. PENJAMINAN KREDIT DAERAH PROV
 </body>
 
 </html>
-
-{
-    "php.validate.executablePath": "C:/xampp/php/php.exe",
-    "files.autoSave": "onFocusChange",
-    "explorer.confirmDelete": false,
-    "editor.codeActionsOnSave": null,
-    "editor.formatOnSave": true,
-    "json.schemas": [
-
-    ],
-    "phpfmt.passes": [
-        "PSR2KeywordsLowerCase",
-        "PSR2LnAfterNamespace",
-        "PSR2CurlyOpenNextLine",
-        "PSR2ModifierVisibilityStaticOrder",
-        "PSR2SingleEmptyLineAndStripClosingTag",
-        "ReindentSwitchBlocks"
-    ],
-    "phpfmt.exclude": [
-        "ReindentComments",
-        "StripNewlineWithinClassBody"
-    ],
-    "phpfmt.psr2": false,
-    "phpfmt.php_bin": "C:\\xampp\\php\\php.exe",
-    "php.executablePath": "",
-    "editor.fontSize": 22,
-    "security.workspace.trust.untrustedFiles": "open",
-    "git.confirmSync": false,
-    "workbench.colorTheme": "SynthWave '84",
-    "git.enableSmartCommit": true,
-    "bracketPairColorizer.depreciation-notice": false
-}
