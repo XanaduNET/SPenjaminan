@@ -82,7 +82,7 @@ class Casebc extends CI_Controller
         $this->form_validation->set_rules('CBCkesimpulan', 'Kesimpulan', 'required');
 
         if ($this->form_validation->run() == false) {
-            return $this->index();
+            echo "<script type='text/javascript'>alert('Data Tidak Boleh Kosong!');</script>";
         } else {
             $CBCnomormemo = $_POST['CBCnomormemo'];
             $TRJMnama = $_POST['TRJMnama'];

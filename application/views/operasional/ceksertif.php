@@ -326,7 +326,7 @@ if ($u->PKSno2 != null) {
                 <td style="width:10%;"><div align="center"></div></td>
                 <td style="width:80%;">5. Rate Penjaminan</td>
                 <td style="width:10%;"><div align="center">:</div></td>
-                <td style="width:130%;"> <?php echo $u->DJPDrate . "%" ?> </td>
+                <td style="width:130%;"> <?php echo $u->DJPDrate ?> </td>
             </tr>
 </table>
 <br>

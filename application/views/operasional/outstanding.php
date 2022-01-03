@@ -5,7 +5,7 @@
         <h1 class="h3 mb-4 text-gray-800"><?=$title;?></h1>
         <div>
             <div><?=validation_errors()?></div>
-            
+
             <?=form_open('Outstanding/triggeredExport', ['class' => 'form-horizontal'])?>
             <form role="form" class="form-horizontal">
                 <input type="hidden" id="table" name="table"
@@ -78,7 +78,7 @@
                                     <?php
 $no = 1;
 foreach ($table as $u) {
-	?>
+    ?>
                                     <tr>
                                         <td><?php echo $no ?></td>
                                         <td><?php echo $u->DJPDtanggalakad ?></td>
@@ -102,23 +102,23 @@ foreach ($table as $u) {
                                         <td><?php echo $u->DJPnoreg ?></td>
                                         <td><?php
 $date1 = $u->DJPDtanggalakad;
-	$date2 = date('Y-m-d');
+    $date2 = date('Y-m-d');
 
-	$ts1 = strtotime($date1);
-	$ts2 = strtotime($date2);
+    $ts1 = strtotime($date1);
+    $ts2 = strtotime($date2);
 
-	$year1 = date('Y', $ts1);
-	$year2 = date('Y', $ts2);
+    $year1 = date('Y', $ts1);
+    $year2 = date('Y', $ts2);
 
-	$month1 = date('m', $ts1);
-	$month2 = date('m', $ts2);
+    $month1 = date('m', $ts1);
+    $month2 = date('m', $ts2);
 
-	$day1 = date('d', $ts1);
-	$day2 = date('d', $ts2);
+    $day1 = date('d', $ts1);
+    $day2 = date('d', $ts2);
 
-	$diff = (($year2 - $year1) * 12) + ($month2 - $month1);
+    $diff = (($year2 - $year1) * 12) + ($month2 - $month1);
 
-	echo $diff?></td>
+    echo $diff?></td>
                                         <td><?php echo "IDR&nbsp" . number_format($taksasi = ($u->DJPDnilaipenjaminan / $u->DJPDjangkawaktu * $diff), 0, ".", ".") ?>
                                         </td>
                                         <td><?php echo "IDR&nbsp" . number_format($u->DJPDnilaipenjaminan - $taksasi, 0, ".", ".") ?>
@@ -132,171 +132,174 @@ $no++;
                         </div>
                     </div>
                 </div>
-                <div><?=validation_errors()?></div>
-                
-                <?=form_open('Outstanding', ['class' => 'form-horizontal'])?>
-                <form role="form" class="form-horizontal">
-                    <div class="col-xl-4 col-md-7 mb-5">
-                        <div class="card border-left-success shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="font-weight-bold text-success text-uppercase mb-1">
-                                            <label> Data Grup Penerima Penjaminan </label>
-                                            <br>
-                                            <input name="semuaGPP" type="checkbox" id="Semua" class="semuaGPP"
-                                                value="semua" <?php echo set_checkbox('semuaGPP', 'semua'); ?>> Select
-                                            All
-                                            <br>
-                                            <?php
+            </div>
+
+
+        </div>
+
+        <div><?=validation_errors()?></div>
+
+<?=form_open('Outstanding', ['class' => 'form-horizontal'])?>
+<form role="form" class="form-horizontal">
+    <div class="col-xl-4 col-md-7 mb-5">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="font-weight-bold text-success text-uppercase mb-1">
+                            <label> Data Grup Penerima Penjaminan </label>
+                            <br>
+                            <input name="semuaGPP" type="checkbox" id="Semua" class="semuaGPP"
+                                value="semua" <?php echo set_checkbox('semuaGPP', 'semua'); ?>> Select
+                            All
+                            <br>
+                            <?php
 foreach ($gpp as $u) {
-	?>
-                                            <input name="GPPchecked[]" type="checkbox" value=<?php echo $u->GPPid ?>
-                                                id=<?php echo $u->GPPid ?> class="checkedGPP"
-                                                <?php echo set_checkbox('GPPchecked', '' . $u->GPPid . ''); ?> />
-                                            <?php echo $u->GPPnama ?>
-                                            <br>
-                                            <?php }?>
-                                        </div>
-                                    </div>
-                                    <div class="col-auto">
-                                    </div>
-                                </div>
-                            </div>
+    ?>
+                            <input name="GPPchecked[]" type="checkbox" value=<?php echo $u->GPPid ?>
+                                id=<?php echo $u->GPPid ?> class="checkedGPP"
+                                <?php echo set_checkbox('GPPchecked', '' . $u->GPPid . ''); ?> />
+                            <?php echo $u->GPPnama ?>
+                            <br>
+                            <?php }?>
                         </div>
                     </div>
-                    <div class="col-xl-4 col-md-7 mb-5">
-                        <div class="card border-left-success shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="font-weight-bold text-success text-uppercase mb-1">
-                                            <label> Data OPK </label>
-                                            <br>
-                                            <input name="semuaOPK" type="checkbox" id="Semua" class="semuaOPK"
-                                                value="semua" <?php echo set_checkbox('semuaOPK', 'semua'); ?>> Select
-                                            All
-                                            <br>
-                                            <?php
-foreach ($opk as $u) {
-	?>
-                                            <input name="OPKchecked[]" type="checkbox" value=<?php echo $u->OPKid ?>
-                                                id=<?php echo $u->OPKid ?> class="checkedOPK"
-                                                <?php echo set_checkbox('OPKchecked', '' . $u->OPKid . ''); ?> />
-                                            <?php echo $u->OPKjenis ?>
-                                            <br>
-                                            <?php }?>
-                                        </div>
-                                    </div>
-                                    <div class="col-auto">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-auto">
                     </div>
-                    <br>
-                    <div class="col-xl-4 col-md-7 mb-5">
-                        <div class="card border-left-success shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="font-weight-bold text-success text-uppercase mb-1">
-                                            <label> Bulan </label>
-                                            <br>
-                                            <input name="semuaMonth" type="checkbox" value="semua" id="semua"
-                                                class="semuaMonth" <?php echo set_checkbox('semuaGPP', 'semua'); ?>>
-                                            Select All
-                                            <br>
-                                            <input name="Monthchecked[]" type="checkbox" value="01" id="01"
-                                                class="checkedMonth"
-                                                <?php echo set_checkbox('Monthchecked', '01'); ?> /> Januari
-                                            <br>
-                                            <input name="Monthchecked[]" type="checkbox" value="02" id="02"
-                                                class="checkedMonth"
-                                                <?php echo set_checkbox('Monthchecked', '02'); ?> /> Februari
-                                            <br>
-                                            <input name="Monthchecked[]" type="checkbox" value="03" id="03"
-                                                class="checkedMonth"
-                                                <?php echo set_checkbox('Monthchecked', '03'); ?> /> Maret
-                                            <br>
-                                            <input name="Monthchecked[]" type="checkbox" value="04" id="04"
-                                                class="checkedMonth"
-                                                <?php echo set_checkbox('Monthchecked', '04'); ?> /> April
-                                            <br>
-                                            <input name="Monthchecked[]" type="checkbox" value="05" id="05"
-                                                class="checkedMonth"
-                                                <?php echo set_checkbox('Monthchecked', '05'); ?> /> Mei
-                                            <br>
-                                            <input name="Monthchecked[]" type="checkbox" value="06" id="06"
-                                                class="checkedMonth"
-                                                <?php echo set_checkbox('Monthchecked', '06'); ?> />Juni
-                                            <br>
-                                            <input name="Monthchecked[]" type="checkbox" value="07" id="07"
-                                                class="checkedMonth"
-                                                <?php echo set_checkbox('Monthchecked', '07'); ?> /> Juli
-                                            <br>
-                                            <input name="Monthchecked[]" type="checkbox" value="08" id="08"
-                                                class="checkedMonth"
-                                                <?php echo set_checkbox('Monthchecked', '08'); ?> />Agustus
-                                            <br>
-                                            <input name="Monthchecked[]" type="checkbox" value="09" id="09"
-                                                class="checkedMonth"
-                                                <?php echo set_checkbox('Monthchecked', '09'); ?> /> September
-                                            <br>
-                                            <input name="Monthchecked[]" type="checkbox" value="10" id="10"
-                                                class="checkedMonth"
-                                                <?php echo set_checkbox('Monthchecked', '10'); ?> /> Oktober
-                                            <br>
-                                            <input name="Monthchecked[]" type="checkbox" value="11" id="11"
-                                                class="checkedMonth"
-                                                <?php echo set_checkbox('Monthchecked', '11'); ?> /> November
-                                            <br>
-                                            <input name="Monthchecked[]" type="checkbox" value="12" id="12"
-                                                class="checkedMonth"
-                                                <?php echo set_checkbox('Monthchecked', '12'); ?> /> Desember
-                                            <br>
-                                        </div>
-                                    </div>
-                                    <div class="col-auto">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                    <input name="Kirim" type="submit" class="btn btn-primary" />
-                </form>
-                <script>
-                $('input.semuaGPP').on('change', function() {
-                    $('input.checkedGPP').not(this).prop('checked', false);
-                });
-
-                $('input.checkedGPP').on('change', function() {
-                    $('input.semuaGPP').not(this).prop('checked', false);
-                });
-
-                $('input.semuaOPK').on('change', function() {
-                    $('input.checkedOPK').not(this).prop('checked', false);
-                });
-
-                $('input.checkedOPK').on('change', function() {
-                    $('input.semuaOPK').not(this).prop('checked', false);
-                });
-
-                $('input.semuaMonth').on('change', function() {
-                    $('input.checkedMonth').not(this).prop('checked', false);
-                });
-
-                $('input.checkedMonth').on('change', function() {
-                    $('input.semuaMonth').not(this).prop('checked', false);
-                });
-                </script>
-                <br />
-                <br />
-                <br />
+                </div>
             </div>
         </div>
+    </div>
+    <div class="col-xl-4 col-md-7 mb-5">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="font-weight-bold text-success text-uppercase mb-1">
+                            <label> Data OPK </label>
+                            <br>
+                            <input name="semuaOPK" type="checkbox" id="Semua" class="semuaOPK"
+                                value="semua" <?php echo set_checkbox('semuaOPK', 'semua'); ?>> Select
+                            All
+                            <br>
+                            <?php
+foreach ($opk as $u) {
+    ?>
+                            <input name="OPKchecked[]" type="checkbox" value=<?php echo $u->OPKid ?>
+                                id=<?php echo $u->OPKid ?> class="checkedOPK"
+                                <?php echo set_checkbox('OPKchecked', '' . $u->OPKid . ''); ?> />
+                            <?php echo $u->OPKjenis ?>
+                            <br>
+                            <?php }?>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="col-xl-4 col-md-7 mb-5">
+        <div class="card border-left-success shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="font-weight-bold text-success text-uppercase mb-1">
+                            <label> Bulan </label>
+                            <br>
+                            <input name="semuaMonth" type="checkbox" value="semua" id="semua"
+                                class="semuaMonth" <?php echo set_checkbox('semuaGPP', 'semua'); ?>>
+                            Select All
+                            <br>
+                            <input name="Monthchecked[]" type="checkbox" value="01" id="01"
+                                class="checkedMonth"
+                                <?php echo set_checkbox('Monthchecked', '01'); ?> /> Januari
+                            <br>
+                            <input name="Monthchecked[]" type="checkbox" value="02" id="02"
+                                class="checkedMonth"
+                                <?php echo set_checkbox('Monthchecked', '02'); ?> /> Februari
+                            <br>
+                            <input name="Monthchecked[]" type="checkbox" value="03" id="03"
+                                class="checkedMonth"
+                                <?php echo set_checkbox('Monthchecked', '03'); ?> /> Maret
+                            <br>
+                            <input name="Monthchecked[]" type="checkbox" value="04" id="04"
+                                class="checkedMonth"
+                                <?php echo set_checkbox('Monthchecked', '04'); ?> /> April
+                            <br>
+                            <input name="Monthchecked[]" type="checkbox" value="05" id="05"
+                                class="checkedMonth"
+                                <?php echo set_checkbox('Monthchecked', '05'); ?> /> Mei
+                            <br>
+                            <input name="Monthchecked[]" type="checkbox" value="06" id="06"
+                                class="checkedMonth"
+                                <?php echo set_checkbox('Monthchecked', '06'); ?> />Juni
+                            <br>
+                            <input name="Monthchecked[]" type="checkbox" value="07" id="07"
+                                class="checkedMonth"
+                                <?php echo set_checkbox('Monthchecked', '07'); ?> /> Juli
+                            <br>
+                            <input name="Monthchecked[]" type="checkbox" value="08" id="08"
+                                class="checkedMonth"
+                                <?php echo set_checkbox('Monthchecked', '08'); ?> />Agustus
+                            <br>
+                            <input name="Monthchecked[]" type="checkbox" value="09" id="09"
+                                class="checkedMonth"
+                                <?php echo set_checkbox('Monthchecked', '09'); ?> /> September
+                            <br>
+                            <input name="Monthchecked[]" type="checkbox" value="10" id="10"
+                                class="checkedMonth"
+                                <?php echo set_checkbox('Monthchecked', '10'); ?> /> Oktober
+                            <br>
+                            <input name="Monthchecked[]" type="checkbox" value="11" id="11"
+                                class="checkedMonth"
+                                <?php echo set_checkbox('Monthchecked', '11'); ?> /> November
+                            <br>
+                            <input name="Monthchecked[]" type="checkbox" value="12" id="12"
+                                class="checkedMonth"
+                                <?php echo set_checkbox('Monthchecked', '12'); ?> /> Desember
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <input name="Kirim" type="submit" class="btn btn-primary" />
+</form>
+<script>
+$('input.semuaGPP').on('change', function() {
+    $('input.checkedGPP').not(this).prop('checked', false);
+});
+
+$('input.checkedGPP').on('change', function() {
+    $('input.semuaGPP').not(this).prop('checked', false);
+});
+
+$('input.semuaOPK').on('change', function() {
+    $('input.checkedOPK').not(this).prop('checked', false);
+});
+
+$('input.checkedOPK').on('change', function() {
+    $('input.semuaOPK').not(this).prop('checked', false);
+});
+
+$('input.semuaMonth').on('change', function() {
+    $('input.checkedMonth').not(this).prop('checked', false);
+});
+
+$('input.checkedMonth').on('change', function() {
+    $('input.semuaMonth').not(this).prop('checked', false);
+});
+</script>
+<br />
+<br />
+<br />
     </div>
 </div>
 

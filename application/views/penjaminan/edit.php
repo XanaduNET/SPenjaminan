@@ -27,7 +27,7 @@
                                 <?=$djpsertif['GPPnama'];?></option>
                             <?php
 foreach ($ambilgpp as $row) {
-	echo '<option value="' . $row->GPPid . '">' . $row->GPPnama . '</option>';
+    echo '<option value="' . $row->GPPid . '">' . $row->GPPnama . '</option>';
 }
 ?>
                         </select>
@@ -40,11 +40,11 @@ foreach ($ambilgpp as $row) {
 
                             <?php
 if ($djpsertif['PKSno2'] != null) {
-	?> <option selected="<?=$djpsertif['PKSid'];?>" value="<?=$djpsertif['PKSid'];?>"><?=$djpsertif['PKSno2'];?></option>
+    ?> <option selected="<?=$djpsertif['PKSid'];?>" value="<?=$djpsertif['PKSid'];?>"><?=$djpsertif['PKSno2'];?></option>
                             <?php
 } else {
 
-	?>
+    ?>
                             <option selected="<?=$djpsertif['PKSid'];?>" value="<?=$djpsertif['PKSid'];?>">
                                 <?=$djpsertif['PKSno1'];?></option>
                             <?php }
@@ -115,8 +115,13 @@ if ($djpsertif['PKSno2'] != null) {
                     <label class="col-sm-2 col-form-label">Periode Sertifikat</label>
                     <div class="form-group col-lg-3 col-sm-4">
                         <select id="DJPperiode" name="DJPperiode" style="width: 100%;" class="form-control">
+                            <?php
+$periode = $djpsertif['DJPperiode'];
+$dateObj = DateTime::createFromFormat('!m', $periode);
+$monthName = $dateObj->format('F'); // March
+?>
                             <option selected="<?=$djpsertif['DJPperiode'];?>" value="<?=$djpsertif['DJPperiode'];?>">
-                                <?=$djpsertif['DJPperiode'];?></option>
+                                <?=$monthName;?></option>
                             <option value=01 <?php echo set_select('DJPperiode', '01'); ?>>Januari
                             </option>
                             <option value=02 <?php echo set_select('DJPperiode', '02'); ?>>Februari
@@ -154,7 +159,7 @@ if ($djpsertif['PKSno2'] != null) {
                             <?=$djpsertif['OPKjenis'];?></option>
                         <?php
 foreach ($ambilOPK as $row) {
-	echo '<option value="' . $row->OPKid . '">' . $row->OPKjenis . '</option>';
+    echo '<option value="' . $row->OPKid . '">' . $row->OPKjenis . '</option>';
 }
 ?>
                     </select>
@@ -168,7 +173,7 @@ foreach ($ambilOPK as $row) {
                             <?=$djpsertif['SPJnama'];?></option>
                         <?php
 foreach ($ambilSPJ as $row) {
-	echo '<option value="' . $row->SPJid . '">' . $row->SPJnama . '</option>';
+    echo '<option value="' . $row->SPJid . '">' . $row->SPJnama . '</option>';
 }
 ?>
                     </select>
@@ -182,7 +187,7 @@ foreach ($ambilSPJ as $row) {
                             <?=$djpsertif['JSPjenis'];?></option>
                         <?php
 foreach ($ambilJSP as $row) {
-	echo '<option value="' . $row->JSPid . '">' . $row->JSPjenis . '</option>';
+    echo '<option value="' . $row->JSPid . '">' . $row->JSPjenis . '</option>';
 }
 ?>
                     </select>

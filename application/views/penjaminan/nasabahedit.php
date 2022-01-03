@@ -77,7 +77,7 @@ $DJPD = $qry;
 $i = 1;
 foreach ($DJPD->result_array() as $djpdqry) {
 
-	?>
+    ?>
                                             <tr>
                                                 <td><input type="text" id="TRJMnama<?=$i;?>" name="TRJMnama<?=$i;?>"
                                                         class="TRJMnama" value="<?=$djpdqry['TRJMnama'];?>"></td>
@@ -87,10 +87,10 @@ foreach ($DJPD->result_array() as $djpdqry) {
                                                         class="TRJMusia" value="<?=$djpdqry['TRJMusia'];?>"></td>
                                                 <?php
 $trjmid = (string) $djpdqry['TRJMid'];
-	$qrytrjm2 = $this->db->query("SELECT * FROM tbltrjm WHERE TRJMid='$trjmid'");
-	$TRJM = $qrytrjm2;
-	foreach ($TRJM->result_array() as $trjmqry) {
-		?>
+    $qrytrjm2 = $this->db->query("SELECT * FROM tbltrjm WHERE TRJMid='$trjmid'");
+    $TRJM = $qrytrjm2;
+    foreach ($TRJM->result_array() as $trjmqry) {
+        ?>
                                                 <td><input type="text" id="TRJMsiup<?=$i;?>" name="TRJMsiup<?=$i;?>"
                                                         class="TRJMsiup" value="<?=$trjmqry['TRJMsiup'];?>"> </td>
                                                 <td><input type="text" id="TRJMktp<?=$i;?>" name="TRJMktp<?=$i;?>"
@@ -109,10 +109,10 @@ $trjmid = (string) $djpdqry['TRJMid'];
                                                     <option selected="selected"><?=$djpdqry['PKRJid'];?></option>
                                                     <?php
 
-	foreach ($ambilpkrj as $row) {
-		echo '<option value="' . $row->PKRJid . '">' . $row->PKRJnama . '</option>';
-	}
-	?> <div id="loading" style="margin-top: 15px;">
+    foreach ($ambilpkrj as $row) {
+        echo '<option value="' . $row->PKRJid . '">' . $row->PKRJnama . '</option>';
+    }
+    ?> <div id="loading" style="margin-top: 15px;">
                                                         <img src="../img/loading.gif" width="18">
                                                         <small>Loading...</small>
                                                     </div>
@@ -475,7 +475,7 @@ $qry = $this->db->query("SELECT * FROM tbldjph WHERE DJPid='$DJPid'");
 $DJP = $qry;
 
 foreach ($DJP->result_array() as $djpqry) {
-	?>
+    ?>
 
     <form id="formbiayabiaya" method="post">
         <div class="container-fluid">
@@ -628,20 +628,6 @@ foreach ($DJP->result_array() as $djpqry) {
                                         DJPjumlahfeebankrubah.value = convertRupiah(this.value);
                                     });
                                     DJPjumlahfeebankrubah.addEventListener('click', function(event) {
-                                        return isNumberKey(event);
-                                    });
-                                    var DJPfeematerairubah = document.getElementById("DJPfeematerai");
-                                    DJPfeematerairubah.addEventListener("keyup", function(e) {
-                                        DJPfeematerairubah.value = convertRupiah(this.value);
-                                    });
-                                    DJPfeematerairubah.addEventListener('keydown', function(event) {
-                                        return isNumberKey(event);
-                                    });
-                                    var DJPfeeadminrubah = document.getElementById("DJPfeeadmin");
-                                    DJPfeeadminrubah.addEventListener("keyup", function(e) {
-                                        DJPfeeadminrubah.value = convertRupiah(this.value);
-                                    });
-                                    DJPfeeadminrubah.addEventListener('keydown', function(event) {
                                         return isNumberKey(event);
                                     });
                                     var DJPjumlahbiayarubah = document.getElementById("DJPjumlahbiaya");

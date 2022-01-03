@@ -4,7 +4,7 @@
     <div class="main-container">
         <h1 class="h3 mb-4 text-gray-800"><?=$title;?></h1>
         <div>
-             
+
             <?php if (validation_errors()): ?>
             <div class="alert alert-danger" role="alert">
                 <?=validation_errors();?>
@@ -13,7 +13,6 @@
             <?=form_open('Casebc/input', ['class' => 'form-horizontal'])?>
             <form role="form" class="form-horizontal">
                 <div class="card-body">
-
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Nomor Memo</label>
                         <div class="form-group col-lg-3 col-sm-4">
@@ -23,7 +22,7 @@
                     </div>
                     <hr class="sidebar-divider">
                     <div class="form-group row">
-                        <label class="col-sm-2 col-form-label">Data Calon Terjamin</label>
+                    <label class="col-sm-2 col-form-label">Data Calon Terjamin</label>
                     </div>
                     <!-- Body  Data Calon Terjamin -->
                     <div class="form-group row">

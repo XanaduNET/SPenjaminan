@@ -896,20 +896,6 @@ foreach ($ambilpkrj as $row) {
     DJPjumlahfeebankrubah.addEventListener('click', function(event) {
         return isNumberKey(event);
     });
-    var DJPfeematerairubah = document.getElementById("DJPfeematerai");
-    DJPfeematerairubah.addEventListener("click", function(e) {
-        DJPfeematerairubah.value = convertRupiah(this.value);
-    });
-    DJPfeematerairubah.addEventListener("click", function(event) {
-        return isNumberKey(event);
-    });
-    var DJPfeeadminrubah = document.getElementById("DJPfeeadmin");
-    DJPfeeadminrubah.addEventListener("click", function(e) {
-        DJPfeeadminrubah.value = convertRupiah(this.value);
-    });
-    DJPfeeadminrubah.addEventListener("click", function(event) {
-        return isNumberKey(event);
-    });
     var DJPjumlahbiayarubah = document.getElementById("DJPjumlahbiaya");
     DJPjumlahbiayarubah.addEventListener("click", function(e) {
         DJPjumlahbiayarubah.value = convertRupiah(this.value);

@@ -5,7 +5,7 @@
         <h1 class="h3 mb-4 text-gray-800"><?=$title;?></h1>
         <div>
             <div><?=validation_errors()?></div>
-            
+
             <?=form_open('Accrual_baru/triggeredExport', ['class' => 'form-horizontal'])?>
             <form role="form" class="form-horizontal">
                 <input type="hidden" id="table" name="table"
@@ -39,27 +39,27 @@ $tglawal = date('Y-01');
 
 foreach ($bulanmax as $u) {
 
-	$date1 = $tglawal;
-	$date2 = $u->DJPDtanggalakhir;
+    $date1 = $tglawal;
+    $date2 = $u->DJPDtanggalakhir;
 
-	$ts1 = strtotime($date1);
-	$ts2 = strtotime($date2);
+    $ts1 = strtotime($date1);
+    $ts2 = strtotime($date2);
 
-	$year1 = date('Y', $ts1);
-	$year2 = date('Y', $ts2);
+    $year1 = date('Y', $ts1);
+    $year2 = date('Y', $ts2);
 
-	$month1 = date('m', $ts1);
-	$month2 = date('m', $ts2);
+    $month1 = date('m', $ts1);
+    $month2 = date('m', $ts2);
 
-	$diff = (($year2 - $year1) * 12) + ($month2 - $month1);
+    $diff = (($year2 - $year1) * 12) + ($month2 - $month1);
 
-	$flagtanggal = $u->DJPDjangkawaktu + $diff;
-	for ($i = 0; $i <= $flagtanggal; $i++) {
+    $flagtanggal = $u->DJPDjangkawaktu + $diff;
+    for ($i = 0; $i <= $flagtanggal; $i++) {
 
-		$tglakhir = date('Y-M', strtotime('+ ' . $i . 'month', strtotime($tglawal)));
-		?><th> <?php echo $tglakhir; ?> </th><?php
+        $tglakhir = date('Y-M', strtotime('+ ' . $i . 'month', strtotime($tglawal)));
+        ?><th> <?php echo $tglakhir; ?> </th><?php
 
-	}
+    }
 
 }?>
                                     </tr>
@@ -81,20 +81,20 @@ foreach ($table as $u) {?>
                                         </td>
                                         <?php
 $tglawal = date('Y-01');
-	for ($i = 0; $i <= $u->DJPDjangkawaktu; $i++) {
-		$time = strtotime($u->DJPtanggalcetak);
-		$newtime = date('Y-M', $time);
-		$tglakhir = date('Y-M', strtotime('+ ' . $i . 'month', strtotime($tglawal)));
+    for ($i = 0; $i <= $u->DJPDjangkawaktu; $i++) {
+        $time = strtotime($u->DJPtanggalcetak);
+        $newtime = date('Y-M', $time);
+        $tglakhir = date('Y-M', strtotime('+ ' . $i . 'month', strtotime($tglawal)));
 
-		if ($newtime == $tglakhir) {
+        if ($newtime == $tglakhir) {
 
-			for ($i = 0; $i <= $u->DJPDjangkawaktu; $i++) {?>
+            for ($i = 0; $i <= $u->DJPDjangkawaktu; $i++) {?>
                                         <td><?php echo "Rp." . number_format($angsuran, 0, ".", "."); ?></td>
                                         <?php }
-		} else {
-			?><td bgcolor="#FFC0CB"> -- </td> <?php
+        } else {
+            ?><td bgcolor="#FFC0CB"> -- </td> <?php
 
-		}}?>
+        }}?>
                                     </tr>
                                     <?php $no++;}?>
 
@@ -108,31 +108,24 @@ $tglawal = date('Y-01');
 
                             <!-- BATAS  -->
 
+                        </div>
 
+                    </div>
 
-
-
-                            <div><?=validation_errors()?></div>
-                           
-                            <?=form_open('Accrual_baru', ['class' => 'form-horizontal'])?>
+                    <?=form_open('Accrual_baru', ['class' => 'form-horizontal'])?>
                             <form role="form" class="form-horizontal">
-                                <div class="col-xl-4 col-md-7 mb-5">
-                                    <div class="card border-left-success shadow h-100 py-2">
-                                        <div class="card-body">
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col mr-2">
-                                                    <div class="font-weight-bold text-success text-uppercase mb-1">
-                                                        <label> Data Grup Penerima Penjaminan </label>
-                                                        <br>
-                                                        <input name="semuaGPP" type="checkbox" id="Semua"
-                                                            class="semuaGPP" value="semua"
-                                                            <?php echo set_checkbox('semuaGPP', 'semua'); ?>>
-                                                        Select
-                                                        All
-                                                        <br>
+                            <div class="row">
+                            <div class="col-xl-4 mb-30">
+                            <div class="card-box height-100-p pd-20">
+                            <div class="font-weight-bold text-uppercase mb-1">
+                <label> Data Grup Penerima Penjaminan </label>
+                <br>
+                <input name="semuaGPP" type="checkbox" id="Semua" class="semuaGPP" value="semua"<?php echo set_checkbox('semuaGPP', 'semua'); ?>>
+                                        Select All <br>
+    </div>
                                                         <?php
 foreach ($gpp as $u) {
-	?>
+    ?>
                                                         <input name="GPPchecked[]" type="checkbox"
                                                             value=<?php echo $u->GPPid ?> id=<?php echo $u->GPPid ?>
                                                             class="checkedGPP"
@@ -142,29 +135,20 @@ foreach ($gpp as $u) {
                                                         <?php }?>
                                                     </div>
                                                 </div>
-                                                <div class="col-auto">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-md-7 mb-5">
-                                    <div class="card border-left-success shadow h-100 py-2">
-                                        <div class="card-body">
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col mr-2">
-                                                    <div class="font-weight-bold text-success text-uppercase mb-1">
+                                                <div class="col-xl-4 mb-30">
+					                            <div class="card-box height-100-p pd-20">
+                                                <div class="font-weight-bold text-uppercase mb-1">
                                                         <label> Data OPK </label>
                                                         <br>
                                                         <input name="semuaOPK" type="checkbox" id="Semua"
                                                             class="semuaOPK" value="semua"
                                                             <?php echo set_checkbox('semuaOPK', 'semua'); ?>>
-                                                        Select
-                                                        All
+                                                        Select All
                                                         <br>
+</div>
                                                         <?php
 foreach ($opk as $u) {
-	?>
+    ?>
                                                         <input name="OPKchecked[]" type="checkbox"
                                                             value=<?php echo $u->OPKid ?> id=<?php echo $u->OPKid ?>
                                                             class="checkedOPK"
@@ -174,20 +158,13 @@ foreach ($opk as $u) {
                                                         <?php }?>
                                                     </div>
                                                 </div>
-                                                <div class="col-auto">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <br>
-                                <div class="col-xl-4 col-md-7 mb-5">
-                                    <div class="card border-left-success shadow h-100 py-2">
-                                        <div class="card-body">
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col mr-2">
-                                                    <div class="font-weight-bold text-success text-uppercase mb-1">
+                                                <div class="col-xl-4 mb-30">
+					<div class="card-box height-100-p pd-20">
+                    <div class="font-weight-bold text-uppercase mb-1">
+                                                        <label> Bulan Periode </label>
+                                                        <br>
+</div>
                                                         <select id="Month" name="Month">
                                                             <option selected="selected" value="00">Semua Bulan</option>
                                                             <option value=01 <?php echo set_select('Month', '01'); ?>>
@@ -230,11 +207,6 @@ foreach ($opk as $u) {
                                                         <br>
                                                     </div>
                                                 </div>
-                                                <div class="col-auto">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
 
 
@@ -243,7 +215,11 @@ foreach ($opk as $u) {
                                 <input name="Kirim" type="submit" class="btn btn-primary" />
                             </form>
 
+                </div>
 
+            </div>
+
+        </div>
 
                             <script>
                             $('input.semuaGPP').on('change', function() {
@@ -262,10 +238,3 @@ foreach ($opk as $u) {
                                 $('input.semuaOPK').not(this).prop('checked', false);
                             });
                             </script>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
