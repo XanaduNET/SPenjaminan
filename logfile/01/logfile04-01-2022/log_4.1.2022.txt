@@ -1,0 +1,10 @@
+User: ::1 - January 4, 2022, 09:56:35
+Attempt: Failed Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - January 4, 2022, 09:56:51
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------

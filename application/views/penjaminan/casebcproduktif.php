@@ -184,7 +184,7 @@ $(document).ready(function() {
     <div class="main-container">
         <h1 class="h3 mb-4 text-gray-800"><?=$title;?></h1>
         <div>
-           
+
             <?php if (validation_errors()): ?>
             <div class="alert alert-danger" role="alert">
                 <?=validation_errors();?>
@@ -198,14 +198,14 @@ $(document).ready(function() {
                         <label class="col-sm-2 col-form-label">Nomor Memo</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" name="CBCPnomormemo" id="CBCPnomormemo"
-                                class="form-control">
+                                class="form-control" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Prinsipal</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" name="CBCPprinsipal" id="CBCPprinsipal"
-                                class="form-control">
+                                class="form-control" required>
                         </div>
                     </div>
                     <hr class="sidebar-divider">
@@ -216,74 +216,74 @@ $(document).ready(function() {
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Nama Lengkap</label>
                         <div class="form-group col-lg-3 col-sm-4">
-                            <input style="width: 100%;" type="text" name="TRJMnama" id="TRJMnama" class="form-control">
+                            <input style="width: 100%;" type="text" name="TRJMnama" id="TRJMnama" class="form-control" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Tempat Tanggal Lahir</label>
                         <div class="form-group col-lg-3 col-sm-4">
-                            <input style="width: 100%;" type="text" name="TRJMttl" id="TRJMttl" class="form-control">
+                            <input style="width: 100%;" type="text" name="TRJMttl" id="TRJMttl" class="form-control" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">No. Identitas Diri</label>
                         <div class="form-group col-lg-3 col-sm-4">
-                            <input style="width: 100%;" type="text" name="TRJMktp" id="TRJMktp" class="form-control">
+                            <input style="width: 100%;" type="text" name="TRJMktp" id="TRJMktp" class="form-control" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Alamat Sesuai KTP</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" name="TRJMalamat" id="TRJMalamat"
-                                class="form-control">
+                                class="form-control" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Alamat Saat Ini</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" name="TRJMalamatsekarang" id="TRJMalamatsekarang"
-                                class="form-control">
+                                class="form-control" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Pekerjaan</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" name="TRJMpekerjaan" id="TRJMpekerjaan"
-                                class="form-control">
+                                class="form-control" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Jenis Usaha</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" name="TRJMusaha" id="TRJMusaha"
-                                class="form-control">
+                                class="form-control" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">NPWP Pribadi</label>
                         <div class="form-group col-lg-3 col-sm-4">
-                            <input style="width: 100%;" type="text" name="TRJMnpwp" id="TRJMnpwp" class="form-control">
+                            <input style="width: 100%;" type="text" name="TRJMnpwp" id="TRJMnpwp" class="form-control" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Status Pernikahan</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" name="TRJMstatuspernikahan"
-                                id="TRJMstatuspernikahan" class="form-control">
+                                id="TRJMstatuspernikahan" class="form-control" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Nama Suami/Istri</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" name="TRJMpartner" id="TRJMpartner"
-                                class="form-control">
+                                class="form-control" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Alamat Sesuai KTP</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" name="TRJMalamatpartner" id="TRJMalamatpartner"
-                                class="form-control">
+                                class="form-control" required>
                         </div>
                     </div>
 
@@ -291,7 +291,7 @@ $(document).ready(function() {
                         <label class="col-sm-2 col-form-label">Pekerjaan Suami/Istri</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" name="TRJMpekerjaanpartner"
-                                id="TRJMpekerjaanpartner" class="form-control">
+                                id="TRJMpekerjaanpartner" class="form-control" required>
                         </div>
                     </div>
                     <hr class="sidebar-divider">
@@ -305,7 +305,7 @@ $(document).ready(function() {
                         <label class="col-sm-2 col-form-label">Jenis Fasilitas Kredit</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" name="CBCPjenis" id="CBCPjenis"
-                                class="form-control">
+                                class="form-control" required>
                         </div>
                     </div>
 
@@ -313,7 +313,7 @@ $(document).ready(function() {
                         <label class="col-sm-2 col-form-label">Sifat Kredit</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" name="CBCPsifat" id="CBCPsifat"
-                                class="form-control">
+                                class="form-control" required>
                         </div>
                     </div>
 
@@ -321,27 +321,27 @@ $(document).ready(function() {
                         <label class="col-sm-2 col-form-label">Plafond Kredit</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" name="CBCPplafondkredit" id="CBCPplafondkredit"
-                                class="form-control">
+                                class="form-control" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Rate</label>
                         <div class="form-group col-lg-3 col-sm-4">
-                            <input style="width: 100%;" type="text" name="CBCPrate" id="CBCPrate" class="form-control">
+                            <input style="width: 100%;" type="text" name="CBCPrate" id="CBCPrate" class="form-control" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Coverage</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" name="CBCPcoverage" id="CBCPcoverage"
-                                class="form-control">
+                                class="form-control" required>
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Jangka Waktu Kredit</label>
                         <div class="form-group col-lg-3 col-sm-4">
-                            <input style="width: 100%;" type="text" name="CBCPjwk" id="CBCPjwk" class="form-control">
+                            <input style="width: 100%;" type="text" name="CBCPjwk" id="CBCPjwk" class="form-control" required>
                         </div>
                     </div>
 
@@ -350,7 +350,7 @@ $(document).ready(function() {
                         <label class="col-sm-2 col-form-label">Angsuran Kredit</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="number" name="CBCPangsurankredit" id="CBCPangsurankredit"
-                                class="form-control">
+                                class="form-control" required>
                         </div>
                     </div>
 
@@ -358,7 +358,7 @@ $(document).ready(function() {
                         <label class="col-sm-2 col-form-label">Agunan Kredit</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <textarea name="CBCPagunankredit" id="CBCPagunankredit" class="form-control" rows="4"
-                                cols="50">
+                                cols="50" required>
                         </textarea>
                         </div>
                     </div>
@@ -367,7 +367,7 @@ $(document).ready(function() {
                         <label class="col-sm-2 col-form-label">Rencana Penggunaan Kredit</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <textarea name="CBCPrencanakredit" id="CBCPrencanakredit" class="form-control" rows="4"
-                                cols="50">
+                                cols="50" required>
                         </textarea>
                         </div>
                     </div>
@@ -382,7 +382,7 @@ $(document).ready(function() {
                         <label class="col-sm-2 col-form-label">Nama Bank</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input type="text" name="PPid" class="form-control" id="PPid" hidden>
-                            <input type="text" name="PPnama" class="form-control" id="PPnama">
+                            <input type="text" name="PPnama" class="form-control" id="PPnama" required>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -395,28 +395,28 @@ $(document).ready(function() {
                         <label class="col-sm-2 col-form-label">Telp/Fax</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="PPtelpon" name="PPtelpon"
-                                placeholder="">
+                                placeholder="" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Contact Person</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPcontactperson"
-                                name="CBCPcontactperson" placeholder="">
+                                name="CBCPcontactperson" placeholder="" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Surat Permohonan Penjaminan</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPsuratpermohonan"
-                                name="CBCPsuratpermohonan" placeholder="">
+                                name="CBCPsuratpermohonan" placeholder="" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Keputusan Kelompok Pemutus Kredit</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPkeputusan"
-                                name="CBCPkeputusan" placeholder="">
+                                name="CBCPkeputusan" placeholder="" required>
                         </div>
                     </div>
                     <hr class="sidebar-divider">
@@ -432,7 +432,7 @@ $(document).ready(function() {
                         <label class="col-sm-2 col-form-label">NPWP</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="TRJMnpwpcopy"
-                                name="TRJMnpwpcopy" placeholder="">
+                                name="TRJMnpwpcopy" placeholder="" required>
                         </div>
                     </div>
 
@@ -440,7 +440,7 @@ $(document).ready(function() {
                         <label class="col-sm-2 col-form-label">Surat Keterangan Izin Usaha</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPsiup" name="CBCPsiup"
-                                placeholder="">
+                                placeholder="" required>
                         </div>
                     </div>
 
@@ -448,7 +448,7 @@ $(document).ready(function() {
                         <label class="col-sm-2 col-form-label">Izin-Izin Jatuh Tempo</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPizinjatuhtempo"
-                                name="CBCPizinjatuhtempo" placeholder="">
+                                name="CBCPizinjatuhtempo" placeholder="" required>
                         </div>
                     </div>
 
@@ -461,7 +461,7 @@ $(document).ready(function() {
                         <label class="col-sm-2 col-form-label">Deskripsi Sumber Pendapatan</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <textarea name="CBCPdeskripsisumberpendapatan" id="CBCPdeskripsisumberpendapatan"
-                                class="form-control"></textarea>
+                                class="form-control" required></textarea>
                         </div>
                     </div>
                     <hr class="sidebar-divider">
@@ -472,7 +472,7 @@ $(document).ready(function() {
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Deskripsi Usaha Produktif</label>
                         <div class="form-group col-lg-3 col-sm-4">
-                            <textarea name="CBCPdeskripsiusaha" class="form-control"></textarea>
+                            <textarea name="CBCPdeskripsiusaha" class="form-control" required></textarea>
                         </div>
                     </div>
                     <hr class="sidebar-divider">
@@ -485,7 +485,7 @@ $(document).ready(function() {
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Jenis Agunan/Jaminan</label>
                         <div class="form-group col-lg-3 col-sm-4">
-                            <textarea name="CBCPjenisagunan[]" class="form-control"></textarea>
+                            <textarea name="CBCPjenisagunan[]" class="form-control" required></textarea>
                         </div>
                     </div>
 
@@ -493,22 +493,22 @@ $(document).ready(function() {
                         <label class="col-sm-2 col-form-label">Nilai Tasaksi Agunan</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPnilaitasaksi[]"
-                                name="CBCPnilaitasaksi[]">
+                                name="CBCPnilaitasaksi[]" required>
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPnilaitasaksitanah[]"
-                                name="CBCPnilaitasaksitanah[]" placeholder="Tanah/m">
+                                name="CBCPnilaitasaksitanah[]" placeholder="Tanah/m" required>
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPnilaitasaksibangunan[]"
-                                name="CBCPnilaitasaksibangunan[]" placeholder="Bangunan">
+                                name="CBCPnilaitasaksibangunan[]" placeholder="Bangunan" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Nilai Dasar Agunan</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPnilaidasar[]"
-                                name="CBCPnilaidasar[]">
+                                name="CBCPnilaidasar[]" required>
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPnilaidasartanah[]"
-                                name="CBCPnilaidasartanah[]" placeholder="Nilai Dasar Tanah/m">
+                                name="CBCPnilaidasartanah[]" placeholder="Nilai Dasar Tanah/m" required>
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPnilaidasarbangunan[]"
-                                name="CBCPnilaidasarbangunan[]" placeholder="Nilai Dasar Bangunan">
+                                name="CBCPnilaidasarbangunan[]" placeholder="Nilai Dasar Bangunan" required>
 
 
                         </div>
@@ -533,14 +533,14 @@ $(document).ready(function() {
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Analisa Dokumen Identitas</label>
                         <div class="form-group col-lg-3 col-sm-4">
-                            <textarea name="CBCPanalisadokumenidentitas" class="form-control"></textarea>
+                            <textarea name="CBCPanalisadokumenidentitas" class="form-control" required></textarea>
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Analisa Slik OJK</label>
                         <div class="form-group col-lg-3 col-sm-4">
-                            <textarea name="CBCPanalisaslikojk" class="form-control"></textarea>
+                            <textarea name="CBCPanalisaslikojk" class="form-control" required></textarea>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -550,7 +550,7 @@ $(document).ready(function() {
                         <label class="col-sm-2 col-form-label">Nama Bank</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPojknamabank[]"
-                                name="CBCPojknamabank[]" placeholder="">
+                                name="CBCPojknamabank[]" placeholder="" required>
                         </div>
                     </div>
 
@@ -558,49 +558,49 @@ $(document).ready(function() {
                         <label class="col-sm-2 col-form-label">Jangka Waktu</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPnamabank[]"
-                                name="CBCPojkjangkawaktu[]" placeholder="">
+                                name="CBCPojkjangkawaktu[]" placeholder="" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Plafond Kredit</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPojkplafondkredit[]"
-                                name="CBCPojkplafondkredit[]" placeholder="">
+                                name="CBCPojkplafondkredit[]" placeholder="" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Tunggakan Pokok</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPojktunggakanpokok[]"
-                                name="CBCPojktunggakanpokok[]" placeholder="">
+                                name="CBCPojktunggakanpokok[]" placeholder="" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Tunggakan Bunga</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPojktunggakanbunga[]"
-                                name="CBCPojktunggakanbunga[]" placeholder="">
+                                name="CBCPojktunggakanbunga[]" placeholder="" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Angsuran</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPojkangsuran[]"
-                                name="CBCPojkangsuran[]" placeholder="">
+                                name="CBCPojkangsuran[]" placeholder="" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Kualitas</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPojkkualitas[]"
-                                name="CBCPojkkualitas[]" placeholder="">
+                                name="CBCPojkkualitas[]" placeholder="" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Kondisi</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPojkkondisi[]"
-                                name="CBCPojkkondisi[]" placeholder="">
+                                name="CBCPojkkondisi[]" placeholder="" required>
                         </div>
                     </div>
 
@@ -613,21 +613,21 @@ $(document).ready(function() {
                         <label class="col-sm-2 col-form-label"><br>Sumber Pendapatan</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPsumberpendapatan[]"
-                                name="CBCPsumberpendapatan[]" placeholder="">
+                                name="CBCPsumberpendapatan[]" placeholder="" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label"><br>Nama Pendapatan</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPnamapendapatan[]"
-                                name="CBCPnamapendapatan[]" placeholder="">
+                                name="CBCPnamapendapatan[]" placeholder="" required>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Pendapatan /bulan</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPpendapatanbulan[]"
-                                name="CBCPpendapatanbulan[]" placeholder="">
+                                name="CBCPpendapatanbulan[]" placeholder="" required>
                         </div>
                     </div>
 
@@ -646,7 +646,7 @@ $(document).ready(function() {
                         <label class="col-sm-2 col-form-label">Nama Pengeluaran</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPnamapengeluaran[]"
-                                name="CBCPnamapengeluaran[]" placeholder="">
+                                name="CBCPnamapengeluaran[]" placeholder="" required>
                         </div>
                     </div>
 
@@ -654,7 +654,7 @@ $(document).ready(function() {
                         <label class="col-sm-2 col-form-label">Pengeluaran /bulan</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPpengeluaranbulan[]"
-                                name="CBCPpengeluaranbulan[]" placeholder="">
+                                name="CBCPpengeluaranbulan[]" placeholder="" required>
                         </div>
                     </div>
 
@@ -667,7 +667,7 @@ $(document).ready(function() {
                         <label class="col-sm-2 col-form-label">Angsuran Existing /bulan</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" class="form-control" id="CBCPangsuranexist"
-                                name="CBCPangsuranexist" placeholder="">
+                                name="CBCPangsuranexist" placeholder="" required>
                         </div>
                     </div>
                     <!-- End Analisa Permohonan Penjaminan -->
@@ -677,7 +677,7 @@ $(document).ready(function() {
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Kesimpulan</label>
                         <div class="form-group col-lg-3 col-sm-4">
-                            <textarea name="CBCPkesimpulan" id="CBCPkesimpulan" class="form-control" rows="4" cols="50">
+                            <textarea name="CBCPkesimpulan" id="CBCPkesimpulan" class="form-control" rows="4" cols="50" required>
                         </textarea>
                         </div>
                     </div>
