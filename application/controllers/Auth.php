@@ -48,8 +48,11 @@ class Auth extends CI_Controller
                     $data = [
                         'nama' => $user['nama'],
                         'role_id' => $user['role_id'],
+                        'id' => $user['id'],
                     ];
+                    $this->load->model('Messagemodel');
                     $this->session->set_userdata($data);
+                    $this->Messagemodel->logoutUser('active', '');
 
                     if ($user['role_id'] == 1) {
 
@@ -127,7 +130,7 @@ class Auth extends CI_Controller
 
             file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
             echo "<script>
-            alert('User Tidak Terdaftar! Silahkan Hubungi Admiistrator!');
+            alert('User Tidak Terdaftar! Silahkan Hubungi Administrator!');
             window.location.href='auth';</script>";
 
         }
