@@ -1,0 +1,10 @@
+User: ::1 - January 19, 2022, 09:11:05
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - January 19, 2022, 09:12:19
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Manajemen Risiko
+-------------------------
