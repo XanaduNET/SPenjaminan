@@ -217,7 +217,7 @@ class Fee_baru extends CI_Controller
     {
         $table_result = $dataTable;
         $bulanmax = $dataBulan;
-        $tglawal = date('Y-01');
+
         $alphabet = 'J';
         $alphabet2 = 'J';
         $spreadsheet = new Spreadsheet;
@@ -238,7 +238,7 @@ class Fee_baru extends CI_Controller
         // looping abcnya aja angkanya sih engga
 
         foreach ($bulanmax as $u) {
-
+            $tglawal = date($u->DJPDtanggalawal);
             $date1 = $tglawal;
             $date2 = $u->DJPDtanggalakhir;
 
@@ -275,9 +275,11 @@ class Fee_baru extends CI_Controller
                 ->setCellValue('G' . $kolom, $u->DJPDtanggalakhir)
                 ->setCellValue('H' . $kolom, "Rp." . number_format($u->DJPDfeebank, 0, ".", "."))
                 ->setCellValue('I' . $kolom, "Rp." . number_format($angsuran = (int) ($u->DJPDfeebank / $u->DJPDjangkawaktu), 0, ".", "."));
-
+            foreach ($bulanmax as $y) {
+                $tglawal = date($y->DJPDtanggalawal);
+            }
             for ($i = 0; $i <= $u->DJPDjangkawaktu; $i++) {
-                $time = strtotime($u->DJPtanggalcetak);
+                $time = strtotime($u->DJPDtanggalawal);
                 $newtime = date('Y-M', $time);
                 $tglakhir = date('Y-M', strtotime('+ ' . $i . 'month', strtotime($tglawal)));
 

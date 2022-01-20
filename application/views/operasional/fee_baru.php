@@ -35,10 +35,9 @@
                                         <th>Premi</th>
                                         <th>Angsuran / Bulan </th>
                                         <?php
-$tglawal = date('Y-01');
 
 foreach ($bulanmax as $u) {
-
+    $tglawal = date($u->DJPDtanggalawal);
     $date1 = $tglawal;
     $date2 = $u->DJPDtanggalakhir;
 
@@ -80,9 +79,11 @@ foreach ($table as $u) {?>
                                         <td><?php echo "Rp." . number_format($angsuran = (int) ($u->DJPDfeebank / $u->DJPDjangkawaktu), 0, ".", "."); ?>
                                         </td>
                                         <?php
-$tglawal = date('Y-01');
+foreach ($bulanmax as $y) {
+    $tglawal = date($y->DJPDtanggalawal);
+}
     for ($i = 0; $i <= $u->DJPDjangkawaktu; $i++) {
-        $time = strtotime($u->DJPtanggalcetak);
+        $time = strtotime($u->DJPDtanggalawal);
         $newtime = date('Y-M', $time);
         $tglakhir = date('Y-M', strtotime('+ ' . $i . 'month', strtotime($tglawal)));
 
@@ -108,7 +109,7 @@ $tglawal = date('Y-01');
 
 </div>
 
-<?=form_open('Accrual_baru', ['class' => 'form-horizontal'])?>
+<?=form_open('Fee_baru', ['class' => 'form-horizontal'])?>
         <form role="form" class="form-horizontal">
         <div class="row">
         <div class="col-xl-4 mb-30">

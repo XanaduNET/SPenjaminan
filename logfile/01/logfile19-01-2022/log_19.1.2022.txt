@@ -298,3 +298,58 @@ Attempt: Success Masuk Halaman
 User: Akbar
 Aksi: Accrual Penjaminan
 -------------------------
+User: ::1 - January 19,2022, 15:16:28
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 19, 2022, 15:16:34
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------
+User: ::1 - January 19,2022, 15:16:37
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 19, 2022, 15:16:43
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------
+User: ::1 - January 19,2022, 15:18:12
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 19,2022, 15:19:28
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 19, 2022, 15:19:34
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------
+User: ::1 - January 19,2022, 15:20:33
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 19, 2022, 15:20:47
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------
+User: ::1 - January 19,2022, 15:23:19
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 19, 2022, 15:23:22
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------

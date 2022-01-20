@@ -50,9 +50,8 @@ class Auth extends CI_Controller
                         'role_id' => $user['role_id'],
                         'id' => $user['id'],
                     ];
-                    $this->load->model('Messagemodel');
+
                     $this->session->set_userdata($data);
-                    $this->Messagemodel->logoutUser('active', '');
 
                     if ($user['role_id'] == 1) {
 

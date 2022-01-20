@@ -216,6 +216,7 @@ class Model_table_fee extends CI_Model
         $this->db->like('DJPnoreg', $keyword);
         $this->db->select_max('DJPDtanggalakhir');
         $this->db->select_max('DJPDjangkawaktu');
+        $this->db->select_min('DJPDtanggalawal');
 
         $this->db->from('tbldjph');
         $this->db->join('tbldjpd', 'tbldjph.DJPid=tbldjpd.DJPid');
@@ -238,6 +239,7 @@ class Model_table_fee extends CI_Model
         $this->db->like('DJPnoreg', $keyword);
         $this->db->select_max('DJPDtanggalakhir');
         $this->db->select_max('DJPDjangkawaktu');
+        $this->db->select_min('DJPDtanggalawal');
 
         $this->db->from('tbldjph');
         $this->db->join('tbldjpd', 'tbldjph.DJPid=tbldjpd.DJPid');
