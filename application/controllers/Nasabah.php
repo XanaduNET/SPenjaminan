@@ -140,6 +140,7 @@ class Nasabah extends CI_Controller
             'DJPjumlahbiaya' => implode(explode(".", $this->input->post('DJPjumlahbiaya'))),
             'DJPjumlahbiayaterbilang' => $this->input->post('DJPjumlahbiayaterbilang'),
             'DJPuseridentry' => $userid['id'],
+            'DJPtanggalentry' => date("Y-m-d"),
 
         ];
         $this->db->where('DJPid', $this->input->post('DJPid'));

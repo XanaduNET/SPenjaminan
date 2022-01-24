@@ -1,0 +1,285 @@
+User: ::1 - January 24, 2022, 08:47:35
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - January 24,2022, 09:01:06
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 09:01:28
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 09:09:08
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 09:09:24
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 09:10:06
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 09:10:40
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 09:11:01
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 09:11:21
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 09:11:35
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 09:12:09
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 09:12:50
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 09:13:05
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 09:13:15
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 09:13:30
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 09:27:15
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Fee Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 09:27:52
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Fee Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 09:28:45
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Fee Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 09:28:55
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Fee Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 09:31:11
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Fee Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 09:42:26
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Fee Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 09:43:43
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Fee Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 09:43:55
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Fee Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 10:57:39
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Fee
+-------------------------
+User: ::1 - January 24,2022, 10:57:51
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Fee
+-------------------------
+User: ::1 - January 24,2022, 10:57:52
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Fee Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 10:58:07
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Fee Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 10:58:09
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Fee Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 10:58:10
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Fee
+-------------------------
+User: ::1 - January 24,2022, 10:58:20
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Fee
+-------------------------
+User: ::1 - January 24,2022, 10:58:21
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Fee Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 10:58:51
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Fee
+-------------------------
+User: ::1 - January 24,2022, 10:59:42
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Fee
+-------------------------
+User: ::1 - January 24,2022, 11:00:03
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Fee
+-------------------------
+User: ::1 - January 24,2022, 11:00:05
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Fee Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 11:00:30
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Fee
+-------------------------
+User: ::1 - January 24,2022, 11:00:37
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Fee
+-------------------------
+User: ::1 - January 24,2022, 11:01:13
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 11:01:33
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 11:02:16
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 11:02:24
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 11:02:25
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 11:02:32
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 11:02:35
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 11:18:14
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 11:18:20
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 11:18:21
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 11:18:27
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 11:18:36
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 11:18:39
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 11:18:49
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 11:19:03
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 11:19:11
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24,2022, 11:19:23
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - January 24, 2022, 11:34:48
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - January 24, 2022, 11:40:20
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - January 24, 2022, 11:40:27
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------

@@ -51,6 +51,12 @@ class Table extends CI_Controller
         $this->db->where('DJPid', $id);
         $this->db->update('tbldjph');
 
+        $userid = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+
+        $this->db->set('DJPuseridcetak', $userid['id']);
+        $this->db->where('DJPid', $id);
+        $this->db->update('tbldjph');
+
         $data['table'] = $this->Model_table->cetaksertifikat($id);
         $this->load->view('operasional/sertifikat', $data);
 

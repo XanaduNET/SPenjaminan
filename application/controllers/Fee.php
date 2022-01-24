@@ -24,6 +24,7 @@ class Fee extends CI_Controller
         $OPKchecked = array();
         $GPPchecked = array();
         $Monthchecked = array();
+        $Tahunchecked = array();
 
         if (!empty($this->input->post('Month')) && ($this->input->post('Month') == "00")) {
 
@@ -37,10 +38,12 @@ class Fee extends CI_Controller
                     $OPKchecked[] = $obj;
                 }
 
+                $Tahunchecked[] = $this->input->post('Tahun');
+
                 $keyword = $this->input->post('keyword');
                 $data['ambilid'] = $this->Model_fee->ambilid();
 
-                $data['table'] = $this->Model_table_fee->ambil_data_query_lengkap($keyword, $GPPchecked, $OPKchecked); // pass value to model fn
+                $data['table'] = $this->Model_table_fee->ambil_data_query_lengkap($keyword, $GPPchecked, $OPKchecked, $Tahunchecked); // pass value to model fn
 
             } else if (empty($this->input->post('GPPchecked')) && !empty($this->input->post('OPKchecked'))) {
 
@@ -48,10 +51,12 @@ class Fee extends CI_Controller
                     $OPKchecked[] = $obj;
                 }
 
+                $Tahunchecked[] = $this->input->post('Tahun');
+
                 $keyword = $this->input->post('keyword');
                 $data['ambilid'] = $this->Model_fee->ambilid();
 
-                $data['table'] = $this->Model_table_fee->ambil_data_query_opk($keyword, $OPKchecked); // pass value to model fn
+                $data['table'] = $this->Model_table_fee->ambil_data_query_opk($keyword, $OPKchecked, $Tahunchecked); // pass value to model fn
 
             } else if (!empty($this->input->post('semuaGPP')) && !empty($this->input->post('OPKchecked'))) {
 
@@ -59,10 +64,12 @@ class Fee extends CI_Controller
                     $OPKchecked[] = $obj;
                 }
 
+                $Tahunchecked[] = $this->input->post('Tahun');
+
                 $keyword = $this->input->post('keyword');
                 $data['ambilid'] = $this->Model_fee->ambilid();
 
-                $data['table'] = $this->Model_table_fee->ambil_data_query_opk($keyword, $OPKchecked); // pass value to model fn
+                $data['table'] = $this->Model_table_fee->ambil_data_query_opk($keyword, $OPKchecked, $Tahunchecked); // pass value to model fn
 
             } else if (!empty($this->input->post('semuaGPP')) && !empty($this->input->post('semuaOPK'))) {
 
@@ -76,10 +83,12 @@ class Fee extends CI_Controller
                     $GPPchecked[] = $obj;
                 }
 
+                $Tahunchecked[] = $this->input->post('Tahun');
+
                 $keyword = $this->input->post('keyword');
                 $data['ambilid'] = $this->Model_fee->ambilid();
 
-                $data['table'] = $this->Model_table_fee->ambil_data_query($keyword, $GPPchecked); // pass value to model fn
+                $data['table'] = $this->Model_table_fee->ambil_data_query($keyword, $GPPchecked, $Tahunchecked); // pass value to model fn
 
             } else {
 
@@ -107,21 +116,24 @@ class Fee extends CI_Controller
                     $OPKchecked[] = $obj;
                 }
 
+                $Tahunchecked[] = $this->input->post('Tahun');
+
                 $keyword = $this->input->post('keyword');
                 $data['ambilid'] = $this->Model_fee->ambilid();
 
-                $data['table'] = $this->Model_table_fee->ambil_data_query_lengkap_bulan($keyword, $GPPchecked, $OPKchecked, $totalBulan); // pass value to model fn
+                $data['table'] = $this->Model_table_fee->ambil_data_query_lengkap_bulan($keyword, $GPPchecked, $OPKchecked, $totalBulan, $Tahunchecked); // pass value to model fn
 
             } else if (empty($this->input->post('GPPchecked')) && !empty($this->input->post('OPKchecked'))) {
 
                 foreach ($this->input->post('OPKchecked') as $obj) {
                     $OPKchecked[] = $obj;
                 }
+                $Tahunchecked[] = $this->input->post('Tahun');
 
                 $keyword = $this->input->post('keyword');
                 $data['ambilid'] = $this->Model_fee->ambilid();
 
-                $data['table'] = $this->Model_table_fee->ambil_data_query_opk_bulan($keyword, $OPKchecked, $totalBulan); // pass value to model fn
+                $data['table'] = $this->Model_table_fee->ambil_data_query_opk_bulan($keyword, $OPKchecked, $totalBulan, $Tahunchecked); // pass value to model fn
 
             } else if (!empty($this->input->post('semuaGPP')) && !empty($this->input->post('OPKchecked'))) {
 
@@ -129,34 +141,41 @@ class Fee extends CI_Controller
                     $OPKchecked[] = $obj;
                 }
 
+                $Tahunchecked[] = $this->input->post('Tahun');
+
                 $keyword = $this->input->post('keyword');
                 $data['ambilid'] = $this->Model_fee->ambilid();
 
-                $data['table'] = $this->Model_table_fee->ambil_data_query_opk_bulan($keyword, $OPKchecked, $totalBulan); // pass value to model fn
+                $data['table'] = $this->Model_table_fee->ambil_data_query_opk_bulan($keyword, $OPKchecked, $totalBulan, $Tahunchecked); // pass value to model fn
 
             } else if (!empty($this->input->post('semuaGPP')) && !empty($this->input->post('semuaOPK'))) {
 
+                $Tahunchecked[] = $this->input->post('Tahun');
+
                 $keyword = $this->input->post('keyword');
                 $data['ambilid'] = $this->Model_fee->ambilid();
-
-                $data['table'] = $this->Model_table_fee->ambil_data_bulan($keyword, $totalBulan);
+                $data['table'] = $this->Model_table_fee->ambil_data_bulan($keyword, $totalBulan, $Tahunchecked);
 
             } else if (!empty($this->input->post('GPPchecked')) && !empty($this->input->post('semuaOPK'))) {
 
                 foreach ($this->input->post('GPPchecked') as $obj) {
                     $GPPchecked[] = $obj;
                 }
+                $Tahunchecked[] = $this->input->post('Tahun');
 
                 $keyword = $this->input->post('keyword');
                 $data['ambilid'] = $this->Model_fee->ambilid();
 
-                $data['table'] = $this->Model_table_fee->ambil_data_query_bulan($keyword, $GPPchecked, $totalBulan); // pass value to model fn
+                $data['table'] = $this->Model_table_fee->ambil_data_query_bulan($keyword, $GPPchecked, $totalBulan, $Tahunchecked); // pass value to model fn
 
             } else {
+
+                $Tahunchecked[] = $this->input->post('Tahun');
+
                 $keyword = $this->input->post('keyword');
                 $data['ambilid'] = $this->Model_fee->ambilid();
 
-                $data['table'] = $this->Model_table_fee->ambil_data_bulan($keyword, $totalBulan);
+                $data['table'] = $this->Model_table_fee->ambil_data_bulan($keyword, $totalBulan, $Tahunchecked);
 
             }
 
@@ -174,8 +193,10 @@ class Fee extends CI_Controller
 
         $data['title'] = 'Fee';
         $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
-
-        $namauser = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+        $data['gpp'] = $this->Model_table_fee->getGPP();
+        $data['opk'] = $this->Model_table_fee->getOPK();
+        $data['tahun'] = $this->Model_table_fee->getYear();
+        $data['menu'] = $this->db->get('user_menu')->result_array();
 
         $date = date("d-m-Y");
         $bulan = date("m");
@@ -184,15 +205,11 @@ class Fee extends CI_Controller
         $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j,Y, H:i:s") . PHP_EOL .
             "Attempt: " . ("Success Masuk Halaman") . PHP_EOL .
             "User: " . $namauser['nama'] . PHP_EOL .
-            "Aksi: " . ('Beranda Fee') . PHP_EOL .
+            "Aksi: " . ('Fee Penjaminan') . PHP_EOL .
             "-------------------------" . PHP_EOL;
         //-
         file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
 
-        $data['gpp'] = $this->Model_table_fee->getGPP();
-        $data['opk'] = $this->Model_table_fee->getOPK();
-
-        $data['menu'] = $this->db->get('user_menu')->result_array();
         $this->load->view('template/header', $data);
         $this->load->view('template/header_body', $data);
         $this->load->view('template/right_sidebar', $data);
@@ -937,7 +954,7 @@ class Fee extends CI_Controller
 
         $writer = new Xlsx($spreadsheet);
         header('Content-Type: application/vnd.ms-excel');
-        header('Content-Disposition: attachment;filename="IJPAccrual.Xlsx"');
+        header('Content-Disposition: attachment;filename="IJPfee.Xlsx"');
         header('Cache-Control: max-age=0');
         $writer->save('php://output');
     }

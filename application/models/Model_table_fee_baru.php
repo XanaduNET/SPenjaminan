@@ -1,11 +1,11 @@
 <?php
-class Model_table_semua extends CI_Model
+class Model_table_fee_baru extends CI_Model
 {
 
     public function ambil_data($keyword)
     {
         //    return $this->db->get('tbldjph');
-
+        $this->db->like('DJPnoreg', $keyword);
         $this->db->select('*');
         $this->db->from('tbldjph');
         $this->db->join('tblgpp', 'tbldjph.GPPid=tblgpp.GPPid');
@@ -13,7 +13,7 @@ class Model_table_semua extends CI_Model
         $this->db->join('tblspj', 'tbldjph.SPJid=tblspj.SPJid');
         $this->db->join('tbljsp', 'tbldjph.JSPid=tbljsp.JSPid');
         $this->db->join('tbldjpd', 'tbldjph.DJPid=tbldjpd.DJPid');
-        $this->db->group_by('DJPnoreg'); // add group_by
+
         $query = $this->db->get();
         return $query->result();
     }
@@ -22,6 +22,7 @@ class Model_table_semua extends CI_Model
     {
         $GPPid = $GPPchecked;
 
+        $this->db->like('DJPnoreg', $keyword);
         $this->db->select('*');
         $this->db->from('tbldjph');
         $this->db->join('tblgpp', 'tbldjph.GPPid=tblgpp.GPPid');
@@ -38,7 +39,7 @@ class Model_table_semua extends CI_Model
         } else {
             echo "<script>
             alert('Data Tidak Ditemukan');
-            window.location.href='Table';
+            window.location.href='Fee_baru';
             </script>";
         }
     }
@@ -47,6 +48,7 @@ class Model_table_semua extends CI_Model
     {
         $OPKid = $OPKchecked;
 
+        $this->db->like('DJPnoreg', $keyword);
         $this->db->select('*');
         $this->db->from('tbldjph');
         $this->db->join('tblgpp', 'tbldjph.GPPid=tblgpp.GPPid');
@@ -63,7 +65,7 @@ class Model_table_semua extends CI_Model
         } else {
             echo "<script>
             alert('Data Tidak Ditemukan');
-            window.location.href='Table';
+            window.location.href='Fee_baru';
             </script>";
         }
     }
@@ -73,6 +75,7 @@ class Model_table_semua extends CI_Model
         $GPPid = $GPPchecked;
         $OPKid = $OPKchecked;
 
+        $this->db->like('DJPnoreg', $keyword);
         $this->db->select('*');
         $this->db->from('tbldjph');
         $this->db->join('tblgpp', 'tbldjph.GPPid=tblgpp.GPPid');
@@ -90,7 +93,7 @@ class Model_table_semua extends CI_Model
         } else {
             echo "<script>
             alert('Data Tidak Ditemukan');
-            window.location.href='Table';
+            window.location.href='Fee_baru';
             </script>";
         }
     }
@@ -101,6 +104,7 @@ class Model_table_semua extends CI_Model
         $OPKid = $OPKchecked;
         $MONTHid = $Monthchecked;
 
+        $this->db->like('DJPnoreg', $keyword);
         $this->db->select('*');
         $this->db->from('tbldjph');
         $this->db->join('tblgpp', 'tbldjph.GPPid=tblgpp.GPPid');
@@ -108,7 +112,7 @@ class Model_table_semua extends CI_Model
         $this->db->join('tblspj', 'tbldjph.SPJid=tblspj.SPJid');
         $this->db->join('tbljsp', 'tbldjph.JSPid=tbljsp.JSPid');
         $this->db->join('tbldjpd', 'tbldjph.DJPid=tbldjpd.DJPid');
-        $this->db->where_in("DATE_FORMAT(DJPtanggalverif,'%m')", $MONTHid);
+        $this->db->where_in("DATE_FORMAT(DJPtanggaldeklarasi,'%m')", $MONTHid);
         $this->db->where_in('tbldjph.GPPid', $GPPid);
         $this->db->where_in('tbldjph.OPKid', $OPKid);
         $query = $this->db->get();
@@ -119,7 +123,7 @@ class Model_table_semua extends CI_Model
         } else {
             echo "<script>
             alert('Data Tidak Ditemukan');
-            window.location.href='Table';
+            window.location.href='Fee_baru';
             </script>";
         }
     }
@@ -129,6 +133,7 @@ class Model_table_semua extends CI_Model
         $OPKid = $OPKchecked;
         $MONTHid = $Monthchecked;
 
+        $this->db->like('DJPnoreg', $keyword);
         $this->db->select('*');
         $this->db->from('tbldjph');
         $this->db->join('tblgpp', 'tbldjph.GPPid=tblgpp.GPPid');
@@ -136,7 +141,7 @@ class Model_table_semua extends CI_Model
         $this->db->join('tblspj', 'tbldjph.SPJid=tblspj.SPJid');
         $this->db->join('tbljsp', 'tbldjph.JSPid=tbljsp.JSPid');
         $this->db->join('tbldjpd', 'tbldjph.DJPid=tbldjpd.DJPid');
-        $this->db->where_in("DATE_FORMAT(DJPtanggalverif,'%m')", $MONTHid);
+        $this->db->where_in("DATE_FORMAT(DJPtanggaldeklarasi,'%m')", $MONTHid);
         $this->db->where_in('tbldjph.OPKid', $OPKid);
         $query = $this->db->get();
 
@@ -146,7 +151,7 @@ class Model_table_semua extends CI_Model
         } else {
             echo "<script>
             alert('Data Tidak Ditemukan');
-            window.location.href='Table';
+            window.location.href='Fee_baru';
             </script>";
         }
     }
@@ -156,7 +161,7 @@ class Model_table_semua extends CI_Model
 
         $MONTHid = $Monthchecked;
         //    return $this->db->get('tbldjph');
-
+        $this->db->like('DJPnoreg', $keyword);
         $this->db->select('*');
         $this->db->from('tbldjph');
         $this->db->join('tblgpp', 'tbldjph.GPPid=tblgpp.GPPid');
@@ -164,7 +169,7 @@ class Model_table_semua extends CI_Model
         $this->db->join('tblspj', 'tbldjph.SPJid=tblspj.SPJid');
         $this->db->join('tbljsp', 'tbldjph.JSPid=tbljsp.JSPid');
         $this->db->join('tbldjpd', 'tbldjph.DJPid=tbldjpd.DJPid');
-        $this->db->where_in("DATE_FORMAT(DJPtanggalverif,'%m')", $MONTHid);
+        $this->db->where_in("DATE_FORMAT(DJPtanggaldeklarasi,'%m')", $MONTHid);
         $query = $this->db->get();
         if ($query->num_rows() > 0) {
             // echo $this->db->last_query()."<br>";
@@ -172,7 +177,7 @@ class Model_table_semua extends CI_Model
         } else {
             echo "<script>
             alert('Data Tidak Ditemukan');
-            window.location.href='Table';
+            window.location.href='Fee_baru';
             </script>";
         }
     }
@@ -181,6 +186,7 @@ class Model_table_semua extends CI_Model
         $MONTHid = $Monthchecked;
         $GPPid = $GPPchecked;
 
+        $this->db->like('DJPnoreg', $keyword);
         $this->db->select('*');
         $this->db->from('tbldjph');
         $this->db->join('tblgpp', 'tbldjph.GPPid=tblgpp.GPPid');
@@ -189,7 +195,7 @@ class Model_table_semua extends CI_Model
         $this->db->join('tbljsp', 'tbldjph.JSPid=tbljsp.JSPid');
         $this->db->join('tbldjpd', 'tbldjph.DJPid=tbldjpd.DJPid');
         $this->db->where_in('tbldjph.GPPid', $GPPid);
-        $this->db->where_in("DATE_FORMAT(DJPtanggalverif,'%m')", $MONTHid);
+        $this->db->where_in("DATE_FORMAT(DJPtanggaldeklarasi,'%m')", $MONTHid);
         $query = $this->db->get();
 
         if ($query->num_rows() > 0) {
@@ -198,7 +204,52 @@ class Model_table_semua extends CI_Model
         } else {
             echo "<script>
             alert('Data Tidak Ditemukan');
-            window.location.href='Table';
+            window.location.href='Fee_baru';
+            </script>";
+        }
+    }
+    public function ambil_data_maxbulan_perbulan($keyword, $Monthchecked)
+    {
+
+        $MONTHid = $Monthchecked;
+        //    return $this->db->get('tbldjph');
+        $this->db->like('DJPnoreg', $keyword);
+        $this->db->select_max('DJPDtanggalakhir');
+        $this->db->select_max('DJPDjangkawaktu');
+        $this->db->select_min('DJPDtanggalawal');
+
+        $this->db->from('tbldjph');
+        $this->db->join('tbldjpd', 'tbldjph.DJPid=tbldjpd.DJPid');
+        $this->db->where_in("DATE_FORMAT(DJPtanggaldeklarasi,'%m')", $MONTHid);
+        $query = $this->db->get();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            echo "<script>
+            alert('Data Tidak Ditemukan');
+            window.location.href='Accrual_baru';
+            </script>";
+        }
+    }
+
+    public function ambil_data_maxbulan($keyword)
+    {
+
+        //    return $this->db->get('tbldjph');
+        $this->db->like('DJPnoreg', $keyword);
+        $this->db->select_max('DJPDtanggalakhir');
+        $this->db->select_max('DJPDjangkawaktu');
+        $this->db->select_min('DJPDtanggalawal');
+
+        $this->db->from('tbldjph');
+        $this->db->join('tbldjpd', 'tbldjph.DJPid=tbldjpd.DJPid');
+        $query = $this->db->get();
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            echo "<script>
+            alert('Data Tidak Ditemukan');
+            window.location.href='Accrual_baru';
             </script>";
         }
     }
@@ -219,35 +270,6 @@ class Model_table_semua extends CI_Model
 
         $query = $this->db->get();
         return $query->result();
-    }
-    public function cetak($id)
-    {
-        $query = $this->db->query("SELECT * FROM tbldjph JOIN tbldjpd on tbldjph.DJPid = tbldjpd.DJPid JOIN tblopk on tbldjph.OPKid = tblopk.OPKid WHERE tbldjph.DJPid='$id'");
-        return $query->result();
-    }
-
-    public function cetaksertifikat($id)
-    {
-
-        $query = $this->db->query("SELECT * FROM tbldjph JOIN tbldjpd on tbldjph.DJPid = tbldjpd.DJPid JOIN tblpks on tbldjph.PKSid = tblpks.PKSid JOIN tblopk on tbldjph.OPKid = tblopk.OPKid JOIN tbljsp on tbldjph.JSPid = tbljsp.JSPid JOIN tblpp on tbldjph.PPid = tblpp.PPid JOIN tblrs on tblpp.RSid = tblrs.Rsid   WHERE tbldjph.DJPid='$id'");
-        return $query->result();
-
-    }
-
-    public function getSertif($DJPid)
-    {
-
-        $query = $this->db->query("SELECT * FROM tbldjph JOIN tblgpp ON tbldjph.GPPid = tblgpp.GPPid JOIN tblpks ON tbldjph.PKSid = tblpks.PKSid JOIN tblpp on tbldjph.PPid = tblpp.PPid JOIN tblopk on tbldjph.OPKid = tblopk.OPKid JOIN tbljsp on tbldjph.JSPid = tbljsp.JSPid JOIN tblspj on tbldjph.SPJid = tblSPJ.SPJid WHERE tbldjph.DJPid = '$DJPid' ");
-        return $query->row_array();
-
-    }
-
-    public function getSertifNoID()
-    {
-
-        $query = $this->db->query("SELECT * FROM tbldjph");
-        return $query->result_array();
-
     }
 
 }

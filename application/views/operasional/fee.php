@@ -4,18 +4,26 @@
     <div class="main-container">
         <h1 class="h3 mb-4 text-gray-800"><?=$title;?></h1>
         <div>
-            <?php $bulanini[1] = "BULAN INI";
+        <?php $bulanini[1] = "BULAN INI";
 $bulandepan[1] = "BULAN DEPAN";
 $bulanjumlah = 00;
 $awal = 1;
 $u = 00;
+$year = date("Y");
 ?>
 
 
-            <?php foreach ($bulan as $u) {
+    <?php
+
+foreach ($table as $a) {
+    $year = date("Y", strtotime($a->DJPtanggaldeklarasi));
+}
+
+foreach ($bulan as $u) {
+
     if ($u == 01) {
-        $bulanini[1] = "JANUARI 2021";
-        $bulandepan[1] = "FEB-JAN 2022";
+        $bulanini[1] = "JANUARI $year";
+        $bulandepan[1] = "FEB-JAN " . $year + 1;
         $bulanjumlah = $u;
         $awal = 0;
 
@@ -25,11 +33,11 @@ $u = 00;
         $flagbulan[1] = 0;
 
     } else if ($u == 02) {
-        $bulanini[1] = "JAN-FEB 2021";
-        $bulandepan[1] = "MAR-FEB 2022";
+        $bulanini[1] = "JAN-FEB $year";
+        $bulandepan[1] = "MAR-FEB" . $year + 1;
 
-        $bulanini[2] = "FEBRUARI 2021";
-        $bulandepan[2] = "MAR-FEB 2022";
+        $bulanini[2] = "FEBRUARI $year";
+        $bulandepan[2] = "MAR-FEB" . $year + 1;
 
         $kalibulan[1] = (20 / 100);
         $kalibulan[2] = (20 / 100);
@@ -42,12 +50,12 @@ $u = 00;
         $flagkaliawal = 1;
 
     } else if ($u == 03) {
-        $bulanini[1] = "JAN-MAR 2021";
-        $bulandepan[1] = "APR-MAR 2022";
-        $bulanini[2] = "FEB-MAR 2021";
-        $bulandepan[2] = "APR-MAR 2022";
-        $bulanini[3] = "MARET 2021";
-        $bulandepan[3] = "APR-MAR 2022";
+        $bulanini[1] = "JAN-MAR $year";
+        $bulandepan[1] = "APR-MAR" . $year + 1;
+        $bulanini[2] = "FEB-MAR $year";
+        $bulandepan[2] = "APR-MAR" . $year + 1;
+        $bulanini[3] = "MARET $year";
+        $bulandepan[3] = "APR-MAR" . $year + 1;
 
         $kalibulan[1] = (20 / 100);
         $kalibulan[2] = (20 / 100);
@@ -62,14 +70,14 @@ $u = 00;
 
         $flagkaliawal = 1;
     } else if ($u == 04) {
-        $bulanini[1] = "JAN-APR 2021";
-        $bulandepan[1] = "MEI-APR 2022";
-        $bulanini[2] = "FEB-APR 2021";
-        $bulandepan[2] = "MEI-APR 2022";
-        $bulanini[3] = "MAR-APR 2021";
-        $bulandepan[3] = "MEI-APR 2022";
-        $bulanini[4] = "APRIL 2021";
-        $bulandepan[4] = "MEI-APR 2022";
+        $bulanini[1] = "JAN-APR $year";
+        $bulandepan[1] = "MEI-APR" . $year + 1;
+        $bulanini[2] = "FEB-APR $year";
+        $bulandepan[2] = "MEI-APR" . $year + 1;
+        $bulanini[3] = "MAR-APR $year";
+        $bulandepan[3] = "MEI-APR" . $year + 1;
+        $bulanini[4] = "APRIL $year";
+        $bulandepan[4] = "MEI-APR" . $year + 1;
 
         $kalibulan[1] = (20 / 100);
         $kalibulan[2] = (20 / 100);
@@ -86,16 +94,16 @@ $u = 00;
 
         $flagkaliawal = 1;
     } else if ($u == 05) {
-        $bulanini[1] = "JAN-MEI 2021";
-        $bulandepan[1] = "JUN-MEI 2022";
-        $bulanini[2] = "FEB-MEI 2021";
-        $bulandepan[2] = "JUN-MEI 2022";
-        $bulanini[3] = "MAR-MEI 2021";
-        $bulandepan[3] = "JUN-MEI 2022";
-        $bulanini[4] = "APR-MEI 2021";
-        $bulandepan[4] = "JUN-MEI 2022";
-        $bulanini[5] = "MEI 2021";
-        $bulandepan[5] = "JUN-MEI 2022";
+        $bulanini[1] = "JAN-MEI $year";
+        $bulandepan[1] = "JUN-MEI" . $year + 1;
+        $bulanini[2] = "FEB-MEI $year";
+        $bulandepan[2] = "JUN-MEI" . $year + 1;
+        $bulanini[3] = "MAR-MEI $year";
+        $bulandepan[3] = "JUN-MEI" . $year + 1;
+        $bulanini[4] = "APR-MEI $year";
+        $bulandepan[4] = "JUN-MEI" . $year + 1;
+        $bulanini[5] = "MEI $year";
+        $bulandepan[5] = "JUN-MEI" . $year + 1;
 
         $kalibulan[1] = (20 / 100);
         $kalibulan[2] = (20 / 100);
@@ -114,18 +122,18 @@ $u = 00;
 
         $flagkaliawal = 1;
     } else if ($u == 06) {
-        $bulanini[1] = "JAN-JUN 2021";
-        $bulandepan[1] = "JUL-JUN 2022";
-        $bulanini[2] = "FEB-JUN 2021";
-        $bulandepan[2] = "JUL-JUN 2022";
-        $bulanini[3] = "MAR-JUN 2021";
-        $bulandepan[3] = "JUL-JUN 2022";
-        $bulanini[4] = "APR-JUN 2021";
-        $bulandepan[4] = "JUL-JUN 2022";
-        $bulanini[5] = "MEI-JUN 2021";
-        $bulandepan[5] = "JUL-JUN 2022";
-        $bulanini[6] = "JUNI 2021";
-        $bulandepan[6] = "JUL-JUN 2022";
+        $bulanini[1] = "JAN-JUN $year";
+        $bulandepan[1] = "JUL-JUN" . $year + 1;
+        $bulanini[2] = "FEB-JUN $year";
+        $bulandepan[2] = "JUL-JUN" . $year + 1;
+        $bulanini[3] = "MAR-JUN $year";
+        $bulandepan[3] = "JUL-JUN" . $year + 1;
+        $bulanini[4] = "APR-JUN $year";
+        $bulandepan[4] = "JUL-JUN" . $year + 1;
+        $bulanini[5] = "MEI-JUN $year";
+        $bulandepan[5] = "JUL-JUN" . $year + 1;
+        $bulanini[6] = "JUNI $year";
+        $bulandepan[6] = "JUL-JUN" . $year + 1;
 
         $kalibulan[1] = (20 / 100);
         $kalibulan[2] = (20 / 100);
@@ -146,20 +154,20 @@ $u = 00;
 
         $flagkaliawal = 1;
     } else if ($u == 07) {
-        $bulanini[1] = "JAN-JUL 2021";
-        $bulandepan[1] = "AGU-JUL 2022";
-        $bulanini[2] = "FEB-JUL 2021";
-        $bulandepan[2] = "AGU-JUL 2022";
-        $bulanini[3] = "MAR-JUL 2021";
-        $bulandepan[3] = "AGU-JUL 2022";
-        $bulanini[4] = "APR-JUL 2021";
-        $bulandepan[4] = "AGU-JUL 2022";
-        $bulanini[5] = "MEI-JUL 2021";
-        $bulandepan[5] = "AGU-JUL 2022";
-        $bulanini[6] = "JUNI-JUL 2021";
-        $bulandepan[6] = "AGU-JUL 2022";
-        $bulanini[7] = "JULI 2021";
-        $bulandepan[7] = "AGU-JUL 2022";
+        $bulanini[1] = "JAN-JUL $year";
+        $bulandepan[1] = "AGU-JUL" . $year + 1;
+        $bulanini[2] = "FEB-JUL $year";
+        $bulandepan[2] = "AGU-JUL" . $year + 1;
+        $bulanini[3] = "MAR-JUL $year";
+        $bulandepan[3] = "AGU-JUL" . $year + 1;
+        $bulanini[4] = "APR-JUL $year";
+        $bulandepan[4] = "AGU-JUL" . $year + 1;
+        $bulanini[5] = "MEI-JUL $year";
+        $bulandepan[5] = "AGU-JUL" . $year + 1;
+        $bulanini[6] = "JUNI-JUL $year";
+        $bulandepan[6] = "AGU-JUL" . $year + 1;
+        $bulanini[7] = "JULI $year";
+        $bulandepan[7] = "AGU-JUL" . $year + 1;
 
         $kalibulan[1] = (20 / 100);
         $kalibulan[2] = (20 / 100);
@@ -180,25 +188,24 @@ $u = 00;
         $bulanjumlah = $u;
         $awal = 0;
         $flagkali = 7;
-
         $flagkaliawal = 1;
     } else if ($u == '08') {
-        $bulanini[1] = "JAN-AGU 2021";
-        $bulandepan[1] = "SEP-AGU 2022";
-        $bulanini[2] = "FEB-AGU 2021";
-        $bulandepan[2] = "SEP-AGU 2022";
-        $bulanini[3] = "MAR-AGU 2021";
-        $bulandepan[3] = "SEP-AGU 2022";
-        $bulanini[4] = "APR-AGU 2021";
-        $bulandepan[4] = "SEP-AGU 2022";
-        $bulanini[5] = "MEI-AGU 2021";
-        $bulandepan[5] = "SEP-AGU 2022";
-        $bulanini[6] = "JUN-AGU 2021";
-        $bulandepan[6] = "SEP-AGU 2022";
-        $bulanini[7] = "JUL-AGU 2021";
-        $bulandepan[7] = "SEP-AGU 2022";
-        $bulanini[8] = "AGUSTUS 2021";
-        $bulandepan[8] = "SEP-AGU 2022";
+        $bulanini[1] = "JAN-AGU $year";
+        $bulandepan[1] = "SEP-AGU" . $year + 1;
+        $bulanini[2] = "FEB-AGU $year";
+        $bulandepan[2] = "SEP-AGU" . $year + 1;
+        $bulanini[3] = "MAR-AGU $year";
+        $bulandepan[3] = "SEP-AGU" . $year + 1;
+        $bulanini[4] = "APR-AGU $year";
+        $bulandepan[4] = "SEP-AGU" . $year + 1;
+        $bulanini[5] = "MEI-AGU $year";
+        $bulandepan[5] = "SEP-AGU" . $year + 1;
+        $bulanini[6] = "JUN-AGU $year";
+        $bulandepan[6] = "SEP-AGU" . $year + 1;
+        $bulanini[7] = "JUL-AGU $year";
+        $bulandepan[7] = "SEP-AGU" . $year + 1;
+        $bulanini[8] = "AGUSTUS $year";
+        $bulandepan[8] = "SEP-AGU" . $year + 1;
 
         $kalibulan[1] = (20 / 100);
         $kalibulan[2] = (20 / 100);
@@ -224,24 +231,24 @@ $u = 00;
         $flagkaliawal = 1;
 
     } else if ($u == '09') {
-        $bulanini[1] = "JAN-SEP 2021";
-        $bulandepan[1] = "OKT-SEP 2022";
-        $bulanini[2] = "FEB-SEP 2021";
-        $bulandepan[2] = "OKT-SEP 2022";
-        $bulanini[3] = "MAR-SEP 2021";
-        $bulandepan[3] = "OKT-SEP 2022";
-        $bulanini[4] = "APR-SEP 2021";
-        $bulandepan[4] = "OKT-SEP 2022";
-        $bulanini[5] = "MEI-SEP 2021";
-        $bulandepan[5] = "OKT-SEP 2022";
-        $bulanini[6] = "JUN-SEP 2021";
-        $bulandepan[6] = "OKT-SEP 2022";
-        $bulanini[7] = "JUL-SEP 2021";
-        $bulandepan[7] = "OKT-SEP 2022";
-        $bulanini[8] = "AGUS-SEP 2021";
-        $bulandepan[8] = "OKT-SEP 2022";
-        $bulanini[9] = "SEPTEMBER 2021";
-        $bulandepan[9] = "OKT-SEP 2022";
+        $bulanini[1] = "JAN-SEP $year";
+        $bulandepan[1] = "OKT-SEP" . $year + 1;
+        $bulanini[2] = "FEB-SEP $year";
+        $bulandepan[2] = "OKT-SEP" . $year + 1;
+        $bulanini[3] = "MAR-SEP $year";
+        $bulandepan[3] = "OKT-SEP" . $year + 1;
+        $bulanini[4] = "APR-SEP $year";
+        $bulandepan[4] = "OKT-SEP" . $year + 1;
+        $bulanini[5] = "MEI-SEP $year";
+        $bulandepan[5] = "OKT-SEP" . $year + 1;
+        $bulanini[6] = "JUN-SEP $year";
+        $bulandepan[6] = "OKT-SEP" . $year + 1;
+        $bulanini[7] = "JUL-SEP $year";
+        $bulandepan[7] = "OKT-SEP" . $year + 1;
+        $bulanini[8] = "AGUS-SEP $year";
+        $bulandepan[8] = "OKT-SEP" . $year + 1;
+        $bulanini[9] = "SEPTEMBER $year";
+        $bulandepan[9] = "OKT-SEP" . $year + 1;
 
         $kalibulan[1] = (20 / 100);
         $kalibulan[2] = (20 / 100);
@@ -267,26 +274,26 @@ $u = 00;
         $flagkali = 9;
         $flagkaliawal = 1;
     } else if ($u == 10) {
-        $bulanini[1] = "JAN-OKT 2021";
-        $bulandepan[1] = "NOV-OKT 2022";
-        $bulanini[2] = "FEB-OKT 2021";
-        $bulandepan[2] = "NOV-OKT 2022";
-        $bulanini[3] = "MAR-OKT 2021";
-        $bulandepan[3] = "NOV-OKT 2022";
-        $bulanini[4] = "APR-OKT 2021";
-        $bulandepan[4] = "NOV-OKT 2022";
-        $bulanini[5] = "MEI-OKT 2021";
-        $bulandepan[5] = "NOV-OKT 2022";
-        $bulanini[6] = "JUN-OKT 2021";
-        $bulandepan[6] = "NOV-OKT 2022";
-        $bulanini[7] = "JUL-OKT 2021";
-        $bulandepan[7] = "NOV-OKT 2022";
-        $bulanini[8] = "AGU-OKT 2021";
-        $bulandepan[8] = "NOV-OKT 2022";
-        $bulanini[9] = "SEP-OKT 2021";
-        $bulandepan[9] = "NOV-OKT 2022";
-        $bulanini[10] = "OKTOBER 2021";
-        $bulandepan[10] = "NOV-OKT 2022";
+        $bulanini[1] = "JAN-OKT $year";
+        $bulandepan[1] = "NOV-OKT" . $year + 1;
+        $bulanini[2] = "FEB-OKT $year";
+        $bulandepan[2] = "NOV-OKT" . $year + 1;
+        $bulanini[3] = "MAR-OKT $year";
+        $bulandepan[3] = "NOV-OKT" . $year + 1;
+        $bulanini[4] = "APR-OKT $year";
+        $bulandepan[4] = "NOV-OKT" . $year + 1;
+        $bulanini[5] = "MEI-OKT $year";
+        $bulandepan[5] = "NOV-OKT" . $year + 1;
+        $bulanini[6] = "JUN-OKT $year";
+        $bulandepan[6] = "NOV-OKT" . $year + 1;
+        $bulanini[7] = "JUL-OKT $year";
+        $bulandepan[7] = "NOV-OKT" . $year + 1;
+        $bulanini[8] = "AGU-OKT $year";
+        $bulandepan[8] = "NOV-OKT" . $year + 1;
+        $bulanini[9] = "SEP-OKT $year";
+        $bulandepan[9] = "NOV-OKT" . $year + 1;
+        $bulanini[10] = "OKTOBER $year";
+        $bulandepan[10] = "NOV-OKT" . $year + 1;
 
         $kalibulan[1] = (20 / 100);
         $kalibulan[2] = (20 / 100);
@@ -315,28 +322,28 @@ $u = 00;
         $flagkaliawal = 1;
 
     } else if ($u == 11) {
-        $bulanini[1] = "JAN-NOV 2021";
-        $bulandepan[1] = "DES-NOV 2022";
-        $bulanini[2] = "FEB-NOV 2021";
-        $bulandepan[2] = "DES-NOV 2022";
-        $bulanini[3] = "MAR-NOV 2021";
-        $bulandepan[3] = "DES-NOV 2022";
-        $bulanini[4] = "APR-NOV 2021";
-        $bulandepan[4] = "DES-NOV 2022";
-        $bulanini[5] = "MEI-NOV 2021";
-        $bulandepan[5] = "DES-NOV 2022";
-        $bulanini[6] = "JUN-NOV 2021";
-        $bulandepan[6] = "DES-NOV 2022";
-        $bulanini[7] = "JUL-NOV 2021";
-        $bulandepan[7] = "DES-NOV 2022";
-        $bulanini[8] = "AGU-NOV 2021";
-        $bulandepan[8] = "DES-NOV 2022";
-        $bulanini[9] = "SEP-NOV 2021";
-        $bulandepan[9] = "DES-NOV 2022";
-        $bulanini[10] = "OKT-NOV 2021";
-        $bulandepan[10] = "DES-NOV 2022";
-        $bulanini[11] = "NOVEMBER 2021";
-        $bulandepan[11] = "DES-NOV 2022";
+        $bulanini[1] = "JAN-NOV $year";
+        $bulandepan[1] = "DES-NOV" . $year + 1;
+        $bulanini[2] = "FEB-NOV $year";
+        $bulandepan[2] = "DES-NOV" . $year + 1;
+        $bulanini[3] = "MAR-NOV $year";
+        $bulandepan[3] = "DES-NOV" . $year + 1;
+        $bulanini[4] = "APR-NOV $year";
+        $bulandepan[4] = "DES-NOV" . $year + 1;
+        $bulanini[5] = "MEI-NOV $year";
+        $bulandepan[5] = "DES-NOV" . $year + 1;
+        $bulanini[6] = "JUN-NOV $year";
+        $bulandepan[6] = "DES-NOV" . $year + 1;
+        $bulanini[7] = "JUL-NOV $year";
+        $bulandepan[7] = "DES-NOV" . $year + 1;
+        $bulanini[8] = "AGU-NOV $year";
+        $bulandepan[8] = "DES-NOV" . $year + 1;
+        $bulanini[9] = "SEP-NOV $year";
+        $bulandepan[9] = "DES-NOV" . $year + 1;
+        $bulanini[10] = "OKT-NOV $year";
+        $bulandepan[10] = "DES-NOV" . $year + 1;
+        $bulanini[11] = "NOVEMBER $year";
+        $bulandepan[11] = "DES-NOV" . $year + 1;
 
         $kalibulan[1] = (20 / 100);
         $kalibulan[2] = (20 / 100);
@@ -367,30 +374,30 @@ $u = 00;
         $flagkaliawal = 1;
 
     } else if ($u == 12) {
-        $bulanini[1] = "JAN-DES 2021";
-        $bulandepan[1] = "2022";
-        $bulanini[2] = "FEB-DES 2021";
-        $bulandepan[2] = "2022";
-        $bulanini[3] = "MAR-DES 2021";
-        $bulandepan[3] = "2022";
-        $bulanini[4] = "APR-DES 2021";
-        $bulandepan[4] = "2022";
-        $bulanini[5] = "MEI-DES 2021";
-        $bulandepan[5] = "2022";
-        $bulanini[6] = "JUN-DES 2021";
-        $bulandepan[6] = "2022";
-        $bulanini[7] = "JUL-DES 2021";
-        $bulandepan[7] = "2022";
-        $bulanini[8] = "AGU-DES 2021";
-        $bulandepan[8] = "2022";
-        $bulanini[9] = "SEP-DES 2021";
-        $bulandepan[9] = "2022";
-        $bulanini[10] = "OKT-DES 2021";
-        $bulandepan[10] = "2022";
-        $bulanini[11] = "NOV-DES 2021";
-        $bulandepan[11] = "2022";
-        $bulanini[12] = "DESEMBER 2021";
-        $bulandepan[12] = "2022";
+        $bulanini[1] = "JAN-DES $year";
+        $bulandepan[1] = " " . $year + 1;
+        $bulanini[2] = "FEB-DES $year";
+        $bulandepan[2] = " " . $year + 1;
+        $bulanini[3] = "MAR-DES $year";
+        $bulandepan[3] = " " . $year + 1;
+        $bulanini[4] = "APR-DES $year";
+        $bulandepan[4] = " " . $year + 1;
+        $bulanini[5] = "MEI-DES $year";
+        $bulandepan[5] = " " . $year + 1;
+        $bulanini[6] = "JUN-DES $year";
+        $bulandepan[6] = " " . $year + 1;
+        $bulanini[7] = "JUL-DES $year";
+        $bulandepan[7] = " " . $year + 1;
+        $bulanini[8] = "AGU-DES $year";
+        $bulandepan[8] = " " . $year + 1;
+        $bulanini[9] = "SEP-DES $year";
+        $bulandepan[9] = " " . $year + 1;
+        $bulanini[10] = "OKT-DES $year";
+        $bulandepan[10] = " " . $year + 1;
+        $bulanini[11] = "NOV-DES $year";
+        $bulandepan[11] = " " . $year + 1;
+        $bulanini[12] = "DESEMBER $year";
+        $bulandepan[12] = " " . $year + 1;
 
         $kalibulan[1] = (20 / 100);
         $kalibulan[2] = (20 / 100);
@@ -428,7 +435,6 @@ $u = 00;
         $bulanjumlah = 01;
 
     }}?>
-
 
             <div><?=validation_errors()?></div>
 
@@ -520,7 +526,7 @@ $no = 1;
                                         <td><?php echo $u->DJPDfeematerai ?></td>
                                         <td><?php echo number_format($total = $u->DJPDimbaljasa + $u->DJPDfeeadm + $u->DJPDfeematerai, 0, ".", ".") ?>
                                         </td>
-                                        <td><?php echo $u->DJPDfeebank ?></td>
+                                        <td><?php echo number_format($u->DJPDfeebank, 0, ".", ".") ?></td>
                                         <td><?php echo number_format($total - $u->DJPDfeebank, 0, ".", ".") ?></td>
                                         <td>
                                             <?php echo number_format(
@@ -663,7 +669,7 @@ $no++;
                                         <td><?php echo $u->DJPDfeematerai ?></td>
                                         <td><?php echo number_format($total = $u->DJPDimbaljasa + $u->DJPDfeeadm + $u->DJPDfeematerai, 0, ".", ".") ?>
                                         </td>
-                                        <td><?php echo $u->DJPDfeebank ?></td>
+                                        <td><?php echo number_format($u->DJPDfeebank, 0, ".", ".") ?></td>
                                         <td><?php echo number_format($total - $u->DJPDfeebank, 0, ".", ".") ?></td>
                                         <td> <?php echo number_format(($hasilbulanawal = (($u->DJPDfeebank * $kalibulan[$i]) + (($u->DJPDfeebank - ($u->DJPDfeebank * $kalibulan[$i])) / ($u->DJPDjangkawaktu - $flagkaliawal) * $flagbulan[$i]))), 0, ".", ".") ?>
                                         </td>
@@ -968,7 +974,7 @@ if ($flag == $u->DJPjumlahpk) {
 						</div>
 
 
-<?=form_open('Accrual_baru', ['class' => 'form-horizontal'])?>
+<?=form_open('Fee', ['class' => 'form-horizontal'])?>
 		<form role="form" class="form-horizontal">
 		<div class="row">
 		<div class="col-xl-4 mb-30">
@@ -1066,6 +1072,22 @@ foreach ($opk as $u) {
 			</div>
 
 
+            <div class="col-xl-4 mb-30">
+<div class="card-box height-100-p pd-20">
+<div class="font-weight-bold text-uppercase mb-1">
+									<label> Tahun </label>
+
+                                    <br>
+                                        <select id="Tahun" name="Tahun">
+                                        <?php foreach ($tahun as $u) {?>
+                                        <option value="<?php echo $u->DJPtanggaldeklarasi ?>" <?php echo set_select('Tahun', "$u->DJPtanggaldeklarasi"); ?>>
+											<?php echo $u->DJPtanggaldeklarasi; ?>
+										</option>
+
+                                        <?php }?>
+</select>
+									<br>
+</div>
 
 			<br>
 			<input name="Kirim" type="submit" class="btn btn-primary" />
