@@ -35,10 +35,10 @@ foreach ($bulan as $u) {
 
     } else if ($u == 02) {
         $bulanini[1] = "JAN-FEB $year";
-        $bulandepan[1] = "MAR-FEB" . $year + 1;
+        $bulandepan[1] = "MAR-FEB " . $year + 1;
 
         $bulanini[2] = "FEBRUARI $year";
-        $bulandepan[2] = "MAR-FEB" . $year + 1;
+        $bulandepan[2] = "MAR-FEB " . $year + 1;
 
         $kalibulan[1] = (20 / 100);
         $kalibulan[2] = (20 / 100);
@@ -52,11 +52,11 @@ foreach ($bulan as $u) {
 
     } else if ($u == 03) {
         $bulanini[1] = "JAN-MAR $year";
-        $bulandepan[1] = "APR-MAR" . $year + 1;
+        $bulandepan[1] = "APR-MAR " . $year + 1;
         $bulanini[2] = "FEB-MAR $year";
-        $bulandepan[2] = "APR-MAR" . $year + 1;
+        $bulandepan[2] = "APR-MAR " . $year + 1;
         $bulanini[3] = "MARET $year";
-        $bulandepan[3] = "APR-MAR" . $year + 1;
+        $bulandepan[3] = "APR-MAR " . $year + 1;
 
         $kalibulan[1] = (20 / 100);
         $kalibulan[2] = (20 / 100);
@@ -72,13 +72,13 @@ foreach ($bulan as $u) {
         $flagkaliawal = 1;
     } else if ($u == 04) {
         $bulanini[1] = "JAN-APR $year";
-        $bulandepan[1] = "MEI-APR" . $year + 1;
+        $bulandepan[1] = "MEI-APR " . $year + 1;
         $bulanini[2] = "FEB-APR $year";
-        $bulandepan[2] = "MEI-APR" . $year + 1;
+        $bulandepan[2] = "MEI-APR " . $year + 1;
         $bulanini[3] = "MAR-APR $year";
-        $bulandepan[3] = "MEI-APR" . $year + 1;
+        $bulandepan[3] = "MEI-APR " . $year + 1;
         $bulanini[4] = "APRIL $year";
-        $bulandepan[4] = "MEI-APR" . $year + 1;
+        $bulandepan[4] = "MEI-APR " . $year + 1;
 
         $kalibulan[1] = (20 / 100);
         $kalibulan[2] = (20 / 100);
@@ -96,15 +96,15 @@ foreach ($bulan as $u) {
         $flagkaliawal = 1;
     } else if ($u == 05) {
         $bulanini[1] = "JAN-MEI $year";
-        $bulandepan[1] = "JUN-MEI" . $year + 1;
+        $bulandepan[1] = "JUN-MEI " . $year + 1;
         $bulanini[2] = "FEB-MEI $year";
-        $bulandepan[2] = "JUN-MEI" . $year + 1;
+        $bulandepan[2] = "JUN-MEI " . $year + 1;
         $bulanini[3] = "MAR-MEI $year";
-        $bulandepan[3] = "JUN-MEI" . $year + 1;
+        $bulandepan[3] = "JUN-MEI " . $year + 1;
         $bulanini[4] = "APR-MEI $year";
-        $bulandepan[4] = "JUN-MEI" . $year + 1;
+        $bulandepan[4] = "JUN-MEI " . $year + 1;
         $bulanini[5] = "MEI $year";
-        $bulandepan[5] = "JUN-MEI" . $year + 1;
+        $bulandepan[5] = "JUN-MEI " . $year + 1;
 
         $kalibulan[1] = (20 / 100);
         $kalibulan[2] = (20 / 100);
@@ -124,17 +124,17 @@ foreach ($bulan as $u) {
         $flagkaliawal = 1;
     } else if ($u == 06) {
         $bulanini[1] = "JAN-JUN $year";
-        $bulandepan[1] = "JUL-JUN" . $year + 1;
+        $bulandepan[1] = "JUL-JUN " . $year + 1;
         $bulanini[2] = "FEB-JUN $year";
-        $bulandepan[2] = "JUL-JUN" . $year + 1;
+        $bulandepan[2] = "JUL-JUN " . $year + 1;
         $bulanini[3] = "MAR-JUN $year";
-        $bulandepan[3] = "JUL-JUN" . $year + 1;
+        $bulandepan[3] = "JUL-JUN " . $year + 1;
         $bulanini[4] = "APR-JUN $year";
-        $bulandepan[4] = "JUL-JUN" . $year + 1;
+        $bulandepan[4] = "JUL-JUN " . $year + 1;
         $bulanini[5] = "MEI-JUN $year";
-        $bulandepan[5] = "JUL-JUN" . $year + 1;
+        $bulandepan[5] = "JUL-JUN " . $year + 1;
         $bulanini[6] = "JUNI $year";
-        $bulandepan[6] = "JUL-JUN" . $year + 1;
+        $bulandepan[6] = "JUL-JUN " . $year + 1;
 
         $kalibulan[1] = (20 / 100);
         $kalibulan[2] = (20 / 100);
@@ -156,19 +156,19 @@ foreach ($bulan as $u) {
         $flagkaliawal = 1;
     } else if ($u == 07) {
         $bulanini[1] = "JAN-JUL $year";
-        $bulandepan[1] = "AGU-JUL" . $year + 1;
+        $bulandepan[1] = "AGU-JUL " . $year + 1;
         $bulanini[2] = "FEB-JUL $year";
-        $bulandepan[2] = "AGU-JUL" . $year + 1;
+        $bulandepan[2] = "AGU-JUL " . $year + 1;
         $bulanini[3] = "MAR-JUL $year";
-        $bulandepan[3] = "AGU-JUL" . $year + 1;
+        $bulandepan[3] = "AGU-JUL " . $year + 1;
         $bulanini[4] = "APR-JUL $year";
-        $bulandepan[4] = "AGU-JUL" . $year + 1;
+        $bulandepan[4] = "AGU-JUL " . $year + 1;
         $bulanini[5] = "MEI-JUL $year";
-        $bulandepan[5] = "AGU-JUL" . $year + 1;
+        $bulandepan[5] = "AGU-JUL " . $year + 1;
         $bulanini[6] = "JUNI-JUL $year";
-        $bulandepan[6] = "AGU-JUL" . $year + 1;
+        $bulandepan[6] = "AGU-JUL " . $year + 1;
         $bulanini[7] = "JULI $year";
-        $bulandepan[7] = "AGU-JUL" . $year + 1;
+        $bulandepan[7] = "AGU-JUL " . $year + 1;
 
         $kalibulan[1] = (20 / 100);
         $kalibulan[2] = (20 / 100);
@@ -192,21 +192,21 @@ foreach ($bulan as $u) {
         $flagkaliawal = 1;
     } else if ($u == '08') {
         $bulanini[1] = "JAN-AGU $year";
-        $bulandepan[1] = "SEP-AGU" . $year + 1;
+        $bulandepan[1] = "SEP-AGU " . $year + 1;
         $bulanini[2] = "FEB-AGU $year";
-        $bulandepan[2] = "SEP-AGU" . $year + 1;
+        $bulandepan[2] = "SEP-AGU " . $year + 1;
         $bulanini[3] = "MAR-AGU $year";
-        $bulandepan[3] = "SEP-AGU" . $year + 1;
+        $bulandepan[3] = "SEP-AGU " . $year + 1;
         $bulanini[4] = "APR-AGU $year";
-        $bulandepan[4] = "SEP-AGU" . $year + 1;
+        $bulandepan[4] = "SEP-AGU " . $year + 1;
         $bulanini[5] = "MEI-AGU $year";
-        $bulandepan[5] = "SEP-AGU" . $year + 1;
+        $bulandepan[5] = "SEP-AGU " . $year + 1;
         $bulanini[6] = "JUN-AGU $year";
-        $bulandepan[6] = "SEP-AGU" . $year + 1;
+        $bulandepan[6] = "SEP-AGU " . $year + 1;
         $bulanini[7] = "JUL-AGU $year";
-        $bulandepan[7] = "SEP-AGU" . $year + 1;
+        $bulandepan[7] = "SEP-AGU " . $year + 1;
         $bulanini[8] = "AGUSTUS $year";
-        $bulandepan[8] = "SEP-AGU" . $year + 1;
+        $bulandepan[8] = "SEP-AGU " . $year + 1;
 
         $kalibulan[1] = (20 / 100);
         $kalibulan[2] = (20 / 100);
@@ -233,23 +233,23 @@ foreach ($bulan as $u) {
 
     } else if ($u == '09') {
         $bulanini[1] = "JAN-SEP $year";
-        $bulandepan[1] = "OKT-SEP" . $year + 1;
+        $bulandepan[1] = "OKT-SEP " . $year + 1;
         $bulanini[2] = "FEB-SEP $year";
-        $bulandepan[2] = "OKT-SEP" . $year + 1;
+        $bulandepan[2] = "OKT-SEP " . $year + 1;
         $bulanini[3] = "MAR-SEP $year";
-        $bulandepan[3] = "OKT-SEP" . $year + 1;
+        $bulandepan[3] = "OKT-SEP " . $year + 1;
         $bulanini[4] = "APR-SEP $year";
-        $bulandepan[4] = "OKT-SEP" . $year + 1;
+        $bulandepan[4] = "OKT-SEP " . $year + 1;
         $bulanini[5] = "MEI-SEP $year";
-        $bulandepan[5] = "OKT-SEP" . $year + 1;
+        $bulandepan[5] = "OKT-SEP " . $year + 1;
         $bulanini[6] = "JUN-SEP $year";
-        $bulandepan[6] = "OKT-SEP" . $year + 1;
+        $bulandepan[6] = "OKT-SEP " . $year + 1;
         $bulanini[7] = "JUL-SEP $year";
-        $bulandepan[7] = "OKT-SEP" . $year + 1;
+        $bulandepan[7] = "OKT-SEP " . $year + 1;
         $bulanini[8] = "AGUS-SEP $year";
-        $bulandepan[8] = "OKT-SEP" . $year + 1;
+        $bulandepan[8] = "OKT-SEP " . $year + 1;
         $bulanini[9] = "SEPTEMBER $year";
-        $bulandepan[9] = "OKT-SEP" . $year + 1;
+        $bulandepan[9] = "OKT-SEP " . $year + 1;
 
         $kalibulan[1] = (20 / 100);
         $kalibulan[2] = (20 / 100);
@@ -276,25 +276,25 @@ foreach ($bulan as $u) {
         $flagkaliawal = 1;
     } else if ($u == 10) {
         $bulanini[1] = "JAN-OKT $year";
-        $bulandepan[1] = "NOV-OKT" . $year + 1;
+        $bulandepan[1] = "NOV-OKT " . $year + 1;
         $bulanini[2] = "FEB-OKT $year";
-        $bulandepan[2] = "NOV-OKT" . $year + 1;
+        $bulandepan[2] = "NOV-OKT " . $year + 1;
         $bulanini[3] = "MAR-OKT $year";
-        $bulandepan[3] = "NOV-OKT" . $year + 1;
+        $bulandepan[3] = "NOV-OKT " . $year + 1;
         $bulanini[4] = "APR-OKT $year";
-        $bulandepan[4] = "NOV-OKT" . $year + 1;
+        $bulandepan[4] = "NOV-OKT " . $year + 1;
         $bulanini[5] = "MEI-OKT $year";
-        $bulandepan[5] = "NOV-OKT" . $year + 1;
+        $bulandepan[5] = "NOV-OKT " . $year + 1;
         $bulanini[6] = "JUN-OKT $year";
-        $bulandepan[6] = "NOV-OKT" . $year + 1;
+        $bulandepan[6] = "NOV-OKT " . $year + 1;
         $bulanini[7] = "JUL-OKT $year";
-        $bulandepan[7] = "NOV-OKT" . $year + 1;
+        $bulandepan[7] = "NOV-OKT " . $year + 1;
         $bulanini[8] = "AGU-OKT $year";
-        $bulandepan[8] = "NOV-OKT" . $year + 1;
+        $bulandepan[8] = "NOV-OKT " . $year + 1;
         $bulanini[9] = "SEP-OKT $year";
-        $bulandepan[9] = "NOV-OKT" . $year + 1;
+        $bulandepan[9] = "NOV-OKT " . $year + 1;
         $bulanini[10] = "OKTOBER $year";
-        $bulandepan[10] = "NOV-OKT" . $year + 1;
+        $bulandepan[10] = "NOV-OKT " . $year + 1;
 
         $kalibulan[1] = (20 / 100);
         $kalibulan[2] = (20 / 100);
@@ -324,27 +324,27 @@ foreach ($bulan as $u) {
 
     } else if ($u == 11) {
         $bulanini[1] = "JAN-NOV $year";
-        $bulandepan[1] = "DES-NOV" . $year + 1;
+        $bulandepan[1] = "DES-NOV " . $year + 1;
         $bulanini[2] = "FEB-NOV $year";
-        $bulandepan[2] = "DES-NOV" . $year + 1;
+        $bulandepan[2] = "DES-NOV " . $year + 1;
         $bulanini[3] = "MAR-NOV $year";
-        $bulandepan[3] = "DES-NOV" . $year + 1;
+        $bulandepan[3] = "DES-NOV " . $year + 1;
         $bulanini[4] = "APR-NOV $year";
-        $bulandepan[4] = "DES-NOV" . $year + 1;
+        $bulandepan[4] = "DES-NOV " . $year + 1;
         $bulanini[5] = "MEI-NOV $year";
-        $bulandepan[5] = "DES-NOV" . $year + 1;
+        $bulandepan[5] = "DES-NOV " . $year + 1;
         $bulanini[6] = "JUN-NOV $year";
-        $bulandepan[6] = "DES-NOV" . $year + 1;
+        $bulandepan[6] = "DES-NOV " . $year + 1;
         $bulanini[7] = "JUL-NOV $year";
-        $bulandepan[7] = "DES-NOV" . $year + 1;
+        $bulandepan[7] = "DES-NOV " . $year + 1;
         $bulanini[8] = "AGU-NOV $year";
-        $bulandepan[8] = "DES-NOV" . $year + 1;
+        $bulandepan[8] = "DES-NOV " . $year + 1;
         $bulanini[9] = "SEP-NOV $year";
-        $bulandepan[9] = "DES-NOV" . $year + 1;
+        $bulandepan[9] = "DES-NOV " . $year + 1;
         $bulanini[10] = "OKT-NOV $year";
-        $bulandepan[10] = "DES-NOV" . $year + 1;
+        $bulandepan[10] = "DES-NOV " . $year + 1;
         $bulanini[11] = "NOVEMBER $year";
-        $bulandepan[11] = "DES-NOV" . $year + 1;
+        $bulandepan[11] = "DES-NOV " . $year + 1;
 
         $kalibulan[1] = (20 / 100);
         $kalibulan[2] = (20 / 100);
