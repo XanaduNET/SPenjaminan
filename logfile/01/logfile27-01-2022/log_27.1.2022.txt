@@ -1,0 +1,95 @@
+User: ::1 - January 27, 2022, 09:20:41
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - January 27, 2022, 14:28:47
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - January 27, 2022, 14:33:00
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - January 27, 2022, 14:33:10
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - January 27, 2022, 14:33:20
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - January 27, 2022, 14:33:38
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - January 27, 2022, 14:34:03
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - January 27, 2022, 14:38:28
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - January 27, 2022, 14:38:34
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - January 27, 2022, 14:39:13
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - January 27, 2022, 14:39:35
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - January 27, 2022, 14:39:51
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - January 27, 2022, 14:40:40
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - January 27, 2022, 14:41:32
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - January 27, 2022, 14:41:41
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - January 27, 2022, 14:42:06
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - January 27, 2022, 14:43:15
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - January 27, 2022, 14:43:29
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - January 27, 2022, 14:43:40
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------

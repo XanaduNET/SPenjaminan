@@ -1,0 +1,30 @@
+User: ::1 - February 7, 2022, 08:47:40
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: ::1 - February 7, 2022, 09:02:16
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - February 7, 2022, 09:03:08
+Attempt: Failed Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - February 7, 2022, 09:03:16
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - February 7, 2022, 09:04:49
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - February 7, 2022, 09:04:55
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------

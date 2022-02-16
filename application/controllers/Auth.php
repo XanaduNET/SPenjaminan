@@ -45,16 +45,24 @@ class Auth extends CI_Controller
             if ($user['is_active'] == 1) {
                 //cek password
                 if (password_verify($password, $user['password'])) {
+
                     $data = [
                         'nama' => $user['nama'],
                         'role_id' => $user['role_id'],
                         'id' => $user['id'],
+                        'image' => $user['image'],
+                        'username' => $user['nama'],
+                        'uniqueid' => $user['id'],
                     ];
 
+                    $this->load->model('Messagemodel');
                     $this->session->set_userdata($data);
+                    $this->Messagemodel->logoutUser('active', '');
+                    print_r($user);
 
                     if ($user['role_id'] == 1) {
 
+                        // Login Admin
                         $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j, Y, H:i:s") . PHP_EOL .
                             "Attempt: " . ('Success Login') . PHP_EOL .
                             "User: " . $nama . PHP_EOL .
@@ -65,7 +73,10 @@ class Auth extends CI_Controller
                         file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
 
                         redirect('admin');
+
                     } elseif ($user['role_id'] == 4) {
+
+                        // Login Direksi
                         $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j, Y, H:i:s") . PHP_EOL .
                             "Attempt: " . ('Success Login') . PHP_EOL .
                             "User: " . $nama . PHP_EOL .
@@ -78,6 +89,7 @@ class Auth extends CI_Controller
                         redirect('direktur');
                     } else {
 
+                        // Login User Biasa
                         $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j, Y, H:i:s") . PHP_EOL .
                             "Attempt: " . ('Success Login') . PHP_EOL .
                             "User: " . $nama . PHP_EOL .
@@ -103,7 +115,9 @@ class Auth extends CI_Controller
                     window.location.href='auth';</script>";
 
                 }
-            } else {
+            }
+            // Kalau Gagal Login
+            else {
 
                 $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j, Y, H:i:s") . PHP_EOL .
                     "Attempt: " . ('Failed Login') . PHP_EOL .
@@ -131,7 +145,6 @@ class Auth extends CI_Controller
             echo "<script>
             alert('User Tidak Terdaftar! Silahkan Hubungi Administrator!');
             window.location.href='auth';</script>";
-
         }
     }
     public function registration()
