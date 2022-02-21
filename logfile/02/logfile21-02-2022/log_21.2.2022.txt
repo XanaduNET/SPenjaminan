@@ -133,3 +133,88 @@ Attempt: Success Login
 User: akbar
 Aksi: Login
 -------------------------
+User: 172.17.7.33 - February 21, 2022, 13:29:44
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: 172.17.7.12 - February 21, 2022, 13:31:47
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: 172.17.7.12 - February 21 2022, 13:33:10
+Attempt: Success Add Data Terjamin
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: 172.17.7.12 - February 21 2022, 13:33:15
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: 172.17.7.33 - February 21, 2022, 13:35:44
+Attempt: Success Login
+User: Akbar
+Aksi: Login
+-------------------------
+User: 172.17.7.33 - February 21 2022, 13:41:32
+Attempt: Success Add Data Terjamin
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: 172.17.7.33 - February 21 2022, 13:41:54
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: 172.17.7.27 - February 21, 2022, 13:45:19
+Attempt: Success Login
+User: admin
+Aksi: Login
+-------------------------
+User: 172.17.7.12 - February 21, 2022, 13:45:30
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: 172.17.7.12 - February 21, 2022, 13:45:43
+Attempt: Success Login
+User: rani
+Aksi: Login
+-------------------------
+User: 172.17.7.33 - February 21, 2022, 13:46:16
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: 172.17.7.33 - February 21, 2022, 13:46:28
+Attempt: Berhasil Tambah User Rhani
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: 172.17.7.12 - February 21, 2022, 13:47:15
+Attempt: Success Logout
+User: Rani
+Aksi: Logout
+-------------------------
+User: 172.17.7.12 - February 21, 2022, 13:47:28
+Attempt: Failed Login
+User: ranhi
+Aksi: Login
+-------------------------
+User: 172.17.7.12 - February 21, 2022, 13:47:37
+Attempt: Success Login
+User: rhani
+Aksi: Login
+-------------------------
+User: 172.17.7.27 - February 21 2022, 14:00:11
+Attempt: Success Add Data Terjamin
+User: Admin
+Aksi: Data Nasabah
+-------------------------
+User: 172.17.7.27 - February 21 2022, 14:00:55
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Admin
+Aksi: Data Nasabah
+-------------------------
