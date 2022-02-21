@@ -8,3 +8,183 @@ Attempt: Success Logout
 User: Akbar
 Aksi: Logout
 -------------------------
+User: ::1 - February 16, 2022, 09:02:46
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - February 16 2022, 09:33:03
+Attempt: Success Add Data Terjamin
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 09:34:02
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 09:44:23
+Attempt: Success Add Data Terjamin
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 09:44:38
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 09:44:38
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 09:44:38
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 10:36:47
+Attempt: Success Add Data Terjamin
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 10:37:04
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 10:37:04
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 10:54:17
+Attempt: Success Add Data Terjamin
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 10:54:35
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 10:56:55
+Attempt: Success Add Data Terjamin
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 10:57:07
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 11:00:43
+Attempt: Success Add Data Terjamin
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 11:05:34
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 14:16:03
+Attempt: Success Add Data Terjamin
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 14:16:36
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 14:16:36
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 14:16:36
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 14:23:48
+Attempt: Success Add Data Terjamin
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 14:24:07
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 14:24:07
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 14:36:49
+Attempt: Success Add Data Terjamin
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 14:36:58
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 14:36:58
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 14:56:36
+Attempt: Success Add Data Terjamin
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 14:56:47
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 14:56:47
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 14:56:47
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 14:56:47
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 14:56:47
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 14:56:47
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 14:56:47
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 14:56:47
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - February 16 2022, 14:56:47
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
