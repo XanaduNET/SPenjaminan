@@ -128,3 +128,8 @@ Attempt: Success Tambah Data Terjamin Lengkap
 User: Akbar
 Aksi: Data Nasabah
 -------------------------
+User: 172.17.7.33 - February 21, 2022, 13:28:29
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
