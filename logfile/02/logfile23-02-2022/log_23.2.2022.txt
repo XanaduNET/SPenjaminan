@@ -1,0 +1,50 @@
+User: 172.17.7.33 - February 23, 2022, 11:27:05
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: 172.17.7.12 - February 23, 2022, 13:36:05
+Attempt: Success Login
+User: rhani
+Aksi: Login
+-------------------------
+User: 172.17.7.33 - February 23 2022, 13:51:48
+Attempt: Success Add Data Terjamin
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: 172.17.7.33 - February 23 2022, 13:52:12
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: 172.17.7.33 - February 23 2022, 13:52:12
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: 172.17.7.33 - February 23 2022, 13:52:12
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: 172.17.7.33 - February 23 2022, 13:52:12
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: 172.17.7.33 - February 23 2022, 13:52:12
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: 172.17.7.33 - February 23 2022, 13:52:12
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: 172.17.7.33 - February 23 2022, 13:52:12
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------

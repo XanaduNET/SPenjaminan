@@ -261,6 +261,12 @@ class Nasabah extends CI_Controller
         $opk = $this->input->post('opk');
         $plafond = $this->input->post('plafond');
 
+        if ($jwk > 60) {
+            $jwk = 60;
+        } else {
+
+        }
+
         if ($opk == 1 or $opk == 2) {
 
             $queryjwk = $this->db->query("SELECT JWKid FROM tbljwk WHERE $jwk BETWEEN JWKsatu AND JWKdua");
