@@ -262,7 +262,7 @@ class Nasabah extends CI_Controller
         $plafond = $this->input->post('plafond');
 
         if ($jwk > 60) {
-            $jwk = 60;
+            $jwk = 61;
         } else {
 
         }
