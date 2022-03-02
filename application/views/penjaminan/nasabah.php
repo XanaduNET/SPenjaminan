@@ -691,7 +691,7 @@ foreach ($ambilpkrj as $row) {
                 var coverage2 = parseInt(coverage);
                 var nilaipnjm = ((coverage2 / 100) * plafond2);
 
-                document.getElementById("DJPDnilaipenjaminan" + i).value = nilaipnjm;
+                document.getElementById("DJPDnilaipenjaminan" + i).value = Math.round(nilaipnjm);
 
 
 
@@ -770,7 +770,7 @@ foreach ($ambilpkrj as $row) {
         var coverage2 = parseInt(coverage);
         var nilaipnjm = (coverage2 / 100) * plafond2;
 
-        document.getElementById("DJPDnilaipenjaminan").value = nilaipnjm;
+        document.getElementById("DJPDnilaipenjaminan").value = Math.round(nilaipnjm);
 
 
 
