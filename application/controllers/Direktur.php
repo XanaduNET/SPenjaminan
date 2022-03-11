@@ -274,6 +274,10 @@ class Direktur extends CI_Controller
         $data['cbcppendapatan'] = $this->Model_CBC->getCBCPpendapatanbyid($id);
         $data['cbcppengeluaran'] = $this->Model_CBC->getCBCPpengeluaranbyid($id);
 
+        // sebelum masuk ke title pdf
+
+        // end
+
         // title dari pdf
         $this->load->library('pdfsp2k');
         $this->data['title_pdf'] = 'SP2K';

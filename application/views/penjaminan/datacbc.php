@@ -60,7 +60,7 @@
                                                 <?php if ($c['CBCstatus'] == 4) {?>
                                                 &nbsp;
                                                 <a href="<?=base_url("Direktur/CBCsp2k/");?><?=$c['CBCid'];?>"
-                                                    class=" badge badge-success">Download SP2K</a>
+                                                    class="badge badge-success">Download SP2K</a>
                                                 <?php }?>
                                             </td>
                                             <td>

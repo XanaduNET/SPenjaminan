@@ -509,29 +509,29 @@ $no = 1;
             if (($u->DJPnoreg != $DJPnoreg) && ($bulansekarang == $i)) {
                 ?>
                                     <tr>
-                                        <td><?php echo $no ?></td>
-                                        <td><?php echo $u->PPnama ?></td>
-                                        <td><?php echo $u->DJPnoreg ?></td>
-                                        <td><?php echo $u->DJPtanggalverif ?></td>
-                                        <td><?php echo "1" ?></td>
-                                        <td><?php echo $u->TRJMnama ?></td>
-                                        <td><?php echo $u->DJPDcoverage ?></td>
-                                        <td><?php echo number_format($u->DJPDplafondkredit, 0, ".", ".") ?></td>
-                                        <td><?php echo number_format($u->DJPDnilaipenjaminan, 0, ".", ".") ?></td>
-                                        <td><?php echo $u->DJPDtanggalawal ?></td>
-                                        <td><?php echo $u->DJPDtanggalakhir ?></td>
-                                        <td><?php echo $u->DJPDjangkawaktu ?></td>
-                                        <td><?php echo $u->DJPDrate . "%" ?></td>
-                                        <td><?php echo number_format($u->DJPDimbaljasa, 0, ".", ".") ?></td>
-                                        <td><?php echo $u->DJPDfeeadm ?></td>
-                                        <td><?php echo $u->DJPDfeematerai ?></td>
-                                        <td><?php echo number_format($total = $u->DJPDimbaljasa + $u->DJPDfeeadm + $u->DJPDfeematerai, 0, ".", ".") ?>
-                                        </td>
-                                        <td><?php echo $u->DJPDfeebank ?></td>
-                                        <td><?php echo number_format($total - $u->DJPDfeebank, 0, ".", ".") ?></td>
-                                        <td> <?php echo number_format(($hasilbulanawal = (($u->DJPDimbaljasa * $kalibulan[$i]) + (($u->DJPDimbaljasa - ($u->DJPDimbaljasa * $kalibulan[$i])) / ($u->DJPDjangkawaktu - $flagkaliawal) * $flagbulan[$i]))), 0, ".", ".") ?>
-                                        </td>
-                                        <td><?php
+                                            <td><?php echo $no ?></td>
+                                            <td><?php echo $u->PPnama ?></td>
+                                            <td><?php echo $u->DJPnoreg ?></td>
+                                            <td><?php echo $u->DJPtanggalverif ?></td>
+                                            <td><?php echo "1" ?></td>
+                                            <td><?php echo $u->TRJMnama ?></td>
+                                            <td><?php echo $u->DJPDcoverage ?></td>
+                                            <td><?php echo number_format($u->DJPDplafondkredit, 0, ".", ".") ?></td>
+                                            <td><?php echo number_format($u->DJPDnilaipenjaminan, 0, ".", ".") ?></td>
+                                            <td><?php echo $u->DJPDtanggalawal ?></td>
+                                            <td><?php echo $u->DJPDtanggalakhir ?></td>
+                                            <td><?php echo $u->DJPDjangkawaktu ?></td>
+                                            <td><?php echo $u->DJPDrate . "%" ?></td>
+                                            <td><?php echo number_format($u->DJPDimbaljasa, 0, ".", ".") ?></td>
+                                            <td><?php echo $u->DJPDfeeadm ?></td>
+                                            <td><?php echo $u->DJPDfeematerai ?></td>
+                                            <td><?php echo number_format($total = $u->DJPDimbaljasa + $u->DJPDfeeadm + $u->DJPDfeematerai, 0, ".", ".") ?>
+                                            </td>
+                                            <td><?php echo $u->DJPDfeebank ?></td>
+                                            <td><?php echo number_format($total - $u->DJPDfeebank, 0, ".", ".") ?></td>
+                                            <td> <?php echo number_format(($hasilbulanawal = (($u->DJPDimbaljasa * $kalibulan[$i]) + (($u->DJPDimbaljasa - ($u->DJPDimbaljasa * $kalibulan[$i])) / ($u->DJPDjangkawaktu - $flagkaliawal) * $flagbulan[$i]))), 0, ".", ".") ?>
+                                            </td>
+                                            <td><?php
 
                 $date1 = $u->DJPtanggalverif;
                 $date2 = date('Y-m-d');
@@ -717,6 +717,8 @@ $sumbulanawal += $hasilbulanawal;
 
                                     </tr>
 
+
+
                                     <?php
 
                     $flag = 0;
@@ -746,7 +748,7 @@ $sumbulanawal += $hasilbulanawal;
 
                             </table>
                             <?php }?>
-
+                            <!-- END -->
                             <!-- START -->
                             <?php if ($awal == 1) {?>
                             <table class=" table table-bordered" id="" width="100%" cellspacing="0">
