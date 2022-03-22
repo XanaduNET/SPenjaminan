@@ -1,0 +1,110 @@
+User: ::1 - March 21, 2022, 08:52:24
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - March 21 2022, 09:18:57
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - March 21, 2022, 09:19:43
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - March 21, 2022, 09:22:26
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - March 21, 2022, 09:22:28
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - March 21, 2022, 09:22:31
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - March 21, 2022, 09:22:34
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - March 21, 2022, 09:22:50
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - March 21, 2022, 09:22:51
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - March 21, 2022, 09:22:52
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - March 21, 2022, 09:22:56
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - March 21, 2022, 09:22:57
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - March 21, 2022, 09:22:58
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - March 21, 2022, 09:23:00
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - March 21 2022, 16:05:23
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - March 21 2022, 16:09:08
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - March 21, 2022, 16:10:17
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - March 21,2022, 16:12:23
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - March 21 2022, 16:28:48
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - March 21,2022, 16:30:28
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - March 21,2022, 16:30:53
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - March 21,2022, 16:39:04
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------

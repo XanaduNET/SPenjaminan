@@ -1,0 +1,20 @@
+User: ::1 - March 14, 2022, 08:59:31
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - March 14, 2022, 09:41:10
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - March 14,2022, 09:41:38
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - March 14, 2022, 11:43:47
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------

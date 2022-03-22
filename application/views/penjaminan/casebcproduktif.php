@@ -235,6 +235,12 @@ $(document).ready(function() {
                         </div>
                     </div>
                     <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Usia</label>
+                        <div class="form-group col-lg-3 col-sm-4">
+                            <input style="width: 100%;" type="text" name="TRJMusia" id="TRJMusia" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <label class="col-sm-2 col-form-label">No. Identitas Diri</label>
                         <div class="form-group col-lg-3 col-sm-4">
                             <input style="width: 100%;" type="text" name="TRJMktp" id="TRJMktp" class="form-control" required>

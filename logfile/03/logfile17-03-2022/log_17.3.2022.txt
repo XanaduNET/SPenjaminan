@@ -1,0 +1,65 @@
+User: ::1 - March 17, 2022, 08:50:26
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - March 17 2022, 16:40:13
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - March 17 2022, 16:40:32
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - March 17 2022, 16:42:39
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - March 17 2022, 16:48:56
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - March 17, 2022, 16:49:33
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - March 17, 2022, 16:50:50
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - March 17,2022, 16:53:00
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - March 17,2022, 16:55:35
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - March 17 2022, 16:56:00
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - March 17, 2022, 16:57:20
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - March 17, 2022, 16:57:34
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - March 17, 2022, 17:15:25
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------

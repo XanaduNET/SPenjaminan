@@ -313,10 +313,12 @@ class Casebc extends CI_Controller
 
         $CBCPnomormemo = $_POST['CBCPnomormemo'];
         $CBCPprinsipal = $_POST['CBCPprinsipal'];
+        $CBCPtanggalinput = $_POST['CBCPtanggalinput'];
 
         $TRJMpartner = $_POST['TRJMpartner'];
         $TRJMalamatpartner = $_POST['TRJMalamatpartner'];
         $TRJMpekerjaanpartner = $_POST['TRJMpekerjaanpartner'];
+        $TRJMusia = $_POST['TRJMusia'];
 
         $TRJMnama = $_POST['TRJMnama'];
         $TRJMttl = $_POST['TRJMttl'];
@@ -387,6 +389,7 @@ class Casebc extends CI_Controller
         $dataterjamin = array(
             'TRJMnama' => $TRJMnama,
             'TRJMttl' => $TRJMttl,
+            'TRJMusia' => $TRJMusia,
             'TRJMktp' => $TRJMktp,
             'TRJMalamat' => $TRJMalamat,
             'TRJMpekerjaan' => $TRJMpekerjaan,
@@ -402,6 +405,7 @@ class Casebc extends CI_Controller
         $dataCBCP = array(
             'CBCPnomormemo' => $CBCPnomormemo,
             'CBCPprinsipal' => $CBCPprinsipal,
+            'CBCPtanggalinput' => $CBCPtanggalinput,
             'CBCPjenis' => $CBCPjenis,
             'CBCPsifat' => $CBCPsifat,
             'CBCPplafondkredit' => $CBCPplafondkredit,

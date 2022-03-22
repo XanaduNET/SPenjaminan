@@ -84,13 +84,17 @@ class Model_CBC extends CI_Model
 
     public function getCBCPbyid($id)
     {
-        $query = "SELECT `tblcbcp`.*, `tbltrjm`.*, `tblpp`.*, `tbldaerah`.*
+        $query = "SELECT `tblcbcp`.*, `tbltrjm`.*, `tblpp`.*, `tbldaerah`.*,`tblgpp`.*,`tblpks`.*
                    FROM `tblcbcp` JOIN `tbltrjm`
                    ON `tblcbcp`.`TRJMid` = `tbltrjm`.`TRJMid`
                    JOIN `tblpp`
                    ON `tblcbcp`.`PPid` = `tblpp`.`PPid`
                    JOIN `tbldaerah`
                    ON `tblpp`.`DAERAHid` = `tbldaerah`.`DAERAHid`
+                   JOIN `tblgpp`
+                   ON `tblgpp`.`GPPid` = `tblpp`.`GPPid`
+                   JOIN `tblpks`
+                   ON `tblpks`.`GPPid` = `tblpp`.`GPPid`
                    WHERE `tblcbcp`.`CBCPid` = $id
          ";
         return $this->db->query($query);
