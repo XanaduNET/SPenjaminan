@@ -94,6 +94,17 @@
                                 class="form-control">
                         </div>
                     </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label">Rate CBC (‰)</label>
+                        <div class="form-group col-lg-3 col-sm-4">
+                            <input style="width: 100%;" type="text" name="CBCrate" id="CBCrate"
+                                class="form-control">
+                            <input style="width: 100%;" type="number" name="CBCcoverage" id="CBCcoverage"
+                                class="form-control" value=100>
+                        </div>
+                    </div>
+
                     <hr class="sidebar-divider">
                     <!-- End Data Permohonan Kredit -->
 

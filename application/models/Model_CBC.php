@@ -17,13 +17,17 @@ class Model_CBC extends CI_Model
 
     public function getCBCid($id)
     {
-        $query = "SELECT `tblcbc`.*, `tbltrjm`.*, `tblpp`.*, `tbldaerah`.*
+        $query = "SELECT `tblcbc`.*, `tbltrjm`.*, `tblpp`.*,`tbldaerah`.*,`tblgpp`.*,`tblpks`.*
                    FROM `tblcbc` JOIN `tbltrjm`
                    ON `tblcbc`.`TRJMid` = `tbltrjm`.`TRJMid`
                    JOIN `tblpp`
                    ON `tblcbc`.`PPid` = `tblpp`.`PPid`
                    JOIN `tbldaerah`
                    ON `tblpp`.`DAERAHid` = `tbldaerah`.`DAERAHid`
+                   JOIN `tblgpp`
+                   ON `tblgpp`.`GPPid` = `tblpp`.`GPPid`
+                   JOIN `tblpks`
+                   ON `tblpks`.`GPPid` = `tblpp`.`GPPid`
                    WHERE `tblcbc`.`CBCid` = $id
          ";
         return $this->db->query($query);

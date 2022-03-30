@@ -1,0 +1,100 @@
+User: ::1 - March 24, 2022, 15:07:51
+Attempt: Success Login
+User: admin
+Aksi: Login
+-------------------------
+User: ::1 - March 24 2022, 15:09:40
+Attempt: Success Add Data Terjamin
+User: Admin
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - March 24 2022, 15:10:14
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Admin
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - March 24, 2022, 15:11:52
+Attempt: Success Checker
+User: Admin
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - March 24,2022, 15:12:08
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - March 24,2022, 15:12:39
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - March 24, 2022, 15:12:52
+Attempt: Success Export Accrual
+User: Admin
+Aksi: Operasional Accrual
+-------------------------
+User: ::1 - March 24,2022, 15:12:57
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - March 24,2022, 15:13:16
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - March 24,2022, 15:14:11
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - March 24,2022, 15:17:45
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - March 24,2022, 15:18:07
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - March 24,2022, 15:22:40
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - March 24,2022, 15:23:22
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - March 24,2022, 15:24:02
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - March 24,2022, 15:25:20
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - March 24,2022, 15:25:37
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - March 24,2022, 15:26:03
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - March 24,2022, 15:27:35
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - March 24,2022, 15:36:46
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Accrual Penjaminan
+-------------------------

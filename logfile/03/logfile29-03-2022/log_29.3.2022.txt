@@ -1,0 +1,15 @@
+User: ::1 - March 29, 2022, 08:56:22
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - March 29 2022, 13:46:51
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - March 29, 2022, 13:48:43
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------

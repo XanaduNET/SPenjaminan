@@ -246,6 +246,11 @@ class Direktur extends CI_Controller
     {
         $id = $this->uri->segment(3);
         $data['table'] = $this->Model_CBC->getCBCid($id);
+
+        //mulai proses
+        $this->importcbc($id);
+        //end
+
         $this->load->view('penjaminan/cetakCBC', $data);
 
         // title dari pdf
@@ -391,6 +396,203 @@ class Direktur extends CI_Controller
         $this->db->insert('tbldjpd', $data);
         $DJPDid = $this->db->insert_id();
         //START PENJAMINAN HASIL
+
+        $queryjumlahfeebankadmmaterai = $this->db->query("SELECT DJPDid, DJPDimbaljasa FROM tbldjpd WHERE DJPid = '$DJPid'");
+        foreach ($queryjumlahfeebankadmmaterai->result() as $row) {
+            $Jumlahimbaljasa = $row->DJPDimbaljasa;
+            $DJPDid = $row->DJPDid;
+        }
+        $data = [
+
+            'DJPDfeeadm' => 0,
+            'DJPDfeematerai' => 0,
+            'DJPDfeebank' => (10 / 100) * $Jumlahimbaljasa,
+
+        ];
+        $this->db->where('DJPid', $DJPid);
+        $this->db->where('DJPDid', $DJPDid);
+        $this->db->update('tbldjpd', $data);
+
+        // nilai pert tertinggi diambil dari total plafond seluruh terjamin didalam satu dpj id atau no registrasi
+        $querynilaipert = $this->db->query("SELECT MAX(DJPDplafondkredit) AS DJPDplafondkredit FROM tbldjpd WHERE DJPid = '$DJPid'");
+        foreach ($querynilaipert->result() as $row) {
+            $NilaiPert = $row->DJPDplafondkredit;
+        }
+
+        // nilai plafond djph ditotalkan dari seluruh plafond kredit dari terjamin
+        $querysumplafond = $this->db->query("SELECT SUM(DJPDplafondkredit) AS DJPDplafondkredit FROM tbldjpd WHERE DJPid = '$DJPid'");
+        foreach ($querysumplafond->result() as $row) {
+            $NilaiPlafond = $row->DJPDplafondkredit;
+        }
+        // jumlah pk didapatkan dari select count terjamin per nomor registrasi atau djp id
+        $queryjumlahpk = $this->db->query("SELECT COUNT(TRJMid) AS TRJMid FROM tbldjpd WHERE DJPid = '$DJPid'");
+        foreach ($queryjumlahpk->result() as $row) {
+            $JumlahPK = $row->TRJMid;
+        }
+        // nilai penjaminan didapat dari total nilai penjaminan semua terjamin
+        $querysumpenjaminan = $this->db->query("SELECT SUM(DJPDnilaipenjaminan) AS DJPDnilaipenjaminan FROM tbldjpd WHERE DJPid = '$DJPid'");
+        foreach ($querysumpenjaminan->result() as $row) {
+            $NilaiPenjaminan = $row->DJPDnilaipenjaminan;
+        }
+
+        // total ijp dari semua terjamin per nomor registrasi atau djp id
+        $querysumijp = $this->db->query("SELECT SUM(DJPDimbaljasa) AS DJPDimbaljasa FROM tbldjpd WHERE DJPid = '$DJPid'");
+        foreach ($querysumijp->result() as $row) {
+            $NilaiIJP = $row->DJPDimbaljasa;
+        }
+        // Feebank  dan Materai diambil dari nomor pks yang ada di djph
+        $queryambilpks = $this->db->query("SELECT PKSid FROM tbldjph WHERE DJPid = '$DJPid'");
+        foreach ($queryambilpks->result() as $row) {
+            $PKSid = $row->PKSid;
+        }
+
+        $querybank = $this->db->query("SELECT PKSratefee FROM tblpks WHERE PKSid = '$PKSid'");
+        foreach ($querybank->result() as $row) {
+            $FeeBank = $row->PKSratefee;
+
+        }
+
+        $np = $NilaiPert;
+        $jpk = $JumlahPK;
+        $plafond = $NilaiPlafond;
+        $nilaip = $NilaiPenjaminan;
+        $ijp = $NilaiIJP;
+        $fb = $FeeBank;
+
+        // start post total
+
+        $userid = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+
+        $data = [
+            'DJPmaxnilai' => $np,
+            'DJPtahun' => date("Y"),
+            'DJPjumlahpk' => $jpk,
+            'DJPjumlahnilaipk' => $plafond,
+            'DJPnilaipenjaminan' => $nilaip,
+            'DJPjumlahimbaljasa' => $ijp,
+            'PKSratefee' => "10%",
+            'DJPfeebank' => $ijp * (10 / 100),
+            'DJPfeematerai' => 0,
+            'DJPfeeadmin' => 0,
+            'DJPjumlahbiaya' => $jumlah = $ijp - ($ijp * (10 / 100)),
+            'DJPjumlahbiayaterbilang' => $this->penyebut($jumlah),
+            'DJPuseridentry' => $userid['id'],
+            'DJPtanggalentry' => date("Y-m-d"),
+
+        ];
+        $this->db->where('DJPid', $DJPid);
+        $this->db->update('tbldjph', $data);
+
+        $date = date("d-m-Y");
+        $bulan = date("m");
+
+        $namauser = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+
+        $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j Y, H:i:s") . PHP_EOL .
+            "Attempt: " . ("Success Tambah Data Terjamin Lengkap") . PHP_EOL .
+            "User: " . $namauser['nama'] . PHP_EOL .
+            "Aksi: " . ('Data Nasabah') . PHP_EOL .
+            "-------------------------" . PHP_EOL;
+        //-
+        file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
+
+        $data = array(
+            'comment_subject' => 'Data CBC',
+            'comment_text' => "Data CBC Baru",
+            'comment_status' => 0,
+            'roleId_sender' => 2,
+            'roleId_receiver' => 3,
+        );
+        $this->db->insert('tbl_comments', $data);
+
+    }
+
+    public function importcbc($id)
+    {
+        $id = $this->uri->segment(3);
+        $table = $this->Model_CBC->getCBCid($id)->row_array();
+
+        $autogen = $this->Model_Kredit->noregis();
+        $autogenurut = $this->Model_Kredit->nourut();
+
+        $DJPacuanhitung = "PLAFOND KREDIT";
+        $GPPid = $table['GPPid'];
+        $DJPnoreg = $autogen;
+        $DJPnourut = $autogenurut;
+        $DJPnoseri = "--";
+        $PPid = $table['PPid'];
+        $PPnama = $table['PPnama'];
+        $PPalamat = $table['PPalamat'];
+        $DJPnodeklarasi = "--";
+        $DJPtanggaldeklarasi = $table['CBCtanggal'];
+        $DJPperiode = date("m");
+        $OPKid = "4";
+        $PKSid = $table['PKSid'];
+        $SPJid = "1";
+        $JSPid = "2";
+        $PKSjenis = "PK";
+
+        $this->Model_Kredit->tambah($DJPacuanhitung, $GPPid, $DJPnoreg, $DJPnourut, $DJPnoseri, $PPid, $PPnama, $PPalamat, $DJPnodeklarasi, $DJPtanggaldeklarasi, $DJPperiode, $OPKid, $PKSid, $PKSjenis, $SPJid, $JSPid);
+        $insert_id = $this->db->insert_id();
+        $DJPid = $insert_id;
+
+        $DJPDnoreg = $DJPnoreg;
+        $TRJMnama = $table['TRJMnama'];
+        $TRJMalamat = $table['TRJMalamat'];
+        $TRJMusia = $table['TRJMusia'];
+        $PKRJid = "--";
+        $DJPDnoakad = $table['CBCnomormemo'];
+        $DJPDtanggalakad = $table['CBCtanggal'];
+        $DJPDjangkawaktu = $table['CBCjwk'];
+        $DJPDtanggalawal = $table['CBCtanggal'];
+
+        //hitung jangka waktu
+        $tglakhir = date('Y-m-d', strtotime('+ ' . $DJPDjangkawaktu . '  month', strtotime($DJPDtanggalawal)));
+        $DJPDtanggalakhir = $tglakhir;
+        //end
+        $DJPDplafondkredit = $table['CBCplafondkredit'];
+        $DJPDcoverage = $table['CBCcoverage'];
+        $nilaipnjm = ($DJPDcoverage / 100) * $DJPDplafondkredit;
+        $DJPDnilaipenjaminan = $nilaipnjm;
+
+        $DJPDrate = $table['CBCrate'];
+
+        $DJPDimbaljasa = $DJPDplafondkredit * ($DJPDrate / 1000);
+        $DJPDtujuankredit = "Case By Case";
+        $DJPDjenisagunan = "Case By Case";
+        $DJPDcarapengikatan = "Case By Case";
+        $DJPDnilaitransaksipasar = "Case By Case";
+        $DJPDnilaitransaksilikuidasi = "Case By Case";
+        $DJPDsu = "Case By Case";
+        $DJPDobjekpenjaminan = "Case By Case";
+
+        $data = array(
+            'TRJMid' => $table['TRJMid'],
+            'TRJMnama' => $TRJMnama,
+            'TRJMalamat' => $TRJMalamat,
+            'TRJMusia' => $TRJMusia,
+            'DJPDnoakad' => $DJPDnoakad,
+            'DJPDtanggalakad' => $DJPDtanggalakad,
+            'DJPDjangkawaktu' => $DJPDjangkawaktu,
+            'DJPDtanggalawal' => $DJPDtanggalawal,
+            'DJPDtanggalakhir' => $DJPDtanggalakhir,
+            'DJPDplafondkredit' => $DJPDplafondkredit,
+            'DJPDcoverage' => $DJPDcoverage,
+            'DJPDrate' => $DJPDrate,
+            'DJPDnilaipenjaminan' => $DJPDnilaipenjaminan,
+            'DJPDtujuankredit' => $DJPDtujuankredit,
+            'DJPDjenisagunan' => $DJPDjenisagunan,
+            'DJPDcarapengikatan' => $DJPDcarapengikatan,
+            'DJPDnilaitransaksipasar' => $DJPDnilaitransaksipasar,
+            'DJPDnilaitransaksilikuidasi' => $DJPDnilaitransaksilikuidasi,
+            'DJPDimbaljasa' => $DJPDimbaljasa,
+            'DJPid' => $DJPid,
+            'DJPDnoreg' => "" . $DJPnoreg,
+            'DJPDsu' => $DJPDsu,
+            'DJPDobjekpenjaminan' => $DJPDobjekpenjaminan,
+        );
+        $this->db->insert('tbldjpd', $data);
+        $DJPDid = $this->db->insert_id();
 
         $queryjumlahfeebankadmmaterai = $this->db->query("SELECT DJPDid, DJPDimbaljasa FROM tbldjpd WHERE DJPid = '$DJPid'");
         foreach ($queryjumlahfeebankadmmaterai->result() as $row) {
