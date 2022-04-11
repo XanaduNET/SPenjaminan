@@ -1,0 +1,65 @@
+User: 172.17.7.33 - April 7, 2022, 09:13:00
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: 172.17.7.33 - April 7, 2022, 09:19:04
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - April 7, 2022, 09:19:16
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - April 7, 2022, 09:37:31
+Attempt: Success Upload Berkas
+User: Akbar
+Aksi: Case By Case Konsumtif
+-------------------------
+User: ::1 - April 7, 2022, 09:41:36
+Attempt: Success Upload Berkas
+User: Akbar
+Aksi: Case By Case Konsumtif
+-------------------------
+User: ::1 - April 7, 2022, 09:53:43
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - April 7, 2022, 09:53:56
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Manajemen Risiko
+-------------------------
+User: ::1 - April 7, 2022, 10:07:05
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Manajemen Risiko
+-------------------------
+User: ::1 - April 7, 2022, 10:07:05
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Manajemen Risiko
+-------------------------
+User: ::1 - April 7, 2022, 10:07:22
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - April 7, 2022, 10:22:06
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Legal
+-------------------------
+User: ::1 - April 7, 2022, 10:22:06
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - April 7,2022, 14:27:51
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------

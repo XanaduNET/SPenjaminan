@@ -56,17 +56,17 @@
                                                 <?php
 
 if ($c['CBCPstatus'] == 0) {
-	echo "Dokumen Tidak Lengkap!";
+    echo "<span style=color:#FF0000;text-align:center;>Dokumen Tidak Lengkap!</span>";
 } else if ($c['CBCPstatus'] == 1) {
-	echo "Dokumen Lengkap, Belum Di Approve Manajemen Risiko";
+    echo "<span style=color:#FF0000;text-align:center;>Dokumen Lengkap, Belum Di Approve Manajemen Risiko</span>";
 } else if ($c['CBCPstatus'] == 2) {
-	echo "Dokumen Lengkap, Belum Di Approve";
+    echo "<span style=color:#FF0000;text-align:center;>Dokumen Lengkap, Belum Di Approve</span>";
 } else if ($c['CBCPstatus'] == 3) {
-	echo "Dokumen Lengkap, Dilanjutkan Ke Direktur";
+    echo "<span style=color:#228B22;text-align:center;>Dokumen Lengkap, Dilanjutkan Ke Direktur</span>";
 } else if ($c['CBCPstatus'] == 4) {
-	echo "Dokumen Lengkap, Diterima";
+    echo "<span style=color:#228B22;text-align:center;>Dokumen Lengkap, Diterima</span>";
 } else if ($c['CBCPstatus'] == 5) {
-	echo "Ditolak!";
+    echo "<span style=color:#FF0000;text-align:center;>Ditolak!</span>";
 }
 ?>
                                             </td>

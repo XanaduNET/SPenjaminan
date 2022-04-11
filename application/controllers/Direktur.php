@@ -232,7 +232,7 @@ class Direktur extends CI_Controller
         //untuk dapatin cbc semua karena getCBCP di Model_direktur pake parameter
         $data['cbc'] = $this->Model_direktur->getCBCAll();
         //untuk dapatin cbcp semuanya dari Model_direktur
-        $data['cbcp'] = $this->Model_direktur->getCBCP();
+        $data['cbcp'] = $this->Model_direktur->getCBCPAll();
 
         $this->load->view('template/header', $data);
         $this->load->view('template/header_body', $data);

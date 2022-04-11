@@ -1,0 +1,35 @@
+User: 172.17.7.12 - April 4, 2022, 14:10:26
+Attempt: Success Login
+User: rhani
+Aksi: Login
+-------------------------
+User: 172.17.7.12 - April 4, 2022, 14:11:16
+Attempt: Success Logout
+User: Rhani
+Aksi: Logout
+-------------------------
+User: 172.17.7.12 - April 4, 2022, 14:11:28
+Attempt: Success Login
+User: admin
+Aksi: Login
+-------------------------
+User: 172.17.7.12 - April 4,2022, 14:18:21
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Accrual Penjaminan
+-------------------------
+User: 172.17.7.12 - April 4,2022, 14:25:38
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Beranda Direktur
+-------------------------
+User: 172.17.7.12 - April 4, 2022, 14:38:05
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Beranda Legal
+-------------------------
+User: 172.17.7.12 - April 4, 2022, 14:45:59
+Attempt: Success Masuk Halaman
+User: Admin
+Aksi: Beranda Manajemen Risiko
+-------------------------

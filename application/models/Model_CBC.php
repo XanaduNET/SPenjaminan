@@ -154,6 +154,7 @@ class Model_CBC extends CI_Model
         ON `tblcbc`.`TRJMid` = `tbltrjm`.`TRJMid`
         JOIN `tblpp`
         ON `tblcbc`.`PPid` = `tblpp`.`PPid`
+        WHERE `tblcbc`.`CBCid` = $id
 ";
         return $this->db->query($query);
     }
@@ -163,7 +164,7 @@ class Model_CBC extends CI_Model
         $query = "SELECT `tblcbc`.*, `tblupload`.*
          FROM `tblcbc` JOIN `tblupload`
         ON `tblcbc`.`CBCid` = `tblupload`.`CBCid`
-
+        WHERE `tblcbc`.`CBCid` = $id
 ";
         return $this->db->query($query);
     }
@@ -175,6 +176,7 @@ class Model_CBC extends CI_Model
         ON `tblcbcp`.`TRJMid` = `tbltrjm`.`TRJMid`
         JOIN `tblpp`
         ON `tblcbcp`.`PPid` = `tblpp`.`PPid`
+        WHERE `tblcbcp`.`CBCpid` = $id
 ";
         return $this->db->query($query);
     }
@@ -184,7 +186,7 @@ class Model_CBC extends CI_Model
         $query = "SELECT `tblcbcp`.*, `tbluploadcbcp`.*
          FROM `tblcbcp` JOIN `tbluploadcbcp`
         ON `tblcbcp`.`CBCPid` = `tbluploadcbcp`.`CBCPid`
-
+        WHERE `tblcbcp`.`CBCPid` = $id
 ";
         return $this->db->query($query);
     }

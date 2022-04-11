@@ -80,6 +80,8 @@ class Casebc extends CI_Controller
         $this->form_validation->set_rules('CBCaspek_agunan', 'Aspek agunan', 'required');
         $this->form_validation->set_rules('CBCaspek_pinjaman', 'Aspek pinjaman', 'required');
         $this->form_validation->set_rules('CBCkesimpulan', 'Kesimpulan', 'required');
+        $this->form_validation->set_rules('CBCrate', 'Rate', 'required');
+        $this->form_validation->set_rules('CBCcoverage', 'Coverage', 'required');
 
         if ($this->form_validation->run() == false) {
             $this->konsumtif();
@@ -93,6 +95,8 @@ class Casebc extends CI_Controller
             $CBCjenis = $_POST['CBCjenis'];
             $CBCplafondkredit = $_POST['CBCplafondkredit'];
             $CBCjwk = $_POST['CBCjwk'];
+            $CBCrate = $_POST['CBCrate'];
+            $CBCcoverage = $_POST['CBCcoverage'];
             $CBCangsurankredit = $_POST['CBCangsurankredit'];
             $PPid = $_POST['PPid'];
             $CBCsuratpermohonan = $_POST['CBCsuratpermohonan'];
@@ -116,6 +120,8 @@ class Casebc extends CI_Controller
                 'CBCjenis' => $CBCjenis,
                 'CBCplafondkredit' => $CBCplafondkredit,
                 'CBCjwk' => $CBCjwk,
+                'CBCrate' => $CBCrate,
+                'CBCcoverage' => $CBCcoverage,
                 'CBCangsurankredit' => $CBCangsurankredit,
                 'CBCsuratpermohonan' => $CBCsuratpermohonan,
                 'CBCaspek_kesehatan' => $CBCaspek_kesehatan,
@@ -875,11 +881,11 @@ class Casebc extends CI_Controller
     public function cbcpberkas()
     {
         $this->load->model('Model_CBC');
-        $CBCid = $this->uri->segment(3);
+        $CBCPid = $this->uri->segment(3);
         $data['title'] = 'Berkas Case By Case';
         // Pake untuk manggil berkas pdf pada folder
-        $data['table'] = $this->Model_CBC->getCBCPberkas($CBCid)->row_array();
-        $data['upld'] = $this->Model_CBC->getCBCPberkasupload($CBCid)->result_array();
+        $data['table'] = $this->Model_CBC->getCBCPberkas($CBCPid)->row_array();
+        $data['upld'] = $this->Model_CBC->getCBCPberkasupload($CBCPid)->result_array();
 
         $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
 

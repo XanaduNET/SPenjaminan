@@ -39,6 +39,7 @@
                                     <tbody>
                                         <?php $i = 1;?>
                                         <?php foreach ($cbc->result_array() as $c): ?>
+
                                         <tr>
                                             <th scope="row"><?=$i;?></th>
                                             <td><?=$c['TRJMnama'];?></td>
@@ -49,7 +50,7 @@
                                                 <a href="<?=base_url("casebc/CBCpdf/");?><?=$c['CBCid'];?>"
                                                     class=" badge badge-primary">Detail</a>
                                                 &nbsp;
-                                                <a href="#" data-toggle="modal" data-target="#modalcbc"
+                                                <a href="#" data-toggle="modal" data-target="#modalcbc<?=$c['CBCid'];?>"
                                                     class="badge badge-danger">Upload Dokumen</a>
                                                 &nbsp;
                                                 <a href="<?=base_url("casebc/CBCedit/");?><?=$c['CBCid'];?>"
@@ -69,13 +70,13 @@
 if ($c['CBCstatus'] == 0) {
     echo "Dokumen Tidak Lengkap!";
 } else if ($c['CBCstatus'] == 1) {
-    echo "Dokumen Lengkap!";
+    echo "Dokumen Lengkap, Belum ada analisa Manajemen Risiko";
 } else if ($c['CBCstatus'] == 2) {
-    echo "Dokumen Lengkap!";
+    echo "Dokumen Lengkap, Belum ada analisa Legal";
 } else if ($c['CBCstatus'] == 3) {
-    echo "Dokumen Lengkap!";
+    echo "Dokumen Lengkap, Belum ada analisa Direksi";
 } else if ($c['CBCstatus'] == 4) {
-    echo "Dokumen Lengkap!";
+    echo "Dokumen Lengkap, Diterima";
 } else if ($c['CBCstatus'] == 5) {
     echo "Ditolak!";
 }
@@ -84,7 +85,7 @@ if ($c['CBCstatus'] == 0) {
                                         </tr>
 
                                         <!-- Modal Upload Doc -->
-                                        <div class="modal fade" id="modalcbc" role="dialog">
+                                        <div class="modal fade" id="modalcbc<?=$c['CBCid'];?>" role="dialog">
                                             <div class="modal-dialog modal-sm vertical-align-center">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -164,7 +165,7 @@ if ($c['CBCstatus'] == 0) {
                                                 <a href="<?=base_url("casebc/CBCPpdf/");?><?=$c['CBCPid'];?>"
                                                     class=" badge badge-primary">Detail</a>
                                                 &nbsp;
-                                                <a href="#" data-toggle="modal" data-target="#modalcbcp"
+                                                <a href="#" data-toggle="modal" data-target="#modalcbcp<?=$c['CBCPid'];?>"
                                                     class="badge badge-danger">Upload Dokumen</a>
                                                 &nbsp;
                                                 <a href="<?=base_url("casebc/CBCPedit/");?><?=$c['CBCPid'];?>"
@@ -185,13 +186,13 @@ if ($c['CBCstatus'] == 0) {
 if ($c['CBCPstatus'] == 0) {
     echo "Dokumen Tidak Lengkap!";
 } else if ($c['CBCPstatus'] == 1) {
-    echo "Dokumen Lengkap!";
+    echo "Dokumen Lengkap, Belum ada analisa Manajemen Risiko";
 } else if ($c['CBCPstatus'] == 2) {
-    echo "Dokumen Lengkap!";
+    echo "Dokumen Lengkap, Belum ada analisa Legal";
 } else if ($c['CBCPstatus'] == 3) {
-    echo "Dokumen Lengkap!";
+    echo "Dokumen Lengkap, Belum ada analisa direksi";
 } else if ($c['CBCPstatus'] == 4) {
-    echo "Dokumen Lengkap!";
+    echo "Dokumen Lengkap, Diterima";
 } else if ($c['CBCPstatus'] == 5) {
     echo "Ditolak!";
 }
@@ -200,7 +201,7 @@ if ($c['CBCPstatus'] == 0) {
                                         </tr>
 
                                         <!-- Modal Upload Doc -->
-                                        <div class="modal fade" id="modalcbcp" role="dialog">
+                                        <div class="modal fade" id="modalcbcp<?=$c['CBCPid'];?>" role="dialog">
                                             <div class="modal-dialog modal-sm vertical-align-center">
                                                 <div class="modal-content">
                                                     <div class="modal-header">

@@ -1,0 +1,30 @@
+User: ::1 - April 11, 2022, 08:52:46
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - April 11,2022, 08:53:04
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - April 11,2022, 08:53:38
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - April 11, 2022, 09:07:04
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Direktur
+-------------------------
+User: ::1 - April 11,2022, 09:07:04
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - April 11 2022, 09:08:12
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------

@@ -54,6 +54,18 @@ class Model_direktur extends CI_Model
         return $this->db->query($query);
     }
 
+    public function getCBCP()
+    {
+        $query = "SELECT `tblcbcp`.*, `tbltrjm`.*, `tblpp`.*
+                   FROM `tblcbcp` JOIN `tbltrjm`
+                   ON `tblcbcp`.`TRJMid` = `tbltrjm`.`TRJMid`
+                   JOIN `tblpp`
+                   ON `tblcbcp`.`PPid` = `tblpp`.`PPid`
+                   WHERE `tblcbcp`.`CBCPstatus` = 3
+         ";
+        return $this->db->query($query);
+    }
+
     public function tambahkomentar($CBCdirektur, $CBCid, $CBCkeputusan)
     {
         if ($CBCkeputusan == 4) {
@@ -145,14 +157,14 @@ class Model_direktur extends CI_Model
         return $this->db->query($query);
     }
 
-    public function getCBCP()
+    public function getCBCPall()
     {
         $query = "SELECT `tblcbcp`.*, `tbltrjm`.*, `tblpp`.*
                    FROM `tblcbcp` JOIN `tbltrjm`
                    ON `tblcbcp`.`TRJMid` = `tbltrjm`.`TRJMid`
                    JOIN `tblpp`
                    ON `tblcbcp`.`PPid` = `tblpp`.`PPid`
-                   WHERE `tblcbcp`.`CBCPstatus` = 3
+
 
          ";
         return $this->db->query($query);

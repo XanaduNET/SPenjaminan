@@ -49,51 +49,54 @@
                                                 <a href="<?=base_url("casebc/CBCpdf/");?><?=$c['CBCid'];?>"
                                                     class=" badge badge-primary">Detail</a>
                                                 &nbsp;
-                                                <a href="#" data-toggle="modal" data-target="#modalcbc"
+                                                <a href="#" data-toggle="modal" data-target="#modalcbc<?=$c['CBCid'];?>"
                                                     class="badge badge-info">Berkas</a>
-                                            </td>
+                                                                             </td>
                                             <td>
                                                 <?php
 
 if ($c['CBCstatus'] == 0) {
-	echo "Dokumen Tidak Lengkap!";
+    echo "<span style=color:#FF0000;text-align:center;>Dokumen Tidak Lengkap!</span>";
 } else if ($c['CBCstatus'] == 1) {
-	echo "Dokumen Lengkap!";
+    echo "<span style=color:#FF0000;text-align:center;>Dokumen Lengkap, Belum ada analisa Manajemen Risiko</span>";
 } else if ($c['CBCstatus'] == 2) {
-	echo "Dokumen Lengkap!";
+    echo "<span style=color:#FF0000;text-align:center;>Dokumen Lengkap, Belum ada analisa Legal!</span>";
 } else if ($c['CBCstatus'] == 3) {
-	echo "Dokumen Lengkap!";
+    echo "<span style=color:#FF0000;text-align:center;>Dokumen Lengkap, Belum ada analisa</span>";
 } else if ($c['CBCstatus'] == 4) {
-	echo "Dokumen Lengkap!";
+    echo "<span style=color:#228B22;text-align:center;>Dokumen Lengkap, Diterima</span>";
 } else if ($c['CBCstatus'] == 5) {
-	echo "Ditolak!";
+    echo "<span style=color:#FF0000;text-align:center;>Ditolak!</span>";
 }
 ?>
                                             </td>
                                         </tr>
 
                                         <!-- Modal Upload Doc -->
-                                        <div class="modal fade" id="modalcbc" role="dialog">
+                                        <div class="modal fade" id="modalcbc<?=$c['CBCid'];?>" role="dialog">
                                             <div class="modal-dialog modal-sm vertical-align-center">
                                                 <div class="modal-content">
-                                                    <div class="modal-header">
+                                                     <div class="modal-header">
                                                         <button type="button" class="close"
                                                             data-dismiss="modal">&times;</button>
                                                         <h4 class="modal-title">Berkas Terjamin</h4>
                                                     </div>
                                                     <div class="modal-body">
-                                                        <?php
+
+<?php $CBCid = $c['CBCid'];?>
+
+<?php
 {
-	$query = "SELECT `tblcbc`.*, `tblupload`.*
+    $query = "SELECT `tblcbc`.*, `tblupload`.*
      FROM `tblcbc` JOIN `tblupload`
     ON `tblcbc`.`CBCid` = `tblupload`.`CBCid`
-
+    WHERE `tblcbc`.`CBCid` = $CBCid
 ";
-	$upld = $this->db->query($query)->result_array();
+    $upld = $this->db->query($query)->result_array();
 }
 
 foreach ($upld as $u) {
-	?>
+    ?>
                                                         <a
                                                             href="../../uploads/<?=$u['UPLDnama']?>"><?=$u['UPLDnama']?></a><br>
                                                         <?php
@@ -119,6 +122,7 @@ foreach ($upld as $u) {
                 </div>
             </div>
             <!-- Produktif -->
+            &nbsp;
             <h1 class="h3 mb-4 text-gray-800"><?=$title . " Produktif";?></h1>
             <div class="row">
 
@@ -155,32 +159,31 @@ foreach ($upld as $u) {
                                                 <a href="<?=base_url("casebc/CBCPpdf/");?><?=$c['CBCPid'];?>"
                                                     class=" badge badge-primary">Detail</a>
                                                 &nbsp;
-                                                <a href="#" data-toggle="modal" data-target="#modalcbcp"
+                                                <a href="#" data-toggle="modal" data-target="#modalcbcp<?=$c['CBCPid'];?>"
                                                     class="badge badge-info">Berkas</a>
 
                                             </td>
                                             <td>
-                                                <?php
+                                            <?php
 
 if ($c['CBCPstatus'] == 0) {
-	echo "Dokumen Tidak Lengkap!";
+    echo "<span style=color:#FF0000;text-align:center;>Dokumen Tidak Lengkap!</span>";
 } else if ($c['CBCPstatus'] == 1) {
-	echo "Dokumen Lengkap!";
+    echo "<span style=color:#FF0000;text-align:center;>Dokumen Lengkap, Belum ada analisa Manajemen Risiko</span>";
 } else if ($c['CBCPstatus'] == 2) {
-	echo "Dokumen Lengkap!";
+    echo "<span style=color:#FF0000;text-align:center;>Dokumen Lengkap, Belum ada analisa Legal!</span>";
 } else if ($c['CBCPstatus'] == 3) {
-	echo "Dokumen Lengkap!";
+    echo "<span style=color:#FF0000;text-align:center;>Dokumen Lengkap, Belum ada analisa</span>";
 } else if ($c['CBCPstatus'] == 4) {
-	echo "Dokumen Lengkap!";
+    echo "<span style=color:#228B22;text-align:center;>Dokumen Lengkap, Diterima</span>";
 } else if ($c['CBCPstatus'] == 5) {
-	echo "Ditolak!";
+    echo "<span style=color:#FF0000;text-align:center;>Ditolak!</span>";
 }
-?>
-                                            </td>
+?>                          </td>
                                         </tr>
 
                                         <!-- Modal Upload Doc -->
-                                        <div class="modal fade" id="modalcbcp" role="dialog">
+                                        <div class="modal fade" id="modalcbcp<?=$c['CBCPid'];?>" role="dialog">
                                             <div class="modal-dialog modal-sm vertical-align-center">
                                                 <div class="modal-content">
                                                     <div class="modal-header">
@@ -191,15 +194,17 @@ if ($c['CBCPstatus'] == 0) {
                                                     <div class="modal-body">
 
                                                         <!-- Disini -->
-                                                        <?php $query = "SELECT `tblcbcp`.*, `tbluploadcbcp`.*
+                                                        <?php
+$CBCPid = $c['CBCPid'];
+$query = "SELECT `tblcbcp`.*, `tbluploadcbcp`.*
          FROM `tblcbcp` JOIN `tbluploadcbcp`
         ON `tblcbcp`.`CBCPid` = `tbluploadcbcp`.`CBCPid`
-
+        WHERE `tblcbcp`.`CBCPid` = $CBCPid
 ";
 $upld = $this->db->query($query)->result_array();
 
 foreach ($upld as $u) {
-	?>
+    ?>
                                                         <a
                                                             href="../../uploads/<?=$u['UPLDPnama']?>"><?=$u['UPLDPnama']?></a><br>
                                                         <?php
