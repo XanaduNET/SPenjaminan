@@ -28,3 +28,128 @@ Attempt: Success Tambah Data Terjamin Lengkap
 User: Akbar
 Aksi: Data Nasabah
 -------------------------
+User: ::1 - April 11, 2022, 10:34:22
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - April 11 2022, 10:50:33
+Attempt: Success Add Data Terjamin
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - April 11 2022, 10:53:35
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - April 11, 2022, 10:54:56
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - April 11, 2022, 10:56:07
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - April 11, 2022, 10:57:22
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - April 11,2022, 11:15:51
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - April 11,2022, 11:16:05
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - April 11,2022, 11:16:20
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - April 11,2022, 11:17:34
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - April 11,2022, 11:18:22
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - April 11,2022, 11:22:15
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - April 11,2022, 11:23:13
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - April 11,2022, 11:30:59
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - April 11, 2022, 11:32:29
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------
+User: ::1 - April 11, 2022, 11:36:35
+Attempt: Success Upload Berkas
+User: Akbar
+Aksi: Case By Case Konsumtif
+-------------------------
+User: ::1 - April 11, 2022, 11:38:47
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Manajemen Risiko
+-------------------------
+User: ::1 - April 11, 2022, 11:43:28
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Manajemen Risiko
+-------------------------
+User: ::1 - April 11, 2022, 11:43:28
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Manajemen Risiko
+-------------------------
+User: ::1 - April 11, 2022, 11:44:57
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Legal
+-------------------------
+User: ::1 - April 11, 2022, 11:44:58
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - April 11, 2022, 11:47:27
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Direktur
+-------------------------
+User: ::1 - April 11,2022, 11:47:27
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - April 11 2022, 11:48:45
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - April 11, 2022, 11:51:22
+Attempt: Success Checker
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
