@@ -1,0 +1,70 @@
+User: ::1 - April 14, 2022, 08:56:47
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - April 14, 2022, 09:02:36
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - April 14, 2022, 09:02:46
+Attempt: Success Login
+User: tiara
+Aksi: Login
+-------------------------
+User: ::1 - April 14, 2022, 09:27:45
+Attempt: Success Logout
+User: Tiara
+Aksi: Logout
+-------------------------
+User: ::1 - April 14, 2022, 09:27:51
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - April 14, 2022, 09:37:16
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - April 14, 2022, 09:37:28
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - April 14, 2022, 09:37:39
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - April 14, 2022, 09:37:52
+Attempt: Failed Login
+User: Tiara
+Aksi: Login
+-------------------------
+User: ::1 - April 14, 2022, 09:37:59
+Attempt: Success Login
+User: Tiara
+Aksi: Login
+-------------------------
+User: ::1 - April 14, 2022, 10:19:09
+Attempt: Success Logout
+User: Tiara
+Aksi: Logout
+-------------------------
+User: ::1 - April 14, 2022, 10:19:38
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - April 14, 2022, 10:45:56
+Attempt: Success Add SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - April 14, 2022, 10:46:36
+Attempt: Success Edit SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------

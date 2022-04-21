@@ -240,4 +240,18 @@ class Model_table extends CI_Model
 
     }
 
+    public function getRFA()
+    {
+
+        $query = $this->db->query("SELECT * FROM tblrfapenj");
+        return $query->result_array();
+
+    }
+
+    public function requestRFA()
+    {
+        $query = $this->db->query("SELECT * FROM tbldjph WHERE DJPcheckerstatus = 0 OR DJPcheckerstatus = 2 ");
+        return $query->result_array();
+    }
+
 }

@@ -252,4 +252,23 @@ class Table extends CI_Controller
 
     }
 
+    public function rfacac()
+    {
+
+        $this->load->model('Model_table');
+
+        $data['title'] = 'Request For Approval';
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+        $data['rfa'] = $this->Model_table->getRFA();
+        $data['request'] = $this->Model_table->requestRFA();
+
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
+        $this->load->view('penjaminan/rfacac', $data);
+        $this->load->view('template/footer');
+
+    }
+
 }

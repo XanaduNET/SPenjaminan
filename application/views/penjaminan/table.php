@@ -11,6 +11,11 @@
             });
             </script>
 
+        <?php
+
+$role = $user['role_id'];
+
+?>
     <div class="card">
                 <div class="card-body">
                     <div class="table-responsive">
@@ -65,13 +70,21 @@ foreach ($table as $u) {
     <td><?php echo $u->DJPtanggalverif ?></td>
     <td><?php echo $u->DJPtanggalcetak ?></td>
     <td>
-        <center> <a
+        <center>
+            <?php
+if ($role == 13 && ($u->DJPcheckerstatus == 1 or $u->DJPcheckerstatus == 3)) {
+        ?>
+            <a
                 href="<?=base_url('table/cekdata/' . $u->DJPid);?>"
                 target='_blank'
                 class="fa fa-check-square fa-2x"></a>
             <a href="<?=base_url('table/reportpdf/' . $u->DJPid);?>"
                 target='_blank'
                 class="fa fa-check-square fa-2x"></a>
+            <?php } else {
+        echo "Diperlukan&nbspIzin&nbspUntuk\nMelakukan&nbspTindakan&nbspIni!";
+    }
+    ?>
         </center>
     </td>
 

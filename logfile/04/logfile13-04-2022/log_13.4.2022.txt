@@ -3,3 +3,43 @@ Attempt: Success Login
 User: akbar
 Aksi: Login
 -------------------------
+User: ::1 - April 13, 2022, 13:37:53
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - April 13, 2022, 13:54:33
+Attempt: Success Add Role
+User: Akbar
+Aksi: Role
+-------------------------
+User: ::1 - April 13, 2022, 13:55:23
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - April 13, 2022, 13:55:36
+Attempt: Berhasil Tambah User Tiara
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - April 13, 2022, 13:58:05
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - April 13, 2022, 13:58:13
+Attempt: Success Login
+User: Tiara
+Aksi: Login
+-------------------------
+User: ::1 - April 13 2022, 14:05:42
+Attempt: Success Add Data Terjamin
+User: Tiara
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - April 13 2022, 14:05:51
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Tiara
+Aksi: Data Nasabah
+-------------------------

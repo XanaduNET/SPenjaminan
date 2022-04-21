@@ -1,0 +1,55 @@
+User: ::1 - April 19, 2022, 09:05:52
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - April 19, 2022, 09:06:41
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - April 19, 2022, 09:06:47
+Attempt: Success Login
+User: tiara
+Aksi: Login
+-------------------------
+User: ::1 - April 19, 2022, 09:13:23
+Attempt: Success Logout
+User: Tiara
+Aksi: Logout
+-------------------------
+User: ::1 - April 19, 2022, 09:13:31
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - April 19, 2022, 09:14:54
+Attempt: Success Edit SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - April 19, 2022, 09:16:09
+Attempt: Success Edit SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - April 19, 2022, 11:38:17
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - April 19, 2022, 11:38:25
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - April 19, 2022, 13:35:16
+Attempt: Success Edit SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - April 19, 2022, 13:38:23
+Attempt: Success Edit SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
