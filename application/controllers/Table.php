@@ -252,23 +252,66 @@ class Table extends CI_Controller
 
     }
 
-    public function rfacac()
+    public function rfa()
     {
-
         $this->load->model('Model_table');
 
         $data['title'] = 'Request For Approval';
         $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
         $data['rfa'] = $this->Model_table->getRFA();
         $data['request'] = $this->Model_table->requestRFA();
+        $data['useraccept'] = $this->Model_table->getUserAcc();
 
         $this->load->view('template/header', $data);
         $this->load->view('template/header_body', $data);
         $this->load->view('template/right_sidebar', $data);
         $this->load->view('template/left_sidebar', $data);
-        $this->load->view('penjaminan/rfacac', $data);
+        $this->load->view('penjaminan/rfa', $data);
+        $this->load->view('template/footer');
+    }
+
+    public function inputrfacac()
+    {
+        $USER = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+
+        $DJPid = $_POST['DJP'];
+        $RFAcomment = $_POST['RFAcomment'];
+        $USERidreq = $USER['id'];
+        $USERidapp = 0;
+
+        $this->Model_table->uploadrfa($USERidreq, $USERidapp, $DJPid, $RFAcomment);
+
+        // modal data berhasil ditambah dan refresh penjaminan/rfa
+    }
+
+    public function accRFA()
+    {
+
+        $this->load->model('Model_table');
+
+        $data['title'] = 'Akseptasi Request';
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+        $data['rfa'] = $this->Model_table->getAkseptasiRFA();
+        $data['useraccept'] = $this->Model_table->getUserAcc();
+
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
+        $this->load->view('penjaminan/accrfa', $data);
         $this->load->view('template/footer');
 
     }
 
+    public function aksepRFA()
+    {
+        $RFAid = $this->uri->segment(3);
+
+        $data['rfa'] = $this->Model_table->getRFAbyID($RFAid);
+    }
+
+    public function tolakRFA()
+    {
+        $RFAid = $this->uri->segment(3);
+    }
 }

@@ -9,7 +9,8 @@
         });
         </script>
 
-        <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newRFA">Request DJP</a>
+
+        <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#newRFA">Request CAC</a>
         <div>
             <div class="card">
                 <div class="card-body">
@@ -25,26 +26,42 @@
                                     <th scope="col">Status Request</th>
                                 </tr>
                             </thead>
-                            <!-- <tbody>
-                                <?php $i = 1;?>
-                                <?php foreach ($submenu as $sm): ?>
+                            <tbody>
+                                <?php $i = 1;
+$j = 0;?>
+                                <?php foreach ($rfa as $r): ?>
                                 <tr>
                                     <th scope="row"><?=$i;?></th>
-                                    <td><?=$sm['title'];?></td>
-                                    <td><?=$sm['menu'];?></td>
-                                    <td><?=$sm['url'];?></td>
-                                    <td><?=$sm['is_active'];?></td>
+                                    <td><?=$r['nama'];?></td>
                                     <td>
-                                        <a href="<?=base_url("menu/editsubMenu/");?><?=$sm['id'];?>"
-                                            class=" badge badge-success">edit</a>
-                                        <a href=" <?=base_url("menu/deletesubMenu/");?><?=$sm['id'];?>"
-                                            class="badge badge-danger float right"
-                                            onclick="return confirm('sure?');">delete</a>
+                                        <?php
+
+if (empty($useraccept)) {
+    echo "--";
+} else if ($useraccept[$j]['id'] == $r['id']) {
+    echo $useraccept[$j]['nama'];
+}
+
+?>
+                                    </td>
+                                    <td><?=$r['DJPnoreg'];?></td>
+                                    <td><?=$r['RFAcomment'];?></td>
+                                    <td>
+                                    <?php if ($r['DJPcheckerstatus'] == 0) {
+    echo "Menunggu approval";
+} else if ($r['DJPcheckerstatus'] == 2) {
+    echo "Data sudah di ce k, menunggu approval kembali";
+} else if ($r['DJPcheckerstatus'] == 4) {
+    echo "Data sudah dikunci";
+} else {
+    echo "Data sudah di accept";
+}
+?>
                                     </td>
                                 </tr>
                                 <?php $i++;?>
                                 <?php endforeach;?>
-                            </tbody> -->
+                            </tbody>
                         </table>
                     </div>
                 </div>
@@ -63,20 +80,19 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="<?=base_url('casebycase/submenu');?>" method="post">
+            <form action="<?=base_url('Table/inputrfacac');?>" method="post">
                 <div class="modal-body">
 
                 <div class="form-group">
-                        <select name="menu_id" id="menu_id" class="form-control">
+                        <select name="DJP" id="DJP" class="form-control">
                             <option value="">Pilih Nomor Registrasi</option>
                             <?php foreach ($request as $r): ?>
                             <option value="<?=$r['DJPid'];?>"><?=$r['DJPnoreg'];?></option>
                             <?php endforeach;?>
                         </select>
                     </div>
-
                 <div class="form-group">
-                        <input type="text" class="form-control" id="RFAcomment" name="RFAcomment" placeholder="Comment">
+                <input type="text" class="form-control" id="RFAcomment" name="RFAcomment" placeholder="Comment">
                 </div>
                 </div>
                 <div class="modal-footer">

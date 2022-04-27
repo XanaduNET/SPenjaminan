@@ -298,7 +298,8 @@ class Model_table extends CI_Model
         $this->db->insert('tblrfapenj', $data);
     }
 
-    public function getRFAbyID($RFAid){
+    public function getRFAbyID($RFAid)
+    {
 
         $query = " SELECT `tblrfapenj`.*, `tbldjph`.*, `user`.*
         FROM `tblrfapenj`
@@ -308,7 +309,7 @@ class Model_table extends CI_Model
         ON `tblrfapenj`.`USERidreq` = `user`.`id`
         WHERE `tblrfapenj`.`RFAid` = $RFAid
         ";
-        return $this->db->query($query->result_array();
+        return $this->db->query($query)->result_array();
     }
 
 }

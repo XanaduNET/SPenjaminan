@@ -1,0 +1,15 @@
+User: ::1 - April 26, 2022, 10:05:46
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - April 26, 2022, 13:13:06
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - April 26, 2022, 13:13:17
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
