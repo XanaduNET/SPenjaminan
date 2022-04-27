@@ -4,23 +4,19 @@
     <div class="main-container">
         <h1 class="h3 mb-4 text-gray-800"><?=$title . " Konsumtif";?></h1>
         <div>
+
             <script>
             $(document).ready(function() {
                 $('table.display').DataTable();
             });
             </script>
-
             <div class="row">
                 <div class="col-lg">
-
                     <?php if (validation_errors()): ?>
                     <div class="alert alert-danger" role="alert">
                         <?=validation_errors();?>
                     </div>
                     <?php endif;?>
-
-
-
                     <div class="card">
                         <div class="card-body">
                             <div class="table-responsive">
@@ -94,7 +90,6 @@ if ($c['CBCstatus'] == 0) {
                                                         <h4 class="modal-title">Upload Dokumen Terjamin</h4>
                                                     </div>
                                                     <div class="modal-body">
-
                                                         <?php echo form_open_multipart(base_url("casebc/uploadcbc/") . $c['CBCid']); ?>
                                                         <input type='file' name='userfile' size='20' />
 
@@ -182,7 +177,6 @@ if ($c['CBCstatus'] == 0) {
                                             </td>
                                             <td>
                                                 <?php
-
 if ($c['CBCPstatus'] == 0) {
     echo "Dokumen Tidak Lengkap!";
 } else if ($c['CBCPstatus'] == 1) {
@@ -199,7 +193,6 @@ if ($c['CBCPstatus'] == 0) {
 ?>
                                             </td>
                                         </tr>
-
                                         <!-- Modal Upload Doc -->
                                         <div class="modal fade" id="modalcbcp<?=$c['CBCPid'];?>" role="dialog">
                                             <div class="modal-dialog modal-sm vertical-align-center">
@@ -234,21 +227,17 @@ if ($c['CBCPstatus'] == 0) {
                                             </div>
                                         </div>
                                         <!-- End Modal -->
-
                                         <?php $i++;?>
                                         <?php endforeach;?>
                                     </tbody>
-
                                 </table>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
 
         </div>
     </div>
 </div>
-
 </div>

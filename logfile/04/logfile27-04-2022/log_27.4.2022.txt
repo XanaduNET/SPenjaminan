@@ -3,3 +3,13 @@ Attempt: Success Login
 User: akbar
 Aksi: Login
 -------------------------
+User: ::1 - April 27, 2022, 14:10:49
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - April 27, 2022, 14:10:58
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
