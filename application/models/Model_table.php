@@ -243,8 +243,30 @@ class Model_table extends CI_Model
     public function getRFA()
     {
 
-        $query = $this->db->query("SELECT * FROM tblrfapenj");
-        return $query->result_array();
+        $query = "SELECT `tblrfapenj`.*, `tbldjph`.*, `user`.*
+        FROM `tblrfapenj`
+        JOIN `tbldjph`
+        ON `tblrfapenj`.`DJPid` = `tbldjph`.`DJPid`
+        JOIN `user`
+        ON `tblrfapenj`.`USERidreq` = `user`.`id`
+        ";
+        return $this->db->query($query)->result_array();
+
+    }
+
+    public function getAkseptasiRFA()
+    {
+
+        $query = "SELECT `tblrfapenj`.*, `tbldjph`.*, `user`.*
+        FROM `tblrfapenj`
+        JOIN `tbldjph`
+        ON `tblrfapenj`.`DJPid` = `tbldjph`.`DJPid`
+        JOIN `user`
+        ON `tblrfapenj`.`USERidreq` = `user`.`id`
+        WHERE `tbldjph`.`DJPcheckerstatus` = 0
+        OR  `tbldjph`.`DJPcheckerstatus` = 2
+        ";
+        return $this->db->query($query)->result_array();
 
     }
 
@@ -252,6 +274,41 @@ class Model_table extends CI_Model
     {
         $query = $this->db->query("SELECT * FROM tbldjph WHERE DJPcheckerstatus = 0 OR DJPcheckerstatus = 2 ");
         return $query->result_array();
+    }
+
+    public function getUserAcc()
+    {
+        $query = "SELECT `tblrfapenj`.*, `user`.*
+        FROM `tblrfapenj`
+        JOIN `user`
+        ON `tblrfapenj`.`USERidapp` = `user`.`id`
+
+        ";
+
+        return $this->db->query($query)->result_array();
+    }
+    public function uploadRFA($USERidreq, $USERidapp, $DJPid, $RFAcomment)
+    {
+        $data = array(
+            'USERidreq' => $USERidreq,
+            'USERidapp' => $USERidapp,
+            'DJPid' => $DJPid,
+            'RFAcomment' => $RFAcomment,
+        );
+        $this->db->insert('tblrfapenj', $data);
+    }
+
+    public function getRFAbyID($RFAid){
+
+        $query = " SELECT `tblrfapenj`.*, `tbldjph`.*, `user`.*
+        FROM `tblrfapenj`
+        JOIN `tbldjph`
+        ON `tblrfapenj`.`DJPid` = `tbldjph`.`DJPid`
+        JOIN `user`
+        ON `tblrfapenj`.`USERidreq` = `user`.`id`
+        WHERE `tblrfapenj`.`RFAid` = $RFAid
+        ";
+        return $this->db->query($query->result_array();
     }
 
 }
