@@ -264,7 +264,6 @@ class Model_table extends CI_Model
         JOIN `user`
         ON `tblrfapenj`.`USERidreq` = `user`.`id`
         WHERE `tbldjph`.`DJPcheckerstatus` = 0
-        OR  `tbldjph`.`DJPcheckerstatus` = 2
         ";
         return $this->db->query($query)->result_array();
 
@@ -272,7 +271,7 @@ class Model_table extends CI_Model
 
     public function requestRFA()
     {
-        $query = $this->db->query("SELECT * FROM tbldjph WHERE DJPcheckerstatus = 0 OR DJPcheckerstatus = 2 ");
+        $query = $this->db->query("SELECT * FROM tbldjph WHERE DJPcheckerstatus = 0 ");
         return $query->result_array();
     }
 
