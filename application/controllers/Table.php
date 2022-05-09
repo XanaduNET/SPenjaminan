@@ -306,7 +306,6 @@ class Table extends CI_Controller
     public function aksepRFA()
     {
         $RFAid = $this->uri->segment(3);
-
         $data['rfa'] = $this->Model_table->getRFAbyID($RFAid);
 
     }
