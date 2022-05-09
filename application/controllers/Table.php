@@ -308,6 +308,7 @@ class Table extends CI_Controller
         $RFAid = $this->uri->segment(3);
 
         $data['rfa'] = $this->Model_table->getRFAbyID($RFAid);
+
     }
 
     public function tolakRFA()
