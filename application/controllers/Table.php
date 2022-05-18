@@ -280,7 +280,7 @@ class Table extends CI_Controller
         $USERidapp = 0;
 
         $this->Model_table->uploadrfa($USERidreq, $USERidapp, $DJPid, $RFAcomment);
-
+        redirect('penjaminan/rfa/');
         // modal data berhasil ditambah dan refresh penjaminan/rfa
     }
 
@@ -306,8 +306,12 @@ class Table extends CI_Controller
     public function aksepRFA()
     {
         $RFAid = $this->uri->segment(3);
-        $data['rfa'] = $this->Model_table->getRFAbyID($RFAid);
+        $USER = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
 
+        $RFAcomment = "Sudah Di Acc";
+        $USERidapp = $USER['id'];
+
+        $this->Model_Table->updateRFA($RFAid, $RFAcomment, $USERidapp);
     }
 
     public function tolakRFA()
