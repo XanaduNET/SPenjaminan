@@ -55,3 +55,4 @@ $route['translate_uri_dashes'] = false;
 
 $route['nasabah/(:num)'] = "nasabah/index/$1";
 $route['nasabah/(:num)/(:num)/(:num)'] = "nasabah/index/$1/$1/$1";
+$route['user/import'] = 'Upload/import';

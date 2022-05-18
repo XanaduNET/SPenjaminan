@@ -233,8 +233,7 @@ class Risk extends CI_Controller
         $query = "SELECT `tbltrjm`.`TRJMnama`
          FROM `tbltrjm` JOIN `tblcbcp`
          ON `tblcbcp`.`TRJMid` = `tbltrjm`.`TRJMid`
-         WHERE `tblcbcp`.`CBCPid`= $CBCPid
- ";
+         WHERE `tblcbcp`.`CBCPid`= $CBCPid";
 
         $trjmnama = $this->db->query($query)->row_array();
         foreach ($trjmnama as $t) {
