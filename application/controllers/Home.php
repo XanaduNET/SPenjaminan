@@ -65,70 +65,70 @@ class Home extends CI_Controller
         $sheetdata = $spreadsheet->getActiveSheet()->toArray();
         $sheetcount = count($sheetdata);
 
-        if ($sheetcount > 1) {
-            $data = array();
-            for ($i = 1; $i < $sheetcount; $i++) {
+        $acuanhitungijp = "PLAFOND KREDIT";
+        $GPPid = "1";
+        $PKSid = "2";
+        $DJPnoreg = $sheetdata[$i][3];
+        $DJPnourut = $sheetdata[$i][3]; // belum selesai
+        $DJPnoseri = "JR.0000.00";
 
-                $acuanhitungijp = "PLAFOND KREDIT";
-                $GPPid = "1";
-                $PKSid = "2";
-                $noregsertif = $sheetdata[$i][3];
-                $nourutsertif = $sheetdata[$i][3]; // belum selesai
-                $noserisertif = "JR.0000.00";
+        // Untuk PP id
+        $pp = $sheetadata[$i][2];
 
-                // Untuk PP id
-                $pp = $sheetadata[$i][2];
+        $sql = "SELECT * FROM tblPP WHERE PPnama LIKE $pp";
+        $query = $this->db->query($sql);
 
-                $sql = "SELECT * FROM tblPP WHERE PPnama LIKE $pp";
-                $query = $this->db->query($sql);
-
-                foreach ($query->result() as $row) {
-                    $PPid = $row->title;
-                    $PPnama = $row->name;
-                    $PPalamat = $row->body;
-                }
-
-                $nomordeklarasi = "--";
-                $tanggaldeklarasi = $sheetdata[$i][4];
-                $periodesertifikat = date('m', $tanggaldeklarasi);
-
-                // pemilihan jenis kredit
-                $jeniskredit = str_replace(',', '.', $sheetdata[$i][13]);
-
-                $sql = "SELECT OPKid FROM tblIJP WHERE IJPrate = $jeniskredit";
-                $query = $this->db->query($sql);
-
-                foreach ($query->result_row() as $row) {
-                    $OPKid = $row->OPKid;
-                }
-                //end
-
-                $statuspenjaminan = "Baru";
-
-                if ($sheetcount > 1) {
-                    $JSPid = 1;
-                } else {
-                    $JSPid = 2;
-                }
-
-                //end
-
-                // $data[] = array(
-                //     'product_name' => $product_name,
-                //     'product_quantity' => $product_qty,
-                //     'product_price' => $product_price,
-                // );
-            }
-
-            $inserdata = $this->home_model->insert_batch($data);
-            if ($inserdata) {
-                $this->session->set_flashdata('message', '<div class="alert alert-success">Successfully Added.</div>');
-                redirect('Home');
-            } else {
-                $this->session->set_flashdata('message', '<div class="alert alert-danger">Data Not uploaded. Please Try Again.</div>');
-                redirect('Home');
-            }
+        foreach ($query->result() as $row) {
+            $PPid = $row->title;
+            $PPnama = $row->name;
+            $PPalamat = $row->body;
         }
+
+        $DJPnodeklarasi = "--";
+        $DJPtanggaldeklarasi = $sheetdata[$i][4];
+        $DJPperiode = date('m', $tanggaldeklarasi);
+
+        // pemilihan jenis kredit
+        $jeniskredit = str_replace(',', '.', $sheetdata[$i][13]);
+
+        $sql = "SELECT OPKid FROM tblIJP WHERE IJPrate = $jeniskredit";
+        $query = $this->db->query($sql);
+
+        foreach ($query->result_row() as $row) {
+            $OPKid = $row->OPKid;
+        }
+        //end
+
+        $SPJid = "1";
+
+        if ($sheetcount > 1) {
+            $JSPid = 1;
+        } else {
+            $JSPid = 2;
+        }
+
+        //end
+
+        $dataDJPH[] = array(
+            'DJPnoreg' => $noregsertif,
+            'DJPnoseri' => $DJPnoseri,
+            'DJPnourut' =>   
+        )
+        // $data[] = array(
+        //     'product_name' => $product_name,
+        //     'product_quantity' => $product_qty,
+        //     'product_price' => $product_price,
+        // );
+        $insertdata = $this->home_model->insertnotbatch($dataDJPH);
+        $inserdata = $this->home_model->insert_batch($data);
+        if ($inserdata) {
+            $this->session->set_flashdata('message', '<div class="alert alert-success">Successfully Added.</div>');
+            redirect('Home');
+        } else {
+            $this->session->set_flashdata('message', '<div class="alert alert-danger">Data Not uploaded. Please Try Again.</div>');
+            redirect('Home');
+        }
+
     }
 
     public function spreadsheet_export()
