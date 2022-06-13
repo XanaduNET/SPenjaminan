@@ -112,8 +112,8 @@ class Home extends CI_Controller
         $dataDJPH[] = array(
             'DJPnoreg' => $noregsertif,
             'DJPnoseri' => $DJPnoseri,
-            'DJPnourut' =>   
-        )
+            'DJPnourut' => $DJPnourut,
+        );
         // $data[] = array(
         //     'product_name' => $product_name,
         //     'product_quantity' => $product_qty,
