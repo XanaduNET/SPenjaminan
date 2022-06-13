@@ -1053,7 +1053,7 @@ Dari hasil <i> On The Desk </i> (OTD), maka nilai dasar agunan calon terjamin di
 <tr>
     <td width="50%">  </td>
     <td colspan="2" style="border: 1px solid black; text-align:center; " >
-    <b><u> AFRIZAL BERRY </u></b> <br> <u> Direktur Utama </u>
+    <b><u> RM. IBNU LEGOWO </u></b> <br> <u> Direktur Umum </u>
         </td>
 </tr>
 </table>

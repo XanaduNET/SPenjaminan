@@ -1,0 +1,75 @@
+User: ::1 - June 10, 2022, 09:02:26
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - June 10, 2022, 16:17:10
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - June 10,2022, 16:17:26
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - June 10,2022, 16:22:08
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - June 10, 2022, 16:25:18
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------
+User: ::1 - June 10,2022, 16:25:56
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - June 10,2022, 16:25:57
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - June 10,2022, 16:26:23
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - June 10, 2022, 16:27:11
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------
+User: ::1 - June 10,2022, 16:27:42
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Fee Penjaminan
+-------------------------
+User: ::1 - June 10,2022, 16:28:09
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - June 10,2022, 16:28:31
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - June 10,2022, 16:29:23
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - June 10,2022, 16:43:33
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - June 10, 2022, 16:43:38
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------

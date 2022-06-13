@@ -1,0 +1,10 @@
+User: ::1 - June 9, 2022, 09:01:41
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - June 9, 2022, 10:59:13
+Attempt: Success Add SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------

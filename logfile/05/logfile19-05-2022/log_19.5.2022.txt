@@ -1,0 +1,10 @@
+User: ::1 - May 19, 2022, 09:16:53
+Attempt: Failed Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - May 19, 2022, 09:16:59
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------

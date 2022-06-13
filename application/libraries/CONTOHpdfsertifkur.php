@@ -477,8 +477,8 @@ $tgl_terakhir = date('d-M-Y');
 					<br>
 					<br>
 					<br>
-					<b><u>AFRIZAL BERRY</u></b><br>
-					Direktur Utama<br>
+					<b><u>RM. IBNU LEGOWO</u></b><br>
+					Direktur Umum<br>
               </td>
             </tr>
       </table>

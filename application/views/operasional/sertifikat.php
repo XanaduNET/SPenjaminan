@@ -418,13 +418,13 @@ atas harap dilimpahkan pada rekening atas nama PT. PENJAMINAN KREDIT DAERAH PROV
 <td></td>
 <td></td>
 <td></td>
-<td style="width:20%;"><div align="center;"> <b> <u> AFRIZAL BERRY </u> </b> </div>  </td>
+<td style="width:20%;"><div align="center;"> <b> <u> RM. IBNU LEGOWO </u> </b> </div>  </td>
 </tr>
 <tr>
 <td></td>
 <td></td>
 <td></td>
-<td style="width:20%;"> <div align="center;"> Direktur Utama </div>  </td>
+<td style="width:20%;"> <div align="center;"> Direktur Umum </div>  </td>
 </tr>
 </table>
     </div>
