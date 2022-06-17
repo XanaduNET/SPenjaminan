@@ -15,7 +15,16 @@ class Home extends CI_Controller
 
     public function index()
     {
-        $this->load->view('indexx');
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+        $data['title'] = 'Migrasi Data';
+
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
+        $this->load->view('indexx', $data);
+        $this->load->view('template/footer');
+
     }
     public function spreadhseet_format_download()
     {
@@ -64,42 +73,48 @@ class Home extends CI_Controller
         $spreadsheet = $reader->load($_FILES['upload_file']['tmp_name']);
         $sheetdata = $spreadsheet->getActiveSheet()->toArray();
         $sheetcount = count($sheetdata);
+        $dataDJPH = array();
+        $userid = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
 
-        $acuanhitungijp = "PLAFOND KREDIT";
+        $DJPacuanhitung = "PLAFOND KREDIT";
         $GPPid = "1";
         $PKSid = "2";
-        $DJPnoreg = $sheetdata[$i][3];
-        $DJPnourut = $sheetdata[$i][3]; // belum selesai
+        $PKSjenis = "PK";
+        $DJPnoreg = $sheetdata[2][2];
+        $DJPnourut = $sheetdata[2][2]; // belum selesai
         $DJPnoseri = "JR.0000.00";
 
         // Untuk PP id
-        $pp = $sheetadata[$i][2];
+        $pp = $sheetdata[2][1];
 
-        $sql = "SELECT * FROM tblPP WHERE PPnama LIKE $pp";
-        $query = $this->db->query($sql);
+        $query = $this->db->query("SELECT * FROM tblpp WHERE PPnama LIKE '%$pp%'")->result();
 
-        foreach ($query->result() as $row) {
-            $PPid = $row->title;
-            $PPnama = $row->name;
-            $PPalamat = $row->body;
+        foreach ($query as $row) {
+            $ppidtes = $row->PPid;
+            $ppnamates = $row->PPnama;
+            $ppalamattes = $row->PPalamat;
+
         }
-
+        $PPid = $ppidtes;
+        $PPnama = $ppnamates;
+        $PPalamat = $ppalamattes;
         $DJPnodeklarasi = "--";
-        $DJPtanggaldeklarasi = $sheetdata[$i][4];
-        $DJPperiode = date('m', $tanggaldeklarasi);
+        $djptanggal = strtotime($sheetdata[2][3]);
+        $DJPtanggaldeklarasi = date('Y-m-d', $djptanggal);
+        $DJPperiode = date('m', $djptanggal);
 
         // pemilihan jenis kredit
-        $jeniskredit = str_replace(',', '.', $sheetdata[$i][13]);
+        $jeniskredit = str_replace(',', '.', $sheetdata[2][12]);
+        $jk = explode("%", $jeniskredit);
+        $query = $this->db->query("SELECT OPKid FROM tblijp WHERE IJPrate = '$jk[0]'")->result();
 
-        $sql = "SELECT OPKid FROM tblIJP WHERE IJPrate = $jeniskredit";
-        $query = $this->db->query($sql);
-
-        foreach ($query->result_row() as $row) {
-            $OPKid = $row->OPKid;
+        foreach ($query as $row) {
+            $opktes = $row->OPKid;
         }
         //end
 
         $SPJid = "1";
+        $OPKid = $opktes;
 
         if ($sheetcount > 1) {
             $JSPid = 1;
@@ -110,23 +125,36 @@ class Home extends CI_Controller
         //end
 
         $dataDJPH[] = array(
-            'DJPnoreg' => $noregsertif,
+            'DJPnoreg' => $DJPnoreg,
             'DJPnoseri' => $DJPnoseri,
             'DJPnourut' => $DJPnourut,
+            'DJPnodeklarasi' => $DJPnodeklarasi,
+            'DJPperiode' => $DJPperiode,
+            'DJPacuanhitung' => $DJPacuanhitung,
+            'DJPtanggaldeklarasi' => $DJPtanggaldeklarasi,
+            'GPPid' => $GPPid,
+            'PKSid' => $PKSid,
+            'PPid' => $PPid,
+            'PPnama' => $PPnama,
+            'PPalamat' => $PPalamat,
+            'OPKid' => $OPKid,
+            'JSPid' => $JSPid,
+            'SPJid' => $SPJid,
+            'DJPuseridentry' => $userid['id'],
+            'DJPtanggalentry' => date("Y-m-d"),
+
         );
-        // $data[] = array(
-        //     'product_name' => $product_name,
-        //     'product_quantity' => $product_qty,
-        //     'product_price' => $product_price,
-        // );
+
         $insertdata = $this->home_model->insertnotbatch($dataDJPH);
-        $inserdata = $this->home_model->insert_batch($data);
-        if ($inserdata) {
-            $this->session->set_flashdata('message', '<div class="alert alert-success">Successfully Added.</div>');
-            redirect('Home');
+
+        if ($insertdata) {
+
+            // $this->session->set_flashdata('message', '<div class="alert alert-success">Successfully Added ' . $insertdata . '.</div>');
+            // redirect('Home');
         } else {
-            $this->session->set_flashdata('message', '<div class="alert alert-danger">Data Not uploaded. Please Try Again.</div>');
-            redirect('Home');
+
+            // $this->session->set_flashdata('message', '<div class="alert alert-danger">Data Not uploaded. Please Try Again.</div>');
+            // redirect('Home');
         }
 
     }

@@ -1,0 +1,60 @@
+User: ::1 - June 14, 2022, 09:12:15
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - June 14, 2022, 20:37:11
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - June 14 2022, 20:39:06
+Attempt: Success Add Data Terjamin
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - June 14 2022, 20:39:30
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - June 14,2022, 20:45:12
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - June 14,2022, 20:45:24
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - June 14,2022, 20:46:11
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - June 14,2022, 20:47:28
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - June 14,2022, 20:47:42
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - June 14,2022, 20:48:58
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - June 14,2022, 20:49:12
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - June 14, 2022, 20:50:43
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------
