@@ -97,6 +97,7 @@ class Home extends CI_Controller
                 $ppnamates = $row->PPnama;
                 $ppalamattes = $row->PPalamat;
             }
+
             // END
             $PPid = $ppidtes;
             $PPnama = $ppnamates;
