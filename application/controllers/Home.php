@@ -16,7 +16,7 @@ class Home extends CI_Controller
     public function index()
     {
         $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
-        $data['title'] = 'Migrasi Data';
+        $data['title'] = 'Migrasi Data Penjaminan';
 
         $this->load->view('template/header', $data);
         $this->load->view('template/header_body', $data);
@@ -73,89 +73,175 @@ class Home extends CI_Controller
         $spreadsheet = $reader->load($_FILES['upload_file']['tmp_name']);
         $sheetdata = $spreadsheet->getActiveSheet()->toArray();
         $sheetcount = count($sheetdata);
-        $dataDJPH = array();
+
         $userid = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
 
-        $DJPacuanhitung = "PLAFOND KREDIT";
-        $GPPid = "1";
-        $PKSid = "2";
-        $PKSjenis = "PK";
-        $DJPnoreg = $sheetdata[2][2];
-        $DJPnourut = $sheetdata[2][2]; // belum selesai
-        $DJPnoseri = "JR.0000.00";
-
-        // Untuk PP id
-        $pp = $sheetdata[2][1];
-
-        $query = $this->db->query("SELECT * FROM tblpp WHERE PPnama LIKE '%$pp%'")->result();
-
-        foreach ($query as $row) {
-            $ppidtes = $row->PPid;
-            $ppnamates = $row->PPnama;
-            $ppalamattes = $row->PPalamat;
-
-        }
-        $PPid = $ppidtes;
-        $PPnama = $ppnamates;
-        $PPalamat = $ppalamattes;
-        $DJPnodeklarasi = "--";
-        $djptanggal = strtotime($sheetdata[2][3]);
-        $DJPtanggaldeklarasi = date('Y-m-d', $djptanggal);
-        $DJPperiode = date('m', $djptanggal);
-
-        // pemilihan jenis kredit
-        $jeniskredit = str_replace(',', '.', $sheetdata[2][12]);
-        $jk = explode("%", $jeniskredit);
-        $query = $this->db->query("SELECT OPKid FROM tblijp WHERE IJPrate = '$jk[0]'")->result();
-
-        foreach ($query as $row) {
-            $opktes = $row->OPKid;
-        }
-        //end
-
-        $SPJid = "1";
-        $OPKid = $opktes;
-
         if ($sheetcount > 1) {
-            $JSPid = 1;
-        } else {
-            $JSPid = 2;
+            $dataDJPH = array();
+            $DJPacuanhitung = "PLAFOND KREDIT";
+            $GPPid = "1";
+            $PKSid = "2";
+            $BPid = "2";
+            $PKSjenis = "PK";
+            $DJPnoreg = $sheetdata[2][2];
+            $djpimplode = $sheetdata[2][2];
+            $dn = explode(".", $djpimplode);
+            $DJPnourut = $dn[3];
+            $DJPnoseri = "JR.0000.00";
+            $PKSjenis = "PK";
+            // Untuk PP id
+            $pp = $sheetdata[2][1];
+            $query = $this->db->query("SELECT * FROM tblpp WHERE PPnama LIKE '%$pp%'")->result();
+            foreach ($query as $row) {
+                $ppidtes = $row->PPid;
+                $ppnamates = $row->PPnama;
+                $ppalamattes = $row->PPalamat;
+            }
+            // END
+            $PPid = $ppidtes;
+            $PPnama = $ppnamates;
+            $PPalamat = $ppalamattes;
+            $DJPnodeklarasi = "--";
+            $djptanggal = strtotime($sheetdata[2][3]);
+            $DJPtanggaldeklarasi = date('Y-m-d', $djptanggal);
+            $DJPperiode = date('m', $djptanggal);
+            // pemilihan jenis kredit
+            $jeniskredit = str_replace(',', '.', $sheetdata[2][12]);
+            $jk = explode("%", $jeniskredit);
+            $query = $this->db->query("SELECT OPKid FROM tblijp WHERE IJPrate = '$jk[0]'")->result();
+
+            foreach ($query as $row) {
+                $opktes = $row->OPKid;
+            }
+            //end
+
+            $SPJid = "1";
+            $OPKid = $opktes;
+
+            if ($sheetcount > 1) {
+                $JSPid = 1;
+            } else {
+                $JSPid = 2;
+            }
+
+            //end
+            $dataDJPH[] = array(
+                'DJPnoreg' => $DJPnoreg,
+                'DJPnoseri' => $DJPnoseri,
+                'DJPnourut' => $DJPnourut,
+                'DJPnodeklarasi' => $DJPnodeklarasi,
+                'DJPperiode' => $DJPperiode,
+                'DJPacuanhitung' => $DJPacuanhitung,
+                'DJPtanggaldeklarasi' => $DJPtanggaldeklarasi,
+                'GPPid' => $GPPid,
+                'PKSid' => $PKSid,
+                'PPid' => $PPid,
+                'PPnama' => $PPnama,
+                'PPalamat' => $PPalamat,
+                'OPKid' => $OPKid,
+                'JSPid' => $JSPid,
+                'SPJid' => $SPJid,
+                'DJPuseridentry' => $userid['id'],
+                'DJPtanggalentry' => date("Y-m-d"),
+                'PKSjenis' => $PKSjenis,
+                'BPid' => $BPid,
+                'PKSratefee' => "10%",
+
+            );
+            $insertdata = $this->home_model->insertnotbatch($dataDJPH);
+            // looping DJPD dan TRJM
+            $totalterjamin = 0;
+            $totalplafon = 0;
+            $totaljaminan = 0;
+            $totalijp = 0;
+            $totaladmin = 0;
+            $totalmaterai = 0;
+            $totalnilaiPK = 0;
+            $totalfeebank = 0;
+            $totaljumlahbiaya = 0;
+
+            for ($i = 2; $i < $sheetcount; $i++) {
+                $dataDJPD = array();
+                $datatrjm = array();
+
+                $TRJMnama = $sheetdata[$i][5];
+                $TRJMalamat = "--";
+                $TRJMusia = "--";
+
+                $datatrjm[] = array(
+                    'TRJMnama' => $TRJMnama,
+                    'TRJMalamat' => $TRJMalamat,
+                    'TRJMusia' => $TRJMusia,
+                );
+
+                $insertIdTRJM = $this->home_model->insertbatchtrjm($datatrjm);
+
+                $DJPDnoreg = $sheetdata[2][2];
+                $DJPDnoakad = "--";
+                $DJPDtanggalakad = $DJPtanggaldeklarasi;
+                $DJPDjangkawaktu = $sheetdata[$i][11];
+                $tanggalawal = strtotime($sheetdata[2][9]);
+                $tanggalakhir = strtotime($sheetdata[2][10]);
+                $DJPDtanggalawal = date('Y-m-d', $tanggalawal);
+                $DJPDtanggalakhir = date('Y-m-d', $tanggalakhir);
+                $DJPDplafondkredit = str_replace(',', '', $sheetdata[$i][7]);
+                $DJPDcoverage = str_replace(',', '.', $sheetdata[$i][6]);
+                $DJPDrate = $sheetdata[$i][12];
+                $DJPDnilaipenjaminan = str_replace(',', '', $sheetdata[$i][8]);
+                $DJPDtujuankredit = "--";
+                $DJPDjenisagunan = "--";
+                $DJPDcarapengikatan = "--";
+                $DJPDnilaitransaksipasar = "--";
+                $DJPDimbaljasa = str_replace(',', '', $sheetdata[$i][13]);
+                $DJPDfeeadm = str_replace(',', '', $sheetdata[$i][14]);
+                $DJPDfeematerai = str_replace(',', '', $sheetdata[$i][15]);
+                $DJPDfeebank = str_replace(',', '', $sheetdata[$i][17]);
+                $DJPDsu = "--";
+                $DJPDobjekpenjaminan = "--";
+                $PKRJid = 1;
+                $TRJMid = $insertIdTRJM;
+                $TRJMnamaDJPD = $TRJMnama;
+                $TRJMalamatDJPD = $TRJMalamat;
+                $TRJMusiaDJPD = $TRJMusia;
+                $DJPid = $insertdata;
+
+                $dataDJPD[] = array(
+                    'DJPDnoreg' => $DJPDnoreg,
+                    'DJPDnoakad' => $DJPDnoakad,
+                    'DJPDtanggalakad' => $DJPDtanggalakad,
+                    'DJPDjangkawaktu' => $DJPDjangkawaktu,
+                    'DJPDtanggalawal' => $DJPDtanggalawal,
+                    'DJPDtanggalakhir' => $DJPDtanggalakhir,
+                    'DJPDplafondkredit' => $DJPDplafondkredit,
+                    'DJPDcoverage' => $DJPDcoverage,
+                    'DJPDrate' => $DJPDrate,
+                    'DJPDnilaipenjaminan' => $DJPDnilaipenjaminan,
+                    'DJPDtujuankredit' => $DJPDtujuankredit,
+                    'DJPDjenisagunan' => $DJPDjenisagunan,
+                    'DJPDcarapengikatan' => $DJPDcarapengikatan,
+                    'DJPDnilaitransaksipasar' => $DJPDnilaitransaksipasar,
+                    'DJPDimbaljasa' => $DJPDimbaljasa,
+                    'DJPDfeeadm' => $DJPDfeeadm,
+                    'DJPDfeematerai' => $DJPDfeematerai,
+                    'DJPDfeebank' => $DJPDfeebank,
+                    'DJPDsu' => $DJPDsu,
+                    'DJPDobjekpenjaminan' => $DJPDobjekpenjaminan,
+                    'PKRJid' => $PKRJid,
+                    'TRJMid' => $TRJMid,
+                    'TRJMnama' => $TRJMnama,
+                    'TRJMalamat' => $TRJMalamat,
+                    'TRJMusia' => $TRJMusia,
+                    'DJPid' => $DJPid,
+                );
+
+                $this->home_model->insertbatchdjpd($dataDJPD);
+
+            }
         }
-
-        //end
-
-        $dataDJPH[] = array(
-            'DJPnoreg' => $DJPnoreg,
-            'DJPnoseri' => $DJPnoseri,
-            'DJPnourut' => $DJPnourut,
-            'DJPnodeklarasi' => $DJPnodeklarasi,
-            'DJPperiode' => $DJPperiode,
-            'DJPacuanhitung' => $DJPacuanhitung,
-            'DJPtanggaldeklarasi' => $DJPtanggaldeklarasi,
-            'GPPid' => $GPPid,
-            'PKSid' => $PKSid,
-            'PPid' => $PPid,
-            'PPnama' => $PPnama,
-            'PPalamat' => $PPalamat,
-            'OPKid' => $OPKid,
-            'JSPid' => $JSPid,
-            'SPJid' => $SPJid,
-            'DJPuseridentry' => $userid['id'],
-            'DJPtanggalentry' => date("Y-m-d"),
-
-        );
-
-        $insertdata = $this->home_model->insertnotbatch($dataDJPH);
-
-        if ($insertdata) {
-
-            // $this->session->set_flashdata('message', '<div class="alert alert-success">Successfully Added ' . $insertdata . '.</div>');
-            // redirect('Home');
-        } else {
-
-            // $this->session->set_flashdata('message', '<div class="alert alert-danger">Data Not uploaded. Please Try Again.</div>');
-            // redirect('Home');
-        }
+        echo "<script>
+    alert('Berhasil Di Input');
+    window.location.href='../home';
+    </script>";
 
     }
 

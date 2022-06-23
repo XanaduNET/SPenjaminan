@@ -1,0 +1,15 @@
+User: ::1 - June 22, 2022, 08:39:29
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - June 22, 2022, 13:43:24
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - June 22, 2022, 13:47:28
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------

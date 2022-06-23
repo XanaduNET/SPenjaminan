@@ -21,8 +21,8 @@ class Home_model extends CI_Model
 
     public function insertnotbatch($dataDJPH)
     {
-
-        $this->db->insert_batch('tbldjph', $dataDJPH);
+        
+        $this->db->insert('tbldjph', $dataDJPH);
         $insertId = $this->db->insert_id();
         if ($this->db->affected_rows() == '1') {
             return $insertId;
@@ -31,26 +31,7 @@ class Home_model extends CI_Model
         }
 
     }
-    public function insertbatchtrjm($datatrjm)
-    {
-        $this->db->insert_batch('tbltrjm', $datatrjm);
-        $insertIdTRJM = $this->db->insert_id();
-        if ($this->db->affected_rows() == '1') {
-            return $insertIdTRJM;
-        } else {
-            return false;
-        }
-    }
 
-    public function insertbatchdjpd($dataDJPD)
-    {
-        $this->db->insert_batch('tbldjpd', $dataDJPD);
-        if ($this->db->affected_rows() == 1) {
-            return true;
-        } else {
-            return false;
-        }
-    }
     public function product_list()
     {
         $this->db->select('*');
