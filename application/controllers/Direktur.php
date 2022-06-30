@@ -9,6 +9,7 @@ class Direktur extends CI_Controller
         $this->load->model('Model_direktur');
         $this->load->model('Model_CBC');
         $this->load->model('Model_Kredit');
+        $this->load->model('Model_sekretaris');
     }
 
     public function index()
@@ -733,6 +734,50 @@ class Direktur extends CI_Controller
         }
         return $temp;
 
+    }
+
+    public function suratmasuknotify()
+    {
+        $data['title'] = 'Permohonan Surat Masuk Dir';
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+
+        $data['sm'] = $this->Model_sekretaris->getSMMasukDir();
+        $data['smreq'] = $this->Model_sekretaris->getSMAccDir();
+
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
+        $this->load->view('Direktur/suratmasuk', $data);
+        $this->load->view('template/footer');
+    }
+    public function suratmasukdirum()
+    {
+        $data['title'] = 'Permohonan Surat Masuk Dir';
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+
+        $data['sm'] = $this->Model_sekretaris->getSMMasukDirum();
+        $data['smreq'] = $this->Model_sekretaris->getSMAccDirum();
+
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
+        $this->load->view('Direktur/suratmasukdirum', $data);
+        $this->load->view('template/footer');
+    }
+
+    public function akseptasisuratmasuk()
+    {
+        $SMid = $_POST['SMid'];
+        $SMketdir = $_POST['SMketdir'];
+        $check = $this->input->post('check_list');
+        
+        foreach($check as $c){
+        $this->Model_direktur->uploadsuratmasukdirektur($SMid, $c);
+        }
+
+        $this->Model_direktur->uploadketdir($SMid, $SMketdir);
     }
 
 }

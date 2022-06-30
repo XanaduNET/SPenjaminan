@@ -24,7 +24,6 @@
                                     <th scope="col">Tanggal Surat</th>
                                     <th scope="col">Tanggal Terima Surat</th>
                                     <th scope="col">Perihal</th>
-                                    <th scope="col">Untuk</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -38,7 +37,6 @@ $j = 0;?>
                                     <td><?=$s['SMtanggalsurat'];?></td>
                                     <td><?=$s['SMtanggalterima'];?></td>
                                     <td><?=$s['SMperihal'];?></td>
-                                    <td><?=$s['SMuntuk'];?></td>
                                 </tr>
                                 <?php $i++;?>
                                 <?php endforeach;?>
@@ -78,9 +76,6 @@ $j = 0;?>
                 </div>
                 <div class="form-group">
                 <input type="text" class="form-control" id="SMperihal" name="SMperihal" placeholder="Perihal">
-                </div>
-                <div class="form-group">
-                <input type="text" class="form-control" id="SMuntuk" name="SMuntuk" placeholder="Untuk">
                 </div>
                 </div>
                 <div class="modal-footer">

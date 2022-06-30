@@ -10,7 +10,7 @@
         </script>
 
 
-        <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#inputsuratmasuk">Input Surat Masuk</a>
+        <a href="" class="btn btn-primary mb-3" data-toggle="modal" data-target="#permohonansuratmasuk">Akseptasi Surat Masuk</a>
         <div>
             <div class="card">
                 <div class="card-body">
@@ -40,7 +40,7 @@ $j = 0;?>
                                     <td><?=$s['SMtanggalterima'];?></td>
                                     <td><?=$s['SMperihal'];?></td>
                                     <td><?=$s['SMuntuk'];?></td>
-                                    <td>Menunggu Untuk Di Acc</td>
+                                    <td>Menunggu Akseptasi</td>
                                 </tr>
                                 <?php $i++;?>
                                 <?php endforeach;?>
@@ -53,17 +53,17 @@ $j = 0;?>
     </div>
 </div>
 <!-- Modal -->
-<div class="modal fade" id="inputsuratmasuk" tabindex="-1" role="dialog" aria-labelledby="inputsuratmasukLabel"
+<div class="modal fade" id="permohonansuratmasuk" tabindex="-1" role="dialog" aria-labelledby="permohonansuratmasukLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="inputsuratmasukModalLabel">Akseptasi Surat Masuk</h5>
+                <h5 class="modal-title" id="permohonansuratmasukModalLabel">Akseptasi Surat Masuk</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="<?=base_url('Sekretaris/akseptasisuratmasuk');?>" method="post">
+            <form action="<?=base_url('Direktur/akseptasisuratmasuk');?>" method="post">
                 <div class="modal-body">
 
                 <div class="form-group">
@@ -75,14 +75,30 @@ $j = 0;?>
                             <?php endforeach;?>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <select name="ROLEid" id="ROLEid" class="form-control">
-                            <option value="">Pilih Untuk</option>
-                            <?php foreach ($smuntuk as $smu): ?>
-                            <option value="<?=$smu['role'];?>"><?=$smu['role'];?></option>
-                            <?php endforeach;?>
-                        </select>
-                    </div>
+                <div class="form-group">
+		<input type="checkbox" name="check_list[]" alt="Checkbox" value="4"> Direktur Utama
+        <br>
+		<input type="checkbox" name="check_list[]" alt="Checkbox" value="14"> Sekretaris Perusahaan
+		<br>
+        <input type="checkbox" name="check_list[]" alt="Checkbox" value="2"> Tenaga Ahli Penjaminan
+		<br>
+        <input type="checkbox" name="check_list[]" alt="Checkbox" value="19"> Kepala SPI
+		<br>
+        <input type="checkbox" name="check_list[]" alt="Checkbox" value="7"> Manajemen Resiko
+		<br>
+        <input type="checkbox" name="check_list[]" alt="Checkbox" value="2"> Kadiv. Penjaminan Konvesional
+		<br>
+        <input type="checkbox" name="check_list[]" alt="Checkbox" value="2"> Kadiv. Penjaminan Syariah
+		<br>
+        <input type="checkbox" name="check_list[]" alt="Checkbox" value="3"> Kadiv. Operasional
+		<br>
+        <input type="checkbox" name="check_list[]" alt="Checkbox" value="6"> Kadiv. Keuangan dan Investasi
+		<br>
+        <input type="checkbox" name="check_list[]" alt="Checkbox" value="18"> Plt. Kabag. Umum
+		<br>
+        <input type="checkbox" name="check_list[]" alt="Checkbox" value="17"> Plt. Kabag. SDM
+        <br>  <input type="textarea" class="form-control" id="SMketdir" name="SMketdir" placeholder="Keterangan Direksi">
+    </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
                     <button type="submit" class="btn btn-primary">Simpan</button>

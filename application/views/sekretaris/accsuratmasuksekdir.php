@@ -40,7 +40,7 @@ $j = 0;?>
                                     <td><?=$s['SMtanggalterima'];?></td>
                                     <td><?=$s['SMperihal'];?></td>
                                     <td><?=$s['SMuntuk'];?></td>
-                                    <td>Menunggu Untuk Di Acc</td>
+                                    <td>Mohon Diteruskan</td>
                                 </tr>
                                 <?php $i++;?>
                                 <?php endforeach;?>
@@ -63,23 +63,17 @@ $j = 0;?>
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="<?=base_url('Sekretaris/akseptasisuratmasuk');?>" method="post">
+            <form action="<?=base_url('Sekretaris/akseptasisuratmasukdir');?>" method="post">
                 <div class="modal-body">
 
                 <div class="form-group">
                 <div class="form-group">
+                
                         <select name="SMid" id="SMid" class="form-control">
                             <option value="">Pilih No Surat</option>
                             <?php foreach ($smreq as $r): ?>
                             <option value="<?=$r['SMid'];?>"><?=$r['SMasal'];?> / <?=$r['SMnomor'];?></option>
-                            <?php endforeach;?>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <select name="ROLEid" id="ROLEid" class="form-control">
-                            <option value="">Pilih Untuk</option>
-                            <?php foreach ($smuntuk as $smu): ?>
-                            <option value="<?=$smu['role'];?>"><?=$smu['role'];?></option>
+                            <input type="hidden" class="form-control" id="SMuntuk" name="SMuntuk" value="<?=$r['SMuntuk'];?>">
                             <?php endforeach;?>
                         </select>
                     </div>

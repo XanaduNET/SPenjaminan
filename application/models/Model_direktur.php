@@ -169,5 +169,29 @@ class Model_direktur extends CI_Model
          ";
         return $this->db->query($query);
     }
+    
+    public function uploadsuratmasukdirektur($SMid, $ROLEid)
+    {
+        $data = array(
+            'SMid' => $SMid,
+            'ROLEid' => $ROLEid,
+        );
 
+        $this->db->insert('tblsm_notify', $data);
+
+        $data = array(
+            'SMstatus' => 3,
+        );
+        $this->db->where('SMid', $SMid);
+        $this->db->update('tblsm', $data);
+    }
+    public function uploadketdir($SMid, $SMketdir)
+    {
+
+        $data = array(
+            'SMketdir' => $SMketdir,
+        );
+        $this->db->where('SMid', $SMid);
+        $this->db->update('tblsm', $data);
+    }
 }

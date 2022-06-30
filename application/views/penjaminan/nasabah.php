@@ -528,13 +528,7 @@ foreach ($ambilpkrj as $row) {
                 '" name="DJPDobjekpenjaminan[]"></td><td> <button type="button" name="remove" id="' +
                 i + '" class="btn btn-danger btn_remove">X</button> </td> </tbody>');
 
-
-            var DJPDplafondkreditrubah = document.getElementById("DJPDplafondkredit" + i);
-            DJPDplafondkreditrubah.addEventListener("keyup", function(e) {
-                DJPDplafondkreditrubah.value = convertRupiah(this.value);
-            });
-            DJPDplafondkreditrubah.addEventListener('keydown', function(event) {
-                return isNumberKey(event);
+            
             });
 
             var DJPDimbaljasarubah = document.getElementById("DJPDimbaljasa" + i);
