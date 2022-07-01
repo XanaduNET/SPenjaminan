@@ -51,6 +51,8 @@ class Home_model extends CI_Model
             return false;
         }
     }
+
+  
     public function product_list()
     {
         $this->db->select('*');

@@ -13,6 +13,38 @@ class Home extends CI_Controller
         $this->load->model('home_model');
     }
 
+
+    public function penyebut($hasil)
+    {
+
+        $nilai = abs($hasil);
+        $huruf = array("", "Satu", "Dua", "Tiga", "Empat", "Lima", "Enam", "Tujuh", "Delapan", "Sembilan", "Sepuluh", "Sebelas");
+        $temp = "";
+        if ($nilai < 12) {
+            $temp = " " . $huruf[$nilai];
+        } else if ($nilai < 20) {
+            $temp = $this->penyebut($nilai - 10) . " Belas";
+        } else if ($nilai < 100) {
+            $temp = $this->penyebut($nilai / 10) . " Puluh" . $this->penyebut($nilai % 10);
+        } else if ($nilai < 200) {
+            $temp = " Seratus" . $this->penyebut($nilai - 100);
+        } else if ($nilai < 1000) {
+            $temp = $this->penyebut($nilai / 100) . " Ratus" . $this->penyebut($nilai % 100);
+        } else if ($nilai < 2000) {
+            $temp = " Seribu" . $this->penyebut($nilai - 1000);
+        } else if ($nilai < 1000000) {
+            $temp = $this->penyebut($nilai / 1000) . " Ribu" . $this->penyebut($nilai % 1000);
+        } else if ($nilai < 1000000000) {
+            $temp = $this->penyebut($nilai / 1000000) . " Juta" . $this->penyebut($nilai % 1000000);
+        } else if ($nilai < 1000000000000) {
+            $temp = $this->penyebut($nilai / 1000000000) . " Milyar" . $this->penyebut(fmod($nilai, 1000000000));
+        } else if ($nilai < 1000000000000000) {
+            $temp = $this->penyebut($nilai / 1000000000000) . " Trilyun" . $this->penyebut(fmod($nilai, 1000000000000));
+        }
+        return $temp;
+
+    }
+
     public function index()
     {
         $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
@@ -78,6 +110,7 @@ class Home extends CI_Controller
 
         if ($sheetcount > 1) {
             $dataDJPH = array();
+            $dataDJPHUpdate = array();
             $DJPacuanhitung = "PLAFOND KREDIT";
             $GPPid = "1";
             $PKSid = "2";
@@ -161,6 +194,7 @@ class Home extends CI_Controller
             $totalfeebank = 0;
             $totaljumlahbiaya = 0;
 
+
             for ($i = 2; $i < $sheetcount; $i++) {
                 $dataDJPD = array();
                 $datatrjm = array();
@@ -237,12 +271,38 @@ class Home extends CI_Controller
 
                 $this->home_model->insertbatchdjpd($dataDJPD);
 
+                $totalterjamin  += 1;
+                $totalnilaiPK  += $DJPDplafondkredit;
+                $totaljaminan += $DJPDnilaipenjaminan;
+                $totalijp += $DJPDimbaljasa;
+                $totalfeebank += $DJPDfeebank;
+                $totaladmin += $DJPDfeeadm;
+                $totalmaterai = $DJPDfeematerai;
+                $totaljumlahbiaya = ($totalijp+$totaladmin+$totalmaterai) - $totalfeebank ;
+
             }
+            $totaljumlahbiaya = ($totalijp+$totaladmin+$totalmaterai) - $totalfeebank ;
+
+            $dataDJPHUpdate = array(
+                'DJPjumlahPK' => $totalterjamin,
+                'DJPjumlahnilaiPK' => $totalnilaiPK,
+                'DJPjumlahimbaljasa' => $totalijp,
+                'DJPnilaipenjaminan' => $totaljaminan,
+                'DJPfeebank' => $totalfeebank,
+                'DJPfeeadmin' => $totaladmin,
+                'DJPfeematerai' => $totalmaterai,
+                
+                'DJPjumlahbiaya' => $totaljumlahbiaya,
+                'DJPjumlahbiayaterbilang' => $this->penyebut($totaljumlahbiaya),
+            );  
+                $this->db->where('DJPid', $DJPid);
+                $this->db->update('tbldjph', $dataDJPHUpdate);
+           
+          
+
+            
         }
-        echo "<script>
-    alert('Berhasil Di Input');
-    window.location.href='../home';
-    </script>";
+     
 
     }
 
