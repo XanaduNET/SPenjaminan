@@ -59,7 +59,7 @@ if (empty($useraccept)) {
 ?>
                                     </td>
                                     <td>
-                                    <a href="<?=base_url("Table/akseprfa/");?><?=$r['RFAid'];?>/<?=$r['DJPid'];?>"
+                                    <a href="<?=base_url("Table/apprfa/");?><?=$r['RFAid'];?>/<?=$r['DJPid'];?>"
                                                     class=" badge badge-primary">Accept</a>
                                     |
                                     <a href="<?=base_url("Table/tolakrfa/");?><?=$r['RFAid'];?>"
@@ -79,40 +79,5 @@ if (empty($useraccept)) {
 
     </div>
 </div>
-</div>
-
-<!-- Modal -->
-<div class="modal fade" id="newRFA" tabindex="-1" role="dialog" aria-labelledby="newRFALabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="newRFAModalLabel">Request Of Approval</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <form action="<?=base_url('Table/inputrfacac');?>" method="post">
-                <div class="modal-body">
-
-                <div class="form-group">
-                        <select name="DJP" id="DJP" class="form-control">
-                            <option value="">Pilih Nomor Registrasi</option>
-                            <?php foreach ($request as $r): ?>
-                            <option value="<?=$r['DJPid'];?>"><?=$r['DJPnoreg'];?></option>
-                            <?php endforeach;?>
-                        </select>
-                    </div>
-                <div class="form-group">
-                <input type="text" class="form-control" id="RFAcomment" name="RFAcomment" placeholder="Comment">
-                </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                    <button type="submit" class="btn btn-primary">Simpan</button>
-                </div>
-            </form>
-        </div>
-    </div>
 </div>
 </div>

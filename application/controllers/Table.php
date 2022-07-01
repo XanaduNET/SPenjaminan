@@ -306,13 +306,47 @@ class Table extends CI_Controller
     public function aksepRFA()
     {
         $RFAid = $this->uri->segment(3);
+        $DJPid = $this->uri->segment(4);
         $USER = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
 
         $RFAcomment = "Sudah Di Acc";
         $USERidapp = $USER['id'];
 
-        $this->Model_Table->updateRFA($RFAid, $RFAcomment, $USERidapp);
+        $this->Model_table->updateRFA($RFAid, $RFAcomment, $USERidapp, $DJPid);
     }
+
+
+    public function approvalrfa()
+    {
+
+        $this->load->model('Model_table');
+
+        $data['title'] = 'Approval Request';
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+        $data['rfa'] = $this->Model_table->getApprovalRFA();
+        $data['useraccept'] = $this->Model_table->getUserAcc();
+
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
+        $this->load->view('penjaminan/approvalrfa', $data);
+        $this->load->view('template/footer');
+
+    }
+
+    public function apprfa()
+    {
+        $RFAid = $this->uri->segment(3);
+        $DJPid = $this->uri->segment(4);
+        $USER = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+
+        $RFAcomment = "ACC Kadiv";
+        $USERidapp = $USER['id'];
+
+        $this->Model_table->updateAPPRFA($RFAid, $RFAcomment, $USERidapp, $DJPid);
+    }
+
 
     public function tolakRFA()
     {

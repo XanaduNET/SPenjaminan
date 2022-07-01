@@ -38,8 +38,8 @@ $j = 0;?>
 
 if (empty($useraccept)) {
     echo "--";
-} else if ($useraccept[$j]['id'] == $r['id']) {
-    echo $useraccept[$j]['nama'];
+} else if ($useraccept['USERidapp'] == $r['id']) {
+    echo $useraccept['nama'];
 }
 
 ?>
@@ -50,7 +50,7 @@ if (empty($useraccept)) {
                                     <?php if ($r['DJPcheckerstatus'] == 0) {
     echo "Menunggu approval";
 } else if ($r['DJPcheckerstatus'] == 2) {
-    echo "Data sudah di ce k, menunggu approval kembali";
+    echo "Data sudah di cek, menunggu approval kembali";
 } else if ($r['DJPcheckerstatus'] == 4) {
     echo "Data sudah dikunci";
 } else {

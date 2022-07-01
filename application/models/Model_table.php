@@ -263,7 +263,22 @@ class Model_table extends CI_Model
         ON `tblrfapenj`.`DJPid` = `tbldjph`.`DJPid`
         JOIN `user`
         ON `tblrfapenj`.`USERidreq` = `user`.`id`
-        WHERE `tbldjph`.`DJPcheckerstatus` = 0
+        WHERE `tbldjph`.`DJPcheckerstatus` = 1
+        ";
+        return $this->db->query($query)->result_array();
+
+    }
+
+    public function getApprovalRFA()
+    {
+
+        $query = "SELECT `tblrfapenj`.*, `tbldjph`.*, `user`.*
+        FROM `tblrfapenj`
+        JOIN `tbldjph`
+        ON `tblrfapenj`.`DJPid` = `tbldjph`.`DJPid`
+        JOIN `user`
+        ON `tblrfapenj`.`USERidreq` = `user`.`id`
+        WHERE `tbldjph`.`DJPcheckerstatus` = 2
         ";
         return $this->db->query($query)->result_array();
 
@@ -284,7 +299,7 @@ class Model_table extends CI_Model
 
         ";
 
-        return $this->db->query($query)->result_array();
+        return $this->db->query($query)->row_array();
     }
     public function uploadRFA($USERidreq, $USERidapp, $DJPid, $RFAcomment)
     {
@@ -295,6 +310,15 @@ class Model_table extends CI_Model
             'RFAcomment' => $RFAcomment,
         );
         $this->db->insert('tblrfapenj', $data);
+
+
+        $dataupdate = array(
+            'DJPcheckerstatus' => 1, //sudah dicek
+            'DJPcheckercount' => 1, //sudah 1 kali cek
+        );
+
+        $this->db->where('DJPid', $DJPid);
+        $this->db->update('tbldjph', $dataupdate);
     }
 
     public function getRFAbyID($RFAid)
@@ -310,5 +334,49 @@ class Model_table extends CI_Model
         ";
         return $this->db->query($query)->result_array();
     }
+
+    public function updateRFA($RFAid, $RFAcomment, $USERidapp, $DJPid)
+    {   
+      
+
+        $data = array(
+            'RFAcomment' => $RFAcomment,
+            'USERidapp' => $USERidapp,
+        );
+        $this->db->where('RFAid', $RFAid);
+        $this->db->update('tblrfapenj', $data);
+
+        
+        $dataupdate = array(
+            'DJPcheckerstatus' => 2, //sudah dicek
+            'DJPcheckercount' => 2, //sudah 1 kali cek
+        );
+
+        $this->db->where('DJPid', $DJPid);
+        $this->db->update('tbldjph', $dataupdate);
+    }
+
+    public function updateAPPRFA($RFAid, $RFAcomment, $USERidapp, $DJPid)
+    {   
+      
+
+        $data = array(
+            'RFAcomment' => $RFAcomment,
+            'USERidapp' => $USERidapp,
+        );
+        $this->db->where('RFAid', $RFAid);
+        $this->db->update('tblrfapenj', $data);
+
+        
+        $dataupdate = array(
+            'DJPcheckerstatus' => 4, //sudah dicek
+            'DJPcheckercount' => 3, //sudah 1 kali cek
+        );
+
+        $this->db->where('DJPid', $DJPid);
+        $this->db->update('tbldjph', $dataupdate);
+    }
+
+    
 
 }

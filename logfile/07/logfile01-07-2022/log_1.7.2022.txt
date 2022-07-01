@@ -1,0 +1,75 @@
+User: ::1 - July 1, 2022, 04:50:36
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 1, 2022, 05:00:45
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - July 1, 2022, 05:00:59
+Attempt: Failed Login
+User: tiara
+Aksi: Login
+-------------------------
+User: ::1 - July 1, 2022, 05:01:07
+Attempt: Success Login
+User: tiara
+Aksi: Login
+-------------------------
+User: ::1 - July 1 2022, 05:53:02
+Attempt: Success Add Data Terjamin
+User: Tiara
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - July 1 2022, 05:53:07
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Tiara
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - July 1, 2022, 06:11:48
+Attempt: Success Logout
+User: Tiara
+Aksi: Logout
+-------------------------
+User: ::1 - July 1, 2022, 06:11:53
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 1, 2022, 06:12:30
+Attempt: Success Add SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - July 1, 2022, 06:18:34
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - July 1, 2022, 06:18:40
+Attempt: Success Login
+User: tiara
+Aksi: Login
+-------------------------
+User: ::1 - July 1, 2022, 06:23:53
+Attempt: Success Logout
+User: Tiara
+Aksi: Logout
+-------------------------
+User: ::1 - July 1, 2022, 06:24:04
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 1, 2022, 06:25:40
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - July 1, 2022, 06:25:53
+Attempt: Success Login
+User: Tiara
+Aksi: Login
+-------------------------

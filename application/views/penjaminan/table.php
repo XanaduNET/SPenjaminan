@@ -44,6 +44,7 @@ $role = $user['role_id'];
                                                         <th>Cetak Verifikasi DJP</th>
                                                         <th>Aksi</th>
                                                         <th>Status</th>
+                                                        
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -54,7 +55,7 @@ foreach ($table as $u) {
     ?>
 <tr>
     <td><?php echo $no ?></td>
-    <td><?php echo $u->DJPacuanhitung ?></td>
+    <td><?php echo $u->DJPacuanhitung?></td>
     <td><?php echo $u->GPPnama ?></td>
     <td><?php echo $u->PKSno1 ?></td>
     <td><?php echo $u->DJPnoreg ?></td>
@@ -72,7 +73,7 @@ foreach ($table as $u) {
     <td>
         <center>
             <?php
-if ($role == 13 && ($u->DJPcheckerstatus == 1 or $u->DJPcheckerstatus == 3)) {
+if ($role == 13 && ($u->DJPcheckerstatus == 2 or $u->DJPcheckerstatus == 4)) {
         ?>
             <a
                 href="<?=base_url('table/cekdata/' . $u->DJPid);?>"
@@ -88,14 +89,39 @@ if ($role == 13 && ($u->DJPcheckerstatus == 1 or $u->DJPcheckerstatus == 3)) {
         </center>
     </td>
 
-
-    <td> <a href="<?=base_url('table/sertifikat/' . $u->DJPid);?>"
+    <td>
+     
+    <?php
+if ($role == 13 && ($u->DJPcheckerstatus == 4)) {
+    ?>    
+    <a href="<?=base_url('table/sertifikat/' . $u->DJPid);?>"
             target='_blank' class="fa fa-print fa-2x"></a>
+            <?php } else {
+        echo "Diperlukan&nbspIzin&nbspUntuk\nMelakukan&nbspTindakan&nbspIni!";
+    }
+    ?>
     </td>
-    <td> <a href="<?=base_url('table/reportpdf/' . $u->DJPid);?>"
-            target='_blank' class="fa fa-print fa-2x"></a></td>
-    <td> <a href="<?=base_url('table/pdfdatadjp/' . $u->DJPid);?>"
-            target='_blank' class="fa fa-print fa-2x"></a></td>
+    
+    <td> 
+    <?php
+if ($role == 13 && ($u->DJPcheckerstatus == 4)) {
+    ?> <a href="<?=base_url('table/reportpdf/' . $u->DJPid);?>"
+            target='_blank' class="fa fa-print fa-2x"></a>
+            <?php } else {
+        echo "Diperlukan&nbspIzin&nbspUntuk\nMelakukan&nbspTindakan&nbspIni!";
+    }
+    ?></td>
+    <td> 
+    <?php
+if ($role == 13 && ($u->DJPcheckerstatus == 4)) {
+    ?><a href="<?=base_url('table/pdfdatadjp/' . $u->DJPid);?>"
+            target='_blank' class="fa fa-print fa-2x"></a>
+            <?php } else {
+        echo "Diperlukan&nbspIzin&nbspUntuk\nMelakukan&nbspTindakan&nbspIni!";
+    }
+    ?></td>
+     
+
     <td>
         <?php
 
@@ -124,6 +150,13 @@ if ($u->status == 0) {
     ?>
     </td>
 
+
+    
+<?php if ($role == 1)  { ?>
+    <td>
+    <?php echo '<span class="badge badge-danger">Silahkan Cek</span>'?>
+</td>
+<?php }?>
     <?php
 $no++;
 }?>
