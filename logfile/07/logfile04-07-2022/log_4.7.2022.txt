@@ -1,0 +1,65 @@
+User: ::1 - July 4, 2022, 09:17:44
+Attempt: Success Login
+User: tiara
+Aksi: Login
+-------------------------
+User: ::1 - July 4, 2022, 09:18:09
+Attempt: Success Checker
+User: Tiara
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - July 4, 2022, 09:26:17
+Attempt: Success Logout
+User: Tiara
+Aksi: Logout
+-------------------------
+User: ::1 - July 4, 2022, 09:26:30
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 4,2022, 09:26:53
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 4,2022, 09:27:13
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 4,2022, 09:27:14
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 4,2022, 09:27:25
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 4,2022, 09:27:26
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 4,2022, 09:27:33
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 4,2022, 09:38:54
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 4,2022, 09:56:06
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 4,2022, 10:53:23
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
