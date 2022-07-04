@@ -26,6 +26,8 @@
                                         <a class="btn btn-outline-primary" href="Accrual">Accrual Format Lama</a>
                                         <br><br>/<br><br>
                                         <a class="btn btn-outline-secondary" href="Accrual_baru">Accrual Format Baru</a>
+                                        <br><br>/<br><br>
+                                        <a class="btn btn-outline-secondary" href="Accrual_murni">Accrual Format Murni</a>
                                 </div>
                                 </center>
                                 <div class="modal-footer">

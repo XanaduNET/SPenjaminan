@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 29, 2022 at 08:27 PM
+-- Generation Time: Jul 04, 2022 at 03:59 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.5
 
@@ -410,6 +410,26 @@ CREATE TABLE `tbldjpd` (
   `DJPid` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `tbldjpd`
+--
+
+INSERT INTO `tbldjpd` (`DJPDid`, `DJPDnoreg`, `DJPDnoakad`, `DJPDtanggalakad`, `DJPDjangkawaktu`, `DJPDtanggalawal`, `DJPDtanggalakhir`, `DJPDplafondkredit`, `DJPDcoverage`, `DJPDrate`, `DJPDnilaipenjaminan`, `DJPDtujuankredit`, `DJPDjenisagunan`, `DJPDcarapengikatan`, `DJPDnilaitransaksipasar`, `DJPDnilaitransaksilikuidasi`, `DJPDimbaljasa`, `DJPDfeeadm`, `DJPDfeematerai`, `DJPDfeebank`, `DJPDsu`, `DJPDobjekpenjaminan`, `PKRJid`, `TRJMid`, `TRJMnama`, `TRJMalamat`, `TRJMusia`, `DJPid`) VALUES
+(17, '07.12.22.00001.01.1.12.0', '--', '2021-10-11', 36, '2021-12-20', '2024-12-20', '  50000000 ', '75%', '4.16%', '  37500000 ', '--', '--', '--', '--', '', '  2080000 ', '0', '0', '  208000 ', '--', '--', 1, 17, 'SAFITRI', '--', '--', 4),
+(18, '07.12.22.00001.01.1.12.0', '--', '2021-10-11', 48, '2021-12-20', '2024-12-20', '  70000000 ', '75%', '4.97%', '  52500000 ', '--', '--', '--', '--', '', '  3479000 ', '0', '0', '  347900 ', '--', '--', 1, 18, 'KUSNO', '--', '--', 4),
+(19, '07.12.22.00001.01.1.12.0', '--', '2021-10-11', 48, '2021-12-20', '2024-12-20', '  50000000 ', '50%', '2.91%', '  25000000 ', '--', '--', '--', '--', '', '  1455000 ', '0', '0', '  145500 ', '--', '--', 1, 19, 'KARIADI', '--', '--', 4),
+(20, '07.12.22.00001.01.1.12.0', '--', '2021-10-11', 48, '2021-12-20', '2024-12-20', '  100000000 ', '75%', '4.97%', '  75000000 ', '--', '--', '--', '--', '', '  4970000 ', '0', '0', '  497000 ', '--', '--', 1, 20, 'SUBROTO', '--', '--', 4),
+(21, '07.12.22.00001.01.1.12.0', '--', '2021-10-11', 36, '2021-12-20', '2024-12-20', '  50000000 ', '75%', '4.16%', '  37500000 ', '--', '--', '--', '--', '', '  2080000 ', '0', '0', '  208000 ', '--', '--', 1, 21, 'SUNARTI', '--', '--', 4),
+(22, '07.12.22.00001.01.1.12.0', '--', '2021-10-11', 36, '2021-12-20', '2024-12-20', '  150000000 ', '75%', '4.16%', '  112500000 ', '--', '--', '--', '--', '', '  6240000 ', '0', '0', '  624000 ', '--', '--', 1, 22, 'DEDI IRAWAN', '--', '--', 4),
+(23, '07.12.22.00001.01.1.12.0', '--', '2021-10-11', 36, '2021-12-20', '2024-12-20', '  20000000 ', '50%', '2.44%', '  10000000 ', '--', '--', '--', '--', '', '  488000 ', '0', '0', '  48800 ', '--', '--', 1, 23, 'YENDRI HERIANTO', '--', '--', 4),
+(24, '07.12.22.00001.01.1.12.0', '--', '2021-10-11', 48, '2021-12-20', '2024-12-20', '  80000000 ', '50%', '2.91%', '  40000000 ', '--', '--', '--', '--', '', '  2328000 ', '0', '0', '  232800 ', '--', '--', 1, 24, 'KHOIRUDDIN HARAHAP', '--', '--', 4),
+(25, '07.12.22.00001.01.1.12.0', '--', '2021-10-11', 60, '2021-12-20', '2024-12-20', '  150000000 ', '50%', '3.28%', '  75000000 ', '--', '--', '--', '--', '', '  4920000 ', '0', '0', '  492000 ', '--', '--', 1, 25, 'SUNASRIL', '--', '--', 4),
+(26, '07.12.22.00001.01.1.12.0', '--', '2021-10-11', 36, '2021-12-20', '2024-12-20', '  100000000 ', '75%', '4.16%', '  75000000 ', '--', '--', '--', '--', '', '  4160000 ', '0', '0', '  416000 ', '--', '--', 1, 26, 'SUHENDRA SARIANDI', '--', '--', 4),
+(27, '07.12.22.00001.01.1.12.0', '--', '2021-10-11', 36, '2021-12-20', '2024-12-20', '  40000000 ', '50%', '2.44%', '  20000000 ', '--', '--', '--', '--', '', '  976000 ', '0', '0', '  97600 ', '--', '--', 1, 27, 'SUKINI', '--', '--', 4),
+(28, '07.12.22.00001.01.1.12.0', '--', '2021-10-11', 48, '2021-12-20', '2024-12-20', '  90000000 ', '75%', '4.97%', '  67500000 ', '--', '--', '--', '--', '', '  4473000 ', '0', '0', '  447300 ', '--', '--', 1, 28, 'AGUS WANTO', '--', '--', 4),
+(29, '07.12.22.00001.01.1.12.0', '--', '2021-10-11', 24, '2021-12-20', '2024-12-20', '  50000000 ', '75%', '3.15%', '  37500000 ', '--', '--', '--', '--', '', '  1575000 ', '0', '0', '  157500 ', '--', '--', 1, 29, 'ROHIMAH BR RINTONGA', '--', '--', 4),
+(30, '07.12.22.00001.01.1.12.0', '--', '2021-10-11', 36, '2021-12-20', '2024-12-20', '  50000000 ', '75%', '4.16%', '  37500000 ', '--', '--', '--', '--', '', '  2080000 ', '0', '0', '  208000 ', '--', '--', 1, 30, 'SARINEM', '--', '--', 4);
+
 -- --------------------------------------------------------
 
 --
@@ -459,6 +479,13 @@ CREATE TABLE `tbldjph` (
   `DJPcheckerstatus` int(11) NOT NULL,
   `DJPcheckercount` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbldjph`
+--
+
+INSERT INTO `tbldjph` (`DJPid`, `DJPnoreg`, `DJPnoseri`, `DJPnourut`, `DJPnodeklarasi`, `DJPtanggaldeklarasi`, `DJPperiode`, `DJPacuanhitung`, `DJPnilaipenjaminan`, `DJPjumlahpk`, `DJPjumlahnilaipk`, `DJPjumlahimbaljasa`, `PKSratefee`, `DJPfeebank`, `DJPfeematerai`, `DJPfeeadmin`, `DJPjumlahbiaya`, `DJPjumlahbiayaterbilang`, `DJPtanggalentry`, `DJPtanggalverif`, `DJPtanggalcetak`, `DJPuseridentry`, `DJPuseridverif`, `DJPuseridcetak`, `DJPuseridapprove`, `DJPmaxnilai`, `DJPtahun`, `DJPnoserilama`, `GPPid`, `PKSid`, `PKSjenis`, `OPKid`, `SPJid`, `JSPid`, `PPid`, `PPnama`, `PPalamat`, `BPid`, `status`, `DJPcheckerstatus`, `DJPcheckercount`) VALUES
+(4, '07.12.22.00001.01.1.12.0', 'JR.0000.00', '00001', '--', '2021-10-11', '10', 'PLAFOND KREDIT', 702500000, 14, '1050000000', '41304000', '10%', '4130400', '0', '0', '37173600', ' Tiga Puluh Tujuh Juta Seratus Tujuh Puluh Tiga Ribu Enam Ratus ', '2022-01-25', '2022-01-25', '2022-01-25', 6, NULL, 18, 0, NULL, NULL, NULL, 1, 2, 'PK', 1, 1, 1, 101, 'Bank Riau Kepri Kedai Pujud', '\"Komplek Graha Nusa Permai Blok C1 No. 1-3', 2, 1, 4, 3);
 
 -- --------------------------------------------------------
 
@@ -2025,6 +2052,15 @@ CREATE TABLE `tblrfapenj` (
   `RFAcomment` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `tblrfapenj`
+--
+
+INSERT INTO `tblrfapenj` (`RFAid`, `USERidreq`, `USERidapp`, `DJPid`, `RFAcomment`) VALUES
+(7, 18, 6, 2, 'ACC Kadiv'),
+(8, 6, 0, 1, 'Mohon DIperiksa'),
+(9, 18, 18, 4, 'ACC Kadiv');
+
 -- --------------------------------------------------------
 
 --
@@ -2080,15 +2116,41 @@ CREATE TABLE `tblsm` (
   `SMtanggalterima` date NOT NULL,
   `SMperihal` varchar(255) NOT NULL,
   `SMuntuk` varchar(255) NOT NULL,
-  `SMstatus` int(11) NOT NULL
+  `SMstatus` int(11) NOT NULL,
+  `SMketdir` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tblsm`
 --
 
-INSERT INTO `tblsm` (`SMid`, `SMasal`, `SMnomor`, `SMtanggalsurat`, `SMtanggalterima`, `SMperihal`, `SMuntuk`, `SMstatus`) VALUES
-(1, 'OJK', 'S-193/MS.71/2022', '2022-04-18', '2022-06-20', 'Undangan Seminar Strategi Penguatan SDM Industri Jasa Keuangan Syariah', 'Dirut Jamkrida Riau', 0);
+INSERT INTO `tblsm` (`SMid`, `SMasal`, `SMnomor`, `SMtanggalsurat`, `SMtanggalterima`, `SMperihal`, `SMuntuk`, `SMstatus`, `SMketdir`) VALUES
+(1, 'OJK', 'S-193/MS.71/2022', '2022-04-18', '2022-06-20', 'Undangan Seminar Strategi Penguatan SDM Industri Jasa Keuangan Syariah', 'Direktur Utama', 3, 'Diproses Sesuai Aturan, Tembusan Kabag IT'),
+(2, 'ICON + ', 'ICN/KS-03/JR/VI/22', '2022-06-29', '2022-06-30', 'Kerja Sama', 'Direktur Umum', 3, 'Tembusan IT, Proses Secara Aturan'),
+(3, 'OJK', 'ICN/KS-03/JR/VI/22', '2022-06-30', '2022-07-01', 'Kerja Sama', 'Direktur Utama', 3, 'Diproses Sesuai Aturan, Tembusan Kabag IT');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblsm_notify`
+--
+
+CREATE TABLE `tblsm_notify` (
+  `SMNOid` int(11) NOT NULL,
+  `SMid` int(11) NOT NULL,
+  `ROLEid` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tblsm_notify`
+--
+
+INSERT INTO `tblsm_notify` (`SMNOid`, `SMid`, `ROLEid`) VALUES
+(3, 1, 19),
+(4, 1, 3),
+(5, 2, 3),
+(6, 3, 19),
+(7, 3, 3);
 
 -- --------------------------------------------------------
 
@@ -2383,6 +2445,26 @@ CREATE TABLE `tbltrjm` (
   `TRJMpasangan` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `tbltrjm`
+--
+
+INSERT INTO `tbltrjm` (`TRJMid`, `TRJMnama`, `TRJMalamat`, `TRJMttl`, `TRJMusia`, `TRJMsiup`, `TRJMktp`, `TRJMnpwp`, `TRJMalamatsaatini`, `TRJMstatuspernikahan`, `TRJMpekerjaan`, `TRJMusaha`, `TRJMstatus`, `TRJMpasangan`) VALUES
+(17, 'SAFITRI', '--', '', '0', NULL, NULL, NULL, '', '', '', '', '', ''),
+(18, 'KUSNO', '--', '', '0', NULL, NULL, NULL, '', '', '', '', '', ''),
+(19, 'KARIADI', '--', '', '0', NULL, NULL, NULL, '', '', '', '', '', ''),
+(20, 'SUBROTO', '--', '', '0', NULL, NULL, NULL, '', '', '', '', '', ''),
+(21, 'SUNARTI', '--', '', '0', NULL, NULL, NULL, '', '', '', '', '', ''),
+(22, 'DEDI IRAWAN', '--', '', '0', NULL, NULL, NULL, '', '', '', '', '', ''),
+(23, 'YENDRI HERIANTO', '--', '', '0', NULL, NULL, NULL, '', '', '', '', '', ''),
+(24, 'KHOIRUDDIN HARAHAP', '--', '', '0', NULL, NULL, NULL, '', '', '', '', '', ''),
+(25, 'SUNASRIL', '--', '', '0', NULL, NULL, NULL, '', '', '', '', '', ''),
+(26, 'SUHENDRA SARIANDI', '--', '', '0', NULL, NULL, NULL, '', '', '', '', '', ''),
+(27, 'SUKINI', '--', '', '0', NULL, NULL, NULL, '', '', '', '', '', ''),
+(28, 'AGUS WANTO', '--', '', '0', NULL, NULL, NULL, '', '', '', '', '', ''),
+(29, 'ROHIMAH BR RINTONGA', '--', '', '0', NULL, NULL, NULL, '', '', '', '', '', ''),
+(30, 'SARINEM', '--', '', '0', NULL, NULL, NULL, '', '', '', '', '', '');
+
 -- --------------------------------------------------------
 
 --
@@ -2421,6 +2503,13 @@ CREATE TABLE `tbl_comments` (
   `roleId_sender` int(11) NOT NULL,
   `roleId_receiver` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_comments`
+--
+
+INSERT INTO `tbl_comments` (`comment_id`, `comment_subject`, `comment_text`, `comment_status`, `roleId_sender`, `roleId_receiver`) VALUES
+(1, 'Data CAC', 'Data CAC Baru', 1, 2, 3);
 
 -- --------------------------------------------------------
 
@@ -2542,7 +2631,22 @@ INSERT INTO `user-sub_menu` (`id`, `menu_id`, `title`, `url`, `icon`, `is_active
 (47, 5, 'Rate', 'Rate', '--', 1),
 (48, 1, 'Migrasi Data ', 'Home', '<>', 1),
 (49, 20, 'Surat Masuk ', 'Sekretaris/suratmasuk', 'fas fa-fw fa-mail', 1),
-(50, 20, 'Akseptasi Surat Masuk', 'Sekretaris/accsuratmasuk', '--', 1);
+(50, 20, 'Akseptasi Surat Masuk', 'Sekretaris/accsuratmasuk', '--', 1),
+(51, 20, 'Surat Masuk Sekdir', 'Sekretaris/accsuratmasuksekdir', '--', 1),
+(52, 10, 'Permohonan Surat Masuk', 'Direktur/suratmasuk', '--', 1),
+(53, 5, 'Surat Masuk', 'Table/suratmasuk', '--', 1),
+(54, 6, 'Surat Masuk', 'operasional/suratmasuk', '--', 1),
+(55, 10, 'Surat Masuk', 'Direktur/suratmasuknotify', '--', 1),
+(56, 11, 'Surat Masuk', 'Legal/suratmasuk', '--', 1),
+(57, 12, 'Surat Masuk', 'Risk/suratmasuk', '--', 1),
+(58, 20, 'Surat Masuk', 'Sekretaris/suratmasuknotify', '--', 1),
+(59, 21, 'Surat Masuk', 'Spi/suratmasuk', '--', 1),
+(60, 22, 'Surat Masuk', 'Umum/suratmasuk', '--', 1),
+(61, 23, 'Surat Masuk', 'Sdm/suratmasuk', '--', 1),
+(62, 24, 'Surat Masuk', 'Keuangan/suratmasuk', '--', 1),
+(63, 20, 'Monitoring Surat Masuk', 'Sekretaris/monitoringsuratmasuk', '--', 1),
+(64, 25, 'Permohonan Surat Masuk Dirum', 'Direktur/suratmasukdirum', '--', 1),
+(65, 5, 'Approval Request', 'Table/approvalrfa', '--', 1);
 
 -- --------------------------------------------------------
 
@@ -2607,7 +2711,12 @@ INSERT INTO `user_access_menu` (`id`, `role_id`, `menu_id`) VALUES
 (58, 1, 19),
 (59, 13, 2),
 (60, 13, 5),
-(61, 1, 20);
+(61, 1, 20),
+(62, 1, 21),
+(63, 1, 23),
+(64, 1, 22),
+(65, 1, 24),
+(66, 1, 25);
 
 -- --------------------------------------------------------
 
@@ -2638,7 +2747,12 @@ INSERT INTO `user_menu` (`id`, `menu`, `logo`) VALUES
 (11, 'Legal', 'micon dw dw-paint-brush'),
 (12, 'Manajemen Resiko', 'micon dw dw-calendar1'),
 (19, 'Message', 'micon dw dw-message'),
-(20, 'Sekretaris dan CS', 'micon dw dw-clipboard');
+(20, 'Sekretaris dan CS', 'micon dw dw-clipboard'),
+(21, 'Kepala SPI', 'micon dw dw-clipboard'),
+(22, 'Umum', 'micon dw dw-clipboard'),
+(23, 'SDM', 'micon dw dw-clipboard'),
+(24, 'Keuangan dan Investasi', 'micon dw dw-clipboard'),
+(25, 'Direktur Umum', '');
 
 -- --------------------------------------------------------
 
@@ -2667,7 +2781,11 @@ INSERT INTO `user_role` (`id`, `role`) VALUES
 (13, 'Staff Divisi Penjaminan'),
 (14, 'Sekretaris Perusahaan'),
 (15, 'Sekretaris Direksi'),
-(16, 'Customer Service');
+(16, 'Customer Service'),
+(17, 'Plt. Kabag. SDM'),
+(18, 'Plt. Kabag. Umum'),
+(19, 'Kepala SPI'),
+(20, 'Direktur Umum');
 
 --
 -- Indexes for dumped tables
@@ -2874,6 +2992,12 @@ ALTER TABLE `tblsm`
   ADD PRIMARY KEY (`SMid`);
 
 --
+-- Indexes for table `tblsm_notify`
+--
+ALTER TABLE `tblsm_notify`
+  ADD PRIMARY KEY (`SMNOid`);
+
+--
 -- Indexes for table `tblspj`
 --
 ALTER TABLE `tblspj`
@@ -2998,13 +3122,13 @@ ALTER TABLE `tblcbcppengeluaran`
 -- AUTO_INCREMENT for table `tbldjpd`
 --
 ALTER TABLE `tbldjpd`
-  MODIFY `DJPDid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `DJPDid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `tbldjph`
 --
 ALTER TABLE `tbldjph`
-  MODIFY `DJPid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `DJPid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tblijp`
@@ -3040,19 +3164,25 @@ ALTER TABLE `tblkur`
 -- AUTO_INCREMENT for table `tblrfapenj`
 --
 ALTER TABLE `tblrfapenj`
-  MODIFY `RFAid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `RFAid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tblsm`
 --
 ALTER TABLE `tblsm`
-  MODIFY `SMid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `SMid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tblsm_notify`
+--
+ALTER TABLE `tblsm_notify`
+  MODIFY `SMNOid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tbltrjm`
 --
 ALTER TABLE `tbltrjm`
-  MODIFY `TRJMid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `TRJMid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `tblupload`
@@ -3070,7 +3200,7 @@ ALTER TABLE `tbluploadcbcp`
 -- AUTO_INCREMENT for table `tbl_comments`
 --
 ALTER TABLE `tbl_comments`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -3082,25 +3212,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user-sub_menu`
 --
 ALTER TABLE `user-sub_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT for table `user_access_menu`
 --
 ALTER TABLE `user_access_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=67;
 
 --
 -- AUTO_INCREMENT for table `user_menu`
 --
 ALTER TABLE `user_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `user_role`
 --
 ALTER TABLE `user_role`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Constraints for dumped tables

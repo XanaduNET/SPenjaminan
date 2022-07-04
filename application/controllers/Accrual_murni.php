@@ -191,7 +191,7 @@ class Accrual_murni extends CI_Controller
 
         $data['bulan'] = $Monthchecked;
 
-        $data['title'] = 'Accrual';
+        $data['title'] = 'Accrual Murni';
         $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
         $data['gpp'] = $this->Model_table_accrual->getGPP();
         $data['opk'] = $this->Model_table_accrual->getOPK();
@@ -214,7 +214,7 @@ class Accrual_murni extends CI_Controller
         $this->load->view('template/header_body', $data);
         $this->load->view('template/right_sidebar', $data);
         $this->load->view('template/left_sidebar', $data);
-        $this->load->view('operasional/accrual', $data);
+        $this->load->view('operasional/accrual_murni', $data);
         $this->load->view('template/footer');
     }
 

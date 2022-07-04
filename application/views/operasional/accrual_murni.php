@@ -529,7 +529,7 @@ $no = 1;
                                             </td>
                                             <td><?php echo $u->DJPDfeebank ?></td>
                                             <td><?php echo number_format($total - $u->DJPDfeebank, 0, ".", ".") ?></td>
-                                            <td> <?php echo number_format(($hasilbulanawal = (($u->DJPDimbaljasa * $kalibulan[$i]) + (($u->DJPDimbaljasa - ($u->DJPDimbaljasa * $kalibulan[$i])) / ($u->DJPDjangkawaktu - $flagkaliawal) * $flagbulan[$i]))), 0, ".", ".") ?>
+                                            <td> <?php echo number_format(($hasilbulanawal = ($u->DJPDimbaljasa /$u->DJPDjangkawaktu)), 0, ".", ".") ?>
                                             </td>
                                             <td><?php
 
@@ -957,7 +957,7 @@ if ($flag == $u->DJPjumlahpk) {
 </div>
 <div><?=validation_errors()?></div>
 
-<?=form_open('Accrual', ['class' => 'form-horizontal'])?>
+<?=form_open('Accrual_murni', ['class' => 'form-horizontal'])?>
 <form role="form" class="form-horizontal">
 		<form role="form" class="form-horizontal">
 		<div class="row">
