@@ -28,7 +28,6 @@ foreach ($bulan as $u) {
         $bulanjumlah = $u;
         $awal = 0;
 
-        $kalibulan[1] = (20 / 100);
         $flagkali = 1;
         $flagkaliawal = 1;
         $flagbulan[1] = 0;
@@ -39,9 +38,6 @@ foreach ($bulan as $u) {
 
         $bulanini[2] = "FEBRUARI $year";
         $bulandepan[2] = "MAR-FEB " . $year + 1;
-
-        $kalibulan[1] = (20 / 100);
-        $kalibulan[2] = (20 / 100);
 
         $flagbulan[2] = 0;
         $flagbulan[1] = 1;
@@ -57,10 +53,6 @@ foreach ($bulan as $u) {
         $bulandepan[2] = "APR-MAR " . $year + 1;
         $bulanini[3] = "MARET $year";
         $bulandepan[3] = "APR-MAR " . $year + 1;
-
-        $kalibulan[1] = (20 / 100);
-        $kalibulan[2] = (20 / 100);
-        $kalibulan[3] = (20 / 100);
 
         $flagbulan[3] = 0;
         $flagbulan[2] = 1;
@@ -79,11 +71,6 @@ foreach ($bulan as $u) {
         $bulandepan[3] = "MEI-APR " . $year + 1;
         $bulanini[4] = "APRIL $year";
         $bulandepan[4] = "MEI-APR " . $year + 1;
-
-        $kalibulan[1] = (20 / 100);
-        $kalibulan[2] = (20 / 100);
-        $kalibulan[3] = (20 / 100);
-        $kalibulan[4] = (20 / 100);
 
         $flagbulan[4] = 0;
         $flagbulan[3] = 1;
@@ -105,12 +92,6 @@ foreach ($bulan as $u) {
         $bulandepan[4] = "JUN-MEI " . $year + 1;
         $bulanini[5] = "MEI $year";
         $bulandepan[5] = "JUN-MEI " . $year + 1;
-
-        $kalibulan[1] = (20 / 100);
-        $kalibulan[2] = (20 / 100);
-        $kalibulan[3] = (20 / 100);
-        $kalibulan[4] = (20 / 100);
-        $kalibulan[5] = (20 / 100);
 
         $flagbulan[5] = 0;
         $flagbulan[4] = 1;
