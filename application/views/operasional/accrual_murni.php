@@ -529,7 +529,22 @@ $no = 1;
                                             </td>
                                             <td><?php echo $u->DJPDfeebank ?></td>
                                             <td><?php echo number_format($total - $u->DJPDfeebank, 0, ".", ".") ?></td>
-                                            <td> <?php echo number_format(($hasilbulanawal = ($u->DJPDimbaljasa /$u->DJPDjangkawaktu)), 0, ".", ".") ?>
+                                            <td> <?php 
+                                           
+                  
+                                            $date1 = new DateTime(date($u->DJPDtanggalawal));
+                                            $date2 = new DateTime(date($u->DJPtanggalverif));
+
+                                            $interval = $date1->diff($date2);
+                                          
+                                            if($interval->m != 0){
+                                            echo number_format(($hasilbulanawal = ($u->DJPDimbaljasa/$u->DJPDjangkawaktu)*($interval->m+$flagkali)), 0, ".", ".");   
+                                            }
+                                            else{
+                                                echo number_format(($hasilbulanawal = ($u->DJPDimbaljasa/$u->DJPDjangkawaktu)*$flagkali), 0, ".", ".");
+                                            }
+                                        
+                                           ?>
                                             </td>
                                             <td><?php
 
@@ -552,11 +567,15 @@ $no = 1;
                 if ($u->DJPDjangkawaktu - $diff <= 12) {
                     $a = 12;
                     $a -= $bulanjumlah;
+                    
                 } else {
                     $a = 12;
                 }
 
-                echo number_format(($hasilbulanakhir = (($u->DJPDimbaljasa - ($u->DJPDimbaljasa * $kalibulan[$i])) / ($u->DJPDjangkawaktu - $flagkaliawal) * $a)), 0, ".", ".")?>
+
+
+                echo number_format(($hasilbulanakhir = ((($u->DJPDimbaljasa/$u->DJPDjangkawaktu)* $a) )), 0, ".", ".");
+               ?>
                                         </td>
                                         <td><?php
 if (($u->DJPDimbaljasa - $hasilbulanawal - $hasilbulanakhir) < 0) {
@@ -658,10 +677,52 @@ $no++;
                                         </td>
                                         <td><?php echo $u->DJPDfeebank ?></td>
                                         <td><?php echo number_format($total - $u->DJPDfeebank, 0, ".", ".") ?></td>
-                                        <td> <?php echo number_format(($hasilbulanawal = (($u->DJPDimbaljasa * $kalibulan[$i]) + (($u->DJPDimbaljasa - ($u->DJPDimbaljasa * $kalibulan[$i])) / ($u->DJPDjangkawaktu - $flagkaliawal) * $flagbulan[$i]))), 0, ".", ".") ?>
-                                        </td>
-                                        <td><?php echo number_format(($hasilbulanakhir = (($u->DJPDimbaljasa - ($u->DJPDimbaljasa * $kalibulan[$i])) / ($u->DJPDjangkawaktu - $flagkaliawal) * 12)), 0, ".", ".") ?>
-                                        </td>
+                                        <td> <?php 
+                                           
+                  
+                                           $date1 = new DateTime(date($u->DJPDtanggalawal));
+                                           $date2 = new DateTime(date($u->DJPtanggalverif));
+
+                                           $interval = $date1->diff($date2);
+                                         
+                                           if($interval->m != 0){
+                                           echo number_format(($hasilbulanawal = ($u->DJPDimbaljasa/$u->DJPDjangkawaktu)*($interval->m+$flagkali)), 0, ".", ".");   
+                                           }
+                                           else{
+                                               echo number_format(($hasilbulanawal = ($u->DJPDimbaljasa/$u->DJPDjangkawaktu)*$flagkali), 0, ".", ".");
+                                           }
+                                       
+                                          ?>
+                                           </td>
+                                           <td><?php
+
+$date1 = $u->DJPtanggalverif;
+$date2 = date('Y-m-d');
+
+$ts1 = strtotime($date1);
+$ts2 = strtotime($date2);
+
+$year1 = date('Y', $ts1);
+$year2 = date('Y', $ts2);
+
+$month1 = date('m', $ts1);
+$month2 = date('m', $ts2);
+
+$day1 = date('d', $ts1);
+$day2 = date('d', $ts2);
+
+$diff = (($year2 - $year1) * 12) + ($month2 - $month1);
+if ($u->DJPDjangkawaktu - $diff <= 12) {
+    $a = 12;
+    $a -= $bulanjumlah;
+} else {
+    $a = 12;
+}
+
+
+
+echo number_format(($hasilbulanakhir = ((($u->DJPDimbaljasa/$u->DJPDjangkawaktu)* $a) )), 0, ".", ".")?>
+                        </td>
                                         <td><?php
 if (($u->DJPDimbaljasa - $hasilbulanawal - $hasilbulanakhir) < 0) {
                     echo "--";
