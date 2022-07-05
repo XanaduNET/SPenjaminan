@@ -36,6 +36,7 @@ $querySubMenu = " SELECT *
                           ON `user-sub_menu`.`menu_id` = `user_menu`.`id`
                         WHERE `user-sub_menu`.`menu_id` = $menuId
                           AND `user-sub_menu`.`is_active` = 1
+                          ORDER BY `title` ASC
                         ";
 $subMenu = $this->db->query($querySubMenu)->result_array();
 ?>

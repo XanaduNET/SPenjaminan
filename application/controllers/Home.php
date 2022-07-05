@@ -13,7 +13,6 @@ class Home extends CI_Controller
         $this->load->model('home_model');
     }
 
-
     public function penyebut($hasil)
     {
 
@@ -108,6 +107,7 @@ class Home extends CI_Controller
 
         $userid = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
 
+        $DJPmaxnilai = 0;
         if ($sheetcount > 1) {
             $dataDJPH = array();
             $dataDJPHUpdate = array();
@@ -130,7 +130,7 @@ class Home extends CI_Controller
                 $ppnamates = $row->PPnama;
                 $ppalamattes = $row->PPalamat;
             }
-            
+
             // END
             $PPid = $ppidtes;
             $PPnama = $ppnamates;
@@ -193,7 +193,6 @@ class Home extends CI_Controller
             $totalnilaiPK = 0;
             $totalfeebank = 0;
             $totaljumlahbiaya = 0;
-
 
             for ($i = 2; $i < $sheetcount; $i++) {
                 $dataDJPD = array();
@@ -271,19 +270,23 @@ class Home extends CI_Controller
 
                 $this->home_model->insertbatchdjpd($dataDJPD);
 
-                $totalterjamin  += 1;
-                $totalnilaiPK  += $DJPDplafondkredit;
+                if ($DJPmaxnilai <= str_replace(',', '', $sheetdata[$i][7])) {
+                    $DJPmaxnilai += str_replace(',', '', $sheetdata[$i][7]);
+                }
+                $totalterjamin += 1;
+                $totalnilaiPK += $DJPDplafondkredit;
                 $totaljaminan += $DJPDnilaipenjaminan;
                 $totalijp += $DJPDimbaljasa;
                 $totalfeebank += $DJPDfeebank;
                 $totaladmin += $DJPDfeeadm;
                 $totalmaterai = $DJPDfeematerai;
-                $totaljumlahbiaya = ($totalijp+$totaladmin+$totalmaterai) - $totalfeebank ;
+                $totaljumlahbiaya = ($totalijp + $totaladmin + $totalmaterai) - $totalfeebank;
 
             }
-            $totaljumlahbiaya = ($totalijp+$totaladmin+$totalmaterai) - $totalfeebank ;
+            $totaljumlahbiaya = ($totalijp + $totaladmin + $totalmaterai) - $totalfeebank;
 
             $dataDJPHUpdate = array(
+                'DJPtahun' => 2022,
                 'DJPjumlahPK' => $totalterjamin,
                 'DJPjumlahnilaiPK' => $totalnilaiPK,
                 'DJPjumlahimbaljasa' => $totalijp,
@@ -291,18 +294,14 @@ class Home extends CI_Controller
                 'DJPfeebank' => $totalfeebank,
                 'DJPfeeadmin' => $totaladmin,
                 'DJPfeematerai' => $totalmaterai,
-                
+                'DJPmaxnilai' => $DJPmaxnilai,
                 'DJPjumlahbiaya' => $totaljumlahbiaya,
                 'DJPjumlahbiayaterbilang' => $this->penyebut($totaljumlahbiaya),
-            );  
-                $this->db->where('DJPid', $DJPid);
-                $this->db->update('tbldjph', $dataDJPHUpdate);
-           
-          
+            );
+            $this->db->where('DJPid', $DJPid);
+            $this->db->update('tbldjph', $dataDJPHUpdate);
 
-            
         }
-     
 
     }
 
