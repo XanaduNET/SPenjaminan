@@ -1,0 +1,215 @@
+User: ::1 - July 6, 2022, 08:42:31
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 6 2022, 09:44:21
+Attempt: Success Add Data Terjamin
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - July 6 2022, 09:52:07
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - July 6 2022, 09:52:07
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - July 6, 2022, 10:41:53
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - July 6, 2022, 10:42:00
+Attempt: Success Login
+User: Tiara
+Aksi: Login
+-------------------------
+User: ::1 - July 6, 2022, 11:29:08
+Attempt: Success Upload Berkas
+User: Tiara
+Aksi: Case By Case Produktif
+-------------------------
+User: ::1 - July 6, 2022, 11:32:26
+Attempt: Success Logout
+User: Tiara
+Aksi: Logout
+-------------------------
+User: ::1 - July 6, 2022, 11:32:31
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 6, 2022, 11:47:29
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - July 6, 2022, 11:47:37
+Attempt: Failed Login
+User: Tiara
+Aksi: Login
+-------------------------
+User: ::1 - July 6, 2022, 11:47:44
+Attempt: Success Login
+User: Tiara
+Aksi: Login
+-------------------------
+User: ::1 - July 6, 2022, 12:01:48
+Attempt: Success Logout
+User: Tiara
+Aksi: Logout
+-------------------------
+User: ::1 - July 6, 2022, 12:02:33
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 6, 2022, 12:05:09
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Manajemen Risiko
+-------------------------
+User: ::1 - July 6, 2022, 12:05:09
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Manajemen Risiko
+-------------------------
+User: ::1 - July 6, 2022, 12:05:39
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Legal
+-------------------------
+User: ::1 - July 6, 2022, 12:05:39
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - July 6, 2022, 12:11:26
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Direktur
+-------------------------
+User: ::1 - July 6,2022, 12:11:26
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - July 6 2022, 12:12:48
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - July 6 2022, 12:14:47
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - July 6 2022, 12:15:20
+Attempt: Success Tambah Data Terjamin Lengkap
+User: Akbar
+Aksi: Data Nasabah
+-------------------------
+User: ::1 - July 6, 2022, 12:19:16
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - July 6, 2022, 12:19:17
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - July 6, 2022, 12:19:19
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - July 6, 2022, 12:19:20
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - July 6, 2022, 12:19:22
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - July 6, 2022, 12:19:23
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - July 6, 2022, 12:19:24
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - July 6, 2022, 12:19:24
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - July 6, 2022, 12:19:24
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - July 6, 2022, 12:19:24
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - July 6, 2022, 12:19:24
+Attempt: Success Delete Data Penajaminan
+User: Akbar
+Aksi: Data Penjaminan
+-------------------------
+User: ::1 - July 6,2022, 12:20:55
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 6,2022, 12:22:13
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 6,2022, 12:24:38
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Fee Penjaminan
+-------------------------
+User: ::1 - July 6,2022, 12:24:50
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Fee Penjaminan
+-------------------------
+User: ::1 - July 6,2022, 12:25:28
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Fee Penjaminan
+-------------------------
+User: ::1 - July 6,2022, 12:26:03
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Fee Penjaminan
+-------------------------
+User: ::1 - July 6,2022, 12:26:09
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Fee
+-------------------------
+User: ::1 - July 6,2022, 12:26:16
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Fee
+-------------------------
+User: ::1 - July 6,2022, 12:26:18
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Fee
+-------------------------

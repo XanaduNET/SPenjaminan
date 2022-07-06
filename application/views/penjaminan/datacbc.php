@@ -94,7 +94,7 @@ if ($c['CBCstatus'] == 0) {
                                                         <input type='file' name='userfile' size='20' />
 
                                                         <br>
-                                                        <input class="form-check-input" type="checkbox" value="1"
+                                                        <input class="check-input" type="checkbox" value="1"
                                                             name="doc_lengkap" id="doc_lengkap" checked>
                                                         <br>
                                                         <label class="form-check-label" for="doc_lengkap">
@@ -208,7 +208,9 @@ if ($c['CBCPstatus'] == 0) {
                                                         <input type='file' name='userfile'/>
 
                                                         <br>
-                                                        <input class="form-check-input" type="checkbox" value="1"
+                                                        <br>
+                                                        <br>
+                                                        <input class="check-input" type="checkbox" value="1"
                                                             name="doc_lengkap" id="doc_lengkap" checked>
                                                         <br>
                                                         <label class="form-check-label" for="doc_lengkap">

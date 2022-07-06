@@ -411,7 +411,7 @@ class Casebc extends CI_Controller
         $dataCBCP = array(
             'CBCPnomormemo' => $CBCPnomormemo,
             'CBCPprinsipal' => $CBCPprinsipal,
-            'CBCPtanggalinput' => $CBCPtanggalinput,
+            'CBCPtanggal' => $CBCPtanggalinput,
             'CBCPjenis' => $CBCPjenis,
             'CBCPsifat' => $CBCPsifat,
             'CBCPplafondkredit' => $CBCPplafondkredit,

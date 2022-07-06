@@ -18,7 +18,9 @@
                                             <th class="col-md-2">KTP Terjamin</th>
                                             <th class="col-md-2">No Surat Izin Usaha Perdagangan</th>
                                             <th class="col-md-2">NPWP Terjamin</th>
+
                                             <th class="col-md-2">Kategori Pekerjaan</th>
+
                                             <th class="col-md-2">No Akad</th>
                                             <th class="col-md-2">Tanggal Akad</th>
                                             <th class="col-md-2">Jangka Waktu</th>
@@ -134,8 +136,7 @@ foreach ($ambilpkrj as $row) {
                             </div>
                             <div class="card-footer">
 
-                                <?php if ($this->uri->segment(4) == 2) {
-
+                                <?php if ($this->uri->segment(3) == 2 || $this->uri->segment(3) == 3) {
     //
 } else {?>
                                 <button type="button" name="add" id="add" class="btn btn-success">Add More</button>
@@ -150,7 +151,7 @@ foreach ($ambilpkrj as $row) {
 
     <!-- DARI UNTUK FROM BIAYA -->
 
-    <form id="formbiayabiaya" method="post" style="display: none; ">
+    <form id="formbiayabiaya" method="post">
         <div class="container-fluid">
             <div class="card-body">
                 <div class="table-responsive">
@@ -312,8 +313,6 @@ foreach ($ambilpkrj as $row) {
 
 
         $('#formnasabah').on('submit', function(e) {
-
-            $('#formbiayabiaya').css('display', 'block');
             var data = $("#formnasabah :input").serialize();
 
 
@@ -528,7 +527,13 @@ foreach ($ambilpkrj as $row) {
                 '" name="DJPDobjekpenjaminan[]"></td><td> <button type="button" name="remove" id="' +
                 i + '" class="btn btn-danger btn_remove">X</button> </td> </tbody>');
 
-            
+
+            var DJPDplafondkreditrubah = document.getElementById("DJPDplafondkredit" + i);
+            DJPDplafondkreditrubah.addEventListener("keyup", function(e) {
+                DJPDplafondkreditrubah.value = convertRupiah(this.value);
+            });
+            DJPDplafondkreditrubah.addEventListener('keydown', function(event) {
+                return isNumberKey(event);
             });
 
             var DJPDimbaljasarubah = document.getElementById("DJPDimbaljasa" + i);
@@ -685,7 +690,7 @@ foreach ($ambilpkrj as $row) {
                 var coverage2 = parseInt(coverage);
                 var nilaipnjm = ((coverage2 / 100) * plafond2);
 
-                document.getElementById("DJPDnilaipenjaminan" + i).value = Math.round(nilaipnjm);
+                document.getElementById("DJPDnilaipenjaminan" + i).value = nilaipnjm;
 
 
 
@@ -764,7 +769,7 @@ foreach ($ambilpkrj as $row) {
         var coverage2 = parseInt(coverage);
         var nilaipnjm = (coverage2 / 100) * plafond2;
 
-        document.getElementById("DJPDnilaipenjaminan").value = Math.round(nilaipnjm);
+        document.getElementById("DJPDnilaipenjaminan").value = nilaipnjm;
 
 
 
@@ -890,6 +895,20 @@ foreach ($ambilpkrj as $row) {
     DJPjumlahfeebankrubah.addEventListener('click', function(event) {
         return isNumberKey(event);
     });
+    var DJPfeematerairubah = document.getElementById("DJPfeematerai");
+    DJPfeematerairubah.addEventListener("keyup", function(e) {
+        DJPfeematerairubah.value = convertRupiah(this.value);
+    });
+    DJPfeematerairubah.addEventListener('keydown', function(event) {
+        return isNumberKey(event);
+    });
+    var DJPfeeadminrubah = document.getElementById("DJPfeeadmin");
+    DJPfeeadminrubah.addEventListener("keyup", function(e) {
+        DJPfeeadminrubah.value = convertRupiah(this.value);
+    });
+    DJPfeeadminrubah.addEventListener('keydown', function(event) {
+        return isNumberKey(event);
+    });
     var DJPjumlahbiayarubah = document.getElementById("DJPjumlahbiaya");
     DJPjumlahbiayarubah.addEventListener("click", function(e) {
         DJPjumlahbiayarubah.value = convertRupiah(this.value);
@@ -946,7 +965,9 @@ foreach ($ambilpkrj as $row) {
 
 </div>
 </div>
-
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
 </div>
 </div>
 </div>

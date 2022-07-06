@@ -991,7 +991,7 @@ Dari hasil <i> On The Desk </i> (OTD), maka nilai dasar agunan calon terjamin di
     <td height="10%">
     </td>
    <td style="text-align: left;">
-   <u> <b> SAMUEL P  </u> </b> <br><b> Plt. Kepala Divisi Penjaminan </b>
+   <u> <b> RIZKI KURNIA PUTRA  </u> </b> <br><b> Kepala Divisi Penjaminan </b>
     </td>
 
     <td>
@@ -999,7 +999,7 @@ Dari hasil <i> On The Desk </i> (OTD), maka nilai dasar agunan calon terjamin di
     <td>
     </td>
     <td style="text-align: right;">
-   <u> <b> RIA EKA SARI PUTRI </u> </b> <br><b> Marketing/Analis </b>
+   <u> <b> TIARA PUTRI </u> </b> <br><b> Marketing/Analis </b>
     </td>
 </tr>
 

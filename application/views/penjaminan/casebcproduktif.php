@@ -256,7 +256,7 @@ $(document).ready(function() {
                     <div class="form-group row">
                         <label class="col-sm-2 col-form-label">Alamat Saat Ini</label>
                         <div class="form-group col-lg-3 col-sm-4">
-                            <input style="width: 100%;" type="text" name="TRJMalamatsekarang" id="TRJMalamatsekarang"
+                            <input style="width: 100%;" type="text" name="TRJMalamatsaatini" id="TRJMalamatsaatini"
                                 class="form-control" required>
                         </div>
                     </div>
