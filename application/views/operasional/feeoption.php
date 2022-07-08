@@ -26,6 +26,8 @@
                                         <a class="btn btn-outline-primary" href="Fee">Fee Format Lama</a>
                                         <br><br>/<br><br>
                                         <a class="btn btn-outline-secondary" href="Fee_baru">Fee Format Baru</a>
+                                        <br><br>/<br><br>
+                                        <a class="btn btn-outline-secondary" href="Fee_murni">Fee Format Murni</a>
                                 </div>
                                 </center>
                                 <div class="modal-footer">

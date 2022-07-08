@@ -1,0 +1,20 @@
+User: ::1 - July 8, 2022, 10:15:02
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 8,2022, 14:05:56
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Fee Penjaminan
+-------------------------
+User: ::1 - July 8,2022, 14:06:57
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 8,2022, 14:17:46
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Fee Penjaminan
+-------------------------

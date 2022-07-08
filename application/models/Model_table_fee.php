@@ -32,7 +32,7 @@ class Model_table_fee extends CI_Model
         $this->db->join('tbljsp', 'tbldjph.JSPid=tbljsp.JSPid');
         $this->db->join('tbldjpd', 'tbldjph.DJPid=tbldjpd.DJPid');
         $this->db->where_in('tbldjph.GPPid', $GPPid);
-        $this->db->where_in('YEAR(DJPtanggaldeklarasi)', $Tahun);
+        $this->db->where_in('YEAR(DJPtanggalcetak)', $Tahun);
         $query = $this->db->get();
 
         if ($query->num_rows() > 0) {
@@ -60,7 +60,7 @@ class Model_table_fee extends CI_Model
         $this->db->join('tbljsp', 'tbldjph.JSPid=tbljsp.JSPid');
         $this->db->join('tbldjpd', 'tbldjph.DJPid=tbldjpd.DJPid');
         $this->db->where_in('tbldjph.OPKid', $OPKid);
-        $this->db->where_in('YEAR(DJPtanggaldeklarasi)', $Tahun);
+        $this->db->where_in('YEAR(DJPtanggalcetak)', $Tahun);
         $query = $this->db->get();
 
         if ($query->num_rows() > 0) {
@@ -89,7 +89,7 @@ class Model_table_fee extends CI_Model
         $this->db->join('tbldjpd', 'tbldjph.DJPid=tbldjpd.DJPid');
         $this->db->where_in('tbldjph.GPPid', $GPPid);
         $this->db->where_in('tbldjph.OPKid', $OPKid);
-        $this->db->where_in('YEAR(DJPtanggaldeklarasi)', $Tahun);
+        $this->db->where_in('YEAR(DJPtanggalcetak)', $Tahun);
         $query = $this->db->get();
 
         if ($query->num_rows() > 0) {
@@ -121,7 +121,7 @@ class Model_table_fee extends CI_Model
         $this->db->where_in("DATE_FORMAT(DJPtanggalverif,'%m')", $MONTHid);
         $this->db->where_in('tbldjph.GPPid', $GPPid);
         $this->db->where_in('tbldjph.OPKid', $OPKid);
-        $this->db->where_in('YEAR(DJPtanggaldeklarasi)', $Tahun);
+        $this->db->where_in('YEAR(DJPtanggalcetak)', $Tahun);
         $query = $this->db->get();
 
         if ($query->num_rows() > 0) {
@@ -151,7 +151,7 @@ class Model_table_fee extends CI_Model
         $this->db->join('tbldjpd', 'tbldjph.DJPid=tbldjpd.DJPid');
         $this->db->where_in("DATE_FORMAT(DJPtanggalverif,'%m')", $MONTHid);
         $this->db->where_in('tbldjph.OPKid', $OPKid);
-        $this->db->where_in('YEAR(DJPtanggaldeklarasi)', $Tahun);
+        $this->db->where_in('YEAR(DJPtanggalcetak)', $Tahun);
         $query = $this->db->get();
 
         if ($query->num_rows() > 0) {
@@ -180,7 +180,7 @@ class Model_table_fee extends CI_Model
         $this->db->join('tbljsp', 'tbldjph.JSPid=tbljsp.JSPid');
         $this->db->join('tbldjpd', 'tbldjph.DJPid=tbldjpd.DJPid');
         $this->db->where_in("DATE_FORMAT(DJPtanggalverif,'%m')", $MONTHid);
-        $this->db->where_in('YEAR(DJPtanggaldeklarasi)', $Tahun);
+        $this->db->where_in('YEAR(DJPtanggalcetak)', $Tahun);
 
         $query = $this->db->get();
         if ($query->num_rows() > 0) {
@@ -207,7 +207,7 @@ class Model_table_fee extends CI_Model
         $this->db->from('tbldjph');
         $this->db->join('tbldjpd', 'tbldjph.DJPid=tbldjpd.DJPid');
         $this->db->where_in("DATE_FORMAT(DJPtanggalverif,'%m')", $MONTHid);
-        $this->db->where_in('YEAR(DJPtanggaldeklarasi)', $Tahun);
+        $this->db->where_in('YEAR(DJPtanggalcetak)', $Tahun);
 
         $query = $this->db->get();
         if ($query->num_rows() > 0) {
@@ -258,7 +258,7 @@ class Model_table_fee extends CI_Model
         $this->db->join('tbldjpd', 'tbldjph.DJPid=tbldjpd.DJPid');
         $this->db->where_in('tbldjph.GPPid', $GPPid);
         $this->db->where_in("DATE_FORMAT(DJPtanggalverif,'%m')", $MONTHid);
-        $this->db->where_in('YEAR(DJPtanggaldeklarasi)', $Tahun);
+        $this->db->where_in('YEAR(DJPtanggalcetak)', $Tahun);
         $query = $this->db->get();
 
         if ($query->num_rows() > 0) {

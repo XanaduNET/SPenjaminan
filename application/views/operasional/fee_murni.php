@@ -29,7 +29,6 @@ foreach ($bulan as $u) {
         $awal = 0;
 
         $kalibulan[1] = (20 / 100);
-
         $flagkali = 1;
         $flagkaliawal = 1;
         $flagbulan[1] = 0;
@@ -538,15 +537,15 @@ $no = 1;
                 $interval = $date1->diff($date2);
 
                 if ($interval->m != 0) {
-                    echo number_format(($hasilbulanawal = ($u->DJPDimbaljasa / $u->DJPDjangkawaktu) * ($interval->m + $flagkali)), 0, ".", ".");
+                    echo number_format(($hasilbulanawal = ($u->DJPDfeebank / $u->DJPDjangkawaktu) * ($interval->m + $flagkali)), 0, ".", ".");
                 } else {
-                    echo number_format(($hasilbulanawal = ($u->DJPDimbaljasa / $u->DJPDjangkawaktu) * $flagkali), 0, ".", ".");
+                    echo number_format(($hasilbulanawal = ($u->DJPDfeebank / $u->DJPDjangkawaktu) * $flagkali), 0, ".", ".");
                 }
 
                 ?>
-                                            </td>
+                            </td>
                                             <td>
-                <?php
+                                            <?php
 
                 $date1 = $u->DJPtanggalverif;
                 $date2 = date('Y-m-d');
@@ -567,18 +566,19 @@ $no = 1;
                 if ($u->DJPDjangkawaktu - $diff <= 12) {
                     $a = 12;
                     $a = $u->DJPDjangkawaktu - ($interval->m + $flagkali);
+
                 } else {
                     $a = 12;
                 }
 
-                echo number_format(($hasilbulanakhir = ((($u->DJPDimbaljasa / $u->DJPDjangkawaktu) * $a))), 0, ".", ".");
+                echo number_format(($hasilbulanakhir = ((($u->DJPDfeebank / $u->DJPDjangkawaktu) * $a))), 0, ".", ".");
                 ?>
                                         </td>
                                         <td><?php
-if (($u->DJPDimbaljasa - $hasilbulanawal - $hasilbulanakhir) < 0) {
+if (($u->DJPDfeebank - $hasilbulanawal - $hasilbulanakhir) < 0) {
                     echo "--";
                 } else {
-                    echo number_format($sisa = ($u->DJPDimbaljasa - $hasilbulanawal - $hasilbulanakhir), 0, ".", ".");
+                    echo number_format($sisa = ($u->DJPDfeebank - $hasilbulanawal - $hasilbulanakhir), 0, ".", ".");
                 }
                 ?></td>
 
@@ -682,14 +682,14 @@ $no++;
                 $interval = $date1->diff($date2);
 
                 if ($interval->m != 0) {
-                    echo number_format(($hasilbulanawal = ($u->DJPDimbaljasa / $u->DJPDjangkawaktu) * ($interval->m + $flagkali)), 0, ".", ".");
+                    echo number_format(($hasilbulanawal = ($u->DJPDfeebank / $u->DJPDjangkawaktu) * ($interval->m + $flagkali)), 0, ".", ".");
                 } else {
-                    echo number_format(($hasilbulanawal = ($u->DJPDimbaljasa / $u->DJPDjangkawaktu) * $flagkali), 0, ".", ".");
+                    echo number_format(($hasilbulanawal = ($u->DJPDfeebank / $u->DJPDjangkawaktu) * $flagkali), 0, ".", ".");
                 }
 
                 ?>
-                                           </td>
-                                           <td><?php
+                           </td>
+                           <td><?php
 
                 $date1 = $u->DJPtanggalverif;
                 $date2 = date('Y-m-d');
@@ -715,12 +715,12 @@ $no++;
                 }
 
                 echo number_format(($hasilbulanakhir = ((($u->DJPDimbaljasa / $u->DJPDjangkawaktu) * $a))), 0, ".", ".")?>
-                        </td>
+        </td>
                                         <td><?php
-if (($u->DJPDimbaljasa - $hasilbulanawal - $hasilbulanakhir) < 0) {
+if (($u->DJPDfeebank - $hasilbulanawal - $hasilbulanakhir) < 0) {
                     echo "--";
                 } else {
-                    echo number_format($sisa = ($u->DJPDimbaljasa - $hasilbulanawal - $hasilbulanakhir), 0, ".", ".");
+                    echo number_format($sisa = ($u->DJPDfeebank - $hasilbulanawal - $hasilbulanakhir), 0, ".", ".");
                 }
                 ?></td>
 
@@ -1011,7 +1011,7 @@ if ($flag == $u->DJPjumlahpk) {
 </div>
 <div><?=validation_errors()?></div>
 
-<?=form_open('Accrual_murni', ['class' => 'form-horizontal'])?>
+<?=form_open('Accrual', ['class' => 'form-horizontal'])?>
 <form role="form" class="form-horizontal">
 		<form role="form" class="form-horizontal">
 		<div class="row">

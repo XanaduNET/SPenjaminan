@@ -6,14 +6,14 @@ require './application/third_party/phpoffice/vendor/autoload.php';
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
-class Accrual_murni extends CI_Controller
+class Fee_murni extends CI_Controller
 {
 
     public function __construct()
     {
         parent::__construct();
-        $this->load->model('Model_accrual');
-        $this->load->model('Model_table_accrual');
+        $this->load->model('Model_fee');
+        $this->load->model('Model_table_fee');
 
     }
 
@@ -41,9 +41,9 @@ class Accrual_murni extends CI_Controller
                 $Tahunchecked[] = $this->input->post('Tahun');
 
                 $keyword = $this->input->post('keyword');
-                $data['ambilid'] = $this->Model_accrual->ambilid();
+                $data['ambilid'] = $this->Model_fee->ambilid();
 
-                $data['table'] = $this->Model_table_accrual->ambil_data_query_lengkap($keyword, $GPPchecked, $OPKchecked, $Tahunchecked); // pass value to model fn
+                $data['table'] = $this->Model_table_fee->ambil_data_query_lengkap($keyword, $GPPchecked, $OPKchecked, $Tahunchecked); // pass value to model fn
 
             } else if (empty($this->input->post('GPPchecked')) && !empty($this->input->post('OPKchecked'))) {
 
@@ -54,9 +54,9 @@ class Accrual_murni extends CI_Controller
                 $Tahunchecked[] = $this->input->post('Tahun');
 
                 $keyword = $this->input->post('keyword');
-                $data['ambilid'] = $this->Model_accrual->ambilid();
+                $data['ambilid'] = $this->Model_fee->ambilid();
 
-                $data['table'] = $this->Model_table_accrual->ambil_data_query_opk($keyword, $OPKchecked, $Tahunchecked); // pass value to model fn
+                $data['table'] = $this->Model_table_fee->ambil_data_query_opk($keyword, $OPKchecked, $Tahunchecked); // pass value to model fn
 
             } else if (!empty($this->input->post('semuaGPP')) && !empty($this->input->post('OPKchecked'))) {
 
@@ -67,15 +67,15 @@ class Accrual_murni extends CI_Controller
                 $Tahunchecked[] = $this->input->post('Tahun');
 
                 $keyword = $this->input->post('keyword');
-                $data['ambilid'] = $this->Model_accrual->ambilid();
+                $data['ambilid'] = $this->Model_fee->ambilid();
 
-                $data['table'] = $this->Model_table_accrual->ambil_data_query_opk($keyword, $OPKchecked, $Tahunchecked); // pass value to model fn
+                $data['table'] = $this->Model_table_fee->ambil_data_query_opk($keyword, $OPKchecked, $Tahunchecked); // pass value to model fn
 
             } else if (!empty($this->input->post('semuaGPP')) && !empty($this->input->post('semuaOPK'))) {
 
                 $keyword = $this->input->post('keyword');
-                $data['ambilid'] = $this->Model_accrual->ambilid();
-                $data['table'] = $this->Model_table_accrual->ambil_data($keyword);
+                $data['ambilid'] = $this->Model_fee->ambilid();
+                $data['table'] = $this->Model_table_fee->ambil_data($keyword);
 
             } else if (!empty($this->input->post('GPPchecked')) && !empty($this->input->post('semuaOPK'))) {
 
@@ -86,15 +86,15 @@ class Accrual_murni extends CI_Controller
                 $Tahunchecked[] = $this->input->post('Tahun');
 
                 $keyword = $this->input->post('keyword');
-                $data['ambilid'] = $this->Model_accrual->ambilid();
+                $data['ambilid'] = $this->Model_fee->ambilid();
 
-                $data['table'] = $this->Model_table_accrual->ambil_data_query($keyword, $GPPchecked, $Tahunchecked); // pass value to model fn
+                $data['table'] = $this->Model_table_fee->ambil_data_query($keyword, $GPPchecked, $Tahunchecked); // pass value to model fn
 
             } else {
 
                 $keyword = $this->input->post('keyword');
-                $data['ambilid'] = $this->Model_accrual->ambilid();
-                $data['table'] = $this->Model_table_accrual->ambil_data($keyword);
+                $data['ambilid'] = $this->Model_fee->ambilid();
+                $data['table'] = $this->Model_table_fee->ambil_data($keyword);
 
             }
         } else if (!empty($this->input->post('Month')) && ($this->input->post('Month') != "00")) {
@@ -119,9 +119,9 @@ class Accrual_murni extends CI_Controller
                 $Tahunchecked[] = $this->input->post('Tahun');
 
                 $keyword = $this->input->post('keyword');
-                $data['ambilid'] = $this->Model_accrual->ambilid();
+                $data['ambilid'] = $this->Model_fee->ambilid();
 
-                $data['table'] = $this->Model_table_accrual->ambil_data_query_lengkap_bulan($keyword, $GPPchecked, $OPKchecked, $totalBulan, $Tahunchecked); // pass value to model fn
+                $data['table'] = $this->Model_table_fee->ambil_data_query_lengkap_bulan($keyword, $GPPchecked, $OPKchecked, $totalBulan, $Tahunchecked); // pass value to model fn
 
             } else if (empty($this->input->post('GPPchecked')) && !empty($this->input->post('OPKchecked'))) {
 
@@ -131,9 +131,9 @@ class Accrual_murni extends CI_Controller
                 $Tahunchecked[] = $this->input->post('Tahun');
 
                 $keyword = $this->input->post('keyword');
-                $data['ambilid'] = $this->Model_accrual->ambilid();
+                $data['ambilid'] = $this->Model_fee->ambilid();
 
-                $data['table'] = $this->Model_table_accrual->ambil_data_query_opk_bulan($keyword, $OPKchecked, $totalBulan, $Tahunchecked); // pass value to model fn
+                $data['table'] = $this->Model_table_fee->ambil_data_query_opk_bulan($keyword, $OPKchecked, $totalBulan, $Tahunchecked); // pass value to model fn
 
             } else if (!empty($this->input->post('semuaGPP')) && !empty($this->input->post('OPKchecked'))) {
 
@@ -144,17 +144,17 @@ class Accrual_murni extends CI_Controller
                 $Tahunchecked[] = $this->input->post('Tahun');
 
                 $keyword = $this->input->post('keyword');
-                $data['ambilid'] = $this->Model_accrual->ambilid();
+                $data['ambilid'] = $this->Model_fee->ambilid();
 
-                $data['table'] = $this->Model_table_accrual->ambil_data_query_opk_bulan($keyword, $OPKchecked, $totalBulan, $Tahunchecked); // pass value to model fn
+                $data['table'] = $this->Model_table_fee->ambil_data_query_opk_bulan($keyword, $OPKchecked, $totalBulan, $Tahunchecked); // pass value to model fn
 
             } else if (!empty($this->input->post('semuaGPP')) && !empty($this->input->post('semuaOPK'))) {
 
                 $Tahunchecked[] = $this->input->post('Tahun');
 
                 $keyword = $this->input->post('keyword');
-                $data['ambilid'] = $this->Model_accrual->ambilid();
-                $data['table'] = $this->Model_table_accrual->ambil_data_bulan($keyword, $totalBulan, $Tahunchecked);
+                $data['ambilid'] = $this->Model_fee->ambilid();
+                $data['table'] = $this->Model_table_fee->ambil_data_bulan($keyword, $totalBulan, $Tahunchecked);
 
             } else if (!empty($this->input->post('GPPchecked')) && !empty($this->input->post('semuaOPK'))) {
 
@@ -164,18 +164,18 @@ class Accrual_murni extends CI_Controller
                 $Tahunchecked[] = $this->input->post('Tahun');
 
                 $keyword = $this->input->post('keyword');
-                $data['ambilid'] = $this->Model_accrual->ambilid();
+                $data['ambilid'] = $this->Model_fee->ambilid();
 
-                $data['table'] = $this->Model_table_accrual->ambil_data_query_bulan($keyword, $GPPchecked, $totalBulan, $Tahunchecked); // pass value to model fn
+                $data['table'] = $this->Model_table_fee->ambil_data_query_bulan($keyword, $GPPchecked, $totalBulan, $Tahunchecked); // pass value to model fn
 
             } else {
 
                 $Tahunchecked[] = $this->input->post('Tahun');
 
                 $keyword = $this->input->post('keyword');
-                $data['ambilid'] = $this->Model_accrual->ambilid();
+                $data['ambilid'] = $this->Model_fee->ambilid();
 
-                $data['table'] = $this->Model_table_accrual->ambil_data_bulan($keyword, $totalBulan, $Tahunchecked);
+                $data['table'] = $this->Model_table_fee->ambil_data_bulan($keyword, $totalBulan, $Tahunchecked);
 
             }
 
@@ -183,19 +183,19 @@ class Accrual_murni extends CI_Controller
         } else {
 
             $keyword = $this->input->post('keyword');
-            $data['ambilid'] = $this->Model_accrual->ambilid();
+            $data['ambilid'] = $this->Model_fee->ambilid();
 
-            $data['table'] = $this->Model_table_accrual->ambil_data($keyword);
+            $data['table'] = $this->Model_table_fee->ambil_data($keyword);
 
         }
 
         $data['bulan'] = $Monthchecked;
 
-        $data['title'] = 'Accrual Murni';
+        $data['title'] = 'Fee';
         $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
-        $data['gpp'] = $this->Model_table_accrual->getGPP();
-        $data['opk'] = $this->Model_table_accrual->getOPK();
-        $data['tahun'] = $this->Model_table_accrual->getYear();
+        $data['gpp'] = $this->Model_table_fee->getGPP();
+        $data['opk'] = $this->Model_table_fee->getOPK();
+        $data['tahun'] = $this->Model_table_fee->getYear();
         $data['menu'] = $this->db->get('user_menu')->result_array();
 
         $date = date("d-m-Y");
@@ -205,7 +205,7 @@ class Accrual_murni extends CI_Controller
         $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j,Y, H:i:s") . PHP_EOL .
             "Attempt: " . ("Success Masuk Halaman") . PHP_EOL .
             "User: " . $namauser['nama'] . PHP_EOL .
-            "Aksi: " . ('Accrual Penjaminan') . PHP_EOL .
+            "Aksi: " . ('Fee Penjaminan') . PHP_EOL .
             "-------------------------" . PHP_EOL;
         //-
         file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
@@ -214,7 +214,7 @@ class Accrual_murni extends CI_Controller
         $this->load->view('template/header_body', $data);
         $this->load->view('template/right_sidebar', $data);
         $this->load->view('template/left_sidebar', $data);
-        $this->load->view('operasional/accrual_murni', $data);
+        $this->load->view('operasional/fee_murni', $data);
         $this->load->view('template/footer');
     }
 
@@ -238,9 +238,9 @@ class Accrual_murni extends CI_Controller
             $namauser = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
 
             $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j, Y, H:i:s") . PHP_EOL .
-                "Attempt: " . ("Success Export Accrual") . PHP_EOL .
+                "Attempt: " . ("Success Export Fee Bank") . PHP_EOL .
                 "User: " . $namauser['nama'] . PHP_EOL .
-                "Aksi: " . ('Operasional Accrual') . PHP_EOL .
+                "Aksi: " . ('Operasional Fee') . PHP_EOL .
                 "-------------------------" . PHP_EOL;
             //-
             file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
@@ -265,8 +265,8 @@ class Accrual_murni extends CI_Controller
         foreach ($table_result as $a) {
             $year = date("Y", strtotime($a->DJPtanggaldeklarasi));
         }
-
         foreach ($bulan as $u) {
+
             if ($u == 01) {
                 $bulanini[1] = "JANUARI $year";
                 $bulandepan[1] = "FEB-JAN " . $year + 1;
@@ -681,6 +681,7 @@ class Accrual_murni extends CI_Controller
                 $bulanjumlah = 01;
 
             }}
+
         // antara masuk dan tidak masuk
         $kolom = 2;
         $nomor = 1;
@@ -688,9 +689,10 @@ class Accrual_murni extends CI_Controller
         $y = 1;
         // end
         $spreadsheet = new Spreadsheet;
+
         for ($i = 01; $i <= $bulanjumlah; $i++) {
 
-            $spreadsheet->setActiveSheetIndex(0)->getFont()->getColor()->setARGB(\PhpOffice\PhpSpreadsheet\Style\Color::COLOR_RED)
+            $spreadsheet->setActiveSheetIndex(0)
                 ->setCellValue("A$y", 'NO')
                 ->setCellValue("B$y", 'CBG/CAPEM/KEDAI')
                 ->setCellValue("C$y", 'NO SERTIFIKAT')
@@ -728,42 +730,38 @@ class Accrual_murni extends CI_Controller
 
             if (!is_array($table_result) || is_array($table_result)) {
                 foreach ($table_result as $u) {
-
-                    $date1 = $u->DJPtanggalverif;
-                    $date2 = date('Y-m-d');
-
-                    $ts1 = strtotime($date1);
-                    $ts2 = strtotime($date2);
-
-                    $year1 = date('Y', $ts1);
-                    $year2 = date('Y', $ts2);
-
-                    $month1 = date('m', $ts1);
-                    $month2 = date('m', $ts2);
-
-                    $day1 = date('d', $ts1);
-                    $day2 = date('d', $ts2);
-
-                    $diff = (($year2 - $year1) * 12) + ($month2 - $month1);
-                    if ($u->DJPDjangkawaktu - $diff <= 12) {
-                        $a = $u->DJPDjangkawaktu - ($interval->m + $flagkali);
-                    } else {
-                        $a = 12;
-                    }
-
-                    $date1 = new DateTime(date($u->DJPDtanggalawal));
-                    $date2 = new DateTime(date($u->DJPtanggalverif));
-
-                    $interval = $date1->diff($date2);
-
-                    if ($interval->m != 0) {
-                        $hasilbulanawal = ($u->DJPDimbaljasa / $u->DJPDjangkawaktu) * ($interval->m + $flagkali);
-                    } else {
-                        $hasilbulanawal = ($u->DJPDimbaljasa / $u->DJPDjangkawaktu) * $flagkali;
-                    }
-
                     $bulansekarang = date('m', strtotime($u->DJPtanggalverif));
                     if (($u->DJPnoreg != $DJPnoreg) && ($bulansekarang == $i)) {
+
+                        $date1 = $u->DJPtanggalverif;
+                        $date2 = date('Y-m-d');
+
+                        $ts1 = strtotime($date1);
+                        $ts2 = strtotime($date2);
+
+                        $year1 = date('Y', $ts1);
+                        $year2 = date('Y', $ts2);
+
+                        $month1 = date('m', $ts1);
+                        $month2 = date('m', $ts2);
+
+                        $day1 = date('d', $ts1);
+                        $day2 = date('d', $ts2);
+
+                        $diff = (($year2 - $year1) * 12) + ($month2 - $month1);
+                        if ($u->DJPDjangkawaktu - $diff <= 12) {
+                            $a = 12;
+                            $a -= $bulanjumlah;
+                        } else {
+                            $a = 12;
+                        }
+
+                        if ($bulanjumlah == 01 || $bulanjumlah == 02) {
+                            $hasilbulanakhir = (($u->DJPDfeebank - ($u->DJPDfeebank * $kalibulan[$i])) / ($u->DJPDjangkawaktu - $flagkaliawal) * $a);
+                        } else {
+                            $hasilbulanakhir = $u->DJPDfeebank / $u->DJPDjangkawaktu * $a;
+                        }
+
                         $spreadsheet->setActiveSheetIndex(0)
                             ->setCellValue('A' . $kolom, $nomor)
                             ->setCellValue('B' . $kolom, $u->PPnama)
@@ -772,24 +770,24 @@ class Accrual_murni extends CI_Controller
                             ->setCellValue('E' . $kolom, 1)
                             ->setCellValue('F' . $kolom, $u->TRJMnama)
                             ->setCellValue('G' . $kolom, $u->DJPDcoverage)
-                            ->setCellValue('H' . $kolom, (int) $u->DJPDplafondkredit)
-                            ->setCellValue('I' . $kolom, (int) $u->DJPDnilaipenjaminan)
+                            ->setCellValue('H' . $kolom, $u->DJPDplafondkredit)
+                            ->setCellValue('I' . $kolom, $u->DJPDnilaipenjaminan)
                             ->setCellValue('J' . $kolom, date('j F Y', strtotime($u->DJPDtanggalawal)))
                             ->setCellValue('K' . $kolom, date('j F Y', strtotime($u->DJPDtanggalakhir)))
                             ->setCellValue('L' . $kolom, $u->DJPDjangkawaktu)
                             ->setCellValue('M' . $kolom, $u->DJPDrate . "%")
-                            ->setCellValue('N' . $kolom, (int) $u->DJPDimbaljasa)
-                            ->setCellValue('O' . $kolom, (int) $u->DJPDfeeadm)
-                            ->setCellValue('P' . $kolom, (int) $u->DJPDfeematerai, 0, ".", ".")
+                            ->setCellValue('N' . $kolom, $u->DJPDimbaljasa)
+                            ->setCellValue('O' . $kolom, $u->DJPDfeeadm)
+                            ->setCellValue('P' . $kolom, $u->DJPDfeematerai, 0, ".", ".")
                             ->setCellValue('Q' . $kolom, (int) ($total = $u->DJPDimbaljasa + $u->DJPDfeeadm + $u->DJPDfeematerai))
                             ->setCellValue('R' . $kolom, (int) $u->DJPDfeebank)
                             ->setCellValue('S' . $kolom, (int) $total - $u->DJPDfeebank)
-                            ->setCellValue('T' . $kolom, (int) ($hasilbulanawal))
-                            ->setCellValue('U' . $kolom, (int) ($hasilbulanakhir = ((($u->DJPDimbaljasa / $u->DJPDjangkawaktu) * $a))))
-                            ->setCellValue('V' . $kolom, (int) $sisa = ($u->DJPDimbaljasa - $hasilbulanawal - $hasilbulanakhir))
+                            ->setCellValue('T' . $kolom, (int) ($hasilbulanawal = (($u->DJPDfeebank * $kalibulan[$i]) + (($u->DJPDfeebank - ($u->DJPDfeebank * $kalibulan[$i])) / ($u->DJPDjangkawaktu - $flagkaliawal) * $flagbulan[$i]))))
+                            ->setCellValue('U' . $kolom, (int) $hasilbulanakhir)
+                            ->setCellValue('V' . $kolom, (int) $sisa = ($u->DJPDfeebank - $hasilbulanawal - $hasilbulanakhir))
                             ->setCellValue('W' . $kolom, (int) $totalakhir = ($hasilbulanawal + $hasilbulanakhir + $sisa))
                             ->setCellValue('X' . $kolom, "--")
-                            ->setCellValue('Y' . $kolom, $bayarminmal = (($u->DJPDimbaljasa - ($u->DJPDimbaljasa * $kalibulan[$i])) / ($u->DJPDjangkawaktu - $flagkaliawal)));
+                            ->setCellValue('Y' . $kolom, $bayarminmal = (($u->DJPDfeebank - ($u->DJPDfeebank * $kalibulan[$i])) / ($u->DJPDjangkawaktu - $flagkaliawal)));
                         $kolom++;
                         $sumbulanawal += $hasilbulanawal;
                         $sumbulanakhir += $hasilbulanakhir;
@@ -807,15 +805,15 @@ class Accrual_murni extends CI_Controller
                                 ->setCellValue('E' . $kolom, $u->DJPjumlahpk)
                                 ->setCellValue('F' . $kolom, "")
                                 ->setCellValue('G' . $kolom, "")
-                                ->setCellValue('H' . $kolom, (int) $u->DJPjumlahnilaipk)
-                                ->setCellValue('I' . $kolom, (int) $u->DJPnilaipenjaminan)
+                                ->setCellValue('H' . $kolom, $u->DJPjumlahnilaipk)
+                                ->setCellValue('I' . $kolom, $u->DJPnilaipenjaminan)
                                 ->setCellValue('J' . $kolom, "")
                                 ->setCellValue('K' . $kolom, "")
                                 ->setCellValue('L' . $kolom, "")
                                 ->setCellValue('M' . $kolom, "")
-                                ->setCellValue('N' . $kolom, (int) $u->DJPjumlahimbaljasa)
-                                ->setCellValue('O' . $kolom, (int) $u->DJPfeeadmin)
-                                ->setCellValue('P' . $kolom, (int) $u->DJPfeematerai, 0, ".", ".")
+                                ->setCellValue('N' . $kolom, $u->DJPjumlahimbaljasa)
+                                ->setCellValue('O' . $kolom, $u->DJPfeeadmin)
+                                ->setCellValue('P' . $kolom, $u->DJPfeematerai, 0, ".", ".")
                                 ->setCellValue('Q' . $kolom, (int) ($total = $u->DJPjumlahimbaljasa + $u->DJPfeeadmin + $u->DJPfeematerai))
                                 ->setCellValue('R' . $kolom, (int) $u->DJPfeebank)
                                 ->setCellValue('S' . $kolom, (int) $total - $u->DJPfeebank)
@@ -839,7 +837,6 @@ class Accrual_murni extends CI_Controller
 
                         $nomor++;
                     } else if ($bulansekarang == $i) {
-
                         $date1 = $u->DJPtanggalverif;
                         $date2 = date('Y-m-d');
 
@@ -857,20 +854,16 @@ class Accrual_murni extends CI_Controller
 
                         $diff = (($year2 - $year1) * 12) + ($month2 - $month1);
                         if ($u->DJPDjangkawaktu - $diff <= 12) {
-                            $a = $u->DJPDjangkawaktu - ($interval->m + $flagkali);
+                            $a = 12;
+                            $a -= $bulanjumlah;
                         } else {
                             $a = 12;
                         }
 
-                        $date1 = new DateTime(date($u->DJPDtanggalawal));
-                        $date2 = new DateTime(date($u->DJPtanggalverif));
-
-                        $interval = $date1->diff($date2);
-
-                        if ($interval->m != 0) {
-                            $hasilbulanawal = ($u->DJPDimbaljasa / $u->DJPDjangkawaktu) * ($interval->m + $flagkali);
+                        if ($bulanjumlah == 01 || $bulanjumlah == 02) {
+                            $hasilbulanakhir = (($u->DJPDfeebank - ($u->DJPDfeebank * $kalibulan[$i])) / ($u->DJPDjangkawaktu - $flagkaliawal) * $a);
                         } else {
-                            $hasilbulanawal = ($u->DJPDimbaljasa / $u->DJPDjangkawaktu) * $flagkali;
+                            $hasilbulanakhir = $u->DJPDfeebank / $u->DJPDjangkawaktu * $a;
                         }
 
                         $spreadsheet->setActiveSheetIndex(0)
@@ -881,24 +874,24 @@ class Accrual_murni extends CI_Controller
                             ->setCellValue('E' . $kolom, 1)
                             ->setCellValue('F' . $kolom, $u->TRJMnama)
                             ->setCellValue('G' . $kolom, $u->DJPDcoverage)
-                            ->setCellValue('H' . $kolom, (int) $u->DJPDplafondkredit)
-                            ->setCellValue('I' . $kolom, (int) $u->DJPDnilaipenjaminan)
+                            ->setCellValue('H' . $kolom, $u->DJPDplafondkredit)
+                            ->setCellValue('I' . $kolom, $u->DJPDnilaipenjaminan)
                             ->setCellValue('J' . $kolom, date('j F Y', strtotime($u->DJPDtanggalawal)))
                             ->setCellValue('K' . $kolom, date('j F Y', strtotime($u->DJPDtanggalakhir)))
                             ->setCellValue('L' . $kolom, $u->DJPDjangkawaktu)
                             ->setCellValue('M' . $kolom, $u->DJPDrate . "%")
-                            ->setCellValue('N' . $kolom, (int) $u->DJPDimbaljasa)
-                            ->setCellValue('O' . $kolom, (int) $u->DJPDfeeadm)
-                            ->setCellValue('P' . $kolom, (int) $u->DJPDfeematerai, 0, ".", ".")
+                            ->setCellValue('N' . $kolom, $u->DJPDimbaljasa)
+                            ->setCellValue('O' . $kolom, $u->DJPDfeeadm)
+                            ->setCellValue('P' . $kolom, $u->DJPDfeematerai, 0, ".", ".")
                             ->setCellValue('Q' . $kolom, (int) ($total = $u->DJPDimbaljasa + $u->DJPDfeeadm + $u->DJPDfeematerai))
                             ->setCellValue('R' . $kolom, (int) $u->DJPDfeebank)
                             ->setCellValue('S' . $kolom, (int) $total - $u->DJPDfeebank)
-                            ->setCellValue('T' . $kolom, (int) ($hasilbulanawal))
-                            ->setCellValue('U' . $kolom, (int) ($hasilbulanakhir = ((($u->DJPDimbaljasa / $u->DJPDjangkawaktu) * $a))))
-                            ->setCellValue('V' . $kolom, (int) $sisa = ($u->DJPDimbaljasa - $hasilbulanawal - $hasilbulanakhir))
+                            ->setCellValue('T' . $kolom, (int) ($hasilbulanawal = (($u->DJPDfeebank * $kalibulan[$i]) + (($u->DJPDfeebank - ($u->DJPDfeebank * $kalibulan[$i])) / ($u->DJPDjangkawaktu - $flagkaliawal) * $flagbulan[$i]))))
+                            ->setCellValue('U' . $kolom, (int) $hasilbulanakhir)
+                            ->setCellValue('V' . $kolom, (int) $sisa = ($u->DJPDfeebank - $hasilbulanawal - $hasilbulanakhir))
                             ->setCellValue('W' . $kolom, (int) $totalakhir = ($hasilbulanawal + $hasilbulanakhir + $sisa))
                             ->setCellValue('X' . $kolom, "--")
-                            ->setCellValue('Y' . $kolom, (int) $bayarminmal = (($u->DJPDimbaljasa - ($u->DJPDimbaljasa * $kalibulan[$i])) / ($u->DJPDjangkawaktu - $flagkaliawal)));
+                            ->setCellValue('Y' . $kolom, $bayarminmal = (($u->DJPDfeebank - ($u->DJPDfeebank * $kalibulan[$i])) / ($u->DJPDjangkawaktu - $flagkaliawal)));
 
                         $sumbulanawal += $hasilbulanawal;
                         $sumbulanakhir += $hasilbulanakhir;
@@ -918,15 +911,15 @@ class Accrual_murni extends CI_Controller
                                 ->setCellValue('E' . $kolom, $u->DJPjumlahpk)
                                 ->setCellValue('F' . $kolom, "")
                                 ->setCellValue('G' . $kolom, "")
-                                ->setCellValue('H' . (int) $kolom, $u->DJPjumlahnilaipk)
-                                ->setCellValue('I' . (int) $kolom, $u->DJPnilaipenjaminan)
+                                ->setCellValue('H' . $kolom, $u->DJPjumlahnilaipk)
+                                ->setCellValue('I' . $kolom, $u->DJPnilaipenjaminan)
                                 ->setCellValue('J' . $kolom, "")
                                 ->setCellValue('K' . $kolom, "")
                                 ->setCellValue('L' . $kolom, "")
                                 ->setCellValue('M' . $kolom, "")
-                                ->setCellValue('N' . (int) $kolom, $u->DJPjumlahimbaljasa)
-                                ->setCellValue('O' . (int) $kolom, $u->DJPfeeadmin)
-                                ->setCellValue('P' . (int) $kolom, $u->DJPfeematerai, 0, ".", ".")
+                                ->setCellValue('N' . $kolom, $u->DJPjumlahimbaljasa)
+                                ->setCellValue('O' . $kolom, $u->DJPfeeadmin)
+                                ->setCellValue('P' . $kolom, $u->DJPfeematerai, 0, ".", ".")
                                 ->setCellValue('Q' . $kolom, (int) ($u->DJPjumlahimbaljasa + $u->DJPfeeadmin + $u->DJPfeematerai))
                                 ->setCellValue('R' . $kolom, (int) $u->DJPfeebank)
                                 ->setCellValue('S' . $kolom, (int) $total - $u->DJPfeebank)
@@ -965,7 +958,7 @@ class Accrual_murni extends CI_Controller
 
         $writer = new Xlsx($spreadsheet);
         header('Content-Type: application/vnd.ms-excel');
-        header('Content-Disposition: attachment;filename="IJPAccrual.xls"');
+        header('Content-Disposition: attachment;filename="IJPfee.Xlsx"');
         header('Cache-Control: max-age=0');
         $writer->save('php://output');
     }
