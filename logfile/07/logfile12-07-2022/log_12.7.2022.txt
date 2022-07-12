@@ -1,0 +1,60 @@
+User: ::1 - July 12, 2022, 11:19:30
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 12, 2022, 19:28:01
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 12, 2022, 22:36:58
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - July 12, 2022, 22:37:11
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 12, 2022, 22:40:52
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - July 12, 2022, 22:43:10
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 12, 2022, 22:46:24
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - July 12, 2022, 22:46:31
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 12, 2022, 22:47:28
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - July 12, 2022, 22:47:47
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 12, 2022, 22:51:25
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - July 12, 2022, 22:51:40
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------

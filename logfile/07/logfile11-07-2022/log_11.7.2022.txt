@@ -1,0 +1,45 @@
+User: ::1 - July 11, 2022, 08:23:17
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 11,2022, 08:35:10
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Fee
+-------------------------
+User: ::1 - July 11,2022, 08:35:30
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Fee Penjaminan
+-------------------------
+User: ::1 - July 11,2022, 08:35:42
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 11,2022, 08:37:09
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 11, 2022, 16:22:23
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 11, 2022, 16:23:16
+Attempt: Success Add SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - July 11, 2022, 22:01:32
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 11, 2022, 23:41:01
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------

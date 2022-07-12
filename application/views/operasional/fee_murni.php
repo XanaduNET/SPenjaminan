@@ -1011,7 +1011,7 @@ if ($flag == $u->DJPjumlahpk) {
 </div>
 <div><?=validation_errors()?></div>
 
-<?=form_open('Accrual', ['class' => 'form-horizontal'])?>
+<?=form_open('Fee_murni', ['class' => 'form-horizontal'])?>
 <form role="form" class="form-horizontal">
 		<form role="form" class="form-horizontal">
 		<div class="row">

@@ -19,6 +19,27 @@ class Home_model extends CI_Model
         }
     }
 
+    public function insert_batch_grm($dataDJPH)
+    {
+        $this->db->insert_batch('tbldjphgrm', $dataDJPH);
+        $insertId = $this->db->insert_id();
+        if ($this->db->affected_rows() == '1') {
+            return $insertId;
+        } else {
+            return false;
+        }
+    }
+    public function insert_batchdjpd_grm($dataDJPD)
+    {
+        $this->db->insert_batch('tbldjpdgrm', $dataDJPD);
+        $insertId = $this->db->insert_id();
+        if ($this->db->affected_rows() == '1') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public function insertnotbatch($dataDJPH)
     {
 
@@ -52,12 +73,4 @@ class Home_model extends CI_Model
         }
     }
 
-  
-    public function product_list()
-    {
-        $this->db->select('*');
-        $this->db->from('product');
-        $query = $this->db->get();
-        return $query->result();
-    }
 }
