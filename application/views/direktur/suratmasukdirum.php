@@ -26,6 +26,7 @@
                                     <th scope="col">Perihal</th>
                                     <th scope="col">Untuk</th>
                                     <th scope="col">Keterangan</th>
+                                    <th scope="col">Berkas</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -41,7 +42,48 @@ $j = 0;?>
                                     <td><?=$s['SMperihal'];?></td>
                                     <td><?=$s['SMuntuk'];?></td>
                                     <td>Menunggu Akseptasi</td>
+                                    <td><a href="#" data-toggle="modal" data-target="#modalberkas<?=$s['SMid'];?>"
+                                                    class="badge badge-info">Cek berkas</a></td>
                                 </tr>
+                                   <!-- Modal Upload Doc -->
+<div class="modal fade" id="modalberkas<?=$s['SMid'];?>" role="dialog">
+         <div class="modal-dialog modal-sm vertical-align-center">
+             <div class="modal-content">
+                  <div class="modal-header">
+                     <button type="button" class="close"
+                         data-dismiss="modal">&times;</button>
+                     <h4 class="modal-title">Berkas Terjamin</h4>
+                 </div>
+                 <div class="modal-body">
+
+
+
+<?php
+$SMid = $s['SMid'];
+$query = "SELECT `tblsm`.*, `tbluploadsm`.*
+FROM `tblsm` JOIN `tbluploadsm`
+ON `tblsm`.`SMid` = `tbluploadsm`.`SMid`
+WHERE `tblsm`.`SMid` = $SMid
+";
+$upld = $this->db->query($query)->result_array();
+
+foreach ($upld as $u) {
+    ?>
+
+                     <a
+                         href="../uploads/<?=$u['UPLDnama']?>"><?=$u['UPLDnama']?></a><br>
+                     <?php
+}
+
+?>
+                 </div>
+                 <div class="modal-footer">
+                     <button type="button" data-dismiss="modal"
+                         class="btn btn-default">Close</button>
+                 </div>
+             </div>
+         </div>
+     </div>
                                 <?php $i++;?>
                                 <?php endforeach;?>
                             </tbody>
@@ -63,7 +105,7 @@ $j = 0;?>
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="<?=base_url('Direktur/akseptasisuratmasuk');?>" method="post">
+            <form action="<?=base_url('Direktur/akseptasisuratmasukdirum');?>" method="post">
                 <div class="modal-body">
 
                 <div class="form-group">

@@ -58,3 +58,8 @@ Attempt: Success Login
 User: akbar
 Aksi: Login
 -------------------------
+User: ::1 - July 12, 2022, 23:19:10
+Attempt: Success Add SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------

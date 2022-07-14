@@ -169,7 +169,7 @@ class Model_direktur extends CI_Model
          ";
         return $this->db->query($query);
     }
-    
+
     public function uploadsuratmasukdirektur($SMid, $ROLEid)
     {
         $data = array(
@@ -184,6 +184,11 @@ class Model_direktur extends CI_Model
         );
         $this->db->where('SMid', $SMid);
         $this->db->update('tblsm', $data);
+
+        echo "<script>
+        alert('Data Berhasil Di Upload');
+        window.location.href='../Direktur/suratmasuk';
+        </script>";
     }
     public function uploadketdir($SMid, $SMketdir)
     {
@@ -193,5 +198,58 @@ class Model_direktur extends CI_Model
         );
         $this->db->where('SMid', $SMid);
         $this->db->update('tblsm', $data);
+    }
+    public function uploadsuratmasukdirekturumum($SMid, $ROLEid)
+    {
+        $data = array(
+            'SMid' => $SMid,
+            'ROLEid' => $ROLEid,
+        );
+
+        $this->db->insert('tblsm_notify', $data);
+
+        $data = array(
+            'SMstatus' => 6,
+        );
+        $this->db->where('SMid', $SMid);
+        $this->db->update('tblsm', $data);
+        echo "<script>
+        alert('Data Berhasil Di Upload');
+        window.location.href='../Direktur/suratmasukdirum';
+        </script>";
+    }
+    public function uploadketdirumum($SMid, $SMketdir)
+    {
+
+        $data = array(
+            'SMketdir' => $SMketdir,
+        );
+        $this->db->where('SMid', $SMid);
+        $this->db->update('tblsm', $data);
+    }
+
+    public function getSuratMasukDirut($role)
+    {
+        $query = "SELECT `tblsm`.*, `tblsm_notify`.*
+        FROM `tblsm`
+        JOIN `tblsm_notify`
+        ON `tblsm`.`SMid` = `tblsm_notify`.`SMid`
+        WHERE `tblsm_notify`.`ROLEid` = 4
+
+
+        ";
+        return $this->db->query($query)->result_array();
+    }
+    public function getSuratMasukDirum($role)
+    {
+        $query = "SELECT `tblsm`.*, `tblsm_notify`.*
+        FROM `tblsm`
+        JOIN `tblsm_notify`
+        ON `tblsm`.`SMid` = `tblsm_notify`.`SMid`
+        WHERE `tblsm_notify`.`ROLEid` = 20
+
+
+        ";
+        return $this->db->query($query)->result_array();
     }
 }

@@ -252,4 +252,20 @@ class Risk extends CI_Controller
         file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
         redirect('Risk/');
     }
+
+    public function suratmasuk()
+    {
+        $data['title'] = 'Surat Masuk Manajemen Risiko';
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+        $role = $data['user']['role_id'];
+        $data['sm'] = $this->Model_risk->getSuratMasuk($role);
+
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
+        $this->load->view('risk/suratmasukvw', $data);
+        $this->load->view('template/footer');
+
+    }
 }

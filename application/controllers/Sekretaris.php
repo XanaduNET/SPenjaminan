@@ -30,7 +30,6 @@ class Sekretaris extends CI_Controller
         $SMtanggalsurat = $_POST['SMtanggalsurat'];
         $SMtanggalterima = $_POST['SMtanggalterima'];
         $SMperihal = $_POST['SMperihal'];
-      
 
         $this->Model_sekretaris->uploadsuratmasuk($SMasal, $SMnomor, $SMtanggalsurat, $SMtanggalterima, $SMperihal);
         redirect('Sekretaris/suratmasuk');
@@ -79,10 +78,14 @@ class Sekretaris extends CI_Controller
     public function akseptasisuratmasukdir()
     {
         $SMid = $_POST['SMid'];
-        $SMuntuk = $_POST['SMuntuk'];
+
+        //
+        $query = $this->db->query("SELECT SMuntuk FROM tblsm WHERE SMid ='$SMid'")->row_array();
+        //
+        $SMuntuk = $query['SMuntuk'];
 
         $this->Model_sekretaris->updatesuratmasuksekdir($SMid, $SMuntuk);
-        redirect('Sekretaris/accsuratmasuk');
+        redirect('Sekretaris/accsuratmasuksekdir');
     }
     public function monitoringsuratmasuk()
     {
@@ -97,5 +100,61 @@ class Sekretaris extends CI_Controller
         $this->load->view('template/left_sidebar', $data);
         $this->load->view('Sekretaris/monitoringsuratmasuk', $data);
         $this->load->view('template/footer');
+    }
+
+    public function uploaddokumen()
+    {
+        {
+            $this->load->model('Model_sekretaris');
+            $SMid = $this->uri->segment(3);
+
+            $config = array(
+                'upload_path' => "./uploads/",
+                'allowed_types' => "pdf",
+                'overwrite' => true,
+                'max_size' => "2048000", // Tertulis dalam KB maks 2mb
+            );
+            $this->load->library('upload', $config);
+            if ($this->upload->do_upload()) {
+                $data = array('upload_data' => $this->upload->data());
+                $UPLDnama = $this->upload->data('file_name');
+                $date = date("d-m-Y");
+                $bulan = date("m");
+                $namauser = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+
+                $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j, Y, H:i:s") . PHP_EOL .
+                    "Attempt: " . ("Success Upload Berkas") . PHP_EOL .
+                    "User: " . $namauser['nama'] . PHP_EOL .
+                    "Aksi: " . ('Surat Masuk') . PHP_EOL .
+                    "-------------------------" . PHP_EOL;
+                //-
+                file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
+
+                $this->Model_sekretaris->upload($UPLDnama, $SMid);
+                //data berhasil di upload
+            } else {
+                echo "<script>
+                    alert('Berkas Tidak Berhasil Di Upload');
+                    window.location.href='../../sekretaris/suratmasuk';
+                    </script>";
+                //data tidak berhasil di upluad
+            }
+        }
+    }
+
+    public function suratmasuknotify()
+    {
+        $data['title'] = 'Surat Masuk Sekretaris';
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+        $role = $data['user']['role_id'];
+        $data['sm'] = $this->Model_sekretaris->getSuratMasuk($role);
+
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
+        $this->load->view('sekretaris/suratmasuknotify', $data);
+        $this->load->view('template/footer');
+
     }
 }

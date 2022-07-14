@@ -52,7 +52,7 @@
 
 foreach ($upld as $u) {
     ?>
-                        <a href="../../uploads/<?=$u['UPLDPnama']?>"><?=$u['UPLDPnama']?></a><br>
+                        <a href="../../uploads/berkas_produktif/<?=$u['UPLDPnama']?>"><?=$u['UPLDPnama']?></a><br>
                         <?php
 }
 ?>

@@ -57,7 +57,6 @@ class Model_sekretaris extends CI_Model
         return $this->db->query($query)->result_array();
     }
 
-
     public function uploadsuratmasuk($SMasal, $SMnomor, $SMtanggalsurat, $SMtanggalterima, $SMperihal)
     {
         $data = array(
@@ -73,13 +72,10 @@ class Model_sekretaris extends CI_Model
     }
 
     public function updatesuratmasuk($SMid, $SMuntuk)
-    {   
-        if($SMuntuk == "Direktur Utama")
-           {
-             $SMstatus = 1;
-           }
-        else if($SMuntuk == "Direktur Umum")
-        {
+    {
+        if ($SMuntuk == "Direktur Utama") {
+            $SMstatus = 1;
+        } else if ($SMuntuk == "Direktur Umum") {
             $SMstatus = 4;
         }
 
@@ -92,19 +88,72 @@ class Model_sekretaris extends CI_Model
     }
 
     public function updatesuratmasuksekdir($SMid, $SMuntuk)
-    {   
-        if($SMuntuk == "Direktur Umum"){
+    {
+        if ($SMuntuk == "Direktur Umum") {
             $SMstatus = 5;
-        }
-        else {
-            $SMstatus == 2;
+        } else if ($SMuntuk == "Direktur Utama") {
+            $SMstatus = 2;
         }
         $data = array(
             'SMid' => $SMid,
             'SMstatus' => $SMstatus,
         );
+
         $this->db->where('SMid', $SMid);
         $this->db->update('tblsm', $data);
     }
-    
+
+    public function uploadcbcp($UPLDPnama, $CBCPid, $CBCPstatus)
+    {
+
+        $data = array(
+            'UPLDPnama' => $UPLDPnama,
+            'CBCPid' => $CBCPid,
+        );
+        $this->db->insert('tbluploadcbcp', $data);
+
+        $data = array(
+            'CBCPstatus' => $CBCPstatus,
+        );
+        $this->db->where('CBCPid', $CBCPid);
+        $this->db->update('tblcbcp', $data);
+
+        echo "<script>
+            alert('Data Berhasil Di Upload');
+            window.location.href='../../casebc/datacbc';
+            </script>";
+    }
+
+    public function upload($UPLDPnama, $SMid)
+    {
+
+        $data = array(
+            'UPLDnama' => $UPLDPnama,
+            'SMid' => $SMid,
+        );
+        $this->db->insert('tbluploadsm', $data);
+
+        echo "<script>
+            alert('Data Berhasil Di Upload');
+            window.location.href='../../sekretaris/suratmasuk';
+            </script>";
+    }
+
+    public function getSuratMasuk($role)
+    {
+        $query = "SELECT `tblsm`.*, `tblsm_notify`.*
+        FROM `tblsm`
+        JOIN `tblsm_notify`
+        ON `tblsm`.`SMid` = `tblsm_notify`.`SMid`
+        WHERE `tblsm_notify`.`ROLEid` = 14
+        OR
+        `tblsm_notify`.`ROLEid` = 15
+        OR
+        `tblsm_notify`.`ROLEid` = 16
+
+
+        ";
+        return $this->db->query($query)->result_array();
+    }
+
 }

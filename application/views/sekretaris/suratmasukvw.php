@@ -24,6 +24,7 @@
                                     <th scope="col">Tanggal Surat</th>
                                     <th scope="col">Tanggal Terima Surat</th>
                                     <th scope="col">Perihal</th>
+                                    <th scope="col">Akses </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -37,8 +38,82 @@ $j = 0;?>
                                     <td><?=$s['SMtanggalsurat'];?></td>
                                     <td><?=$s['SMtanggalterima'];?></td>
                                     <td><?=$s['SMperihal'];?></td>
+                                    <td><a href="#" data-toggle="modal" data-target="#modalsm<?=$s['SMid'];?>"
+                                                    class="badge badge-warning">Upload Dokumen</a> | <a href="#" data-toggle="modal" data-target="#modalberkas<?=$s['SMid'];?>"
+                                                    class="badge badge-info">Cek berkas</a></td>
                                 </tr>
+
+
+                                   <!-- Modal Upload Doc -->
+                                   <div class="modal fade" id="modalberkas<?=$s['SMid'];?>" role="dialog">
+                                            <div class="modal-dialog modal-sm vertical-align-center">
+                                                <div class="modal-content">
+                                                     <div class="modal-header">
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title">Berkas Terjamin</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+
+
+
+<?php
+$SMid = $s['SMid'];
+$query = "SELECT `tblsm`.*, `tbluploadsm`.*
+     FROM `tblsm` JOIN `tbluploadsm`
+    ON `tblsm`.`SMid` = `tbluploadsm`.`SMid`
+    WHERE `tblsm`.`SMid` = $SMid
+";
+$upld = $this->db->query($query)->result_array();
+
+foreach ($upld as $u) {
+    ?>
+
+                                                        <a
+                                                            href="../uploads/<?=$u['UPLDnama']?>"><?=$u['UPLDnama']?></a><br>
+                                                        <?php
+}
+
+?>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" data-dismiss="modal"
+                                                            class="btn btn-default">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                <div class="modal fade" id="modalsm<?=$s['SMid'];?>" role="dialog">
+                                            <div class="modal-dialog modal-sm vertical-align-center">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close"
+                                                            data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title">Upload Dokumen Surat</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+
+                                                        <?php echo form_open_multipart(base_url("sekretaris/uploaddokumen/") . $s['SMid']); ?>
+                                                        <input type='file' name='userfile'/>
+
+                                                        <br>
+                                                        <br>
+                                                        <input type='submit' name='submit' value='upload' />
+                                                        </form>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" data-dismiss="modal"
+                                                            class="btn btn-default">Close</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                 <?php $i++;?>
+
+
                                 <?php endforeach;?>
                             </tbody>
                         </table>
@@ -48,6 +123,10 @@ $j = 0;?>
         </div>
     </div>
 </div>
+
+
+
+
 <!-- Modal -->
 <div class="modal fade" id="inputsuratmasuk" tabindex="-1" role="dialog" aria-labelledby="inputsuratmasukLabel"
     aria-hidden="true">

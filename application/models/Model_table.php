@@ -311,7 +311,6 @@ class Model_table extends CI_Model
         );
         $this->db->insert('tblrfapenj', $data);
 
-
         $dataupdate = array(
             'DJPcheckerstatus' => 1, //sudah dicek
             'DJPcheckercount' => 1, //sudah 1 kali cek
@@ -336,8 +335,7 @@ class Model_table extends CI_Model
     }
 
     public function updateRFA($RFAid, $RFAcomment, $USERidapp, $DJPid)
-    {   
-      
+    {
 
         $data = array(
             'RFAcomment' => $RFAcomment,
@@ -346,7 +344,6 @@ class Model_table extends CI_Model
         $this->db->where('RFAid', $RFAid);
         $this->db->update('tblrfapenj', $data);
 
-        
         $dataupdate = array(
             'DJPcheckerstatus' => 2, //sudah dicek
             'DJPcheckercount' => 2, //sudah 1 kali cek
@@ -357,8 +354,7 @@ class Model_table extends CI_Model
     }
 
     public function updateAPPRFA($RFAid, $RFAcomment, $USERidapp, $DJPid)
-    {   
-      
+    {
 
         $data = array(
             'RFAcomment' => $RFAcomment,
@@ -367,7 +363,6 @@ class Model_table extends CI_Model
         $this->db->where('RFAid', $RFAid);
         $this->db->update('tblrfapenj', $data);
 
-        
         $dataupdate = array(
             'DJPcheckerstatus' => 4, //sudah dicek
             'DJPcheckercount' => 3, //sudah 1 kali cek
@@ -377,6 +372,19 @@ class Model_table extends CI_Model
         $this->db->update('tbldjph', $dataupdate);
     }
 
-    
+    public function getSuratMasuk($role)
+    {
+        $query = "SELECT `tblsm`.*, `tblsm_notify`.*
+        FROM `tblsm`
+        JOIN `tblsm_notify`
+        ON `tblsm`.`SMid` = `tblsm_notify`.`SMid`
+        WHERE `tblsm_notify`.`ROLEid` = 13
+        OR
+        `tblsm_notify`.`ROLEid` = 2
+
+
+        ";
+        return $this->db->query($query)->result_array();
+    }
 
 }

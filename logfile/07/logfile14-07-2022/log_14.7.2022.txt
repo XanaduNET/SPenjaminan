@@ -1,0 +1,270 @@
+User: ::1 - July 14, 2022, 10:29:29
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 14,2022, 10:29:53
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 14,2022, 10:30:14
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 14, 2022, 10:30:32
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------
+User: ::1 - July 14,2022, 10:32:29
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 14,2022, 10:33:40
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 14,2022, 10:34:53
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 14, 2022, 10:35:25
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------
+User: ::1 - July 14,2022, 10:35:35
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 14, 2022, 10:35:44
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------
+User: ::1 - July 14, 2022, 10:36:15
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 14,2022, 10:50:17
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 14, 2022, 10:50:37
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------
+User: ::1 - July 14,2022, 10:51:09
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 14, 2022, 10:52:39
+Attempt: Success Export Accrual
+User: Akbar
+Aksi: Operasional Accrual
+-------------------------
+User: ::1 - July 14, 2022, 10:57:31
+Attempt: Success Upload Berkas
+User: Akbar
+Aksi: Case By Case Produktif
+-------------------------
+User: ::1 - July 14, 2022, 11:13:12
+Attempt: Failed Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 14, 2022, 11:13:18
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 14,2022, 11:13:24
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 14,2022, 11:13:37
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 14, 2022, 11:16:43
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Manajemen Risiko
+-------------------------
+User: ::1 - July 14, 2022, 11:16:43
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Manajemen Risiko
+-------------------------
+User: ::1 - July 14, 2022, 11:16:59
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - July 14, 2022, 11:24:18
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Legal
+-------------------------
+User: ::1 - July 14, 2022, 11:24:18
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - July 14,2022, 11:25:00
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - July 14, 2022, 11:26:51
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Direktur
+-------------------------
+User: ::1 - July 14,2022, 11:26:51
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - July 14, 2022, 11:36:25
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 14, 2022, 11:45:09
+Attempt: Success Edit SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - July 14, 2022, 14:50:13
+Attempt: Success Upload Berkas
+User: Akbar
+Aksi: Case By Case Produktif
+-------------------------
+User: ::1 - July 14, 2022, 15:11:03
+Attempt: Success Upload Berkas
+User: Akbar
+Aksi: Surat Masuk
+-------------------------
+User: ::1 - July 14, 2022, 15:11:22
+Attempt: Success Upload Berkas
+User: Akbar
+Aksi: Surat Masuk
+-------------------------
+User: ::1 - July 14, 2022, 15:14:03
+Attempt: Success Upload Berkas
+User: Akbar
+Aksi: Surat Masuk
+-------------------------
+User: ::1 - July 14, 2022, 15:14:37
+Attempt: Success Upload Berkas
+User: Akbar
+Aksi: Surat Masuk
+-------------------------
+User: ::1 - July 14, 2022, 15:22:59
+Attempt: Success Upload Berkas
+User: Akbar
+Aksi: Surat Masuk
+-------------------------
+User: ::1 - July 14,2022, 15:25:31
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 14,2022, 15:26:01
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 14, 2022, 15:45:41
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Legal
+-------------------------
+User: ::1 - July 14, 2022, 15:45:42
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - July 14, 2022, 15:46:09
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Legal
+-------------------------
+User: ::1 - July 14,2022, 15:51:24
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 14, 2022, 15:52:12
+Attempt: Success Add Komentar
+User: Akbar
+Aksi: CBC Direktur
+-------------------------
+User: ::1 - July 14,2022, 15:52:12
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - July 14,2022, 15:54:57
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 14,2022, 15:55:19
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 14,2022, 15:55:26
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 14,2022, 15:56:10
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 14,2022, 16:00:12
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 14,2022, 16:12:26
+Attempt: Success Masuk Halaman
+User: Akbar
+Aksi: Accrual Penjaminan
+-------------------------
+User: ::1 - July 14, 2022, 16:18:03
+Attempt: Success Upload Berkas
+User: Akbar
+Aksi: Surat Masuk
+-------------------------
+User: ::1 - July 14, 2022, 16:23:37
+Attempt: Success Upload Berkas
+User: Akbar
+Aksi: Surat Masuk
+-------------------------
+User: ::1 - July 14, 2022, 16:24:07
+Attempt: Success Upload Berkas
+User: Akbar
+Aksi: Surat Masuk
+-------------------------
+User: ::1 - July 14, 2022, 16:38:09
+Attempt: Success Upload Berkas
+User: Akbar
+Aksi: Surat Masuk
+-------------------------

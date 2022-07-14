@@ -49,7 +49,7 @@
                                                 <a href="<?=base_url("Legal/cbcpdetail/");?><?=$c['CBCPid'];?>"
                                                     class=" badge badge-primary">Detail</a>
                                                 &nbsp;
-                                                <a href="<?=base_url("Legal/CBCPberkas/");?><?=$c['CBCPid'];?>"
+                                                <a href="<?=base_url("casebc/CBCPberkas/");?><?=$c['CBCPid'];?>"
                                                     class=" badge badge-info">Berkas</a>
                                             </td>
                                             <td>

@@ -352,4 +352,20 @@ class Table extends CI_Controller
     {
         $RFAid = $this->uri->segment(3);
     }
+
+    public function suratmasuk()
+    {
+        $data['title'] = 'Surat Masuk Penjaminan';
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+        $role = $data['user']['role_id'];
+        $data['sm'] = $this->Model_table->getSuratMasuk($role);
+
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
+        $this->load->view('penjaminan/suratmasukvw', $data);
+        $this->load->view('template/footer');
+
+    }
 }

@@ -736,7 +736,7 @@ class Direktur extends CI_Controller
 
     }
 
-    public function suratmasuknotify()
+    public function suratmasuk()
     {
         $data['title'] = 'Permohonan Surat Masuk Dir';
         $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
@@ -772,12 +772,57 @@ class Direktur extends CI_Controller
         $SMid = $_POST['SMid'];
         $SMketdir = $_POST['SMketdir'];
         $check = $this->input->post('check_list');
-        
-        foreach($check as $c){
-        $this->Model_direktur->uploadsuratmasukdirektur($SMid, $c);
+
+        foreach ($check as $c) {
+            $this->Model_direktur->uploadsuratmasukdirektur($SMid, $c);
         }
 
         $this->Model_direktur->uploadketdir($SMid, $SMketdir);
+    }
+
+    public function akseptasisuratmasukdirum()
+    {
+        $SMid = $_POST['SMid'];
+        $SMketdir = $_POST['SMketdir'];
+        $check = $this->input->post('check_list');
+
+        foreach ($check as $c) {
+            $this->Model_direktur->uploadsuratmasukdirekturumum($SMid, $c);
+        }
+
+        $this->Model_direktur->uploadketdirumum($SMid, $SMketdir);
+    }
+
+    public function suratmasukdirumnotify()
+    {
+        $data['title'] = 'Surat Masuk Direktur Umum';
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+        $role = $data['user']['role_id'];
+        $data['sm'] = $this->Model_direktur->getSuratMasukDirum($role);
+
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
+        $this->load->view('Direktur/suratmasukdirumnotify', $data);
+        $this->load->view('template/footer');
+
+    }
+
+    public function suratmasukdirutnotify()
+    {
+        $data['title'] = 'Surat Masuk Direktur Utama';
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+        $role = $data['user']['role_id'];
+        $data['sm'] = $this->Model_direktur->getSuratMasukDirut($role);
+
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
+        $this->load->view('Direktur/suratmasukdirutnotify', $data);
+        $this->load->view('template/footer');
+
     }
 
 }

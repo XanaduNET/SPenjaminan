@@ -1,0 +1,230 @@
+User: ::1 - July 15, 2022, 01:08:40
+Attempt: Failed Login
+User: Tiara
+Aksi: Login
+-------------------------
+User: ::1 - July 15, 2022, 01:08:44
+Attempt: Success Login
+User: Tiara
+Aksi: Login
+-------------------------
+User: ::1 - July 15, 2022, 01:09:04
+Attempt: Success Logout
+User: Tiara
+Aksi: Logout
+-------------------------
+User: ::1 - July 15, 2022, 01:09:13
+Attempt: Failed Login
+User: ulfa
+Aksi: Login
+-------------------------
+User: ::1 - July 15, 2022, 01:10:04
+Attempt: Success Login
+User: Tiara
+Aksi: Login
+-------------------------
+User: ::1 - July 15, 2022, 01:24:34
+Attempt: Success Logout
+User: Tiara
+Aksi: Logout
+-------------------------
+User: ::1 - July 15, 2022, 01:24:44
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 15, 2022, 01:25:02
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - July 15, 2022, 01:25:11
+Attempt: Berhasil Tambah User Fiji
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - July 15, 2022, 01:25:18
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - July 15, 2022, 01:25:35
+Attempt: Berhasil Tambah User Gita
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - July 15, 2022, 01:25:42
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - July 15, 2022, 01:25:52
+Attempt: Berhasil Tambah User Rama
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - July 15, 2022, 01:26:01
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - July 15, 2022, 01:26:08
+Attempt: Berhasil Tambah User Fia
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - July 15, 2022, 01:26:12
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - July 15, 2022, 01:26:24
+Attempt: Berhasil Tambah User Iskandar
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - July 15, 2022, 01:26:29
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - July 15, 2022, 01:26:52
+Attempt: Berhasil Tambah User Marselon
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - July 15, 2022, 01:26:59
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - July 15, 2022, 01:27:08
+Attempt: Berhasil Tambah User Ayu
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - July 15, 2022, 01:27:11
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - July 15, 2022, 01:27:35
+Attempt: Berhasil Tambah User Ibnu
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - July 15, 2022, 01:34:46
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - July 15, 2022, 01:34:53
+Attempt: Success Login
+User: rama
+Aksi: Login
+-------------------------
+User: ::1 - July 15, 2022, 01:39:25
+Attempt: Success Logout
+User: Rama
+Aksi: Logout
+-------------------------
+User: ::1 - July 15, 2022, 01:39:31
+Attempt: Success Login
+User: Gita
+Aksi: Login
+-------------------------
+User: ::1 - July 15, 2022, 01:41:22
+Attempt: Success Logout
+User: Gita
+Aksi: Logout
+-------------------------
+User: ::1 - July 15, 2022, 01:41:38
+Attempt: Failed Login
+User: Purwo
+Aksi: Login
+-------------------------
+User: ::1 - July 15, 2022, 01:41:44
+Attempt: Success Login
+User: Purwo
+Aksi: Login
+-------------------------
+User: ::1 - July 15, 2022, 01:46:41
+Attempt: Success Logout
+User: Purwo
+Aksi: Logout
+-------------------------
+User: ::1 - July 15, 2022, 01:46:55
+Attempt: Success Login
+User: Ayu
+Aksi: Login
+-------------------------
+User: ::1 - July 15, 2022, 01:48:38
+Attempt: Success Logout
+User: Ayu
+Aksi: Logout
+-------------------------
+User: ::1 - July 15, 2022, 01:50:07
+Attempt: Success Login
+User: Marselon
+Aksi: Login
+-------------------------
+User: ::1 - July 15, 2022, 01:51:34
+Attempt: Success Logout
+User: Marselon
+Aksi: Logout
+-------------------------
+User: ::1 - July 15, 2022, 01:51:43
+Attempt: Success Login
+User: Fiji
+Aksi: Login
+-------------------------
+User: ::1 - July 15, 2022, 01:52:56
+Attempt: Success Logout
+User: Fiji
+Aksi: Logout
+-------------------------
+User: ::1 - July 15, 2022, 01:56:09
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 15, 2022, 01:56:42
+Attempt: Success Add SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - July 15, 2022, 01:56:51
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - July 15, 2022, 01:56:58
+Attempt: Success Login
+User: Ibnu
+Aksi: Login
+-------------------------
+User: ::1 - July 15, 2022, 01:58:29
+Attempt: Success Logout
+User: Ibnu
+Aksi: Logout
+-------------------------
+User: ::1 - July 15, 2022, 01:58:43
+Attempt: Failed Login
+User: Berry
+Aksi: Login
+-------------------------
+User: ::1 - July 15, 2022, 01:58:48
+Attempt: Success Login
+User: Berry
+Aksi: Login
+-------------------------
+User: ::1 - July 15,2022, 01:58:49
+Attempt: Success Masuk Halaman
+User: Berry
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - July 15,2022, 01:59:31
+Attempt: Success Masuk Halaman
+User: Berry
+Aksi: Beranda Direktur
+-------------------------

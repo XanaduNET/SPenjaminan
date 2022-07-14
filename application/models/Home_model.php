@@ -29,6 +29,29 @@ class Home_model extends CI_Model
             return false;
         }
     }
+
+    public function insert_batch_iib($dataDJPH)
+    {
+        $this->db->insert_batch('tbldjphiib', $dataDJPH);
+        $insertId = $this->db->insert_id();
+        if ($this->db->affected_rows() == '1') {
+            return $insertId;
+        } else {
+            return false;
+        }
+    }
+
+    public function insert_batchdjpd_iib($dataDJPD)
+    {
+        $this->db->insert_batch('tbldjpdiib', $dataDJPD);
+        $insertId = $this->db->insert_id();
+        if ($this->db->affected_rows() == '1') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public function insert_batchdjpd_grm($dataDJPD)
     {
         $this->db->insert_batch('tbldjpdgrm', $dataDJPD);
