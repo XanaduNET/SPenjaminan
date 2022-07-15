@@ -228,3 +228,58 @@ Attempt: Success Masuk Halaman
 User: Berry
 Aksi: Beranda Direktur
 -------------------------
+User: ::1 - July 15, 2022, 06:12:29
+Attempt: Success Login
+User: iskandar
+Aksi: Login
+-------------------------
+User: ::1 - July 15, 2022, 06:20:22
+Attempt: Success Upload Berkas
+User: Iskandar
+Aksi: Surat Masuk
+-------------------------
+User: ::1 - July 15, 2022, 06:20:48
+Attempt: Success Login
+User: Rama
+Aksi: Login
+-------------------------
+User: ::1 - July 15, 2022, 06:23:26
+Attempt: Success Logout
+User: Rama
+Aksi: Logout
+-------------------------
+User: ::1 - July 15, 2022, 06:23:34
+Attempt: Success Login
+User: berry
+Aksi: Login
+-------------------------
+User: ::1 - July 15,2022, 06:23:34
+Attempt: Success Masuk Halaman
+User: Berry
+Aksi: Beranda Direktur
+-------------------------
+User: ::1 - July 15, 2022, 06:27:55
+Attempt: Success Logout
+User: Berry
+Aksi: Logout
+-------------------------
+User: ::1 - July 15, 2022, 06:27:58
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 15, 2022, 06:29:59
+Attempt: Success Edit SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - July 15, 2022, 06:30:06
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - July 15, 2022, 06:30:18
+Attempt: Success Login
+User: reza
+Aksi: Login
+-------------------------
