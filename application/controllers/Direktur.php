@@ -772,12 +772,24 @@ class Direktur extends CI_Controller
         $SMid = $_POST['SMid'];
         $SMketdir = $_POST['SMketdir'];
         $check = $this->input->post('check_list');
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+
 
         foreach ($check as $c) {
             $this->Model_direktur->uploadsuratmasukdirektur($SMid, $c);
         }
 
         $this->Model_direktur->uploadketdir($SMid, $SMketdir);
+
+        $data = array(
+            'comment_subject' => 'Surat Masuk Divisi',
+            'comment_text' => "Diperiksa",
+            'comment_status' => 0,
+            'roleId_sender' => $data['user']['role_id'],
+            'roleId_receiver' => 2,
+        );
+        $this->db->insert('tbl_comments', $data);
+
     }
 
     public function akseptasisuratmasukdirum()
@@ -785,12 +797,24 @@ class Direktur extends CI_Controller
         $SMid = $_POST['SMid'];
         $SMketdir = $_POST['SMketdir'];
         $check = $this->input->post('check_list');
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+
 
         foreach ($check as $c) {
             $this->Model_direktur->uploadsuratmasukdirekturumum($SMid, $c);
         }
 
         $this->Model_direktur->uploadketdirumum($SMid, $SMketdir);
+
+        $data = array(
+            'comment_subject' => 'Surat Masuk Divisi',
+            'comment_text' => "Diperiksa",
+            'comment_status' => 0,
+            'roleId_sender' => $data['user']['role_id'],
+            'roleId_receiver' => 2,
+        );
+        $this->db->insert('tbl_comments', $data);
+
     }
 
     public function suratmasukdirumnotify()

@@ -24,7 +24,8 @@ class Sekretaris extends CI_Controller
         $this->load->view('template/footer');
     }
     public function inputsuratmasuk()
-    {
+    {   
+         $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
         $SMasal = $_POST['SMasal'];
         $SMnomor = $_POST['SMnomor'];
         $SMtanggalsurat = $_POST['SMtanggalsurat'];
@@ -32,6 +33,16 @@ class Sekretaris extends CI_Controller
         $SMperihal = $_POST['SMperihal'];
 
         $this->Model_sekretaris->uploadsuratmasuk($SMasal, $SMnomor, $SMtanggalsurat, $SMtanggalterima, $SMperihal);
+        
+        $data = array(
+            'comment_subject' => 'Surat Masuk Baru',
+            'comment_text' => "$SMasal / $SMnomor / $SMperihal",
+            'comment_status' => 0,
+            'roleId_sender' => $data['user']['role_id'],
+            'roleId_receiver' => 14,
+        );
+        $this->db->insert('tbl_comments', $data);
+
         redirect('Sekretaris/suratmasuk');
     }
     public function accsuratmasuk()
@@ -52,11 +63,24 @@ class Sekretaris extends CI_Controller
     }
 
     public function akseptasisuratmasuk()
-    {
+    {   
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
         $SMid = $_POST['SMid'];
         $SMuntuk = $_POST['ROLEid'];
 
         $this->Model_sekretaris->updatesuratmasuk($SMid, $SMuntuk);
+
+        
+        $data = array(
+            'comment_subject' => 'Terusan Surat Masuk',
+            'comment_text' => "Mohon Diperiksa",
+            'comment_status' => 0,
+            'roleId_sender' => $data['user']['role_id'],
+            'roleId_receiver' => 15,
+        );
+        $this->db->insert('tbl_comments', $data);
+
+
         redirect('Sekretaris/accsuratmasuk');
     }
 
@@ -76,15 +100,34 @@ class Sekretaris extends CI_Controller
         $this->load->view('template/footer');
     }
     public function akseptasisuratmasukdir()
-    {
+    {   
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+
         $SMid = $_POST['SMid'];
 
         //
         $query = $this->db->query("SELECT SMuntuk FROM tblsm WHERE SMid ='$SMid'")->row_array();
         //
         $SMuntuk = $query['SMuntuk'];
-
+        
+        if ($SMuntuk == "Direktur Utama"){
+            $roleId_receiver = 4;
+        }
+        else if ($SMuntuk == "Direktur Umum")
+        {
+            $roleId_receiver = 20;
+        }
         $this->Model_sekretaris->updatesuratmasuksekdir($SMid, $SMuntuk);
+
+        $data = array(
+            'comment_subject' => 'Terusan Surat Masuk',
+            'comment_text' => "Mohon Diperiksa",
+            'comment_status' => 0,
+            'roleId_sender' => $data['user']['role_id'],
+            'roleId_receiver' => $roleId_receiver,
+        );
+        $this->db->insert('tbl_comments', $data);
+
         redirect('Sekretaris/accsuratmasuksekdir');
     }
     public function monitoringsuratmasuk()
