@@ -3,3 +3,83 @@ Attempt: Success Login
 User: akbar
 Aksi: Login
 -------------------------
+User: ::1 - July 19, 2022, 04:28:24
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 19, 2022, 04:52:05
+Attempt: Success Add SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - July 19, 2022, 05:21:55
+Attempt: Success Add Menu
+User: Akbar
+Aksi: Menu Management
+-------------------------
+User: ::1 - July 19, 2022, 05:25:38
+Attempt: Success Add SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - July 19, 2022, 05:31:36
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - July 19, 2022, 05:32:15
+Attempt: Success Add Role
+User: Akbar
+Aksi: Role
+-------------------------
+User: ::1 - July 19, 2022, 05:33:31
+Attempt: Failed Tambah User
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - July 19, 2022, 05:33:44
+Attempt: Berhasil Tambah User KadivPenjaminan
+User: Akbar
+Aksi: Registrasi
+-------------------------
+User: ::1 - July 19, 2022, 05:34:01
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - July 19, 2022, 05:34:16
+Attempt: Success Login
+User: KadivPenjaminan
+Aksi: Login
+-------------------------
+User: ::1 - July 19, 2022, 05:36:26
+Attempt: Success Logout
+User: KadivPenjaminan
+Aksi: Logout
+-------------------------
+User: ::1 - July 19, 2022, 05:36:32
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - July 19, 2022, 08:34:05
+Attempt: Delete SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - July 19, 2022, 08:35:50
+Attempt: Success Add SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - July 19, 2022, 09:04:28
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - July 19, 2022, 09:04:35
+Attempt: Success Login
+User: KadivPenjaminan
+Aksi: Login
+-------------------------

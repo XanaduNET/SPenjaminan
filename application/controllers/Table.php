@@ -316,42 +316,6 @@ class Table extends CI_Controller
         redirect('Table/accrfa/');
     }
 
-    public function approvalrfa()
-    {
-
-        $this->load->model('Model_table');
-
-        $data['title'] = 'Approval Request';
-        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
-        $data['rfa'] = $this->Model_table->getApprovalRFA();
-        $data['useraccept'] = $this->Model_table->getUserAcc();
-
-        $this->load->view('template/header', $data);
-        $this->load->view('template/header_body', $data);
-        $this->load->view('template/right_sidebar', $data);
-        $this->load->view('template/left_sidebar', $data);
-        $this->load->view('penjaminan/approvalrfa', $data);
-        $this->load->view('template/footer');
-
-    }
-
-    public function apprfa()
-    {
-        $RFAid = $this->uri->segment(3);
-        $DJPid = $this->uri->segment(4);
-        $USER = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
-
-        $RFAcomment = "ACC Kadiv";
-        $USERidapp = $USER['id'];
-
-        $this->Model_table->updateAPPRFA($RFAid, $RFAcomment, $USERidapp, $DJPid);
-        redirect('Table/approvalrfa/');
-    }
-
-    public function tolakRFA()
-    {
-        $RFAid = $this->uri->segment(3);
-    }
 
     public function suratmasuk()
     {
@@ -368,4 +332,75 @@ class Table extends CI_Controller
         $this->load->view('template/footer');
 
     }
+
+    public function suratkeluar()
+    {
+        $data['title'] = 'Surat Keluar';
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+        $data['sk'] = $this->Model_table->getSuratKeluarAll();
+
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
+        $this->load->view('penjaminan/suratkeluarvw', $data);
+        $this->load->view('template/footer');
+
+    }
+
+
+    public function inputsk()
+    {
+        
+        $SKtanggalsurat = $_POST['SKtanggalsurat'];
+        $SKperihal = $_POST['SKperihal'];
+        $SKket = $_POST['SKket'];
+        
+        $this->Model_table->uploadsk($SKtanggalsurat, $SKperihal, $SKket);
+        redirect('table/suratkeluar/');
+        // modal data berhasil ditambah dan refresh table/suratkeluar
+    }
+
+
+    
+    public function uploaddokumenkeluar()
+    {
+        $this->load->model('Model_table');
+        $SKid = $this->uri->segment(3);
+
+        $config = array(
+            'upload_path' => "./uploads/suratkeluar/",
+            'allowed_types' => "pdf",
+            'overwrite' => true,
+            'max_size' => "2048000", // Tertulis dalam KB maks 2mb
+        );
+        $this->load->library('upload', $config);
+        if ($this->upload->do_upload()) {
+            $data = array('upload_data' => $this->upload->data());
+            $UPLDnama = $this->upload->data('file_name');
+            $date = date("d-m-Y");
+            $bulan = date("m");
+            $namauser = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+
+            $log = "User: " . $_SERVER['REMOTE_ADDR'] . ' - ' . date("F j, Y, H:i:s") . PHP_EOL .
+                "Attempt: " . ("Success Upload Berkas") . PHP_EOL .
+                "User: " . $namauser['nama'] . PHP_EOL .
+                "Aksi: " . ('Surat Keluar') . PHP_EOL .
+                "-------------------------" . PHP_EOL;
+            //-
+            file_put_contents('logfile/' . $bulan . '/logfile' . $date . '/log_' . date("j.n.Y") . '.txt', $log, FILE_APPEND);
+
+            $this->Model_table->uploadberkassk($UPLDnama, $SKid);
+            //data berhasil di upload
+        } else {
+            echo "<script>
+                alert('Berkas Tidak Berhasil Di Upload');
+                window.location.href='../../table/suratkeluar';
+                </script>";
+            //data tidak berhasil di upluad
+        }
+    }
+
+
+ 
 }

@@ -59,10 +59,10 @@ if (empty($useraccept)) {
 ?>
                                     </td>
                                     <td>
-                                    <a href="<?=base_url("Table/apprfa/");?><?=$r['RFAid'];?>/<?=$r['DJPid'];?>"
+                                    <a href="<?=base_url("kapenjaminan/apprfa/");?><?=$r['RFAid'];?>/<?=$r['DJPid'];?>"
                                                     class=" badge badge-primary">Accept</a>
                                     |
-                                    <a href="<?=base_url("Table/tolakrfa/");?><?=$r['RFAid'];?>"
+                                    <a href="<?=base_url("kapenjaminan/tolakrfa/");?><?=$r['RFAid'];?>"
                                                     class=" badge badge-warning">Tolak</a>
                                     </td>
                                 </tr>

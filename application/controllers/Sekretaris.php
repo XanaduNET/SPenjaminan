@@ -147,7 +147,7 @@ class Sekretaris extends CI_Controller
 
     public function uploaddokumen()
     {
-        {
+        
             $this->load->model('Model_sekretaris');
             $SMid = $this->uri->segment(3);
 
@@ -182,7 +182,7 @@ class Sekretaris extends CI_Controller
                     </script>";
                 //data tidak berhasil di upluad
             }
-        }
+        
     }
 
     public function suratmasuknotify()

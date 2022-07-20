@@ -387,4 +387,54 @@ class Model_table extends CI_Model
         return $this->db->query($query)->result_array();
     }
 
+
+    public function getSuratKeluarKadiv()
+    {
+        $query = "SELECT `tblsk`.*
+        FROM `tblsk` WHERE `SKasal` = 2 AND  `SKstatus` = 0
+        ";
+        return $this->db->query($query)->result_array();
+    }
+
+
+    public function getSuratKeluarAll()
+    {
+        $query = "SELECT `tblsk`.*
+        FROM `tblsk` WHERE `SKstatus` = 0  
+        ";
+        return $this->db->query($query)->result_array();
+    }
+
+
+    public function uploadsk($SKtanggalsurat, $SKperihal, $SKket)
+    {
+        $data = array(
+            'SKtanggalsurat' => $SKtanggalsurat,
+            'SKasal' => 2,
+            'SKperihal' => $SKperihal,
+            'SKstatus' => 0,
+            'SKket' => $SKket,
+        );
+        $this->db->insert('tblsk', $data);
+    }
+
+
+    public function uploadberkassk($UPLDPnama, $SKid)
+    {
+       
+
+            $data = array(
+                'UPLDnama' => $UPLDPnama,
+                'SKid' => $SKid,
+            );
+            $this->db->insert('tbluploadsk', $data);
+    
+            echo "<script>
+                alert('Data Berhasil Di Upload');
+                window.location.href='../../table/suratkeluar';
+                </script>";
+        }
+    
+
+
 }
