@@ -70,4 +70,15 @@ class kapenjaminan extends CI_Controller
 
     }
 
+
+    public function appsk()
+    {
+        $SKid = $this->uri->segment(3);
+        $user = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+        $SKket = "Di Approve";
+
+        $this->Model_table->updateSKKadiv($SKid, $SKket);
+        redirect('kapenjaminan/approvalsuratkeluar/');
+    }
+
 }

@@ -421,12 +421,16 @@ class Model_table extends CI_Model
 
     public function uploadberkassk($UPLDPnama, $SKid)
     {
-       
+
+
 
             $data = array(
                 'UPLDnama' => $UPLDPnama,
                 'SKid' => $SKid,
             );
+
+
+         
             $this->db->insert('tbluploadsk', $data);
     
             echo "<script>
@@ -434,6 +438,19 @@ class Model_table extends CI_Model
                 window.location.href='../../table/suratkeluar';
                 </script>";
         }
+
+
+    public function uploadSKKadiv($SKid, $SKket)
+    {
+
+        $data = array(
+            'SKket' => $UPLDPnama,
+            
+        );
+
+
+
+    }
     
 
 

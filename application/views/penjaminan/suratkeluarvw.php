@@ -41,7 +41,7 @@ $j = 0;?>
                                     <td><?=$s['SKperihal'];?></td>
                                     <td><?=$s['SKket'];?></td>
                                     <td><a href="#" data-toggle="modal" data-target="#modalberkas<?=$s['SKid'];?>"
-                                                    class="badge badge-info">Cek berkas</a>&nbsp;|&nbsp; <a href="#" data-toggle="modal" data-target="#modalskclass="badge badge-warning">Upload Berkas</a></td>
+                                                    class="badge badge-info">Cek berkas</a>&nbsp;|&nbsp; <a href="#" data-toggle="modal" data-target="#modalsk<?=$s['SKid'];?>" class="badge badge-warning">Upload Berkas</a></td>
                                     <td>  <a href="<?=base_url("penjaminan/hapussk/");?><?=$s['SKid'];?>"
                                                     class=" badge badge-danger">Hapus</a></td>
                                 </tr>

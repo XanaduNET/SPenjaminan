@@ -5,13 +5,14 @@ class Table extends CI_Controller
 
     public function __construct()
     {
+
         parent::__construct();
         $this->load->model('Model_table_semua');
         $this->load->model('Model_nasabah');
         $this->load->model('Model_tablesemua');
         $this->load->model('Model_Kredit');
         $this->load->model('Model_table');
-
+        
     }
 
     public function index()
@@ -378,6 +379,8 @@ class Table extends CI_Controller
         if ($this->upload->do_upload()) {
             $data = array('upload_data' => $this->upload->data());
             $UPLDnama = $this->upload->data('file_name');
+
+            
             $date = date("d-m-Y");
             $bulan = date("m");
             $namauser = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();

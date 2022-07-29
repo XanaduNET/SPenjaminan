@@ -1,0 +1,20 @@
+User: ::1 - July 21, 2022, 05:28:51
+Attempt: Success Login
+User: KadivPenjaminan
+Aksi: Login
+-------------------------
+User: ::1 - July 21, 2022, 05:33:11
+Attempt: Success Upload Berkas
+User: KadivPenjaminan
+Aksi: Surat Keluar
+-------------------------
+User: ::1 - July 21, 2022, 05:37:31
+Attempt: Success Upload Berkas
+User: KadivPenjaminan
+Aksi: Surat Keluar
+-------------------------
+User: ::1 - July 21, 2022, 05:37:43
+Attempt: Success Upload Berkas
+User: KadivPenjaminan
+Aksi: Surat Keluar
+-------------------------
