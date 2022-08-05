@@ -1,0 +1,90 @@
+User: ::1 - August 5, 2022, 05:12:32
+Attempt: Success Login
+User: Tiara
+Aksi: Login
+-------------------------
+User: ::1 - August 5, 2022, 05:13:34
+Attempt: Success Logout
+User: Tiara
+Aksi: Logout
+-------------------------
+User: ::1 - August 5, 2022, 05:13:46
+Attempt: Failed Login
+User: Kadiv Penjaminan
+Aksi: Login
+-------------------------
+User: ::1 - August 5, 2022, 05:13:56
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - August 5, 2022, 05:14:22
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - August 5, 2022, 05:14:31
+Attempt: Failed Login
+User: KadivPenjaminan
+Aksi: Login
+-------------------------
+User: ::1 - August 5, 2022, 05:14:40
+Attempt: Success Login
+User: KadivPenjaminan
+Aksi: Login
+-------------------------
+User: ::1 - August 5, 2022, 05:53:55
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - August 5, 2022, 05:55:50
+Attempt: Success Logout
+User: Akbar
+Aksi: Logout
+-------------------------
+User: ::1 - August 5, 2022, 05:55:58
+Attempt: Success Login
+User: KadivPenjaminan
+Aksi: Login
+-------------------------
+User: ::1 - August 5, 2022, 05:58:07
+Attempt: Success Logout
+User: KadivPenjaminan
+Aksi: Logout
+-------------------------
+User: ::1 - August 5, 2022, 05:58:12
+Attempt: Success Login
+User: rama
+Aksi: Login
+-------------------------
+User: ::1 - August 5, 2022, 05:58:26
+Attempt: Success Logout
+User: Rama
+Aksi: Logout
+-------------------------
+User: ::1 - August 5, 2022, 05:58:29
+Attempt: Success Login
+User: akbar
+Aksi: Login
+-------------------------
+User: ::1 - August 5, 2022, 05:59:14
+Attempt: Success Add SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - August 5, 2022, 07:04:54
+Attempt: Success Add SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - August 5, 2022, 07:05:30
+Attempt: Success Edit SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------
+User: ::1 - August 5, 2022, 07:42:33
+Attempt: Success Add SubMenu
+User: Akbar
+Aksi: SubMenu Management
+-------------------------

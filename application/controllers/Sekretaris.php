@@ -200,4 +200,69 @@ class Sekretaris extends CI_Controller
         $this->load->view('template/footer');
 
     }
+    public function approvalskdiv()
+    {
+        $data['title'] = 'Permohonan Surat Keluar Divisi';
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+        $data['skall'] = $this->Model_sekretaris->getSKAll();
+        $data['skreq'] = $this->Model_sekretaris-> getSKAcc();
+        $data['skuntuk'] = $this->Model_sekretaris->getSMUntuk();
+
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
+        $this->load->view('Sekretaris/approvalsuratkeluardiv', $data);
+        $this->load->view('template/footer');
+    }
+
+    public function akseptasisuratkeluar()
+    {   
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+        $SKid = $_POST['SKid'];
+        $SKuntuk = $_POST['ROLEid'];
+
+      
+        $this->Model_sekretaris->updatesuratkeluar($SKid, $SKuntuk);
+
+        
+        $data = array(
+            'comment_subject' => 'Terusan Surat Keluar',
+            'comment_text' => "Mohon Diperiksa",
+            'comment_status' => 0,
+            'roleId_sender' => $data['user']['role_id'],
+            'roleId_receiver' => 15,
+        );
+        $this->db->insert('tbl_comments', $data);
+
+        redirect('Sekretaris/approvalskdiv');
+    }
+
+
+    public function suratkeluardiv()
+    {
+        $data['title'] = 'Permohonan Surat Keluar Divisi';
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+        $data['sk'] = $this->Model_sekretaris->getSKDiv();
+    
+
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
+        $this->load->view('Sekretaris/suratkeluardiv', $data);
+        $this->load->view('template/footer');
+    }
+
+
+    public function nomorsk()
+    {   
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+        $SKid = $this->uri->segment(3);
+       
+        $this->Model_sekretaris->nomorsk($SKid);
+        redirect('Sekretaris/suratkeluardiv');
+    }
+
+
 }

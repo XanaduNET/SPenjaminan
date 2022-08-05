@@ -440,15 +440,22 @@ class Model_table extends CI_Model
         }
 
 
-    public function uploadSKKadiv($SKid, $SKket)
+    public function updateSKKadiv($SKid, $SKket)
     {
 
         $data = array(
-            'SKket' => $UPLDPnama,
+            'SKket' => $SKket,
+            'SKstatus' => 1, // Diteruskan kepada Sekper
             
         );
 
+        $this->db->where('SKid', $SKid);
+        $this->db->update('tblsk', $data);
 
+        echo "<script>
+        alert('Data Berhasil Di Upload');
+        window.location.href='../../KaPenjaminan/approvalsuratkeluar';
+        </script>";
 
     }
     

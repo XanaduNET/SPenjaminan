@@ -751,6 +751,21 @@ class Direktur extends CI_Controller
         $this->load->view('Direktur/suratmasuk', $data);
         $this->load->view('template/footer');
     }
+    public function appsuratkeluar()
+    {
+        $data['title'] = 'Permohonan Surat Masuk Dir';
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+
+        $data['sk'] = $this->Model_sekretaris->getSKDir();
+        $data['skreq'] = $this->Model_sekretaris->getSKAccDir();
+
+        $this->load->view('template/header', $data);
+        $this->load->view('template/header_body', $data);
+        $this->load->view('template/right_sidebar', $data);
+        $this->load->view('template/left_sidebar', $data);
+        $this->load->view('Direktur/appsuratkeluar', $data);
+        $this->load->view('template/footer');
+    }
     public function suratmasukdirum()
     {
         $data['title'] = 'Permohonan Surat Masuk Dir';
@@ -848,5 +863,18 @@ class Direktur extends CI_Controller
         $this->load->view('template/footer');
 
     }
+
+
+    public function approvalsk()
+    {
+        $SKid = $this->uri->segment(3);
+        $SKket = "Diterima segera di proses";
+       
+        $data['user'] = $this->db->get_where('user', ['nama' => $this->session->userdata('nama')])->row_array();
+        $this->Model_direktur->appsk($SKid, $SKket);
+
+    
+    }
+
 
 }

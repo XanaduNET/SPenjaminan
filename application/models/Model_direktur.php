@@ -252,4 +252,21 @@ class Model_direktur extends CI_Model
         ";
         return $this->db->query($query)->result_array();
     }
+
+    public function appsk($SKid, $SKket)
+    {
+        $data = array(
+            'SKstatus' => 4,
+            'SKket' => $SKket,
+        );
+
+      
+        $this->db->where('SKid', $SKid);
+        $this->db->update('tblsk', $data);
+      
+        echo "<script>
+        window.location.href='../appsuratkeluar';
+        </script>";
+    }
+
 }
